@@ -1,412 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elevate - AirKarting</title>
-  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/babel-standalone@7.22.5/babel.min.js"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', Arial, sans-serif;
-      color: #333;
-      background-color: #f5f5f5;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    nav {
-      background-color: #000;
-      color: #fff;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      padding: 15px 0;
-    }
-    .nav-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-content img {
-      height: 40px;
-    }
-    .nav-content h1 {
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .nav-buttons a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      margin-left: 10px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-    .nav-buttons a.reserve {
-      background-color: #2563eb;
-    }
-    .nav-buttons a.reserve:hover {
-      background-color: #1d4ed8;
-    }
-    .nav-buttons a.book {
-      background-color: #16a34a;
-    }
-    .nav-buttons a.book:hover {
-      background-color: #15803d;
-    }
-    .nav-buttons a.contact {
-      background-color: #4b5563;
-    }
-    .nav-buttons a.contact:hover {
-      background-color: #374151;
-    }
-    .hero {
-      background: url('https://source.unsplash.com/random/1920x1080/?drone,racing') no-repeat center;
-      background-size: cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
-    .hero-content h2 {
-      font-size: 48px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .hero-content p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-    .hero-content a {
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 5px;
-      font-size: 18px;
-      font-weight: bold;
-      margin: 0 10px;
-      transition: background-color 0.3s;
-    }
-    .hero-content a.reserve {
-      background-color: #2563eb;
-    }
-    .hero-content a.reserve:hover {
-      background-color: #1d4ed8;
-    }
-    .hero-content a.book {
-      background-color: #16a34a;
-    }
-    .hero-content a.book:hover {
-      background-color: #15803d;
-    }
-    section {
-      padding: 80px 0;
-    }
-    section h3 {
-      font-size: 36px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    section p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: 0 auto 20px;
-      text-align: center;
-    }
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .feature-card {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-    .feature-card h4 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-    .cta-button {
-      display: inline-block;
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 5px;
-      font-size: 18px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-    .reserve-section {
-      background-color: #2563eb;
-      color: #fff;
-    }
-    .reserve-section .cta-button {
-      background-color: #fff;
-      color: #2563eb;
-    }
-    .reserve-section .cta-button:hover {
-      background-color: #e5e7eb;
-    }
-    .book-section {
-      background-color: #16a34a;
-      color: #fff;
-    }
-    .book-section .cta-button {
-      background-color: #fff;
-      color: #16a34a;
-    }
-    .book-section .cta-button:hover {
-      background-color: #e5e7eb;
-    }
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .testimonial-card {
-      background-color: #f3f4f6;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .testimonial-card p {
-      font-style: italic;
-      margin-bottom: 10px;
-    }
-    .testimonial-card p.author {
-      font-weight: bold;
-      font-style: normal;
-    }
-    .contact-form {
-      max-width: 500px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      width: 100%;
-    }
-    .contact-form textarea {
-      height: 120px;
-      resize: vertical;
-    }
-    .contact-form button {
-      background-color: #2563eb;
-      color: #fff;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .contact-form button:hover {
-      background-color: #1d4ed8;
-    }
-    footer {
-      background-color: #000;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
-      transition: color 0.3s;
-    }
-    footer a:hover {
-      color: #d1d5db;
-    }
-    @media (max-width: 768px) {
-      .hero-content h2 {
-        font-size: 32px;
-      }
-      .hero-content p {
-        font-size: 16px;
-      }
-      section h3 {
-        font-size: 28px;
-      }
-      .nav-content h1 {
-        font-size: 20px;
-      }
-      .nav-buttons a {
-        padding: 8px 12px;
-        font-size: 14px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevate Racing - New Dimension of Motorsport</title>
+    <meta name="description" content="Discover AirKart by Elevate Racing, the ultimate eVTOL for personal flight and racing.">
+    <meta name="keywords" content="AirKart, eVTOL, Elevate Racing, personal flight">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+    <link rel="preload" href="Images/Hero_background.png" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="root"></div>
-  <script type="text/babel">
-    function App() {
-      return (
-        <div>
-          {/* Top Bar */}
-          <nav>
-            <div class="container nav-content">
-              <img src="https://via.placeholder.com/150x50?text=Logo" alt="Elevate Logo" />
-              <h1>Elevate</h1>
-              <div class="nav-buttons">
-                <a href="#reserve" class="reserve">Reserve Your AirKart</a>
-                <a href="#book" class="book">Book a Flight</a>
-                <a href="#contact" class="contact">Contact</a>
-              </div>
-            </div>
-          </nav>
-
-          {/* Hero Section */}
-          <section class="hero">
-            <div class="container hero-content">
-              <h2>Experience the Thrill of AirKarting</h2>
-              <p>Own your AirKart for $199,000 or take a flight at one of our AeroKarting Tracks for $249.</p>
-              <div>
-                <a href="#reserve" class="reserve">Reserve Now</a>
-                <a href="#book" class="book">Book a Flight</a>
-              </div>
-            </div>
-          </section>
-
-          {/* About AirKarts Section */}
-          <section id="about" style={{ backgroundColor: '#fff' }}>
-            <div class="container">
-              <h3>What is AirKarting?</h3>
-              <p>AirKarts are revolutionary manned drones with an 8-ducted propeller coaxial octocopter design, inspired by Formula 1 monocoque fuselages. Fly close to the ground for an adrenaline-pumping experience, no pilot’s license required. Our ducted propellers ensure enhanced safety, making AirKarting accessible and thrilling for everyone.</p>
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dummy-video" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
-          </section>
-
-          {/* Features Section */}
-          <section id="features">
-            <div class="container">
-              <h3>Why Choose AirKarts?</h3>
-              <div class="features-grid">
-                <div class="feature-card">
-                  <h4>Innovative Design</h4>
-                  <p>F1-inspired monocoque fuselage and 8 ducted propellers for unmatched stability and safety.</p>
-                </div>
-                <div class="feature-card">
-                  <h4>No License Needed</h4>
-                  <p>Fly your AirKart without a pilot’s license, making it easy for anyone to experience the thrill.</p>
-                </div>
-                <div class="feature-card">
-                  <h4>AeroKarting Tracks</h4>
-                  <p>Experience high-speed fun at our dedicated tracks or own your AirKart for personal adventures.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Call to Action - Reserve */}
-          <section id="reserve" class="reserve-section">
-            <div class="container">
-              <h3>Own Your AirKart</h3>
-              <p>Reserve your AirKart today for $199,000 and be among the first to own this cutting-edge manned drone. Limited early bird reservations available!</p>
-              <a href="/reserve-form" class="cta-button">Reserve Now</a>
-            </div>
-          </section>
-
-          {/* Call to Action - Book a Flight */}
-          <section id="book" class="book-section">
-            <div class="container">
-              <h3>Fly at an AeroKarting Track</h3>
-              <p>Book your early bird ticket for $249 and experience the thrill of AirKarting at one of our state-of-the-art tracks. Limited spots available!</p>
-              <a href="/book-form" class="cta-button">Book Now</a>
-            </div>
-          </section>
-
-          {/* Testimonials Section */}
-          <section id="testimonials" style={{ backgroundColor: '#fff' }}>
-            <div class="container">
-              <h3>What Our Pilots Say</h3>
-              <div class="testimonials-grid">
-                <div class="testimonial-card">
-                  <p>"Flying an AirKart was the most exhilarating experience of my life! It’s like racing an F1 car in the air."</p>
-                  <p class="author">– Alex R., Early Tester</p>
-                </div>
-                <div class="testimonial-card">
-                  <p>"The safety features and ease of use make AirKarting accessible to everyone. I can’t wait to fly again!"</p>
-                  <p class="author">– Sarah M., First-Time Flyer</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Contact Section */}
-          <section id="contact">
-            <div class="container">
-              <h3>Get in Touch</h3>
-              <p>Have questions about AirKarts or AeroKarting Tracks? Contact us to learn more or join our mailing list for updates.</p>
-              <form class="contact-form">
-                <input type="text" placeholder="Name" required />
-                <input type="email" placeholder="Email" required />
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-              </form>
-            </div>
-          </section>
-
-          {/* Footer */}
-          <footer>
-            <div class="container">
-              <p>© 2025 Elevate. All rights reserved.</p>
-              <div style={{ marginTop: '15px' }}>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">FAQ</a>
-              </div>
-            </div>
-          </footer>
+    <header>
+        <div class="top-box">
+            <img src="Images/logo2.png" alt="AirKart Logo" class="logo2" onerror="this.src='fallback-logo.png'">
+            <img src="Images/logo1.png" alt="Elevate Racing Logo" class="logo1" onerror="this.src='fallback-logo.png'">
+            <nav role="navigation" aria-label="Main navigation">
+                <a href="reserve.html" class="header-btn">Reserve your AirKart</a>
+                <a href="book-a-flight.html" class="header-btn">Book a Flight</a>
+                <a href="#contact-section" class="header-btn">Contact</a>
+            </nav>
         </div>
-      );
-    }
+    </header>
 
-    ReactDOM.render(<App />, document.getElementById('root'));
-  </script>
+    <main class="hero-section">
+        <div class="hero-background"></div>
+        <section class="hero-content">
+            <h1>Experience the Thrill of AirKarting</h1>
+            <h2>Own your AirKart or take a flight at one of our AeroKarting Tracks</h2>
+        </section>
+    </main>
+
+    <section class="content1-section">
+        <div class="content1-background"></div>
+        <div class="content1-header">
+            <h1>AirKart</h1>
+            <p>Single person, recreation and sport purpose only, fully electric, ultralight Take-off and Landing Vehicle. F1-inspired eVTOL vehicle that ignites a ground-hugging flight with the raw edge of go-kart racing.</p>
+        </div>
+        <div class="content1-desktop">
+            <div class="content1-row">
+                <div class="content1-cell left">
+                    <p class="p1">Max Speed</p>
+                    <p class="p2">100 km/h</p>
+                    <p class="p2">55 knots</p>
+                    <p class="p3">Electronically limited to comply with FAA Part 103</p>
+                </div>
+                <div class="content1-cell middle">
+                    <p class="p1">Max Altitude</p>
+                    <p class="p2">400 m</p>
+                    <p class="p2">1,300 feet</p>
+                    <p class="p3">Electronically limited</p>
+                </div>
+                <div class="content1-cell right">
+                    <p class="p1">Flight Time</p>
+                    <p class="p2">15 min</p>
+                    <p class="p3">Estimated (Depends on Pilot's weight)</p>
+                </div>
+            </div>
+            <div class="content1-row">
+                <div class="content1-cell left">
+                    <img src="Images/Content1_Front.PNG" alt="AirKart Front View" class="content1-image">
+                </div>
+                <div class="content1-cell middle">
+                    <img src="Images/Content1_Side.png" alt="AirKart Side View" class="content1-image">
+                </div>
+                <div class="content1-cell right">
+                    <img src="Images/Content1_Back.png" alt="AirKart Back View" class="content1-image">
+                </div>
+            </div>
+            <div class="content1-row">
+                <div class="content1-cell left">
+                    <p class="p1"><strong>CFRP</strong> monocoque construction designed for <strong>pilots safety</strong></p>
+                </div>
+                <div class="content1-cell middle">
+                    <p class="p1">Components made from <strong>environmentally friendly</strong> flex fibre</p>
+                </div>
+                <div class="content1-cell right">
+                    <p class="p1">Ducted propellers for <strong>increased efficiency</strong> and <strong>noise reduction</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="content1-mobile">
+            <div class="content1-mobile-text">
+                <p class="p1">Max Speed</p>
+                <p class="p2">100 km/h</p>
+                <p class="p2">55 knots</p>
+                <p class="p3">Electronically limited to comply with FAA Part 103</p>
+            </div>
+            <div class="content1-mobile-text">
+                <p class="p1">Max Altitude</p>
+                <p class="p2">400 m</p>
+                <p class="p2">1,300 feet</p>
+                <p class="p3">Electronically limited</p>
+            </div>
+            <div class="content1-mobile-text">
+                <p class="p1">Flight Time</p>
+                <p class="p2">15 min</p>
+                <p class="p3">Estimated (Depends on Pilot's weight)</p>
+            </div>
+            <img src="Images/Content1_Perspective.png" alt="AirKart Perspective View" class="content1-mobile-image">
+            <div class="content1-mobile-text">
+                <p class="p1"><strong>Carbon Fibre Composite</strong> monocoque construction designed for <strong>pilot's safety</strong></p>
+            </div>
+            <div class="content1-mobile-text">
+                <p class="p1">Components made from <strong>environmentally friendly</strong> flex fibre</p>
+            </div>
+            <div class="content1-mobile-text">
+                <p class="p1">Ducted propellers for <strong>increased efficiency</strong> and <strong>noise reduction</strong></p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content2-section">
+        <div class="left-section">
+            <img src="Images/Content2-left.png" alt="Left background">
+            <p class="content2-overlay-text">Secure your own AirKart for $199,000 or rent one for just $249 with a 15-minute flight at our AirKarting Tracks – no pilot’s license needed in selected countries!</p>
+            <a href="book-a-flight.html" class="button">Buy Ticket</a>
+        </div>
+        <div class="middle-section">
+            <p class="content2-top-text">Secure your own AirKart for $199,000 or rent one for just $249 with a 15-minute flight at our AirKarting Tracks – no pilot’s license needed in selected countries!</p>
+            <img src="AirKart-middle.png" alt="middle-AirKart" class="Airkart">
+            <p class="content2-bottom-text">Our vision is simple: share the joy of flight and the thrill of Motorsport with everyone. Airkarting turns low-altitude thrills into your next big adventure.</p>
+        </div>
+        <div class="right-section">
+            <img src="Images/Content2-right.png" alt="Right background">
+            <p class="content2-overlay-text">Our vision is simple: share the joy of flight and the thrill of Motorsport with everyone. Airkarting turns low-altitude thrills into your next big adventure.</p>
+            <a href="reserve.html" class="button">Buy AirKart</a>
+        </div>
+    </section>
+
+    <section class="content3-section">
+        <div class="bottom-section">
+            <p class="bottom-text">
+                Imagine low-altitude flight with the pulse-pounding rush of go-kart racing – an experience like no other.
+            </p>
+        </div>
+       
+    </section>
+
+    <section class="content4-section">
+       
+    </section>
+
+
+    
+  <script src="script.js" defer></script>
 </body>
 </html>
