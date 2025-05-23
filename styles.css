@@ -43,6 +43,10 @@
   transform: translateX(-50%);
 }
 
+.logo2 {
+  flex-grow: 0;
+}
+
 /* Desktop baseline: Button container styles */
 .nav-buttons {
   display: flex;
@@ -57,6 +61,7 @@
   border-radius: 0.25rem;
   cursor: pointer;
   font-size: 0.875rem;
+  text-decoration: none;
   transition: background-color 0.2s ease;
 }
 
@@ -64,19 +69,46 @@
   background-color: #1e40af;
 }
 
-/* Desktop baseline: Content styles for scrolling */
-.content {
+/* Hero section to prevent navbar overlap */
+.hero-section {
   margin-top: 5rem;
-  padding: 1rem;
+  position: relative;
+  width: 100%;
 }
 
-.scroll-area {
-  height: 200vh;
-  background-color: #f3f4f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#background-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h1 {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+
+/* Placeholder for empty sections to ensure scrollable content */
+.content1-section,
+.content2-section,
+.content3-section,
+.content4-section {
+  min-height: 100vh;
 }
 
 /* Tablet styles (768px to 1023px) */
