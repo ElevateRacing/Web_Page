@@ -20,7 +20,7 @@ function syncLogoWidths() {
   const logo1 = document.querySelector('.logo1 .logo_image');
   const logo2 = document.querySelector('.logo2 .logo_image');
   if (logo1 && logo2) {
-    const width = Math.min(logo1.offsetWidth, logo2.offsetWidth);
+    const width = Math.min(logo1.naturalWidth, logo2.naturalWidth);
     logo1.style.width = `${width}px`;
     logo2.style.width = `${width}px`;
   }
