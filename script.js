@@ -1,20 +1,32 @@
 let lastScrollTop = 0;
-const logos = document.querySelectorAll('.logo'); // Still select the logo containers
-const navbar = document.querySelector('.navbar'); // Not used in current logic, but kept
+const logos = document.querySelectorAll('.logo');
 
-window.addEventListener('scroll', () => {
+// Debounce function to limit scroll event frequency
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Scroll handler
+const handleScroll = debounce(() => {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  // We apply the shrink class to the logo container, and CSS targets the image within it
-  if (currentScroll > lastScrollTop) {
-    // Scrolling down
+  if (currentScroll > lastScrollTop && currentScroll > 50) {
+    // Scrolling down and past a small threshold
     logos.forEach(logo => logo.classList.add('logo--shrink'));
-  } else {
-    // Scrolling up, but only if not at the very top (to avoid jumpiness)
-    if (currentScroll < lastScrollTop || currentScroll <= 0) { // Condition to remove shrink
-      logos.forEach(logo => logo.classList.remove('logo--shrink'));
-    }
+  } else if (currentScroll <= lastScrollTop || currentScroll <= 50) {
+    // Scrolling up or near the top
+    logos.forEach(logo => logo.classList.remove('logo--shrink'));
   }
-  // Update lastScrollTop, ensuring it doesn't go negative
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
+
+  lastScrollTop = Math.max(0, currentScroll);
+}, 50);
+
+window.addEventListener('scroll', handleScroll);
