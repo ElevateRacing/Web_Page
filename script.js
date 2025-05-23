@@ -1,30 +1,20 @@
 let lastScrollTop = 0;
-const logos = document.querySelectorAll('.logo');
-const navbar = document.querySelector('.navbar');
+const logos = document.querySelectorAll('.logo'); // Still select the logo containers
+const navbar = document.querySelector('.navbar'); // Not used in current logic, but kept
 
 window.addEventListener('scroll', () => {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
+  // We apply the shrink class to the logo container, and CSS targets the image within it
   if (currentScroll > lastScrollTop) {
     // Scrolling down
     logos.forEach(logo => logo.classList.add('logo--shrink'));
   } else {
-    // Scrolling up
-    logos.forEach(logo => logo.classList.remove('logo--shrink'));
+    // Scrolling up, but only if not at the very top (to avoid jumpiness)
+    if (currentScroll < lastScrollTop || currentScroll <= 0) { // Condition to remove shrink
+      logos.forEach(logo => logo.classList.remove('logo--shrink'));
+    }
   }
+  // Update lastScrollTop, ensuring it doesn't go negative
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
-
-// Ensure logos have the same width
-function syncLogoWidths() {
-  const logo1 = document.querySelector('.logo1 .logo_image');
-  const logo2 = document.querySelector('.logo2 .logo_image');
-  if (logo1 && logo2) {
-    const width = Math.min(logo1.naturalWidth, logo2.naturalWidth);
-    logo1.style.width = `${width}px`;
-    logo2.style.width = `${width}px`;
-  }
-}
-
-window.addEventListener('load', syncLogoWidths);
-window.addEventListener('resize', syncLogoWidths);
