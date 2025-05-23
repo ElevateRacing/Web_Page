@@ -29,7 +29,7 @@ html, body {
 
 /* Desktop baseline: Logo container styles */
 .logo {
-  transition: transform 0.3s ease, height 0.3s ease, width 0.3s ease; /* Add height/width for smooth scaling */
+  transition: transform 0.3s ease;
 }
 
 .logo--shrink .logo_image { /* Apply shrink directly to the image for scaling */
@@ -38,7 +38,7 @@ html, body {
 
 .logo_image {
   height: 3rem; /* Original size */
-  width: 6rem; /* Allow width to scale proportionally */
+  width: auto; /* Maintain aspect ratio */
   object-fit: contain;
   transition: transform 0.3s ease; /* Smooth transition for image scale */
 }
@@ -58,13 +58,14 @@ html, body {
   flex-grow: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 /* Desktop baseline: Button container styles */
 .nav-buttons {
   display: flex;
   gap: 1rem;
+  flex-shrink: 0;
 }
 
 .nav-button {
@@ -136,6 +137,8 @@ html, body {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .navbar {
     justify-content: space-between; /* Maintain space between items */
+    padding: 0.75rem;
+    gap: 1rem;
   }
 
   .logo1 {
@@ -146,18 +149,36 @@ html, body {
     transform: none; /* Remove translateX */
   }
 
+  .logo2 {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .logo_image {
+    height: 2.5rem; /* Consistent height for both logos */
+    width: auto;
+  }
+
+  .nav-buttons {
+    flex-shrink: 0;
+    gap: 0.75rem;
+  }
+
   /* Video for tablet */
-    #background-video {
-        height: 100vh; /* Fill visible height */
-        object-position: 50% 50%; /* Focus on center */
-    }
+  #background-video {
+    height: 100vh; /* Fill visible height */
+    object-position: 50% 50%; /* Focus on center */
+  }
 }
 
 /* Mobile styles (below 768px) */
 @media screen and (max-width: 767px) {
   .navbar {
-        justify-content: flex-start; /* Align items to the start */
-        gap: 1rem; /* Space between logo2 and logo1 */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 0.5rem; /* Space between logo2 and logo1 */
+    padding: 0.5rem;
+    flex-wrap: nowrap;
     }
   
   .logo1 {
