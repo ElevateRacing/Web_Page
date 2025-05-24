@@ -70,7 +70,7 @@ html, body {
 /* Dynamic positioning to avoid button overlap */
 @media screen and (min-width: 1401px) {
   .logo1 {
-    left: 50%; /* Center for large screens */
+    left: calc(50% - 150px); /* Shift left to avoid button overlap */
   }
 }
 
