@@ -1,5 +1,7 @@
 let lastScrollTop = 0;
 const logos = document.querySelectorAll('.logo');
+const menuToggle = document.querySelector('.menu-toggle');
+const navButtons = document.querySelector('.nav-buttons');
 
 // Debounce function
 function debounce(func, wait) {
@@ -28,5 +30,13 @@ const handleScroll = debounce(() => {
 
   lastScrollTop = Math.max(0, currentScroll);
 }, 100);
+
+// Menu toggle handler
+if (menuToggle && navButtons) {
+  menuToggle.addEventListener('click', () => {
+    const isExpanded = navButtons.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', isExpanded);
+  });
+}
 
 window.addEventListener('scroll', handleScroll);
