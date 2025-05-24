@@ -19,7 +19,7 @@ html, body {
   width: 100%;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between; /* Distributes items with space between them */
@@ -41,15 +41,20 @@ html, body {
 }
 
 .logo_image {
-  height: 2.1rem; /* Original size */
+  /* !!! Change the value for baseline logo size !!! */
+  height: 1.89rem; /* Original size */
   width: auto; /* Maintain aspect ratio */
   object-fit: contain;
   transition: transform 0.3s ease; /* Smooth transition for image scale */
 }
 
+.logo1 .logo_image {
+  height: 1.512rem; /* 20% smaller than logo2: 1.89rem * 0.8 */
+}
+
 .logo1 {
   position: absolute;
-  left: 50%;
+  left: calc(25% + 75px); /* Positioned in middle of available space between logo2 and buttons */
   transform: translateX(-50%);
 }
 
@@ -84,7 +89,8 @@ html, body {
 
 /* Hero section to prevent navbar overlap */
 .hero-section {
-  margin-top: calc(2.1rem + 1rem + 1rem); /* Dynamic based on logo height + padding + margin */
+  /* !!! Update each time default logo size change !!! */
+  margin-top: calc(1.89rem + 1.5rem + 1rem); /* Dynamic based on logo height + padding + margin */
   position: relative;
   width: 100%;
   overflow: hidden; /* Hide overflow from video if it's larger than container */
@@ -134,7 +140,8 @@ html, body {
 /* Tablet styles (768px to 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .navbar {
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem;
+    gap: 1rem; /* Space between elements */
   }
 
   .logo1 {
@@ -149,7 +156,11 @@ html, body {
   }
 
   .logo_image {
-    height: 1.47rem; /* Consistent height for both logos */
+    height: 1.323rem; /* 30% reduction from desktop's 1.89rem */
+  }
+
+  .logo1 .logo_image {
+    height: 1.058rem; /* 20% smaller than logo2: 1.323rem * 0.8 */
   }
 
   .nav-buttons {
@@ -161,7 +172,8 @@ html, body {
   }
 
   .hero-section {
-    margin-top: calc(1.47rem + 1rem + 1rem);
+    /* !!! Update each time default logo size change !!! */
+    margin-top: calc(1.323rem + 1.5rem + 1rem);
   }
 
   /* Video for tablet */
@@ -176,7 +188,7 @@ html, body {
   .navbar {
     justify-content: flex-start; /* Align items to the start */
     gap: 0.75rem; /* Space between logo2 and logo1 */
-    padding: 0.5rem;
+    padding: 0.75rem;
     flex-wrap: nowrap;
     }
   
@@ -192,8 +204,13 @@ html, body {
   }
 
   .logo_image {
-    height: min(1.8rem, 12vw); /* Responsive height that scales down if needed */
-    max-height: 1.8rem;
+    height: min(1.62rem, 12vw); /* Responsive height (reduced 10%) */
+    max-height: 1.62rem;
+  }
+
+  .logo1 .logo_image {
+    height: min(1.296rem, 9.6vw); /* 20% smaller than logo2 */
+    max-height: 1.296rem;
   }
 
   .nav-buttons {
@@ -201,7 +218,8 @@ html, body {
   }
 
   .hero-section {
-    margin-top: calc(min(1.8rem, 12vw) + 1rem + 1rem);
+    /* !!! Update each time default logo size change !! */
+    margin-top: calc(min(1.62rem, 12vw) + 1.5rem + 1rem);
   }
 
   /* Video for mobile */
@@ -222,11 +240,16 @@ html, body {
 /* Very small screens - ensure logos can always fit */
 @media screen and (max-width: 480px) {
   .logo_image {
-    height: min(1.5rem, 10vw);
-    max-height: 1.5rem;
+    height: min(1.35rem, 10vw);
+    max-height: 1.35rem;
+  }
+
+  .logo1 .logo_image {
+    height: min(1.08rem, 8vw); /* 20% smaller than logo2 */
+    max-height: 1.08rem;
   }
   
   .hero-section {
-    margin-top: calc(min(1.5rem, 10vw) + 1rem + 1rem);
+    margin-top: calc(min(1.35rem, 10vw) + 1.5rem + 1rem);
   }
 }
