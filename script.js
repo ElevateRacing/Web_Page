@@ -1,5 +1,5 @@
 let lastScrollTop = 0;
-const logos = document.querySelectorAll('.logo');
+const logoImages = document.querySelectorAll('.logo_image'); // Target the images directly
 
 // Debounce function
 function debounce(func, wait) {
@@ -19,11 +19,11 @@ const handleScroll = debounce(() => {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
   
   if (currentScroll > lastScrollTop && currentScroll > 50) {
-    // Scrolling down and past threshold
-    logos.forEach(logo => logo.classList.add('logo--shrink'));
+    // Scrolling down - apply transform directly to images
+    logoImages.forEach(img => img.style.transform = 'scale(0.8)');
   } else if (currentScroll <= lastScrollTop || currentScroll <= 50) {
-    // Scrolling up or near top
-    logos.forEach(logo => logo.classList.remove('logo--shrink'));
+    // Scrolling up - reset transform
+    logoImages.forEach(img => img.style.transform = 'scale(1)');
   }
   
   lastScrollTop = Math.max(0, currentScroll);
