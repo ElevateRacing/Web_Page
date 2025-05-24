@@ -54,8 +54,15 @@ html, body {
 
 .logo1 {
   position: absolute;
-  left: calc(25% + 75px); /* Positioned in middle of available space between logo2 and buttons */
+  left: 50%
   transform: translateX(-50%);
+}
+
+/* Fallback positioning when center conflicts with buttons */
+@media screen and (max-width: 1200px) {
+  .logo1 {
+    left: calc(25% + 75px); /* Move to available space when screen gets smaller */
+  }
 }
 
 .logo2 {
