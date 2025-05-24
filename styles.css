@@ -1,15 +1,8 @@
 /* Reset default styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0;}
 
 /* Base styles for HTML and Body */
-html, body {
-  height: 100%; /*Ensure body takes full height for scroll calculation if needed */
-  overflow-x: hidden; /* Prevent horizontal scroll */
-}
+html, body { height: 100%; /*Ensure body takes full height for scroll calculation if needed */ overflow-x: hidden; /* Prevent horizontal scroll */}
 
 /* Custom properties for logo heights */
 :root {
@@ -49,8 +42,7 @@ html, body {
 }
 
 .logo_image {
-  /* !!! Change the value for baseline logo size !!! */
-  height: 1.89rem; /* Original size */
+  height: var(--logo2-height); /* Original size */
   width: auto; /* Maintain aspect ratio */
   object-fit: contain;
   transition: transform 0.3s ease; /* Smooth transition for image scale */
@@ -60,31 +52,11 @@ html, body {
   height: calc(var(--logo2-height) * 0.8); /* 20% smaller than Logo 2 */
 }
 
-.logo1 {
-  position: absolute;
-  left: 50%
-  transform: translateX(-50%);
-}
-
-/* Fallback positioning when center conflicts with buttons */
+.logo1 { position: absolute; left: 50% transform: translateX(-50%);}
 /* Dynamic positioning to avoid button overlap */
-@media screen and (min-width: 1401px) {
-  .logo1 {
-    left: calc(50% - 150px); /* Shift left to avoid button overlap */
-  }
-}
-
-@media screen and (min-width: 1281px) and (max-width: 1400px) {
-  .logo1 {
-    left: calc(50% - 250px); /* Shift left to avoid button overlap */
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .logo1 {
-    left: calc(50% - 300px); /* Center of available space for smaller screens */
-  }
-}
+@media screen and (min-width: 1401px) {.logo1 {left: calc(50% - 150px);}}
+@media screen and (min-width: 1281px) and (max-width: 1400px) {.logo1 {left: calc(50% - 250px);}}
+@media screen and (max-width: 1280px) {.logo1 {left: calc(50% - 300px);}}
 
 .logo2 {
   margin-left: 0.5rem; /* Added slight margin from left edge */
@@ -117,7 +89,6 @@ html, body {
 
 /* Hero section to prevent navbar overlap */
 .hero-section {
-  /* !!! Update each time default logo size change !!! */
   margin-top: calc(var(--logo2-height) + 1.5rem + 1rem);
   position: relative;
   width: 100%;
@@ -200,7 +171,6 @@ html, body {
   }
 
   .hero-section {
-    /* !!! Update each time default logo size change !!! */
     margin-top: calc(var(--logo2-height-tablet) + 1.5rem + 1rem);
   }
 
@@ -246,7 +216,6 @@ html, body {
   }
 
   .hero-section {
-    /* !!! Update each time default logo size change !! */
     margin-top: calc(min(var(--logo2-height-mobile), 12vw) + 1.5rem + 1rem);
   }
 
