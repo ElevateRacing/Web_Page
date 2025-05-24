@@ -69,19 +69,21 @@ html, body {
 }
 
 .nav-button {
-  background-color: #2563eb;
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  font-size: 0.875rem;
+  padding: 8px 16px;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  color: #000000;
+  background-color: transparent;
+  border-radius: 12px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav-button:hover {
-  background-color: #1e40af;
+  background-color: #e0e0e0;
+  transform: scale(1.02);
 }
 
 /* Hero section to prevent navbar overlap */
