@@ -82,7 +82,7 @@ html, body {
 
 @media screen and (max-width: 1280px) {
   .logo1 {
-    left: calc(25% + 75px); /* Center of available space for smaller screens */
+    left: calc(50% - 300px); /* Center of available space for smaller screens */
   }
 }
 
