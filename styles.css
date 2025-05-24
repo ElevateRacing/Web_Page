@@ -60,6 +60,12 @@ html, body {
 
 /* Fallback positioning when center conflicts with buttons */
 /* Dynamic positioning to avoid button overlap */
+@media screen and (min-width: 1401px) {
+  .logo1 {
+    left: 50%; /* Center for large screens */
+  }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1400px) {
   .logo1 {
     left: calc(50% - 150px); /* Shift left to avoid button overlap */
