@@ -1,7 +1,7 @@
 let lastScrollTop = 0;
 const logos = document.querySelectorAll('.logo');
 
-// Debounce function to limit scroll event frequency
+// Debounce function
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -17,15 +17,15 @@ function debounce(func, wait) {
 // Scroll handler
 const handleScroll = debounce(() => {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
+  
   if (currentScroll > lastScrollTop && currentScroll > 50) {
-    // Scrolling down and past a small threshold
+    // Scrolling down and past threshold
     logos.forEach(logo => logo.classList.add('logo--shrink'));
   } else if (currentScroll <= lastScrollTop || currentScroll <= 50) {
-    // Scrolling up or near the top
+    // Scrolling up or near top
     logos.forEach(logo => logo.classList.remove('logo--shrink'));
   }
-
+  
   lastScrollTop = Math.max(0, currentScroll);
 }, 50);
 
