@@ -59,9 +59,16 @@ html, body {
 }
 
 /* Fallback positioning when center conflicts with buttons */
-@media screen and (max-width: 1200px) {
+/* Dynamic positioning to avoid button overlap */
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
   .logo1 {
-    left: calc(25% + 75px); /* Move to available space when screen gets smaller */
+    left: calc(50% - 150px); /* Shift left to avoid button overlap */
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .logo1 {
+    left: calc(25% + 75px); /* Center of available space for smaller screens */
   }
 }
 
