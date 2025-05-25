@@ -138,7 +138,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 #background-video {
     position: absolute;
-    top: var(--logo2-height);
+    /*top: var(--logo2-height);*/
     left: 0;
     width: 100%;
     height: 100vh; /* Cover full browser height */
@@ -148,15 +148,15 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
         @media screen and (min-width: 768px) and (max-width: 1023px) {                   /* Tablet styles (768px to 1023px) */
         /* Video for tablet */
             #background-video {
-                top: var(--logo2-height-tablet);
+                /*top: var(--logo2-height-tablet);*/
                 height: 100vh; /* Fill visible height */
                 object-fit: cover; /* Ensure video covers the area */
                 object-position: 40% 30%; /* 40% horizontal, 30% vertical focus */}}
         @media screen and (max-width: 767px) {                                           /* Mobile styles (below 768px) */
             /* Video for mobile */
             #background-video {
-                top: var(--logo2-height-mobile);
-                height: 100vh; /* Fill visible height */
+                /*top: var(--logo2-height-mobile);*/
+                height: calc(100vh - (--logo2-height-mobile)); /* Fill visible height */
                 object-fit: cover; /* Ensure video covers the area */
                 object-position: 50% 50%; /* Center focus */}}
 
@@ -185,6 +185,8 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 
 
+
+
 .hero-content {
     text-align: left;
     color: var(--primary-font-color);
@@ -195,9 +197,6 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
     flex-direction: column;
     justify-content: center;
     z-index: 1100; /* Ensure content is above video */}
-
-
-
 
 .hero-content h1 {
   font-family: 'Montserrat', Arial, sans-serif;
@@ -230,11 +229,6 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 /* Tablet styles (768px to 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   
-
-  
-
-  
-
   .hero-content {
     bottom: 2.5rem; /* Slightly smaller bottom margin for tablet */
     left: 1.5rem; /* Slightly smaller left margin */
@@ -246,12 +240,6 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 /* Mobile styles (below 768px) */
 @media screen and (max-width: 767px) {
   
-  
-
-  
-
-  
-
   .hero-content {
     text-align: left; /* Adjusted to left */
     margin: 5rem 0 0 1.5rem; /* Generous top margin, some left margin */
@@ -271,8 +259,6 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 /* Very small screens - ensure logos can always fit */
 @media screen and (max-width: 480px) {
-
-  
 
   .hero-content {
     margin: 4rem 0 0 1rem; /* Slightly smaller margins for very small screens */
