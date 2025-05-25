@@ -194,7 +194,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
             #background-video {
                 top: var(--navbar-height-small);
                 height: calc(100vh - var(--navbar-height-small));
-                object-position: 50% 50%; /* Center focus */}}
+                object-position: 50% 60%; /* Center focus */}}
 
 .hero-content {
     position: absolute;
@@ -212,12 +212,20 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
                 left: var(--hero-text-margin-left-tablet);                                              /* Reduced left margin for tablet */}}
         @media screen and (max-width: 767px) {                                                          /* Mobile styles (below 768px) */
             .hero-content {
-                margin: var(--hero-text-margin-top-mobile) 0 0 var(--hero-text-margin-left-mobile);     /* Unchanged mobile positioning */
-                width: 90%;
-                max-width: 56.25rem;                                                                    /* Consistent with desktop */}}
+                    position: absolute; /* Ensure absolute positioning for top-left placement */
+                    top: var(--hero-text-margin-top-mobile); /* Top margin for mobile */
+                    left: var(--hero-text-margin-left-mobile); /* Left margin for mobile */
+                    margin: 0; /* Explicitly remove any margin to prevent conflicts */
+                    width: calc(100% - var(--hero-text-margin-left-mobile) - 1rem); /* Fit viewport width minus margins */
+                    max-width: none; /* Remove max-width to allow full width usage */
+                    word-wrap: break-word; /* Prevent text overflow */                                                                 /* Consistent with desktop */}}
         @media screen and (max-width: 480px) {
             .hero-content {
-                margin: var(--hero-text-margin-top-mobile) 0 0 var(--hero-text-margin-left-mobile);}}
+                    top: var(--hero-text-margin-top-mobile);
+                    left: var(--hero-text-margin-left-mobile);
+                    width: calc(100% - var(--hero-text-margin-left-mobile) - 1rem);
+                    margin: 0;
+                    word-wrap: break-word;}}
 
   
 
@@ -272,7 +280,4 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 /* Very small screens - ensure logos can always fit */
 @media screen and (max-width: 480px) {
 
-  .hero-content {
-    margin: 4rem 0 0 1rem; /* Slightly smaller margins for very small screens */
-  }
 }
