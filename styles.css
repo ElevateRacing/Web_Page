@@ -14,7 +14,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   --primary-font-color:#ffffff;
   --nav-bar-color:#ffffff;
   --shadow-color: rgba(0, 0, 0, 0.1);
-  --button-hover:#e0e0e0;
+  --button-hover:#f5f5f5;
   --button-focus:#ff7f33;
 }
 
@@ -117,7 +117,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   color: var(--primary-font-color);
   padding: 10px 15px;
   max-width: 900px;
-  margin: 25% 0 0 4%; /* Adjustment: higher first value position text lower, smaller last value position text closer to the left */
+  margin: 30% 0 0 3%; /* Adjustment: higher first value position text lower, smaller last value position text closer to the left */
   display: flex;
   flex-direction: column;
   justify-content: center;
