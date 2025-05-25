@@ -21,13 +21,11 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 /* - - - - - - Header Styles - - - - - -*/
 
 .navbar {
-  /* as previous iteration */
   display: flex;
   justify-content: space-between; /* Distributes items with space between them */
   align-items: center;
   background-color: var(--nav-bar-color);
   box-shadow: 0 2px 4px var(--shadow-color);
-  /* new */
   position: fixed;
   top: 0;
   left: 0;
@@ -96,7 +94,6 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 /* Hero section to prevent navbar overlap */
 .hero-section {
   display: flex;
-  /*height: 100vh;*/
   aligh-items: center;
   justify-content: flex-start;
   position: relative;
@@ -112,7 +109,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 #background-video {
   position: absolute;
-  top: 0;
+  top: 50px;
   left: 0;
   width: 100%;
   height: auto;
@@ -131,7 +128,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   text-align: left;
   color: var(--primary-font-color);
 
-  padding: 20px 30px;
+  padding: 15px 25px;
   max-width: 900px;
   margin: 20% 0 0 5%;
   display: flex;
