@@ -151,14 +151,14 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
                 top: var(--logo2-height-tablet);
                 height: 100vh; /* Fill visible height */
                 object-fit: cover; /* Ensure video covers the area */
-                object-position: 30% 25%; /* 30% horizontal, 25% vertical focus */}}
+                object-position: 30% 35%; /* 30% horizontal, 25% vertical focus */}}
         @media screen and (max-width: 767px) {                                           /* Mobile styles (below 768px) */
             /* Video for mobile */
             #background-video {
                 top: var(--logo2-height-mobile);
                 height: 100vh; /* Fill visible height */
                 object-fit: cover; /* Ensure video covers the area */
-                object-position: 40% 60%; /* Center focus */}}
+                object-position: 60% 40%; /* Center focus */}}
 
 /* Hero section to prevent navbar overlap */
 .hero-section {
