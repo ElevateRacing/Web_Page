@@ -91,7 +91,6 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 .nav-button:focus {
     outline: 2px solid var(--button-focus);
-    outline-offset: 2px;
 }
 
 /* Hero section to prevent navbar overlap */
@@ -114,7 +113,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: auto;
   height: 100%;
   object-position: center center; /* Default for desktop */
 
