@@ -106,33 +106,43 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
                 flex-shrink: 0; /* Prevent logo2 from shrinking */
                 margin-left: 0.75rem;}}
 
-
-
-
-
-
 /* Desktop baseline: Button container styles */
 .nav-buttons {
-  display: flex;
-  gap: 1rem;
-  flex-shrink: 0;
-}
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                     /* Tablet styles (768px to 1023px) */
+            .nav-buttons {
+                gap: 0.75rem;}}
+        @media screen and (max-width: 767px) { /* Mobile styles (below 768px) */
+            .nav-buttons {
+                display: none; /* Hide buttons on mobile */}}
 
 .nav-button {
-  padding: 8px 16px;
-  text-decoration: none;
-  color: #000000;
-  background-color: transparent;
-  border-radius: 12px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  white-space: nowrap;
-}
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #000000;
+    background-color: transparent;
+    border-radius: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                   /* Tablet styles (768px to 1023px) */
+            .nav-button {
+                font-size: 0.8rem; /* 10% reduction from desktop */}}
 
 .nav-button:hover {background-color: var(--button-hover); transform: scale(1.02);}
 .nav-button:focus {outline: 2px solid var(--button-focus);}
+
+
+
+
+
+
+
+
 
 #background-video {
   position: absolute;
@@ -199,13 +209,9 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 /* Tablet styles (768px to 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   
-  .nav-buttons {
-    gap: 0.75rem;
-  }
+  
 
-  .nav-button {
-    font-size: 0.8rem; /* 10% reduction from desktop */
-  }
+  
 
   .hero-section {
     margin-top: calc(var(--logo2-height-tablet) + 1.5rem + 1rem);
@@ -229,9 +235,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 /* Mobile styles (below 768px) */
 @media screen and (max-width: 767px) {
   
-  .nav-buttons {
-    display: none; /* Hide buttons on mobile */
-  }
+  
 
   .hero-section {
     margin-top: calc(min(var(--logo2-height-mobile), 12vw) + 1.5rem + 1rem);
