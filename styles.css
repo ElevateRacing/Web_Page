@@ -102,7 +102,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   position: relative;
   padding: 0 0 0 0;
   z-index: 1000;
-  overflow: hidden;
+  width:100%
   /*
   margin-top: calc(var(--logo2-height) + 1.5rem);
   position: relative;
