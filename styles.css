@@ -148,12 +148,14 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
         @media screen and (min-width: 768px) and (max-width: 1023px) {                   /* Tablet styles (768px to 1023px) */
         /* Video for tablet */
             #background-video {
+                top: var(--logo2-height-tablet);
                 height: 100vh; /* Fill visible height */
                 object-fit: cover; /* Ensure video covers the area */
                 object-position: 40% 30%; /* 40% horizontal, 30% vertical focus */}}
         @media screen and (max-width: 767px) {                                           /* Mobile styles (below 768px) */
             /* Video for mobile */
             #background-video {
+                top: var(--logo2-height-mobile);
                 height: 100vh; /* Fill visible height */
                 object-fit: cover; /* Ensure video covers the area */
                 object-position: 50% 50%; /* Center focus */}}
