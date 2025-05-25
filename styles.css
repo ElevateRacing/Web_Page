@@ -182,7 +182,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   }
 
   .hero-section {
-    margin-top: calc(var(--logo2-height-tablet) + 1.5rem + 1rem);
+    margin-top: calc(var(--logo2-height-tablet) + 1.5rem);
   }
 
   /* Video for tablet */
