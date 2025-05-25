@@ -106,20 +106,10 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 }
 
 .hero-content {
-  text-align: left;
-  color: var(--primary-font-color);
-  padding: 20px 30px;
-  max-width: 900px;
-  z-index: 1100;
-  margin: 20% 0 0 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /*
   position: absolute;
   top: auto;
-  bottom: 3rem; /* Generous bottom margin 
-  left: 2rem; /* Left margin for desktop 
+  bottom: 3rem; /* Generous bottom margin */
+  left: 2rem; /* Left margin for desktop */
   transform: none;
   text-align: left;
   color: --primary-font-color;
