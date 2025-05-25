@@ -90,27 +90,28 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   top: var(--logo2-height);
   left: 0;
   width: 100%;
-  height: auto;
-  object-position: center center; /* Default for desktop */
-  z-index:999;
+  height: 100vh; /* Cover full browser height */
+  object-fit: cover; /* Ensure video covers the area */
+  object-position: 50% 40%; /* 40% vertical focus */
+  z-index: 999;
 }
 
 /* Hero section to prevent navbar overlap */
 .hero-section {
   display: flex;
-  aligh-items: center;
+  align-items: center;
   justify-content: flex-start;
   position: relative;
   padding: 20px 0 0 0;
   z-index: 1000;
-  width:100%
+  width: 100%;
 }
 
 .hero-content {
   text-align: left;
   color: var(--primary-font-color);
   padding: 10px 15px;
-  max-width: 900px;
+  max-width: 56.25rem; /* 900px */
   margin: 25% 0 0 3%; /* Adjustment: higher first value position text lower, smaller last value position text closer to the left */
   display: flex;
   flex-direction: column;
@@ -187,13 +188,15 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   /* Video for tablet */
   #background-video {
     height: 100vh; /* Fill visible height */
-    object-position: 50% 50%; /* Focus on center */
+    object-fit: cover; /* Ensure video covers the area */
+    object-position: 40% 30%; /* 40% horizontal, 30% vertical focus */
   }
 
   .hero-content {
     bottom: 2.5rem; /* Slightly smaller bottom margin for tablet */
     left: 1.5rem; /* Slightly smaller left margin */
     text-align: left;
+    max-width: 56.25rem; /* Consistent with desktop */
   }
 }
 
@@ -238,15 +241,15 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   /* Video for mobile */
   #background-video {
     height: 100vh; /* Fill visible height */
-    object-position: 60% 40%; /* Focus as requested */
+    object-fit: cover; /* Ensure video covers the area */
+    object-position: 50% 50%; /* Center focus */
   }
 
   .hero-content {
-    bottom: 2rem; /* Bottom positioning for mobile */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center text */
-    text-align: center; /* Center text for mobile */
-    width: 90%; /* Ensure text doesn't touch edges */
+    text-align: left; /* Adjusted to left */
+    margin: 5rem 0 0 1.5rem; /* Generous top margin, some left margin */
+    width: 90%;
+    max-width: 56.25rem; /* Consistent with desktop */
   }
 
   .hero-content h1 {
@@ -276,6 +279,6 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   }
 
   .hero-content {
-    bottom: 1.5rem; /* Slightly smaller bottom margin for very small screens */
+    margin: 4rem 0 0 1rem; /* Slightly smaller margins for very small screens */
   }
 }
