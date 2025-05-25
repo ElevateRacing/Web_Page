@@ -114,21 +114,13 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   width: 100%;
   height: auto;
   object-position: center center; /* Default for desktop */
-
-  /*
-  width: 100%;
-  height: auto; /* Default for desktop *
-  min-height: 100%; /* Ensure it always covers the height *
-  object-fit: cover;
-  object-position: center center; /* Default for desktop */
   z-index:999;
 }
 
 .hero-content {
   text-align: left;
   color: var(--primary-font-color);
-
-  padding: 15px 25px;
+  padding: 10px 15px;
   max-width: 900px;
   margin: 20% 0 0 5%;
   display: flex;
