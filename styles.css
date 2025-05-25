@@ -156,7 +156,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
             /* Video for mobile */
             #background-video {
                 /*top: var(--logo2-height-mobile);*/
-                height: calc(100vh - var(--logo2-height-mobile)); /* Fill visible height */
+                height: calc(100vh - 20px); /* Fill visible height */
                 object-fit: cover; /* Ensure video covers the area */
                 object-position: 50% 50%; /* Center focus */}}
 
