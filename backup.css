@@ -1,0 +1,278 @@
+/* Reset default styles */
+* {box-sizing: border-box; margin: 0; padding: 0;}
+
+/* Base styles for HTML and Body */
+html, body { height: 100%; /*Ensure body takes full height for scroll calculation if needed */ overflow-x: hidden; /* Prevent horizontal scroll */}
+
+/* Custom properties for logo heights, navbar, and hero text margins */
+:root {
+    --logo2-height: 1.89rem; /* Desktop default */
+    --logo2-height-tablet: 1.323rem;   /* Tablet default */
+    --logo2-height-mobile: 1.62rem;    /* Mobile default */
+    --logo2-height-small: 1.35rem;     /* Very small screens */
+
+    --navbar-padding: 0.75rem;         /* Navbar top/bottom padding */
+    --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding)); /* Total navbar height (logo + padding) */
+    --navbar-height-tablet: calc(var(--logo2-height-tablet) + 2 * var(--navbar-padding));
+    --navbar-height-mobile: calc(var(--logo2-height-mobile) + 2 * var(--navbar-padding));
+    --navbar-height-small: calc(var(--logo2-height-small) + 2 * var(--navbar-padding));
+
+    --primary-font-color:#ffffff;
+    --nav-bar-color:#ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-hover:#f3f3f3;
+    --button-focus:#ff7f33;
+
+    /* Hero text margins for easy adjustment */
+    --hero-text-margin-left-desktop: 3rem;       /* Desktop left margin for hero text */
+    --hero-text-margin-bottom-desktop: 3.75rem;     /* Desktop bottom margin for hero text */
+    --hero-text-margin-left-tablet: 2rem;        /* Tablet left margin (reduced) */
+    --hero-text-margin-bottom-tablet: 2.5rem;    /* Tablet bottom margin (reduced) */
+    --hero-text-margin-left-mobile: 1.5rem;      /* Mobile left margin (unchanged) */
+    --hero-text-margin-top-mobile: 1.5rem;         /* Mobile top margin (unchanged) */
+}
+
+/* - - - - - - Header Styles - - - - - -*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distributes items with space between them */
+  align-items: center;
+  background-color: var(--nav-bar-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--navbar-padding) 1rem;
+  transition: all 0.3s ease;
+  min-height: fit-content;
+  z-index: 2000;}
+      @media screen and (min-width: 768px) and (max-width: 1023px) {                         /* Tablet styles (768px to 1023px) */
+          .navbar {
+              padding: var(--navbar-padding) 0.75rem;
+              gap: 1rem; /* Space between elements */}}
+      @media screen and (max-width: 767px) {                                                 /* Mobile styles (below 768px) */
+          .navbar {
+              justify-content: flex-start; /* Align items to the start */
+              gap: 0.75rem; /* Space between logo2 and logo1 */
+              padding: var(--navbar-padding) 0.75rem;
+              flex-wrap: nowrap;}}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+.logo_image {
+    height: var(--logo2-height); /* Original size */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain;}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
+            .logo_image {
+                height: var(--logo2-height-tablet);}}
+        @media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
+            .logo_image {
+                height: min(var(--logo2-height-mobile), 12vw);
+                max-height: var(--logo2-height-mobile);}}
+        @media screen and (max-width: 480px) {                                              /* Very small screens - ensure logos can always fit */
+            .logo_image {
+                height: min(var(--logo2-height-small), 10vw);
+                max-height: var(--logo2-height-small);}}
+
+.logo1 .logo_image {
+    height: calc(var(--logo2-height) * 0.8); /* 20% smaller than Logo 2 */}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
+            .logo1 .logo_image {
+                height: calc(var(--logo2-height-tablet) * 0.8);}}
+        @media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
+            .logo1 .logo_image {
+                height: min(calc(var(--logo2-height-mobile) * 0.8), 9.6vw);
+                max-height: calc(var(--logo2-height-mobile) * 0.8);}}
+        @media screen and (max-width: 480px) {                                              /* Very small screens - ensure logos can always fit */
+            .logo1 .logo_image {
+                height: min(calc(var(--logo2-height-small) * 0.8), 8vw);
+                max-height: calc(var(--logo2-height-small) * 0.8);}}
+
+.logo1 { position: absolute; left: 50% transform: translateX(-50%);}
+    @media screen and (min-width: 1401px) {.logo1 {left: calc(50% - 150px);}}               /* Dynamic positioning to avoid button overlap */
+    @media screen and (min-width: 1281px) and (max-width: 1400px) {.logo1 {left: calc(50% - 250px);}}
+    @media screen and (max-width: 1280px) {.logo1 {left: calc(50% - 300px);}}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
+            .logo1 {
+                position: static; /* Remove absolute positioning */
+                flex-grow: 1; /* Allow logo1 to take available space */
+                transform: none; /* Remove translateX */}}
+        @media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
+            .logo1 {
+                flex-grow: 1; /* Allow logo1 to take available space */
+                position: static; /* Remove absolute positioning */
+                transform: none; /* Remove translateX */}}
+
+.logo2 {
+    margin-left: 0.5rem; /* Added slight margin from left edge */}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
+            .logo2 {
+                flex-shrink: 0;
+                margin-left: 0.5rem;}}
+        @media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
+            .logo2 {
+                flex-shrink: 0; /* Prevent logo2 from shrinking */
+                margin-left: 0.75rem;}}
+
+/* Desktop baseline: Button container styles */
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                     /* Tablet styles (768px to 1023px) */
+            .nav-buttons {
+                gap: 0.75rem;}}
+        @media screen and (max-width: 767px) { /* Mobile styles (below 768px) */
+            .nav-buttons {
+                display: none; /* Hide buttons on mobile */}}
+
+.nav-button {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #000000;
+    background-color: transparent;
+    border-radius: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                   /* Tablet styles (768px to 1023px) */
+            .nav-button {
+                font-size: 0.8rem; /* 10% reduction from desktop */}}
+
+.nav-button:hover {background-color: var(--button-hover); transform: scale(1.02);}
+.nav-button:focus {outline: 2px solid var(--button-focus);}
+
+/* - - - - - - Hero Section Styles - - - - - -*/
+
+/* Hero section to prevent navbar overlap */
+.hero-section {
+    position: relative;
+    height: calc(100vh - var(--navbar-height)); /* Full viewport height minus navbar */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    z-index: 1000;}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                 /* Tablet styles (768px to 1023px) */
+            .hero-section {
+                height: calc(100vh - var(--navbar-height-tablet));}}
+        @media screen and (max-width: 767px) {                                         /* Mobile styles (below 768px) */
+            .hero-section {
+                height: calc(100vh - var(--navbar-height-mobile));}}
+        @media screen and (max-width: 480px) {                                         /* Very small screens - ensure logos can always fit */
+            .hero-section {
+                height: calc(100vh - var(--navbar-height-small));}}
+
+#background-video {
+    position: absolute;
+    top: var(--navbar-height); /* Start below navbar */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height)); /* Fill hero section height */
+    object-fit: cover; /* Ensure video covers the area */
+    object-position: 50% 50%; /* 40% vertical focus */
+    z-index: 999;}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                   /* Tablet styles (768px to 1023px) */
+            #background-video {
+                top: var(--navbar-height-tablet);
+                height: calc(100vh - var(--navbar-height-tablet));
+                object-position: 50% 50%; /* 30% horizontal, 25% vertical focus */}}
+        @media screen and (max-width: 767px) {                                           /* Mobile styles (below 768px) */
+            #background-video {
+                top: var(--navbar-height-mobile);
+                height: calc(100vh - var(--navbar-height-mobile));
+                object-position: 60% 50%; /* Center focus */}}
+        @media screen and (max-width: 480px) {                                           /* Very small screens - ensure logos can always fit */
+            #background-video {
+                top: var(--navbar-height-small);
+                height: calc(100vh - var(--navbar-height-small));
+                object-position: 60% 50%; /* Center focus */}}
+
+.hero-content {
+    position: absolute;
+    bottom: var(--hero-text-margin-bottom-desktop);   /* Bottom margin for desktop */
+    left: var(--hero-text-margin-left-desktop);       /* Left margin for desktop */
+    color: var(--primary-font-color);
+    max-width: 56.25rem;                              /* 900px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1100;                                                                                      /* Ensure content is above video */}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                                  /* Tablet styles (768px to 1023px) */
+            .hero-content {
+                bottom: var(--hero-text-margin-bottom-tablet);                                          /* Reduced bottom margin for tablet */
+                left: var(--hero-text-margin-left-tablet);                                              /* Reduced left margin for tablet */}}
+        @media screen and (max-width: 767px) {                                                          /* Mobile styles (below 768px) */
+            .hero-content {
+                    position: absolute; /* Ensure absolute positioning for top-left placement */
+                    top: var(--hero-text-margin-top-mobile); /* Top margin for mobile */
+                    left: var(--hero-text-margin-left-mobile); /* Left margin for mobile */
+                    margin: 0; /* Explicitly remove any margin to prevent conflicts */
+                    width: calc(100% - var(--hero-text-margin-left-mobile) - 1rem); /* Fit viewport width minus margins */
+                    max-width: none; /* Remove max-width to allow full width usage */
+                    word-wrap: break-word; /* Prevent text overflow */                                                                 /* Consistent with desktop */}}
+        @media screen and (max-width: 480px) {
+            .hero-content {
+                    top: var(--hero-text-margin-top-mobile);
+                    left: var(--hero-text-margin-left-mobile);
+                    width: calc(100% - var(--hero-text-margin-left-mobile) - 1rem);
+                    margin: 0;
+                    word-wrap: break-word;}}
+
+.hero-content h1 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: clamp(2rem, 3.5vw, 4rem);
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 0 0 12px 0;}
+                @media screen and (max-width: 767px) {                                                     /* Mobile styles (below 768px) */
+                        .hero-content h1 {
+                                font-size: clamp(1.75rem, 6vw, 3rem);
+                                line-height: 1.2;
+                                margin-bottom: 10px;}}
+
+.hero-content h2 {
+        font-family: 'Roboto', Arial, sans-serif;
+        font-size: clamp(1.25rem, 2vw, 2rem);
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.3;
+        margin: 0 0 16px 0;}
+                @media screen and (max-width: 767px) {                                                     /* Mobile styles (below 768px) */
+                        .hero-content h2 {
+                                font-size: clamp(1rem, 4vw, 1.5rem);
+                                margin-bottom: 12px;}}
+
+/* Placeholder for empty sections to ensure scrollable content */
+.content1-section,
+.content2-section,
+.content3-section,
+.content4-section {
+  min-height: 100vh;
+  /* Add background colors for visibility during testing */
+    &:nth-of-type(odd) { background-color: #f0f0f0; }
+    &:nth-of-type(even) { background-color: #e0e0e0; }
+}
+
+/* Tablet styles (768px to 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  
+}
+
+/* Mobile styles (below 768px) */
+@media screen and (max-width: 767px) {
+  
+}
+
+/* Very small screens - ensure logos can always fit */
+@media screen and (max-width: 480px) {
+
+}
