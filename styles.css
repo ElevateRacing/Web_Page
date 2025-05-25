@@ -105,17 +105,18 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 .hero-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  top: auto;
+  bottom: 3rem; /* Generous bottom margin */
+  left: 2rem; /* Left margin for desktop */
+  transform: none;
+  text-align: left;
   color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 1; /* Ensure content is above video */
 }
 
 .hero-content h1 {
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -179,6 +180,12 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
     height: 100vh; /* Fill visible height */
     object-position: 50% 50%; /* Focus on center */
   }
+
+  .hero-content {
+    bottom: 2.5rem; /* Slightly smaller bottom margin for tablet */
+    left: 1.5rem; /* Slightly smaller left margin */
+    text-align: left;
+  }
 }
 
 /* Mobile styles (below 768px) */
@@ -225,7 +232,16 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
     object-position: 60% 40%; /* Focus as requested */
   }
 
+  .hero-content {
+    bottom: 2rem; /* Bottom positioning for mobile */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center text */
+    text-align: center; /* Center text for mobile */
+    width: 90%; /* Ensure text doesn't touch edges */
+  }
+
   .hero-content h1 {
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 1.8rem; /* Adjust font size for mobile */
   }
 
@@ -248,5 +264,9 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   
   .hero-section {
     margin-top: calc(min(var(--logo2-height-small), 10vw) + 1.5rem + 1rem);
+  }
+
+  .hero-content {
+    bottom: 1.5rem; /* Slightly smaller bottom margin for very small screens */
   }
 }
