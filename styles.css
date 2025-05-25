@@ -10,6 +10,8 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   --logo2-height-tablet: 1.323rem; /* Tablet default */
   --logo2-height-mobile: 1.62rem; /* Mobile default */
   --logo2-height-small: 1.35rem; /* Very small screens */
+
+  --primary-font-color:#ffffff
 }
 
 /* Desktop baseline: Navbar styles */
@@ -89,6 +91,14 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 /* Hero section to prevent navbar overlap */
 .hero-section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 90px 0 0 0;
+  z-index: 1000;
+  /*
   margin-top: calc(var(--logo2-height) + 1.5rem + 1rem);
   position: relative;
   width: 100%;
@@ -96,34 +106,58 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 }
 
 #background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto; /* Default for desktop */
-  min-height: 100%; /* Ensure it always covers the height */
+  height: 100%;
+  object-position: 50% 20%;
+  z-index: 999;
+  /*
+  width: 100%;
+  height: auto; /* Default for desktop 
+  min-height: 100%; /* Ensure it always covers the height 
   object-fit: cover;
   object-position: center center; /* Default for desktop */
 }
 
 .hero-content {
+  text-align: left;
+  color: var(--primary-font-color);
+  padding: 20px 30px;
+  max-width: 900px;
+  z-index: 1100;
+  margin: 20% 0 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*
   position: absolute;
   top: auto;
-  bottom: 3rem; /* Generous bottom margin */
-  left: 2rem; /* Left margin for desktop */
+  bottom: 3rem; /* Generous bottom margin 
+  left: 2rem; /* Left margin for desktop 
   transform: none;
   text-align: left;
-  color: #ffffff;
+  color: --primary-font-color;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 1; /* Ensure content is above video */
 }
 
 .hero-content h1 {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(2rem, 3.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 12px 0;
 }
 
 .hero-content h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0 0 16px 0;
 }
 
 /* Placeholder for empty sections to ensure scrollable content */
