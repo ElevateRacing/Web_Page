@@ -1,21 +1,35 @@
 /* Reset default styles */
-* { box-sizing: border-box; margin: 0; padding: 0;}
+* {box-sizing: border-box; margin: 0; padding: 0;}
 
 /* Base styles for HTML and Body */
 html, body { height: 100%; /*Ensure body takes full height for scroll calculation if needed */ overflow-x: hidden; /* Prevent horizontal scroll */}
 
-/* Custom properties for logo heights */
+/* Custom properties for logo heights, navbar, and hero text margins */
 :root {
-  --logo2-height: 1.89rem; /* Desktop default */
-  --logo2-height-tablet: 1.323rem; /* Tablet default */
-  --logo2-height-mobile: 1.62rem; /* Mobile default */
-  --logo2-height-small: 1.35rem; /* Very small screens */
+    --logo2-height: 1.89rem; /* Desktop default */
+    --logo2-height-tablet: 1.323rem;   /* Tablet default */
+    --logo2-height-mobile: 1.62rem;    /* Mobile default */
+    --logo2-height-small: 1.35rem;     /* Very small screens */
 
-  --primary-font-color:#ffffff;
-  --nav-bar-color:#ffffff;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --button-hover:#f3f3f3;
-  --button-focus:#ff7f33;
+    --navbar-padding: 0.75rem;         /* Navbar top/bottom padding */
+    --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding)); /* Total navbar height (logo + padding) */
+    --navbar-height-tablet: calc(var(--logo2-height-tablet) + 2 * var(--navbar-padding));
+    --navbar-height-mobile: calc(var(--logo2-height-mobile) + 2 * var(--navbar-padding));
+    --navbar-height-small: calc(var(--logo2-height-small) + 2 * var(--navbar-padding));
+
+    --primary-font-color:#ffffff;
+    --nav-bar-color:#ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-hover:#f3f3f3;
+    --button-focus:#ff7f33;
+
+    /* Hero text margins for easy adjustment */
+    --hero-text-margin-left-desktop: 3rem;       /* Desktop left margin for hero text */
+    --hero-text-margin-bottom-desktop: 4rem;     /* Desktop bottom margin for hero text */
+    --hero-text-margin-left-tablet: 2rem;        /* Tablet left margin (reduced) */
+    --hero-text-margin-bottom-tablet: 2.5rem;    /* Tablet bottom margin (reduced) */
+    --hero-text-margin-left-mobile: 1.5rem;      /* Mobile left margin (unchanged) */
+    --hero-text-margin-top-mobile: 5rem;         /* Mobile top margin (unchanged) */
 }
 
 /* - - - - - - Header Styles - - - - - -*/
@@ -30,19 +44,19 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: var(--navbar-padding) 1rem;
   transition: all 0.3s ease;
   min-height: fit-content;
   z-index: 2000;}
       @media screen and (min-width: 768px) and (max-width: 1023px) {                         /* Tablet styles (768px to 1023px) */
           .navbar {
-              padding: 0.75rem;
+              padding: var(--navbar-padding) 0.75rem;
               gap: 1rem; /* Space between elements */}}
       @media screen and (max-width: 767px) {                                                 /* Mobile styles (below 768px) */
           .navbar {
               justify-content: flex-start; /* Align items to the start */
               gap: 0.75rem; /* Space between logo2 and logo1 */
-              padding: 0.75rem;
+              padding: var(--navbar-padding) 0.75rem;
               flex-wrap: nowrap;}}
 
 .logo {
@@ -136,67 +150,77 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 .nav-button:hover {background-color: var(--button-hover); transform: scale(1.02);}
 .nav-button:focus {outline: 2px solid var(--button-focus);}
 
+/* - - - - - - Hero Section Styles - - - - - -*/
+
+/* Hero section to prevent navbar overlap */
+.hero-section {
+    position: relative;
+    height: calc(100vh - var(--navbar-height)); /* Full viewport height minus navbar */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    z-index: 1000;}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                 /* Tablet styles (768px to 1023px) */
+            .hero-section {
+                height: calc(100vh - var(--navbar-height-tablet));}}
+        @media screen and (max-width: 767px) {                                         /* Mobile styles (below 768px) */
+            .hero-section {
+                height: calc(100vh - var(--navbar-height-mobile));}}
+        @media screen and (max-width: 480px) {                                         /* Very small screens - ensure logos can always fit */
+            .hero-section {
+                height: calc(100vh - var(--navbar-height-small));}}
+
 #background-video {
     position: absolute;
-    top: var(--logo2-height);
+    top: var(--navbar-height); /* Start below navbar */
     left: 0;
     width: 100%;
-    height: 100vh; /* Cover full browser height */
+    height: calc(100vh - var(--navbar-height)); /* Fill hero section height */
     object-fit: cover; /* Ensure video covers the area */
     object-position: 50% 40%; /* 40% vertical focus */
     z-index: 999;}
         @media screen and (min-width: 768px) and (max-width: 1023px) {                   /* Tablet styles (768px to 1023px) */
-        /* Video for tablet */
             #background-video {
-                top: var(--logo2-height-tablet);
-                height: 100vh; /* Fill visible height */
-                object-fit: cover; /* Ensure video covers the area */
+                top: var(--navbar-height-tablet);
+                height: calc(100vh - var(--navbar-height-tablet));
                 object-position: 30% 45%; /* 30% horizontal, 25% vertical focus */}}
         @media screen and (max-width: 767px) {                                           /* Mobile styles (below 768px) */
-            /* Video for mobile */
             #background-video {
-                top: var(--logo2-height-mobile);
-                height: 100vh; /* Fill visible height */
-                object-fit: cover; /* Ensure video covers the area */
+                top: var(--navbar-height-mobile);
+                height: calc(100vh - var(--navbar-height-mobile));
                 object-position: 30% 40%; /* Center focus */}}
-
-/* Hero section to prevent navbar overlap */
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    padding: 20px 0 0 0;
-    z-index: 1000;
-    width: 100%;}
-/*
-        @media screen and (min-width: 768px) and (max-width: 1023px) {                 /* Tablet styles (768px to 1023px) 
-            .hero-section {
-                margin-top: var(--logo2-height-tablet);}}
-        @media screen and (max-width: 767px) {                                         /* Mobile styles (below 768px) 
-            .hero-section {
-                margin-top: var(--logo2-height-mobile);}}
-        @media screen and (max-width: 480px) {                                         /* Very small screens - ensure logos can always fit 
-            .hero-section {
-                margin-top: var(--logo2-height-small);}}
-
-
-*/
-
-
-
-
+        @media screen and (max-width: 480px) {                                         /* Very small screens - ensure logos can always fit */
+            #background-video {
+                top: var(--navbar-height-small);
+                height: calc(100vh - var(--navbar-height-small));}}
 
 .hero-content {
-    text-align: left;
+    position: absolute;
+    bottom: var(--hero-text-margin-bottom-desktop);   /* Bottom margin for desktop */
+    left: var(--hero-text-margin-left-desktop);       /* Left margin for desktop */
     color: var(--primary-font-color);
-    padding: 10px 15px;
-    max-width: 56.25rem; /* 900px */
-    margin: 25% 0 0 3%; /* Adjustment: higher first value position text lower, smaller last value position text closer to the left */
+    max-width: 56.25rem;                              /* 900px */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 1100; /* Ensure content is above video */}
+    z-index: 1100;                                    /* Ensure content is above video */}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                 /* Tablet styles (768px to 1023px) */
+            .hero-content {
+                bottom: var(--hero-text-margin-bottom-tablet); /* Reduced bottom margin for tablet */
+                left: var(--hero-text-margin-left-tablet); /* Reduced left margin for tablet */}}
+        @media screen and (max-width: 767px) {                                         /* Mobile styles (below 768px) */
+            .hero-content {
+                margin: var(--hero-text-margin-top-mobile) 0 0 var(--hero-text-margin-left-mobile); /* Unchanged mobile positioning */
+                width: 90%;
+                max-width: 56.25rem; /* Consistent with desktop */}}
+        @media screen and (max-width: 480px) {
+            .hero-content {
+                margin: var(--hero-text-margin-top-mobile) 0 0 var(--hero-text-margin-left-mobile);}}
+
+  
+
+    
 
 .hero-content h1 {
   font-family: 'Montserrat', Arial, sans-serif;
@@ -229,24 +253,11 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 /* Tablet styles (768px to 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   
-  .hero-content {
-    bottom: 2.5rem; /* Slightly smaller bottom margin for tablet */
-    left: 1.5rem; /* Slightly smaller left margin */
-    text-align: left;
-    max-width: 56.25rem; /* Consistent with desktop */
-  }
 }
 
 /* Mobile styles (below 768px) */
 @media screen and (max-width: 767px) {
   
-  .hero-content {
-    text-align: left; /* Adjusted to left */
-    margin: 5rem 0 0 1.5rem; /* Generous top margin, some left margin */
-    width: 90%;
-    max-width: 56.25rem; /* Consistent with desktop */
-  }
-
   .hero-content h1 {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 1.8rem; /* Adjust font size for mobile */
