@@ -45,10 +45,6 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   justify-content: center;
 }
 
-.logo--shrink .logo_image { /* Apply shrink directly to the image for scaling */
-  transform: scale(0.8); /* 20% reduction when scrolling */
-}
-
 .logo_image {
   height: var(--logo2-height); /* Original size */
   width: auto; /* Maintain aspect ratio */
