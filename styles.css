@@ -14,7 +14,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   --primary-font-color:#ffffff;
   --nav-bar-color:#ffffff;
   --shadow-color: rgba(0, 0, 0, 0.1);
-  --button-hover:#f5f5f5;
+  --button-hover:#f3f3f3;
   --button-focus:#ff7f33;
 }
 
@@ -82,14 +82,8 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   white-space: nowrap;
 }
 
-.nav-button:hover {
-  background-color: var(--button-hover);
-  transform: scale(1.02);
-}
-
-.nav-button:focus {
-    outline: 2px solid var(--button-focus);
-}
+.nav-button:hover {background-color: var(--button-hover); transform: scale(1.02);}
+.nav-button:focus {outline: 2px solid var(--button-focus);}
 
 #background-video {
   position: absolute;
@@ -117,20 +111,11 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   color: var(--primary-font-color);
   padding: 10px 15px;
   max-width: 900px;
-  margin: 30% 0 0 3%; /* Adjustment: higher first value position text lower, smaller last value position text closer to the left */
+  margin: 25% 0 0 3%; /* Adjustment: higher first value position text lower, smaller last value position text closer to the left */
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   z-index: 1100; /* Ensure content is above video */
-  
-  /*
-  position: absolute;
-  top: auto;
-  bottom: 3rem; /* Generous bottom margin 
-  left: 2rem; /* Left margin for desktop 
-  transform: none;
-  */
 }
 
 .hero-content h1 {
