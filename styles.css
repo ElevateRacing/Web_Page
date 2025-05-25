@@ -87,7 +87,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 #background-video {
   position: absolute;
-  top: 30px;
+  top: var(--logo2-height);
   left: 0;
   width: 100%;
   height: auto;
