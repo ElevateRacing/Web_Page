@@ -87,8 +87,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 #background-video {
   position: absolute;
-  top: 0; /* Align video directly below navbar */
-  margin-top: calc(var(--logo2-height) + 0.75rem * 2); /* Account for navbar padding */
+  margin-top: var(--logo2-height); /* Account for navbar padding */
   left: 0;
   width: 100%;
   height: 100vh; /* Cover full browser height */
@@ -112,8 +111,8 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   text-align: left;
   color: var(--primary-font-color);
   padding: 10px 15px;
-  max-width: 50rem; /* 900px */
-  margin: 0 0 2rem 3%; /* Adjustment: higher first value position text lower, smaller last value position text closer to the left */
+  max-width: 56.25rem; /* 900px */
+  margin: 25% 0 0 3%; /* Adjustment: higher first value position text lower, smaller last value position text closer to the left */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -188,19 +187,17 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
   /* Video for tablet */
   #background-video {
-    top: 0; /* Align video directly below navbar */
     height: 100vh; /* Fill visible height */
     object-fit: cover; /* Ensure video covers the area */
     object-position: 40% 30%; /* 40% horizontal, 30% vertical focus */
-    margin-top: calc(var(--logo2-height-tablet) + 0.75rem * 2); /* Account for navbar padding */
+    margin-top: var(--logo2-height-tablet); /* Account for navbar padding */
   }
 
   .hero-content {
     bottom: 2.5rem; /* Slightly smaller bottom margin for tablet */
     left: 1.5rem; /* Slightly smaller left margin */
     text-align: left;
-    max-width: 50rem; /* Consistent with desktop */
-    margin: 0 0 1.5rem 1.5rem; /* Move text closer to bottom, adjust left margin */
+    max-width: 56.25rem; /* Consistent with desktop */
   }
 }
 
@@ -244,8 +241,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
   /* Video for mobile */
   #background-video {
-    top: 0; /* Align video directly below navbar */
-    margin-top: calc(var(--logo2-height-tablet) + 0.75rem * 2); /* Account for navbar padding */
+    margin-top: var(--logo2-height-mobile); /* Account for navbar padding */
     height: 100vh; /* Fill visible height */
     object-fit: cover; /* Ensure video covers the area */
     object-position: 50% 50%; /* Center focus */
