@@ -33,34 +33,83 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   padding: 0.75rem 1rem;
   transition: all 0.3s ease;
   min-height: fit-content;
-  z-index: 2000;
-}
+  z-index: 2000;}
+      @media screen and (min-width: 768px) and (max-width: 1023px) {                         /* Tablet styles (768px to 1023px) */
+          .navbar {
+              padding: 0.75rem;
+              gap: 1rem; /* Space between elements */}}
+      @media screen and (max-width: 767px) {                                                 /* Mobile styles (below 768px) */
+          .navbar {
+              justify-content: flex-start; /* Align items to the start */
+              gap: 0.75rem; /* Space between logo2 and logo1 */
+              padding: 0.75rem;
+              flex-wrap: nowrap;}}
 
 .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;}
 
 .logo_image {
-  height: var(--logo2-height); /* Original size */
-  width: auto; /* Maintain aspect ratio */
-  object-fit: contain;
-}
+    height: var(--logo2-height); /* Original size */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain;}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
+            .logo_image {
+                height: var(--logo2-height-tablet);}}
+        @media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
+            .logo_image {
+                height: min(var(--logo2-height-mobile), 12vw);
+                max-height: var(--logo2-height-mobile);}}
+        @media screen and (max-width: 480px) {                                              /* Very small screens - ensure logos can always fit */
+            .logo_image {
+                height: min(var(--logo2-height-small), 10vw);
+                max-height: var(--logo2-height-small);}}
 
 .logo1 .logo_image {
-  height: calc(var(--logo2-height) * 0.8); /* 20% smaller than Logo 2 */
-}
+    height: calc(var(--logo2-height) * 0.8); /* 20% smaller than Logo 2 */}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
+            .logo1 .logo_image {
+                height: calc(var(--logo2-height-tablet) * 0.8);}}
+        @media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
+            .logo1 .logo_image {
+                height: min(calc(var(--logo2-height-mobile) * 0.8), 9.6vw);
+                max-height: calc(var(--logo2-height-mobile) * 0.8);}}
+        @media screen and (max-width: 480px) {                                              /* Very small screens - ensure logos can always fit */
+            .logo1 .logo_image {
+                height: min(calc(var(--logo2-height-small) * 0.8), 8vw);
+                max-height: calc(var(--logo2-height-small) * 0.8);}}
 
 .logo1 { position: absolute; left: 50% transform: translateX(-50%);}
-/* Dynamic positioning to avoid button overlap */
-@media screen and (min-width: 1401px) {.logo1 {left: calc(50% - 150px);}}
-@media screen and (min-width: 1281px) and (max-width: 1400px) {.logo1 {left: calc(50% - 250px);}}
-@media screen and (max-width: 1280px) {.logo1 {left: calc(50% - 300px);}}
+    @media screen and (min-width: 1401px) {.logo1 {left: calc(50% - 150px);}}               /* Dynamic positioning to avoid button overlap */
+    @media screen and (min-width: 1281px) and (max-width: 1400px) {.logo1 {left: calc(50% - 250px);}}
+    @media screen and (max-width: 1280px) {.logo1 {left: calc(50% - 300px);}}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
+            .logo1 {
+                position: static; /* Remove absolute positioning */
+                flex-grow: 1; /* Allow logo1 to take available space */
+                transform: none; /* Remove translateX */}}
+        @media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
+            .logo1 {
+                flex-grow: 1; /* Allow logo1 to take available space */
+                position: static; /* Remove absolute positioning */
+                transform: none; /* Remove translateX */}}
 
 .logo2 {
-  margin-left: 0.5rem; /* Added slight margin from left edge */
-}
+    margin-left: 0.5rem; /* Added slight margin from left edge */}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
+            .logo2 {
+                flex-shrink: 0;
+                margin-left: 0.5rem;}}
+        @media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
+            .logo2 {
+                flex-shrink: 0; /* Prevent logo2 from shrinking */
+                margin-left: 0.75rem;}}
+
+
+
+
+
 
 /* Desktop baseline: Button container styles */
 .nav-buttons {
@@ -149,30 +198,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 /* Tablet styles (768px to 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .navbar {
-    padding: 0.75rem;
-    gap: 1rem; /* Space between elements */
-  }
-
-  .logo1 {
-    position: static; /* Remove absolute positioning */
-    flex-grow: 1; /* Allow logo1 to take available space */
-    transform: none; /* Remove translateX */
-  }
-
-  .logo2 {
-    flex-shrink: 0;
-    margin-left: 0.5rem;
-  }
-
-  .logo_image {
-    height: var(--logo2-height-tablet);
-  }
-
-  .logo1 .logo_image {
-    height: calc(var(--logo2-height-tablet) * 0.8);
-  }
-
+  
   .nav-buttons {
     gap: 0.75rem;
   }
@@ -202,34 +228,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 /* Mobile styles (below 768px) */
 @media screen and (max-width: 767px) {
-  .navbar {
-    justify-content: flex-start; /* Align items to the start */
-    gap: 0.75rem; /* Space between logo2 and logo1 */
-    padding: 0.75rem;
-    flex-wrap: nowrap;
-    }
   
-  .logo1 {
-    flex-grow: 1; /* Allow logo1 to take available space */
-    position: static; /* Remove absolute positioning */
-    transform: none; /* Remove translateX */
-  }
-
-  .logo2 {
-    flex-shrink: 0; /* Prevent logo2 from shrinking */
-    margin-left: 0.75rem;
-  }
-
-  .logo_image {
-    height: min(var(--logo2-height-mobile), 12vw);
-    max-height: var(--logo2-height-mobile);
-  }
-
-  .logo1 .logo_image {
-    height: min(calc(var(--logo2-height-mobile) * 0.8), 9.6vw);
-    max-height: calc(var(--logo2-height-mobile) * 0.8);
-  }
-
   .nav-buttons {
     display: none; /* Hide buttons on mobile */
   }
@@ -264,16 +263,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 /* Very small screens - ensure logos can always fit */
 @media screen and (max-width: 480px) {
-  .logo_image {
-    height: min(var(--logo2-height-small), 10vw);
-    max-height: var(--logo2-height-small);
-  }
 
-  .logo1 .logo_image {
-    height: min(calc(var(--logo2-height-small) * 0.8), 8vw);
-    max-height: calc(var(--logo2-height-small) * 0.8);
-  }
-  
   .hero-section {
     margin-top: calc(min(var(--logo2-height-small), 10vw) + 1.5rem + 1rem);
   }
