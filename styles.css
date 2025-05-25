@@ -189,12 +189,12 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
             #background-video {
                 top: var(--navbar-height-mobile);
                 height: calc(100vh - var(--navbar-height-mobile));
-                object-position: 50% 65%; /* Center focus */}}
+                object-position: 50% 50%; /* Center focus */}}
         @media screen and (max-width: 480px) {                                           /* Very small screens - ensure logos can always fit */
             #background-video {
                 top: var(--navbar-height-small);
                 height: calc(100vh - var(--navbar-height-small));
-                object-position: 50% 65%; /* Center focus */}}
+                object-position: 50% 50%; /* Center focus */}}
 
 .hero-content {
     position: absolute;
