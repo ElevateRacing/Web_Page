@@ -11,21 +11,27 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   --logo2-height-mobile: 1.62rem; /* Mobile default */
   --logo2-height-small: 1.35rem; /* Very small screens */
 
-  --primary-font-color:#ffffff
+  --primary-font-color:#ffffff;
+  --nav-bar-color:#ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Desktop baseline: Navbar styles */
+/* - - - - - - Header Styles - - - - - -*/
+
 .navbar {
+  /* as previous iteration */
+  display: flex;
+  justify-content: space-between; /* Distributes items with space between them */
+  align-items: center;
+  background-color: var(--nav-bar-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
+
+  /* new */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0.75rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Distributes items with space between them */
   z-index: 1000;
   transition: all 0.3s ease;
   min-height: fit-content;
