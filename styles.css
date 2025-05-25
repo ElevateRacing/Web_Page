@@ -33,9 +33,9 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   left: 0;
   width: 100%;
   padding: 0.75rem 1rem;
-  z-index: 1000;
   transition: all 0.3s ease;
   min-height: fit-content;
+  z-index: 2000;
 }
 
 .logo {
@@ -111,9 +111,17 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 }
 
 #background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto; /* Default for desktop */
-  min-height: 100%; /* Ensure it always covers the height */
+  height: 100%;
+  object-position: center center; /* Default for desktop */
+
+  /*
+  width: 100%;
+  height: auto; /* Default for desktop *
+  min-height: 100%; /* Ensure it always covers the height *
   object-fit: cover;
   object-position: center center; /* Default for desktop */
   z-index:999;
@@ -122,14 +130,23 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 .hero-content {
   text-align: left;
   color: var(--primary-font-color);
+
+  padding: 20px 30px;
+  max-width: 900px;
+  margin: 20% 0 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   z-index: 1100; /* Ensure content is above video */
   
-  
+  /*
   position: absolute;
   top: auto;
-  bottom: 3rem; /* Generous bottom margin */
-  left: 2rem; /* Left margin for desktop */
+  bottom: 3rem; /* Generous bottom margin 
+  left: 2rem; /* Left margin for desktop 
   transform: none;
+  */
 }
 
 .hero-content h1 {
