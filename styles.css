@@ -87,7 +87,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 #background-video {
   position: absolute;
-  margin-top: var(--logo2-height); /* Account for navbar padding */
+  top: var(--logo2-height);
   left: 0;
   width: 100%;
   height: 100vh; /* Cover full browser height */
@@ -182,7 +182,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
   }
 
   .hero-section {
-    margin-top: calc(var(--logo2-height-tablet) + 1.5rem);
+    margin-top: calc(var(--logo2-height-tablet) + 1.5rem + 1rem);
   }
 
   /* Video for tablet */
@@ -190,7 +190,6 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
     height: 100vh; /* Fill visible height */
     object-fit: cover; /* Ensure video covers the area */
     object-position: 40% 30%; /* 40% horizontal, 30% vertical focus */
-    margin-top: var(--logo2-height-tablet); /* Account for navbar padding */
   }
 
   .hero-content {
@@ -241,7 +240,6 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
   /* Video for mobile */
   #background-video {
-    margin-top: var(--logo2-height-mobile); /* Account for navbar padding */
     height: 100vh; /* Fill visible height */
     object-fit: cover; /* Ensure video covers the area */
     object-position: 50% 50%; /* Center focus */
