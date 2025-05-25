@@ -169,18 +169,19 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
     padding: 20px 0 0 0;
     z-index: 1000;
     width: 100%;}
-        @media screen and (min-width: 768px) and (max-width: 1023px) {                 /* Tablet styles (768px to 1023px) */
+/*
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                 /* Tablet styles (768px to 1023px) 
             .hero-section {
-                /* margin-top: var(--logo2-height-tablet);}}
-        @media screen and (max-width: 767px) {                                         /* Mobile styles (below 768px) */
+                margin-top: var(--logo2-height-tablet);}}
+        @media screen and (max-width: 767px) {                                         /* Mobile styles (below 768px) 
             .hero-section {
-               /* margin-top: var(--logo2-height-mobile);}}
-        @media screen and (max-width: 480px) {                                         /* Very small screens - ensure logos can always fit */
+                margin-top: var(--logo2-height-mobile);}}
+        @media screen and (max-width: 480px) {                                         /* Very small screens - ensure logos can always fit 
             .hero-section {
-               /* margin-top: var(--logo2-height-small);}} */
+                margin-top: var(--logo2-height-small);}}
 
 
-
+*/
 
 
 
