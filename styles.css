@@ -27,9 +27,9 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
     --hero-text-margin-left-desktop: 3rem;       /* Desktop left margin for hero text */
     --hero-text-margin-bottom-desktop: 3.75rem;     /* Desktop bottom margin for hero text */
     --hero-text-margin-left-tablet: 2rem;        /* Tablet left margin (reduced) */
-    --hero-text-margin-bottom-tablet: 2rem;    /* Tablet bottom margin (reduced) */
+    --hero-text-margin-bottom-tablet: 2.5rem;    /* Tablet bottom margin (reduced) */
     --hero-text-margin-left-mobile: 1.5rem;      /* Mobile left margin (unchanged) */
-    --hero-text-margin-top-mobile: 5rem;         /* Mobile top margin (unchanged) */
+    --hero-text-margin-top-mobile: 1.5rem;         /* Mobile top margin (unchanged) */
 }
 
 /* - - - - - - Header Styles - - - - - -*/
@@ -178,23 +178,23 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
     width: 100%;
     height: calc(100vh - var(--navbar-height)); /* Fill hero section height */
     object-fit: cover; /* Ensure video covers the area */
-    object-position: 50% 40%; /* 40% vertical focus */
+    object-position: 50% 50%; /* 40% vertical focus */
     z-index: 999;}
         @media screen and (min-width: 768px) and (max-width: 1023px) {                   /* Tablet styles (768px to 1023px) */
             #background-video {
                 top: var(--navbar-height-tablet);
                 height: calc(100vh - var(--navbar-height-tablet));
-                object-position: 30% 45%; /* 30% horizontal, 25% vertical focus */}}
+                object-position: 50% 50%; /* 30% horizontal, 25% vertical focus */}}
         @media screen and (max-width: 767px) {                                           /* Mobile styles (below 768px) */
             #background-video {
                 top: var(--navbar-height-mobile);
                 height: calc(100vh - var(--navbar-height-mobile));
-                object-position: 30% 40%; /* Center focus */}}
-        @media screen and (max-width: 480px) {                                         /* Very small screens - ensure logos can always fit */
+                object-position: 50% 50%; /* Center focus */}}
+        @media screen and (max-width: 480px) {                                           /* Very small screens - ensure logos can always fit */
             #background-video {
                 top: var(--navbar-height-small);
                 height: calc(100vh - var(--navbar-height-small));
-                object-position: 30% 40%; /* Center focus */}}
+                object-position: 50% 50%; /* Center focus */}}
 
 .hero-content {
     position: absolute;
@@ -205,16 +205,16 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 1100;                                    /* Ensure content is above video */}
-        @media screen and (min-width: 768px) and (max-width: 1023px) {                 /* Tablet styles (768px to 1023px) */
+    z-index: 1100;                                                                                      /* Ensure content is above video */}
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                                  /* Tablet styles (768px to 1023px) */
             .hero-content {
-                bottom: var(--hero-text-margin-bottom-tablet); /* Reduced bottom margin for tablet */
-                left: var(--hero-text-margin-left-tablet); /* Reduced left margin for tablet */}}
-        @media screen and (max-width: 767px) {                                         /* Mobile styles (below 768px) */
+                bottom: var(--hero-text-margin-bottom-tablet);                                          /* Reduced bottom margin for tablet */
+                left: var(--hero-text-margin-left-tablet);                                              /* Reduced left margin for tablet */}}
+        @media screen and (max-width: 767px) {                                                          /* Mobile styles (below 768px) */
             .hero-content {
-                margin: var(--hero-text-margin-top-mobile) 0 0 var(--hero-text-margin-left-mobile); /* Unchanged mobile positioning */
+                margin: var(--hero-text-margin-top-mobile) 0 0 var(--hero-text-margin-left-mobile);     /* Unchanged mobile positioning */
                 width: 90%;
-                max-width: 56.25rem; /* Consistent with desktop */}}
+                max-width: 56.25rem;                                                                    /* Consistent with desktop */}}
         @media screen and (max-width: 480px) {
             .hero-content {
                 margin: var(--hero-text-margin-top-mobile) 0 0 var(--hero-text-margin-left-mobile);}}
