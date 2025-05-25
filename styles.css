@@ -96,12 +96,13 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 /* Hero section to prevent navbar overlap */
 .hero-section {
   display: flex;
-  height: 100vh;
+  /*height: 100vh;*/
   aligh-items: center;
   justify-content: flex-start;
   position: relative;
   padding: 0 0 0 0;
   z-index: 1000;
+  overflow: hidden;
   /*
   margin-top: calc(var(--logo2-height) + 1.5rem);
   position: relative;
