@@ -106,15 +106,16 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 }
 
 .hero-content {
+  text-align: left;
+  color: var(--primary-font-color);
+  z-index: 1100; /* Ensure content is above video */
+  
+  
   position: absolute;
   top: auto;
   bottom: 3rem; /* Generous bottom margin */
   left: 2rem; /* Left margin for desktop */
   transform: none;
-  text-align: left;
-  color: --primary-font-color;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  z-index: 1; /* Ensure content is above video */
 }
 
 .hero-content h1 {
