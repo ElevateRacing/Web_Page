@@ -138,7 +138,7 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
 
 #background-video {
     position: absolute;
-    /*top: var(--logo2-height);*/
+    top: var(--logo2-height);
     left: 0;
     width: 100%;
     height: 100vh; /* Cover full browser height */
@@ -148,17 +148,17 @@ html, body { height: 100%; /*Ensure body takes full height for scroll calculatio
         @media screen and (min-width: 768px) and (max-width: 1023px) {                   /* Tablet styles (768px to 1023px) */
         /* Video for tablet */
             #background-video {
-                /*top: var(--logo2-height-tablet);*/
+                top: var(--logo2-height-tablet);
                 height: 100vh; /* Fill visible height */
                 object-fit: cover; /* Ensure video covers the area */
-                object-position: 40% 30%; /* 40% horizontal, 30% vertical focus */}}
+                object-position: 30% 25%; /* 30% horizontal, 25% vertical focus */}}
         @media screen and (max-width: 767px) {                                           /* Mobile styles (below 768px) */
             /* Video for mobile */
             #background-video {
-                /*top: var(--logo2-height-mobile);*/
+                top: var(--logo2-height-mobile);
                 height: 100vh; /* Fill visible height */
                 object-fit: cover; /* Ensure video covers the area */
-                object-position: 50% 50%; /* Center focus */}}
+                object-position: 40% 60%; /* Center focus */}}
 
 /* Hero section to prevent navbar overlap */
 .hero-section {
