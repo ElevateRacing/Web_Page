@@ -191,16 +191,16 @@ body {
         flex-wrap: nowrap;
     }
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding-h) / 2) 1rem;                              /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding-h) / 2) 1rem;      /* Maintain reduced padding on scroll */
     }
     .logo1-container {
-        left: calc(50% - 450px);
+        left: calc(50% - 50px);
     }
     .logo1 {
-        height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
+        height: calc(var(--logo2-height) * 0.8);              /* Set logo height using variable */
     }
     .nav-buttons {
-        display: none; /* Hide buttons on mobile */
+        display: none;                                        /* Hide buttons on mobile */
     }
 }
 
