@@ -12,6 +12,7 @@ body {
     --logo2-height-mobile: 1.62rem;    /* Logo height for mobile screens */
     --logo2-height-small: 1.35rem;     /* Logo height for very small screens */
     --navbar-padding: 0.75rem;         /* Default top/bottom padding for navbar */
+    --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding));     /* Navbar height: logo + padding */
     --nav-bar-color: #ffffff;          /* Navbar background color (white) */
     --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow color for navbar */
 }
