@@ -139,13 +139,15 @@ body {
     z-index: 1; /* Behind content */
 }
 .hero-content {
-    position: relative;
-    text-align: left;
-    max-width: 56.25rem;                              /* 900px */
+    position: absolute;
     bottom: var(--hero-text-margin-bottom-desktop);   /* Bottom margin for desktop */
     left: var(--hero-text-margin-left-desktop);       /* Left margin for desktop */
     color: var(--primary-font-color);
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3); /* Optional: text shadow for readability */
+    max-width: 56.25rem;                              /* 900px */
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Optional: text shadow for readability */
     z-index: 2; /* Above video */
 }
 .hero-content h1 {
@@ -168,13 +170,15 @@ body {
         left: 50%;
     }
     .hero-content {
-        position: relative;
-        text-align: left;
-        max-width: 56.25rem;                              /* 900px */
+        position: absolute;
         bottom: var(--hero-text-margin-bottom-desktop);   /* Bottom margin for desktop */
         left: var(--hero-text-margin-left-desktop);       /* Left margin for desktop */
         color: var(--primary-font-color);
-        text-shadow: 0 0 4px rgba(0, 0, 0, 0.3); /* Optional: text shadow for readability */
+        max-width: 56.25rem;                              /* 900px */
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Optional: text shadow for readability */
         z-index: 2; /* Above video */
     }
     .hero-content h1 {
@@ -199,13 +203,15 @@ body {
         left: calc(50% - 130px);
     }
     .hero-content {
-        position: relative;
-        text-align: left;
-        max-width: 56.25rem;                              /* 900px */
+        position: absolute;
         bottom: var(--hero-text-margin-bottom-desktop);   /* Bottom margin for desktop */
         left: var(--hero-text-margin-left-desktop);       /* Left margin for desktop */
         color: var(--primary-font-color);
-        text-shadow: 0 0 4px rgba(0, 0, 0, 0.3); /* Optional: text shadow for readability */
+        max-width: 56.25rem;                              /* 900px */
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Optional: text shadow for readability */
         z-index: 2; /* Above video */
     }
     .hero-content h1 {
