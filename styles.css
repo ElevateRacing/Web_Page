@@ -86,7 +86,10 @@ body {
 }
 
 
-
+/* Adjust navbox padding when scrolled */
+.navbox.scrolled {
+    padding: 5px 20px; /* Reduced padding for scrolled state */
+}
 
 
 
