@@ -10,6 +10,7 @@ body {
     font-size: 16px;
     font-family: Arial, sans-serif;     /* Use Arial as default font, with sans-serif fallback */
     scroll-behavior: smooth;            /* Enable smooth scrolling for anchor links */
+    overflow-x: hidden;                 /* Prevent horizontal scroll */
 }
 
 /* Define CSS custom properties (variables) for reusable values */
@@ -22,9 +23,10 @@ body {
 /* navbar spacing */
     --navbar-padding-h: 1rem;                                                  /* Default top/bottom padding for navbar */
     --navbar-padding-v: 1rem;                                                  /* Default right/left padding for navbar */
-    --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding-h));  /* Navbar height: logo + padding */
+    --navbar-height: calc(var(--logo2-height) + 2 * 
+                          var(--navbar-padding-h));      /* Navbar height: logo + padding */
 /* Colors */
-    --nav-bar-color: #ffffff;                                                  /* Navbar background color (white) */
+    --nav-bar-color: #ffffff;                                              /* Navbar background color (white) */
     --shadow-color: rgba(0, 0, 0, 0.1);                                        /* Subtle shadow color for navbar */
     --nav-button-color: #000000;
     --button-hover:#f3f3f3;
