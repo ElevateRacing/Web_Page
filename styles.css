@@ -7,16 +7,17 @@ body {
 
 /* Define CSS custom properties (variables) for reusable values */
 :root {
-    --logo2-height: 1.89rem;           /* Default logo height for desktop screens */
-    --logo2-height-tablet: 1.323rem;   /* Logo height for tablet screens */
-    --logo2-height-mobile: 1.62rem;    /* Logo height for mobile screens */
-    --logo2-height-small: 1.35rem;     /* Logo height for very small screens */
-    --navbar-padding: 0.75rem;         /* Default top/bottom padding for navbar */
+    --logo2-height: 1.89rem;                                                    /* Default logo height for desktop screens */
+    --logo2-height-tablet: 1.323rem;                                            /* Logo height for tablet screens */
+    --logo2-height-mobile: 1.62rem;                                             /* Logo height for mobile screens */
+    --logo2-height-small: 1.35rem;                                              /* Logo height for very small screens */
+    --navbar-padding: 0.75rem;                                                  /* Default top/bottom padding for navbar */
     --navbar-padding-tablet: 0.6rem;
     --navbar-padding-mobile: 0.5rem;
     --navbar-padding-small: 0.4rem;
-    --nav-bar-color: #ffffff;          /* Navbar background color (white) */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow color for navbar */
+    --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding));     /* Navbar height: logo + padding */
+    --nav-bar-color: #ffffff;                                                   /* Navbar background color (white) */
+    --shadow-color: rgba(0, 0, 0, 0.1);                                         /* Subtle shadow color for navbar */
 }
 
 /* Style the navigation bar */
@@ -100,6 +101,10 @@ body {
 
 /* Tablet screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
+    :root {
+        --navbar-height: calc(var(--logo2-height-tablet) + 2 * var(--navbar-padding-tablet)); /* Adjust navbar height */
+    }
+    
     .logo {
         height: var(--logo2-height-tablet); /* Explicitly set logo height for tablets */
         width: auto; /* Maintain proportional scaling */
@@ -111,6 +116,10 @@ body {
 
 /* Mobile screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
+    :root {
+        --navbar-height: calc(var(--logo2-height-mobile) + 2 * var(--navbar-padding-mobile)); /* Adjust navbar height */
+    }
+    
     .logo {
         height: var(--logo2-height-mobile); /* Explicitly set logo height for mobile */
         width: auto; /* Maintain proportional scaling */
@@ -123,6 +132,10 @@ body {
 
 /* Very small screens (max-width: 320px) */
 @media screen and (max-width: 320px) {
+    :root {
+        --navbar-height: calc(var(--logo2-height-small) + 2 * var(--navbar-padding-small)); /* Adjust navbar height */
+    }
+    
     .logo {
         height: var(--logo2-height-small); /* Explicitly set logo height for very small screens */
         width: auto; /* Maintain proportional scaling */
