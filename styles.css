@@ -1,98 +1,91 @@
-/* Reset default margins and set global font */
+/* Reset default browser margins and set a fallback font for consistency */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    margin: 0; /* Remove default margins */
+    font-family: Arial, sans-serif; /* Use Arial as default font, with sans-serif fallback */
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
 }
 
+/* Define CSS custom properties (variables) for reusable values */
 :root {
-        --logo2-height: 1.89rem;           /* Desktop default */
-        --logo2-height-tablet: 1.323rem;   /* Tablet default */
-        --logo2-height-mobile: 1.62rem;    /* Mobile default */
-        --logo2-height-small: 1.35rem;     /* Very small screens */
-
-        --navbar-padding: 0.75rem;                 /* Navbar top/bottom padding */
-    
-        --nav-bar-color: #ffffff;
-        --shadow-color: rgba(0, 0, 0, 0.1);
-    
+    --logo2-height: 1.89rem;           /* Default logo height for desktop screens */
+    --logo2-height-tablet: 1.323rem;   /* Logo height for tablet screens */
+    --logo2-height-mobile: 1.62rem;    /* Logo height for mobile screens */
+    --logo2-height-small: 1.35rem;     /* Logo height for very small screens */
+    --navbar-padding: 0.75rem;         /* Default top/bottom padding for navbar */
+    --nav-bar-color: #ffffff;          /* Navbar background color (white) */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow color for navbar */
 }
 
-/* Navigation bar styling */
+/* Style the navigation bar */
 .navbar {
-        display: flex;
-        justify-content: space-between; /* Space out logo and links */
-        align-items: center; /* Vertically center content */
-        background-color: var(--nav-bar-color);
-        box-shadow: 0 2px 4px var(--shadow-color);
-        position: fixed; /* Keep navbox at the top of the viewport */
-        top: 0;
-        left: 0;
-        width: 100%; /* Full width across the viewport */
-        padding: var(--navbar-padding) 1rem; /* Default padding */
-        transition: padding 0.3s ease; /* Smooth transition for padding changes */
-        box-sizing: border-box; /* Include padding in width calculations */
-        z-index: 1000; /* Ensure navbox stays above other content */
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: space-between; /* Space logo and other content (if added) apart */
+    align-items: center; /* Vertically center content within navbar */
+    background-color: var(--nav-bar-color); /* Set navbar background color */
+    box-shadow: 0 2px 4px var(--shadow-color); /* Add subtle shadow for depth */
+    position: fixed; /* Fix navbar to the top of the viewport */
+    top: 0; /* Align to top edge */
+    left: 0; /* Align to left edge */
+    width: 100%; /* Span full viewport width */
+    padding: var(--navbar-padding) 1rem; /* Apply vertical and horizontal padding */
+    transition: padding 0.3s ease; /* Smooth transition for padding changes on scroll */
+    box-sizing: border-box; /* Include padding in width calculations */
+    z-index: 1000; /* Ensure navbar stays above other content */
 }
 
-/* Container for the logo to prevent stretching */
+/* Style the container holding the logo */
 .logo-container {
-        flex-shrink: 0; /* Prevent logo from shrinking disproportionately */
+    flex-shrink: 0; /* Prevent logo from shrinking disproportionately */
 }
 
-/* Logo image styling */
+/* Style the logo image */
 .logo {
-        height: var(--logo2-height); /* Default logo height for desktop */
-        transition: transform 0.3s ease; /* Smooth scaling transition */
+    height: var(--logo2-height); /* Set logo height using variable */
+    transition: transform 0.3s ease; /* Smooth transition for scaling effect */
 }
 
-/* Shrink logo by 20% when scrolled */
+/* Shrink logo size when scrolled */
 .logo.shrink {
-        transform: scale(0.8); /* Reduce size to 80% of original */
+    transform: scale(0.8); /* Reduce logo to 80% of original size */
 }
 
-/* General section styling for all pages */
-.section {
-        min-height: 100vh; /* Ensure sections cover at least full viewport height */
-        display: flex;
-        flex-direction: column; /* Stack content vertically */
-        justify-content: center; /* Center content vertically */
-        align-items: center; /* Center content horizontally */
-        text-align: center; /* Center text */
-        padding: 20px; /* Inner spacing */
-        box-sizing: border-box; /* Include padding in size calculations */
+/* General styling for all section elements */
+.section_hero,
+.section_page2,
+.section_page3,
+.section_page4 {
+    min-height: 100vh; /* Ensure sections are at least full viewport height */
+    display: flex; /* Use flexbox for content layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text content */
+    padding: 20px; /* Add inner spacing */
+    box-sizing: border-box; /* Include padding in size calculations */
 }
 
-/* Hero section specific styling */
-.hero {
-        background-color: #f0f0f0; /* Light gray background */
-        height: calc(100vh - 80px); /* Full height minus navbox (1.89rem logo + 0.75rem * 2 padding) */
-        margin-top: 80px; 3.39rem; /* Offset for fixed navbox */
+/* Specific styling for the hero section */
+.section_hero {
+    background-color: #f0f0f0; /* Light gray background for hero section */
+    margin-top: calc(var(--logo2-height) + 2 * var(--navbar-padding)); /* Offset to prevent overlap with fixed navbar */
 }
 
-/* Page 2 section styling */
-.page2 {
-        background-color: #e0e0e0; /* Slightly darker gray */
+/* Styling for page 2 section */
+.section_page2 {
+    background-color: #e0e0e0; /* Slightly darker gray background */
 }
 
-/* Page 3 section styling */
-.page3 {
-        background-color: #d0d0d0; /* Darker gray */
+/* Styling for page 3 section */
+.section_page3 {
+    background-color: #d0d0d0; /* Darker gray background */
 }
 
-/* Page 4 section styling */
-.page4 {
-        background-color: #c0c0c0; /* Darkest gray */
+/* Styling for page 4 section */
+.section_page4 {
+    background-color: #c0c0c0; /* Darkest gray background */
 }
 
-
-/* Adjust navbox padding when scrolled */
-.navbox.scrolled {
-    padding: calc(var(--navbar-padding) / 2) 1rem; /* Reduced vertical padding for scrolled state */
+/* Adjust navbar padding when scrolled */
+.navbar.scrolled {
+    padding: calc(var(--navbar-padding) / 2) 1rem; /* Reduce vertical padding when scrolled */
 }
-
-
-
-
-
-
