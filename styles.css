@@ -7,18 +7,21 @@ body {
 
 /* Define CSS custom properties (variables) for reusable values */
 :root {
-    /* Logo 2 sizing */
+/* Logo 2 sizing */
     --logo2-height: 1.89rem;                                                    /* Default logo height for desktop screens */
     --logo2-height-tablet: 1.323rem;                                            /* Logo height for tablet screens */
     --logo2-height-mobile: 1.62rem;                                             /* Logo height for mobile screens */
     --logo2-height-small: 1.35rem;                                              /* Logo height for very small screens */
-    /* navbar spacing */
+/* navbar spacing */
     --navbar-padding-h: 0.75rem;                                                /* Default top/bottom padding for navbar */
     --navbar-padding-v: 1rem;                                                   /* Default right/left padding for navbar */
     --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding-h));   /* Navbar height: logo + padding */
-    /* Colors */
+/* Colors */
     --nav-bar-color: #ffffff;                                                   /* Navbar background color (white) */
     --shadow-color: rgba(0, 0, 0, 0.1);                                         /* Subtle shadow color for navbar */
+    --nav-button-color: #000000;
+    --button-hover:#f3f3f3;
+    --button-focus:#ff7f33;
 }
 
 /* Style the navigation bar */
@@ -117,7 +120,7 @@ body {
 .nav-button {
     padding: 8px 16px;
     text-decoration: none;
-    color: #000000;
+    color: var(--nav-button-color);
     background-color: transparent;
     border-radius: 12px;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -126,12 +129,10 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
     white-space: nowrap;
 }
-
 .nav-button:hover {
     background-color: var(--button-hover);
     transform: scale(1.02);
 }
-
 .nav-button:focus {
     outline: 2px solid var(--button-focus);
 }
