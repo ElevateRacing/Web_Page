@@ -27,7 +27,7 @@ body {
 /* Style the navigation bar */
 .navbar {
     display: flex;                                                 /* Use flexbox to align items horizontally */
-    justify-content: space-between;                                /* Space logo and other content (if added) apart */
+    /*justify-content: space-between;                                /* Space logo and other content (if added) apart */
     align-items: center;                                           /* Vertically center content within navbar */
     background-color: var(--nav-bar-color);                        /* Set navbar background color */
     box-shadow: 0 2px 4px var(--shadow-color);                     /* Add subtle shadow for depth */
@@ -36,8 +36,8 @@ body {
     left: 0;                                                       /* Align to left edge */
     width: 100%;                                                   /* Span full viewport width */
     padding: var(--navbar-padding-h) var(--navbar-padding-v);      /* Apply vertical and horizontal padding */
-    transition: padding 0.3s ease;                                 /* Smooth transition for padding changes on scroll */
-    min-height: fit-content;                                                                                    /* delete if not working properly */
+    transition: all 0.3s ease;                                 /* Smooth transition for padding and height changes on scroll */
+    /* min-height: fit-content;                                                                                    /* delete if not working properly */
     box-sizing: border-box;                                        /* Include padding in width calculations */                  /* delete if not working properly */
     z-index: 1000;                                             /* Ensure navbar stays above other content */
 }
@@ -59,49 +59,71 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    max-width: 100%;                               /* Ensure logo1 doesn't overflow */
 }
-/* Dynamic positioning of Logo1 */
-@media screen and (min-width: 1401px) {            /* Very large screens */
-    .logo1-container {
-        left: calc(50% - 150px);
+/* Dynamic positioning and sizing of Logo1 */
+@media screen and (min-width: 1281px) {            /* Very large and large desktops */
+    .navbar {
+        justify-content: space-between;            /* Ensure buttons stay right-aligned */
     }
-}               
-@media screen and (min-width: 1281px) and (max-width: 1400px) { /* Large screens */
     .logo1-container {
-        left: calc(50% - 250px);
+        max-width: calc(100% - 400px);             /* Reserve space for logo2 (~50px) and buttons (~350px) */
+        min-width: 100px;                          /* Minimum width to prevent over-shrinking */
     }
-}
-@media screen and (max-width: 1280px) {            /* Large screens */
-    .logo1-container {
-        left: calc(50% - 300px);
+    .logo1 {
+        max-height: calc(var(--logo2-height) * 0.8); /* Base height */
+        width: auto;                               /* Maintain aspect ratio */
+        max-width: 100%;                           /* Scale down if needed */
+        transition: all 0.3s ease;                 /* Smooth scaling transition */
     }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
-    .logo1-container {
-        position: static; /* Remove absolute positioning */
-        flex-grow: 1; /* Allow logo1 to take available space */
-        transform: none; /* Remove translateX */
+}        
+
+@media screen and (min-width: 768px) and (max-width: 1280px) { /* Tablet screens */
+    .navbar {
+        justify-content: space-between;            /* Ensure buttons stay right-aligned */
     }
-}
-@media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
     .logo1-container {
-        flex-grow: 1; /* Allow logo1 to take available space */
-        position: static; /* Remove absolute positioning */
-        transform: none; /* Remove translateX */
+        position: static;                          /* Remove absolute positioning */
+        flex-grow: 1;                              /* Take available space */
+        transform: none;                           /* Remove translateX */
+        max-width: calc(100% - 300px);             /* Reserve space for logo2 and buttons */
+        min-width: 80px;                           /* Minimum width to prevent over-shrinking */
+    }
+    .logo1 {
+        max-height: calc(var(--logo2-height-tablet) * 0.8); /* Base height */
+        width: auto;                               /* Maintain aspect ratio */
+        max-width: 100%;                           /* Scale down if needed */
+        transition: all 0.3s ease;                 /* Smooth scaling transition */
     }
 }
 
-
+@media screen and (max-width: 767px) {            /* Mobile screens */
+    .logo1-container {
+        flex-grow: 1;                              /* Take available space */
+        position: static;                          /* Remove absolute positioning */
+        transform: none;                           /* Remove translateX */
+        max-width: calc(100% - 60px);              /* Reserve space for logo2 */
+    }
+    .logo1 {
+        max-height: calc(var(--logo2-height-mobile) * 0.8); /* Base height */
+        width: auto;                               /* Maintain aspect ratio */
+        max-width: 100%;                           /* Scale down if needed */
+        transition: all 0.3s ease;                 /* Smooth scaling transition */
+    }
+}
 
     /* Style the logo image */
     .logo2 {
         height: var(--logo2-height);                /* Set logo height using variable */
         width: auto;                                /* Maintain aspect ratio */
         object-fit: contain;
+        transition: all 0.3s ease;                     /* Smooth transition for scaling */
     }
 
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
+        width: auto;                                   /* Maintain aspect ratio */
+        object-fit: contain;
     }
 
 /* Shrink logo size when scrolled */
@@ -109,12 +131,14 @@ body {
 .logo1.shrink,
 .nav-button.shrink {
     transform: scale(0.8);               /* Reduce logo to 80% of original size */
+    transition: transform 0.3s ease;               /* Smooth transition for scaling */
 }
 
 .nav-buttons {
     display: flex;                       /* Use flexbox to align items horizontally */
     gap: 1rem;
     flex-shrink: 0;
+    margin-left: auto;                             /* Push buttons to the right edge */
 }
 
 .nav-button {
@@ -136,15 +160,6 @@ body {
 .nav-button:focus {
     outline: 2px solid var(--button-focus);
 }
-
-
-
-
-
-
-
-
-
 
 /* General styling for all section elements */
 .section_hero,
@@ -207,9 +222,6 @@ body {
         flex-shrink: 0;
         margin-left: 0.5rem;
     }
-    .logo1 {
-        height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
-    }
 
     .nav-buttons {
         gap: 0.75rem;
@@ -238,9 +250,7 @@ body {
         flex-shrink: 0; /* Prevent logo2 from shrinking */
         margin-left: 0.5rem;
     }
-    .logo1 {
-        height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
-    }
+    
     .nav-buttons {
         display: none; /* Hide buttons on mobile */
     }
