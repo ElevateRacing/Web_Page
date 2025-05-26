@@ -38,7 +38,7 @@ body {
 }
 
     /* Style the container holding the logo */
-    .logo-container {
+    .logo2-container {
         flex-shrink: 0;                                                         /* Prevent logo from shrinking disproportionately */
     }
 
