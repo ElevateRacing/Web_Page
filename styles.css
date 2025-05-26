@@ -35,18 +35,18 @@ body {
 }
 
 /* Style the container holding the logo */
-.logo-container {
+.logo2-container {
     flex-shrink: 0; /* Prevent logo from shrinking disproportionately */
 }
 
 /* Style the logo image */
-.logo {
+.logo2 {
     height: var(--logo2-height); /* Set logo height using variable */
     transition: transform 0.3s ease; /* Smooth transition for scaling effect */
 }
 
 /* Shrink logo size when scrolled */
-.logo.shrink {
+.logo2.shrink {
     transform: scale(0.8); /* Reduce logo to 80% of original size */
 }
 
