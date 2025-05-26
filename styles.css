@@ -136,7 +136,7 @@ body {
         margin-left: 0.5rem;
     }
     .logo1-container {
-        left: calc(50% - 170px);
+        left: calc(50% - 160px);
     }
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);              /* Set logo height using variable */
@@ -169,7 +169,7 @@ body {
         margin-left: 0.5rem;
     }
     .logo1-container {
-        left: 50%;
+        left: 60%;
     }
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);              /* Set logo height using variable */
@@ -194,7 +194,7 @@ body {
         padding: calc(var(--navbar-padding-h) / 2) 1rem;      /* Maintain reduced padding on scroll */
     }
     .logo1-container {
-        left: 50%;
+        left: 60%;
     }
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);              /* Set logo height using variable */
