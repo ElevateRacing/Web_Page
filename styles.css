@@ -139,14 +139,15 @@ body {
     z-index: 1; /* Behind content */
 }
 .hero-content {
-    position: absolute;
+    position: relative;
+    text-align: left;
+    max-width: 56.25rem;                              /* 900px */
     bottom: var(--hero-text-margin-bottom-desktop);   /* Bottom margin for desktop */
     left: var(--hero-text-margin-left-desktop);       /* Left margin for desktop */
     color: var(--primary-font-color);
-    max-width: 56.25rem;                              /* 900px */
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional: text shadow for readability */
     z-index: 2; /* Above video */
 }
