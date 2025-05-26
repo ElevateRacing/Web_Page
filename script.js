@@ -1,11 +1,11 @@
 window.addEventListener('scroll', () => {
             const navbox = document.querySelector('.navbar');
-            const logo = document.querySelector('.logo');
+            const logo2 = document.querySelector('.logo2');
             if (window.scrollY > 50) {
-                logo.classList.add('shrink');
+                logo2.classList.add('shrink');
                 navbox.classList.add('scrolled');
             } else {
-                logo.classList.remove('shrink');
+                logo2.classList.remove('shrink');
                 navbox.classList.remove('scrolled');
             }
         });
