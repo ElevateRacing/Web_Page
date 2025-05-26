@@ -36,18 +36,18 @@ body {
 
 /* Style the container holding the logo */
 .logo2-container {
-    flex-shrink: 0; /* Prevent logo from shrinking disproportionately */
+    flex-shrink: 0;     /* Prevent logo from shrinking disproportionately */
 }
 
 /* Style the logo image */
 .logo2 {
-    height: var(--logo2-height); /* Set logo height using variable */
-    transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+    height: var(--logo2-height);         /* Set logo height using variable */
+    transition: transform 0.3s ease;     /* Smooth transition for scaling effect */
 }
 
 /* Shrink logo size when scrolled */
 .logo2.shrink {
-    transform: scale(0.8); /* Reduce logo to 80% of original size */
+    transform: scale(0.8);     /* Reduce logo to 80% of original size */
 }
 
 /* General styling for all section elements */
@@ -55,77 +55,77 @@ body {
 .section_page2,
 .section_page3,
 .section_page4 {
-    display: flex; /* Use flexbox for content layout */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text content */
-    padding: 20px; /* Add inner spacing */
-    box-sizing: border-box; /* Include padding in size calculations */
+    display: flex;               /* Use flexbox for content layout */
+    flex-direction: column;      /* Stack content vertically */
+    justify-content: center;     /* Center content vertically */
+    align-items: center;         /* Center content horizontally */
+    text-align: center;          /* Center text content */
+    padding: 20px;               /* Add inner spacing */
+    box-sizing: border-box;      /* Include padding in size calculations */
 }
 
 /* Specific styling for the hero section */
 .section_hero {
-    min-height: calc(100vh - var(--navbar-height)); /* Full viewport height minus navbar */
-    margin-top: var(--navbar-height); /* Offset to start below fixed navbar */
-    background-color: #f0f0f0; /* Light gray background */
+    min-height: calc(100vh - var(--navbar-height));     /* Full viewport height minus navbar */
+    margin-top: var(--navbar-height);                   /* Offset to start below fixed navbar */
+    background-color: #f0f0f0;                          /* Light gray background */
 }
 
 /* Styling for page 2 section */
 .section_page2 {
-    min-height: 100vh; /* Allow content to dictate height, with minimum full viewport */
-    background-color: #e0e0e0; /* Slightly darker gray background */
+    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
+    background-color: #e0e0e0;                          /* Slightly darker gray background */
 }
 
 /* Styling for page 3 section */
 .section_page3 {
-    min-height: 100vh; /* Allow content to dictate height, with minimum full viewport */
-    background-color: #d0d0d0; /* Darker gray background */
+    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
+    background-color: #d0d0d0;                          /* Darker gray background */
 }
 
 /* Styling for page 4 section */
 .section_page4 {
-    min-height: 100vh; /* Allow content to dictate height, with minimum full viewport */
-    background-color: #c0c0c0; /* Darkest gray background */
+    min-height: 100vh;                                 /* Allow content to dictate height, with minimum full viewport */
+    background-color: #c0c0c0;                         /* Darkest gray background */
 }
 
 /* Adjust navbar padding when scrolled */
 .navbar.scrolled {
-    padding: calc(var(--navbar-padding) / 2) 1rem; /* Reduce vertical padding when scrolled */
+    padding: calc(var(--navbar-padding) / 2) 1rem;     /* Reduce vertical padding when scrolled */
 }
 
 /* Tablet screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
     :root {
-        --logo2-height: var(--logo2-height-tablet); /* Use tablet logo height */
-        --navbar-padding: 0.6rem; /* Slightly smaller padding for tablets */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding)); /* Update navbar height */
+        --logo2-height: var(--logo2-height-tablet);                                 /* Use tablet logo height */
+        --navbar-padding: 0.6rem;                                                   /* Slightly smaller padding for tablets */
+        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding));     /* Update navbar height */
     }
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding) / 2) 1rem; /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding) / 2) 1rem;                              /* Maintain reduced padding on scroll */
     }
 }
 
 /* Mobile screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
     :root {
-        --logo2-height: var(--logo2-height-mobile); /* Use mobile logo height */
-        --navbar-padding: 0.5rem; /* Smaller padding for mobile */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding)); /* Update navbar height */
+        --logo2-height: var(--logo2-height-mobile);                                 /* Use mobile logo height */
+        --navbar-padding: 0.5rem;                                                   /* Smaller padding for mobile */
+        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding));     /* Update navbar height */
     }
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding) / 2) 1rem; /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding) / 2) 1rem;                              /* Maintain reduced padding on scroll */
     }
 }
 
 /* Very small screens (max-width: 320px) */
 @media screen and (max-width: 320px) {
     :root {
-        --logo2-height: var(--logo2-height-small); /* Use smallest logo height */
-        --navbar-padding: 0.4rem; /* Minimal padding for very small screens */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding)); /* Update navbar height */
+        --logo2-height: var(--logo2-height-small);                                  /* Use smallest logo height */
+        --navbar-padding: 0.4rem;                                                   /* Minimal padding for very small screens */
+        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding));     /* Update navbar height */
     }
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding) / 2) 1rem; /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding) / 2) 1rem;                              /* Maintain reduced padding on scroll */
     }
 }
