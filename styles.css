@@ -38,7 +38,7 @@ body {
     --hero-text-margin-left-tablet: 2rem;            /* Tablet left margin (reduced) */
     --hero-text-margin-bottom-tablet: 2.5rem;        /* Tablet bottom margin (reduced) */
     --hero-text-margin-left-mobile: 1.5rem;          /* Mobile left margin (unchanged) */
-    --hero-text-margin-top-mobile: 1.75rem;           /* Mobile top margin (unchanged) */
+    --hero-text-margin-top-mobile: 2.5rem;           /* Mobile top margin (unchanged) */
 }
 
 /* Style the navigation bar */
