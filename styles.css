@@ -66,8 +66,8 @@ body {
 /* Hero section specific styling */
 .hero {
         background-color: #f0f0f0; /* Light gray background */
-        height: calc(100vh - 80px); /* Full height minus navbox */
-        margin-top: 80px; /* Offset for fixed navbox */
+        height: calc(100vh - 80px); /* Full height minus navbox (1.89rem logo + 0.75rem * 2 padding) */
+        margin-top: 80px; 3.39rem; /* Offset for fixed navbox */
 }
 
 /* Page 2 section styling */
@@ -88,7 +88,7 @@ body {
 
 /* Adjust navbox padding when scrolled */
 .navbox.scrolled {
-    padding: 5px 20px; /* Reduced padding for scrolled state */
+    padding: calc(var(--navbar-padding) / 2) 1rem; /* Reduced vertical padding for scrolled state */
 }
 
 
