@@ -12,6 +12,9 @@ body {
     --logo2-height-mobile: 1.62rem;    /* Logo height for mobile screens */
     --logo2-height-small: 1.35rem;     /* Logo height for very small screens */
     --navbar-padding: 0.75rem;         /* Default top/bottom padding for navbar */
+    --navbar-padding-tablet: 0.6rem;
+    --navbar-padding-mobile: 0.5rem;
+    --navbar-padding-small: 0.4rem;
     --nav-bar-color: #ffffff;          /* Navbar background color (white) */
     --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow color for navbar */
 }
@@ -41,7 +44,9 @@ body {
 /* Style the logo image */
 .logo {
     height: var(--logo2-height); /* Set logo height using variable */
-    transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+    width: auto; /* Ensure width scales proportionally with height */
+    object-fit: contain; /* Prevent image distortion while respecting height */
+    transition: transform 0.3s ease; /* Smooth transition for scaling effect on scroll */
 }
 
 /* Shrink logo size when scrolled */
@@ -95,36 +100,34 @@ body {
 
 /* Tablet screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
-    :root {
-        --logo2-height: var(--logo2-height-tablet); /* Use tablet logo height */
-        --navbar-padding: 0.6rem; /* Slightly smaller padding for tablets */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding)); /* Update navbar height */
+    .logo {
+        height: var(--logo2-height-tablet); /* Explicitly set logo height for tablets */
+        width: auto; /* Maintain proportional scaling */
     }
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding) / 2) 1rem; /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding-tablet) / 2) 1rem; /* Maintain reduced padding on scroll */
     }
 }
 
 /* Mobile screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
-    :root {
-        --logo2-height: var(--logo2-height-mobile); /* Use mobile logo height */
-        --navbar-padding: 0.5rem; /* Smaller padding for mobile */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding)); /* Update navbar height */
+    .logo {
+        height: var(--logo2-height-mobile); /* Explicitly set logo height for mobile */
+        width: auto; /* Maintain proportional scaling */
     }
+    
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding) / 2) 1rem; /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding-mobile) / 2) 1rem; /* Maintain reduced padding on scroll */
     }
 }
 
 /* Very small screens (max-width: 320px) */
 @media screen and (max-width: 320px) {
-    :root {
-        --logo2-height: var(--logo2-height-small); /* Use smallest logo height */
-        --navbar-padding: 0.4rem; /* Minimal padding for very small screens */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding)); /* Update navbar height */
+    .logo {
+        height: var(--logo2-height-small); /* Explicitly set logo height for very small screens */
+        width: auto; /* Maintain proportional scaling */
     }
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding) / 2) 1rem; /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding-small) / 2) 1rem; /* Maintain reduced padding on scroll */
     }
 }
