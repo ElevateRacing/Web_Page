@@ -43,29 +43,37 @@ body {
     left: 0;                                                       /* Align to left edge */
     width: 100%;                                                   /* Span full viewport width */
     padding: var(--navbar-padding-h) var(--navbar-padding-v);      /* Apply vertical and horizontal padding */
-    transition: padding 0.3s ease;                                 /* Smooth transition for padding changes on scroll */
+    transition: all 0.3s ease;                                     /* Smooth transition for changes on scroll */
     min-height: fit-content;                                                                                    /* delete if not working properly */
     box-sizing: border-box;                                        /* Include padding in width calculations */                  /* delete if not working properly */
-    z-index: 1000;                                             /* Ensure navbar stays above other content */
+    z-index: 1000;                                                 /* Ensure navbar stays above other content */
+}
+.navbar-content {                                                  /* Create a wrapper for logo2 and nav-buttons to manage flex spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-/* Style the container holding the logo */
-.logo2-container,
+
+.logo2-container,                    /* Style the container holding the logo */
 .logo1-container {
-    display: flex;                                 /* Use flexbox to align items horizontally */
-    align-items: center;                           /* Vertically center content within logo-containers */
+    display: flex;                   /* Use flexbox to align items horizontally */
+    align-items: center;             /* Vertically center content within logo-containers */
     justify-content: center;
-    flex-shrink: 0;                                /* Prevent logo from shrinking disproportionately */                        /* delete if not working properly */
+    flex-shrink: 0;                  /* Prevent logo from shrinking disproportionately */                        /* delete if not working properly */
 }
 
 .logo2-container {
-    margin-left: 0.5rem;                           /* Added slight margin from left edge */
+    margin-left: 0.5rem;             /* Added slight margin from left edge */
 }
 
 .logo1-container {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1100; /* Ensure logo1 is above other navbar content */
 }
 /* Dynamic positioning of Logo1 */
 
