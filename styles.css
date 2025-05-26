@@ -1,8 +1,8 @@
 /* Reset default browser margins and set a fallback font for consistency */
 body {
-    margin: 0;                                                                  /* Remove default margins */
-    font-family: Arial, sans-serif;                                             /* Use Arial as default font, with sans-serif fallback */
-    scroll-behavior: smooth;                                                    /* Enable smooth scrolling for anchor links */
+    margin: 0; /* Remove default margins */
+    font-family: Arial, sans-serif; /* Use Arial as default font, with sans-serif fallback */
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
 }
 
 /* Define CSS custom properties (variables) for reusable values */
@@ -22,199 +22,124 @@ body {
 
 /* Style the navigation bar */
 .navbar {
-    display: flex;                                                              /* Use flexbox to align items horizontally */
-    justify-content: space-between;                                             /* Space logo and other content (if added) apart */
-    align-items: center;                                                        /* Vertically center content within navbar */
-    background-color: var(--nav-bar-color);                                     /* Set navbar background color */
-    box-shadow: 0 2px 4px var(--shadow-color);                                  /* Add subtle shadow for depth */
-    position: fixed;                                                            /* Fix navbar to the top of the viewport */
-    top: 0;                                                                     /* Align to top edge */
-    left: 0;                                                                    /* Align to left edge */
-    width: 100%;                                                                /* Span full viewport width */
-    padding: var(--navbar-padding) 1rem;                                        /* Apply vertical and horizontal padding */
-    transition: padding 0.3s ease;                                              /* Smooth transition for padding changes on scroll */
-    box-sizing: border-box;                                                     /* Include padding in width calculations */
-    z-index: 1000;                                                              /* Ensure navbar stays above other content */
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: space-between; /* Space logo and other content (if added) apart */
+    align-items: center; /* Vertically center content within navbar */
+    background-color: var(--nav-bar-color); /* Set navbar background color */
+    box-shadow: 0 2px 4px var(--shadow-color); /* Add subtle shadow for depth */
+    position: fixed; /* Fix navbar to the top of the viewport */
+    top: 0; /* Align to top edge */
+    left: 0; /* Align to left edge */
+    width: 100%; /* Span full viewport width */
+    padding: var(--navbar-padding) 1rem; /* Apply vertical and horizontal padding */
+    transition: padding 0.3s ease; /* Smooth transition for padding changes on scroll */
+    box-sizing: border-box; /* Include padding in width calculations */
+    z-index: 1000; /* Ensure navbar stays above other content */
 }
 
-    /* Style the container holding the logo */
-    .logo-container {
-        display: flex;                                                          /* Use flexbox to align items horizontally */
-        flex-shrink: 0;                                                         /* Prevent logo from shrinking disproportionately */
-        align-items: center;                                                    /* Vertically center content */
-        justify-content: center;                                                /* Center content vertically */
-    }
+/* Style the container holding the logo */
+.logo-container {
+    flex-shrink: 0; /* Prevent logo from shrinking disproportionately */
+}
 
-    .logo2 {
-        margin-left: 0.5rem;
-    }
+/* Style the logo image */
+.logo {
+    height: var(--logo2-height); /* Set logo height using variable */
+    width: auto; /* Ensure width scales proportionally with height */
+    object-fit: contain; /* Prevent image distortion while respecting height */
+    transition: transform 0.3s ease; /* Smooth transition for scaling effect on scroll */
+}
 
-    .logo1 {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-        /* Dynamic positioning to avoid button overlap */
-        @media screen and (min-width: 1401px) {
-            .logo1 {
-                left: calc(50% - 150px);
-            }
-        }               
-        @media screen and (min-width: 1281px) and (max-width: 1400px) {
-            .logo1 {
-                left: calc(50% - 250px);
-            }
-        }
-        @media screen and (max-width: 1280px) {
-            .logo1 {
-                left: calc(50% - 300px);
-            }
-        }
-        @media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
-            .logo1 {
-                position: static;                                                           /* Remove absolute positioning */
-                flex-grow: 1;                                                               /* Allow logo1 to take available space */
-                transform: none;                                                            /* Remove translateX */}}
-        @media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
-            .logo1 {
-                flex-grow: 1;                                                               /* Allow logo1 to take available space */
-                position: static;                                                           /* Remove absolute positioning */
-                transform: none;                                                            /* Remove translateX */}}
-
-        /* Style the logo image */
-        .logo2 .logo-image {
-            height: var(--logo2-height);                                            /* Set logo height using variable */
-            width: auto;                                                            /* Ensure width scales proportionally with height */
-            object-fit: contain;                                                    /* Prevent image distortion while respecting height */
-            transition: transform 0.3s ease;                                        /* Smooth transition for scaling effect on scroll */
-        }
-
-        .logo1 .logo-image {
-            height: calc(var(--logo2-height) * 0.8);                                /* 20% smaller than Logo 2 */
-            width: auto;                                                            /* Ensure width scales proportionally with height */
-            object-fit: contain;                                                    /* Prevent image distortion while respecting height */
-            transition: transform 0.3s ease;                                        /* Smooth transition for scaling effect on scroll */
-        }
-
-    /* Shrink logo size when scrolled */
-    .logo-container.shrink {
-        transform: scale(0.8);                                                  /* Reduce logo to 80% of original size */
-    }
+/* Shrink logo size when scrolled */
+.logo.shrink {
+    transform: scale(0.8); /* Reduce logo to 80% of original size */
+}
 
 /* General styling for all section elements */
 .section_hero,
 .section_page2,
 .section_page3,
 .section_page4 {
-    display: flex;              /* Use flexbox for content layout */
-    flex-direction: column;     /* Stack content vertically */
-    justify-content: center;    /* Center content vertically */
-    align-items: center;        /* Center content horizontally */
-    text-align: center;         /* Center text content */
-    padding: 20px;              /* Add inner spacing */
-    box-sizing: border-box;     /* Include padding in size calculations */
+    display: flex; /* Use flexbox for content layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text content */
+    padding: 20px; /* Add inner spacing */
+    box-sizing: border-box; /* Include padding in size calculations */
 }
 
 /* Specific styling for the hero section */
 .section_hero {
-    min-height: calc(100vh - var(--navbar-height));     /* Full viewport height minus navbar */
-    margin-top: var(--navbar-height);                   /* Offset to start below fixed navbar */
-    background-color: #f0f0f0;                          /* Light gray background */
+    min-height: calc(100vh - var(--navbar-height)); /* Full viewport height minus navbar */
+    margin-top: var(--navbar-height); /* Offset to start below fixed navbar */
+    background-color: #f0f0f0; /* Light gray background */
 }
 
 /* Styling for page 2 section */
 .section_page2 {
-    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
-    background-color: #e0e0e0;                          /* Slightly darker gray background */
+    min-height: 100vh; /* Allow content to dictate height, with minimum full viewport */
+    background-color: #e0e0e0; /* Slightly darker gray background */
 }
 
 /* Styling for page 3 section */
 .section_page3 {
-    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
-    background-color: #d0d0d0;                          /* Darker gray background */
+    min-height: 100vh; /* Allow content to dictate height, with minimum full viewport */
+    background-color: #d0d0d0; /* Darker gray background */
 }
 
 /* Styling for page 4 section */
 .section_page4 {
-    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
-    background-color: #c0c0c0;                          /* Darkest gray background */
+    min-height: 100vh; /* Allow content to dictate height, with minimum full viewport */
+    background-color: #c0c0c0; /* Darkest gray background */
 }
 
 /* Adjust navbar padding when scrolled */
 .navbar.scrolled {
-    padding: calc(var(--navbar-padding) / 2) 1rem;      /* Reduce vertical padding when scrolled */
+    padding: calc(var(--navbar-padding) / 2) 1rem; /* Reduce vertical padding when scrolled */
 }
 
 /* Tablet screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
     :root {
-        --navbar-height: calc(var(--logo2-height-tablet) + 2 * var(--navbar-padding-tablet));     /* Adjust navbar height */
-    }
-
-    .logo2 {
-        margin-left: 0.5rem;
+        --navbar-height: calc(var(--logo2-height-tablet) + 2 * var(--navbar-padding-tablet)); /* Adjust navbar height */
     }
     
-    .logo2 {
-        height: var(--logo2-height-tablet);                                                       /* Explicitly set logo height for tablets */
-        width: auto;                                                                              /* Maintain proportional scaling */
+    .logo {
+        height: var(--logo2-height-tablet); /* Explicitly set logo height for tablets */
+        width: auto; /* Maintain proportional scaling */
     }
-
-    .logo1 {
-        height: calc(var(--logo2-height-tablet) * 0.8);                                           /* Reduce logo to 80% of original size */
-        width: auto;                                                                              /* Maintain proportional scaling */
-    }
-
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding-tablet) / 2) 1rem;                                     /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding-tablet) / 2) 1rem; /* Maintain reduced padding on scroll */
     }
 }
 
 /* Mobile screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
     :root {
-        --navbar-height: calc(var(--logo2-height-mobile) + 2 * var(--navbar-padding-mobile));     /* Adjust navbar height */
-    }
-
-    .logo2 {
-        margin-left: 0.5rem;
+        --navbar-height: calc(var(--logo2-height-mobile) + 2 * var(--navbar-padding-mobile)); /* Adjust navbar height */
     }
     
-    .logo2 {
-        height: var(--logo2-height-mobile);                                                       /* Explicitly set logo height for mobile */
-        width: auto;                                                                              /* Maintain proportional scaling */
-    }
-
-    .logo1 {
-        height: calc(var(--logo2-height-mobile) * 0.8);                                           /* Reduce logo to 80% of original size */
-        width: auto;                                                                              /* Maintain proportional scaling */
+    .logo {
+        height: var(--logo2-height-mobile); /* Explicitly set logo height for mobile */
+        width: auto; /* Maintain proportional scaling */
     }
     
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding-mobile) / 2) 1rem;                                     /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding-mobile) / 2) 1rem; /* Maintain reduced padding on scroll */
     }
 }
 
 /* Very small screens (max-width: 320px) */
 @media screen and (max-width: 320px) {
     :root {
-        --navbar-height: calc(var(--logo2-height-small) + 2 * var(--navbar-padding-small));       /* Adjust navbar height */
-    }
-
-    .logo2 {
-        margin-left: 0.5rem;
+        --navbar-height: calc(var(--logo2-height-small) + 2 * var(--navbar-padding-small)); /* Adjust navbar height */
     }
     
-    .logo2 {
-        height: var(--logo2-height-small);                                                        /* Explicitly set logo height for very small screens */
-        width: auto;                                                                              /* Maintain proportional scaling */
+    .logo {
+        height: var(--logo2-height-small); /* Explicitly set logo height for very small screens */
+        width: auto; /* Maintain proportional scaling */
     }
-
-    .logo1 {
-        height: calc(var(--logo2-height-small) * 0.8);                                            /* Reduce logo to 80% of original size */
-        width: auto;                                                                              /* Maintain proportional scaling */
-    }
-
     .navbar.scrolled {
         padding: calc(var(--navbar-padding-small) / 2) 1rem; /* Maintain reduced padding on scroll */
     }
