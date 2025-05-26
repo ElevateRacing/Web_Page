@@ -38,7 +38,7 @@ body {
     --hero-text-margin-left-tablet: 2rem;            /* Tablet left margin (reduced) */
     --hero-text-margin-bottom-tablet: 2.5rem;        /* Tablet bottom margin (reduced) */
     --hero-text-margin-left-mobile: 1.5rem;          /* Mobile left margin (unchanged) */
-    --hero-text-margin-top-mobile: 1.5rem;           /* Mobile top margin (unchanged) */
+    --hero-text-margin-top-mobile: 1.75rem;           /* Mobile top margin (unchanged) */
 }
 
 /* Style the navigation bar */
@@ -321,7 +321,7 @@ body {
         top: var(--hero-text-margin-top-mobile);   /* Bottom margin for desktop */
         left: var(--hero-text-margin-left-mobile);       /* Left margin for desktop */
         color: var(--primary-font-color);
-        max-width: 34.5rem;                              /* 550px */
+        max-width: 25rem;                              /* 400px */
         text-align: left;
         text-shadow: 0 0 7px rgba(0, 0, 0, 0.1); /* Optional: text shadow for readability */
         z-index: 2; /* Above video */
@@ -335,7 +335,7 @@ body {
     }
     .hero-content h2 {
         font-family: 'Roboto', Arial, sans-serif;
-        font-size: 15px;
+        font-size: 17px;
         font-style: italic;
         font-weight: 400;
         line-height: 1.3;
