@@ -19,7 +19,7 @@ body {
 
 /* Style the navigation bar */
 .navbar {
-    display: flex; /* Use flexbox to align items horizontally */
+    display: flex;                                 /* Use flexbox to align items horizontally */
     justify-content: space-between;                /* Space logo and other content (if added) apart */
     align-items: center;                           /* Vertically center content within navbar */
     background-color: var(--nav-bar-color);        /* Set navbar background color */
@@ -36,7 +36,7 @@ body {
 
 /* Style the container holding the logo */
 .logo2-container {
-    flex-shrink: 0;     /* Prevent logo from shrinking disproportionately */
+    flex-shrink: 0;                      /* Prevent logo from shrinking disproportionately */
 }
 
 /* Style the logo image */
@@ -47,8 +47,39 @@ body {
 
 /* Shrink logo size when scrolled */
 .logo2.shrink {
-    transform: scale(0.8);     /* Reduce logo to 80% of original size */
+    transform: scale(0.8);               /* Reduce logo to 80% of original size */
 }
+
+.nav-buttons {
+    display: flex;                       /* Use flexbox to align items horizontally */
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.nav-button {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #000000;
+    background-color: transparent;
+    border-radius: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.02);
+}
+
+.nav-button:focus {
+    outline: 2px solid var(--button-focus);
+}
+
+
+
 
 
 
@@ -110,6 +141,13 @@ body {
     .navbar.scrolled {
         padding: calc(var(--navbar-padding) / 2) 1rem;                              /* Maintain reduced padding on scroll */
     }
+
+    .nav-buttons {
+        gap: 0.75rem;
+    }
+    .nav-button {
+        font-size: 0.8rem; /* 10% reduction from desktop */
+    }
 }
 
 /* Mobile screens (max-width: 480px) */
@@ -122,6 +160,10 @@ body {
     .navbar.scrolled {
         padding: calc(var(--navbar-padding) / 2) 1rem;                              /* Maintain reduced padding on scroll */
     }
+    
+    .nav-buttons {
+        display: none; /* Hide buttons on mobile */
+    }
 }
 
 /* Very small screens (max-width: 320px) */
@@ -133,5 +175,8 @@ body {
     }
     .navbar.scrolled {
         padding: calc(var(--navbar-padding) / 2) 1rem;                              /* Maintain reduced padding on scroll */
+    }
+    .nav-buttons {
+        display: none; /* Hide buttons on mobile */
     }
 }
