@@ -213,7 +213,7 @@ body {
         display: none;                                        /* Hide buttons on mobile */
     }
     .hero-video {
-        object-position: 35% 60%;                             /* Mobile: focus on 35% horizontal, 60% vertical */
+        object-position: 65% 60%;                             /* Mobile: focus on 65% horizontal, 60% vertical */
     }
 }
 @media screen and (max-width: 320px) {                        /* Small mobile */
