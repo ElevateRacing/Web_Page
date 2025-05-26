@@ -16,18 +16,18 @@ body {
 /* Define CSS custom properties (variables) for reusable values */
 :root {
 /* Logo 2 sizing */
-    --logo2-height: 2.5rem;                                                    /* Default logo height for desktop screens */
-    --logo2-height-tablet: 1.5rem;                                             /* Logo height for tablet screens */
-    --logo2-height-mobile: 1.5rem;                                             /* Logo height for mobile screens */
-    --logo2-height-small: 1.2rem;                                              /* Logo height for very small screens */
+    --logo2-height: 2.5rem;                              /* Default logo height for desktop screens */
+    --logo2-height-tablet: 1.5rem;                       /* Logo height for tablet screens */
+    --logo2-height-mobile: 1.5rem;                       /* Logo height for mobile screens */
+    --logo2-height-small: 1.2rem;                        /* Logo height for very small screens */
 /* navbar spacing */
-    --navbar-padding-h: 1rem;                                                  /* Default top/bottom padding for navbar */
-    --navbar-padding-v: 1rem;                                                  /* Default right/left padding for navbar */
+    --navbar-padding-h: 1rem;                            /* Default top/bottom padding for navbar */
+    --navbar-padding-v: 1rem;                            /* Default right/left padding for navbar */
     --navbar-height: calc(var(--logo2-height) + 2 * 
                           var(--navbar-padding-h));      /* Navbar height: logo + padding */
 /* Colors */
-    --nav-bar-color: #ffffff;                                              /* Navbar background color (white) */
-    --shadow-color: rgba(0, 0, 0, 0.1);                                        /* Subtle shadow color for navbar */
+    --nav-bar-color: #ffffff;                            /* Navbar background color (white) */
+    --shadow-color: rgba(0, 0, 0, 0.1);                  /* Subtle shadow color for navbar */
     --nav-button-color: #000000;
     --button-hover:#f3f3f3;
     --button-focus:#ff7f33;
@@ -35,20 +35,21 @@ body {
 
 /* Style the navigation bar */
 .navbar {
-    display: flex;                                                 /* Use flexbox to align items horizontally */
-    justify-content: space-between;                                /* Space logo and other content (if added) apart */
-    align-items: center;                                           /* Vertically center content within navbar */
-    background-color: var(--nav-bar-color);                        /* Set navbar background color */
-    box-shadow: 0 2px 4px var(--shadow-color);                     /* Add subtle shadow for depth */
-    position: fixed;                                               /* Fix navbar to the top of the viewport */
-    top: 0;                                                        /* Align to top edge */
-    left: 0;                                                       /* Align to left edge */
-    width: 100%;                                                   /* Span full viewport width */
-    padding: var(--navbar-padding-h) var(--navbar-padding-v);      /* Apply vertical and horizontal padding */
-    transition: all 0.3s ease;                                 /* Smooth transition for padding changes on scroll */
-    min-height: fit-content;                                                                                    /* delete if not working properly */
-    box-sizing: border-box;                                        /* Include padding in width calculations */                  /* delete if not working properly */
-    z-index: 1000;                                             /* Ensure navbar stays above other content */
+    display: flex;                                 /* Use flexbox to align items horizontally */
+    justify-content: space-between;                /* Space logo and other content (if added) apart */
+    align-items: center;                           /* Vertically center content within navbar */
+    background-color: var(--nav-bar-color);        /* Set navbar background color */
+    box-shadow: 0 2px 4px var(--shadow-color);     /* Add subtle shadow for depth */
+    position: fixed;                               /* Fix navbar to the top of the viewport */
+    top: 0;                                        /* Align to top edge */
+    left: 0;                                       /* Align to left edge */
+    width: 100%;                                   /* Span full viewport width */
+    padding: var(--navbar-padding-h) 
+             var(--navbar-padding-v);              /* Apply vertical and horizontal padding */
+    transition: all 0.3s ease;                     /* Smooth transition for padding changes on scroll */
+    min-height: fit-content;
+    box-sizing: border-box;                        /* Include padding in width calculations */               
+    z-index: 1000;                                 /* Ensure navbar stays above other content */
 }
 
 /* Style the container holding the logo */
@@ -57,7 +58,7 @@ body {
     display: flex;                                 /* Use flexbox to align items horizontally */
     align-items: center;                           /* Vertically center content within logo-containers */
     justify-content: center;
-    flex-shrink: 0;                                /* Prevent logo from shrinking disproportionately */                        /* delete if not working properly */
+    flex-shrink: 0;                                /* Prevent logo from shrinking disproportionately */
 }
 
 .logo2-container {
@@ -72,13 +73,13 @@ body {
 
     /* Style the logo image */
     .logo2 {
-        height: var(--logo2-height);                /* Set logo height using variable */
-        width: auto;                                /* Maintain aspect ratio */
+        height: var(--logo2-height);                           /* Set logo height using variable */
+        width: auto;                                           /* Maintain aspect ratio */
         object-fit: contain;
-        transition: height 0.3s ease, transform 0.3s ease; /* Add transitions for height and transform */
+        transition: height 0.3s ease, transform 0.3s ease;     /* Add transitions for height and transform */
     }
     .logo1 {
-        height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
+        height: calc(var(--logo2-height) * 0.8);               /* Set logo height using variable */
     }
 
 /* Shrink logo size when scrolled */
@@ -114,21 +115,24 @@ body {
     outline: 2px solid var(--button-focus);
 }
 
-@media screen and (min-width: 1367px) {                            /* Large Desktop */
+@media screen and (min-width: 1367px) {                      /* Large Desktop */
     .logo1-container {
-        left: calc(50% - 50px);
+        left: 50%;
     }
 } 
-@media screen and (min-width: 1024px) and (max-width: 1366px) {    /* Desktop */
+@media screen and (min-width: 1024px) 
+              and (max-width: 1366px) {                       /* Desktop */
     .logo1-container {
-        left: calc(50% - 150px);
+        left: calc(50% - 100px);
     }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {     /* Tablet */
+@media screen and (min-width: 768px) 
+              and (max-width: 1023px) {                       /* Tablet */
     :root {
-        --logo2-height: var(--logo2-height-tablet);                                 /* Use tablet logo height */
-        --navbar-padding-v: 0.75rem;                                                /* Slightly smaller right/left padding for tablets */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding-h));   /* Update navbar height */
+        --logo2-height: var(--logo2-height-tablet);           /* Use tablet logo height */
+        --navbar-padding-v: 0.75rem;                          /* Slightly smaller right/left padding for tablets */
+        --navbar-height: calc(var(--logo2-height) + 2 * 
+                              var(--navbar-padding-h));       /* Update navbar height */
     }
     .navbar {
         gap: 1rem; /* Space between elements */
