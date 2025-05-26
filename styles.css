@@ -43,7 +43,7 @@ body {
     left: 0;                                                       /* Align to left edge */
     width: 100%;                                                   /* Span full viewport width */
     padding: var(--navbar-padding-h) var(--navbar-padding-v);      /* Apply vertical and horizontal padding */
-    transition: padding 0.3s ease;                                 /* Smooth transition for padding changes on scroll */
+    transition: all 0.3s ease;                                 /* Smooth transition for padding changes on scroll */
     min-height: fit-content;                                                                                    /* delete if not working properly */
     box-sizing: border-box;                                        /* Include padding in width calculations */                  /* delete if not working properly */
     z-index: 1000;                                             /* Ensure navbar stays above other content */
@@ -72,15 +72,19 @@ body {
 
 
 
+
+
     /* Style the logo image */
     .logo2 {
         height: var(--logo2-height);                /* Set logo height using variable */
         width: auto;                                /* Maintain aspect ratio */
         object-fit: contain;
+        transition: height 0.3s ease, transform 0.3s ease; /* Add transitions for height and transform */
     }
 
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
+        
     }
 
 /* Shrink logo size when scrolled */
@@ -116,13 +120,31 @@ body {
     outline: 2px solid var(--button-focus);
 }
 
-
-
-
-
-
-
-
+@media screen and (min-width: 1367px) {            /* Large Desktop */
+    .logo1-container {
+        left: calc(50% - 150px);
+    }
+} 
+@media screen and (min-width: 1024px) and (max-width: 1366px) { /* Desktop */
+    .logo1-container {
+        left: calc(50% - 250px);
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {         /* Tablet */
+    .logo1-container {
+        left: calc(50% - 350px);
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 767px) {                                 /* Mobile styles */
+    .logo1-container {
+        left: calc(50% - 400px);
+    }
+}
+@media screen and (max-width: 320px) {                            /* Small mobile */
+    .logo1-container {
+        left: calc(50% - 450px);
+    }
+}
 
 
 /* General styling for all section elements */
