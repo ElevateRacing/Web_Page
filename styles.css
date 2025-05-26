@@ -1,4 +1,9 @@
 /* Reset default browser margins and set a fallback font for consistency */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     margin: 0;                          /* Remove default margins */
     font-family: Arial, sans-serif;     /* Use Arial as default font, with sans-serif fallback */
