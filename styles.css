@@ -38,19 +38,28 @@ body {
 }
 
     /* Style the container holding the logo */
-    .logo2-container {
+    .logo-container {
         flex-shrink: 0;                                                         /* Prevent logo from shrinking disproportionately */
+        flex-shrink: 0;                                                         /* Prevent logo from shrinking disproportionately */
+        align-items: center;                                                    /* Vertically center content */
+        justify-content: center;                                                /* Center content vertically */
+    }
+
+
+    .logo2-container {
+        display: flex;                                                          /* Use flexbox to align items horizontally */
+        
     }
 
     /* Style the logo image */
-    .logo2 {
+    .logo2 .logo-image {
         height: var(--logo2-height);                                            /* Set logo height using variable */
         width: auto;                                                            /* Ensure width scales proportionally with height */
         object-fit: contain;                                                    /* Prevent image distortion while respecting height */
         transition: transform 0.3s ease;                                        /* Smooth transition for scaling effect on scroll */
     }
 
-    .logo1 {
+    .logo1 .logo-image {
         height: calc(var(--logo2-height) * 0.8);                                /* 20% smaller than Logo 2 */
         width: auto;                                                            /* Ensure width scales proportionally with height */
         object-fit: contain;                                                    /* Prevent image distortion while respecting height */
