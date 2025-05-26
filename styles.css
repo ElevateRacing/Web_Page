@@ -147,6 +147,7 @@ body {
     /*display: flex;
     flex-direction: column; */
     justify-content: left;
+    text-align: left;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: text shadow for readability */
     z-index: 2; /* Above video */
 }
@@ -178,6 +179,7 @@ body {
         /* display: flex;
         flex-direction: column; */
         justify-content: left;
+        text-align: left;
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: text shadow for readability */
         z-index: 2; /* Above video */
     }
@@ -211,6 +213,7 @@ body {
         /* display: flex;
         flex-direction: column; */
         justify-content: left;
+        text-align: left;
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: text shadow for readability */
         z-index: 2; /* Above video */
     }
