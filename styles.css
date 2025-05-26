@@ -213,7 +213,7 @@ body {
         display: none;                                        /* Hide buttons on mobile */
     }
     .hero-video {
-        object-position: 65% 60%;                             /* Mobile: focus on 65% horizontal, 60% vertical */
+        object-position: 60% 50%;                             /* Mobile: focus on 60% horizontal, 50% vertical */
     }
 }
 @media screen and (max-width: 320px) {                        /* Small mobile */
@@ -241,7 +241,7 @@ body {
         display: none;                                        /* Hide buttons on mobile */
     }
     .hero-video {
-        object-position: 35% 60%;                             /* Same as mobile for small screens */
+        object-position: 60% 50%;                             /* Same as mobile for small screens */
     }
 }
 
