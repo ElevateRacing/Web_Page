@@ -46,7 +46,8 @@ body {
 }
 
 /* Shrink logo size when scrolled */
-.logo2.shrink {
+.logo2.shrink,
+.nav-button.shrink {
     transform: scale(0.8);               /* Reduce logo to 80% of original size */
 }
 
