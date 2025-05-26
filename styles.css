@@ -40,10 +40,9 @@ body {
 }
 
 .logo1-container {
-    flex-shrink: 0;                             /* Prevent logo from shrinking disproportionately */
-    display: flex;                              /* Use flexbox to center logo1 */
-    justify-content: center;                    /* Center logo1 horizontally */
-    flex-grow: 1;                               /* Allow container to take available space for centering */
+    flex-shrink: 0;                             /* Prevent container from shrinking disproportionately */
+    flex-grow: 1;                               /* Allow container to take available space for navbar layout */
+    position: relative;                         /* Serve as a positioning context if needed */
 }
 
     /* Style the logo image */
@@ -55,6 +54,10 @@ body {
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
         transition: transform 0.3s ease;            /* Smooth transition for scaling effect */
+        position: absolute;                         /* Position relative to viewport */
+        top: var(--navbar-padding);                 /* Align with navbar’s top padding */
+        left: 50%;                                  /* Center horizontally */
+        transform: translateX(-50%);                /* Offset by half its width for true centering */
     }
 
 /* Shrink logo size when scrolled */
