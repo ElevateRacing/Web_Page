@@ -236,7 +236,7 @@ body {
     }
     .logo2-container {
         flex-shrink: 0; /* Prevent logo2 from shrinking */
-        margin-left: 0.75rem;
+        margin-left: 0.5rem;
     }
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
