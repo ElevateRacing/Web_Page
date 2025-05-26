@@ -31,6 +31,13 @@ body {
     --nav-button-color: #000000;
     --button-hover:#f3f3f3;
     --button-focus:#ff7f33;
+/* Hero text margins for easy adjustment */
+    --hero-text-margin-left-desktop: 3rem;           /* Desktop left margin for hero text */
+    --hero-text-margin-bottom-desktop: 3.75rem;      /* Desktop bottom margin for hero text */
+    --hero-text-margin-left-tablet: 2rem;            /* Tablet left margin (reduced) */
+    --hero-text-margin-bottom-tablet: 2.5rem;        /* Tablet bottom margin (reduced) */
+    --hero-text-margin-left-mobile: 1.5rem;          /* Mobile left margin (unchanged) */
+    --hero-text-margin-top-mobile: 1.5rem;           /* Mobile top margin (unchanged) */
 }
 
 /* Style the navigation bar */
