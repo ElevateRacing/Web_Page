@@ -203,21 +203,21 @@ body {
         bottom: var(--hero-text-margin-bottom-desktop);   /* Bottom margin for desktop */
         left: var(--hero-text-margin-left-desktop);       /* Left margin for desktop */
         color: var(--primary-font-color);
-        max-width: clamp(30rem, 50rem, 56.25rem);      /* 900px */
+        max-width: 43.75rem;                              /* 700px */
         text-align: left;
         text-shadow: 0 0 7px rgba(0, 0, 0, 0.1); /* Optional: text shadow for readability */
         z-index: 2; /* Above video */
     }
     .hero-content h1 {
         font-family: 'Montserrat', Arial, sans-serif;
-        font-size: clamp(2rem, 3.5vw, 4rem);            /* Min, Preferred, maximum */
+        font-size: 47px;
         font-weight: 700;
         line-height: 1.1;
         margin: 0 0 12px 0;
     }
     .hero-content h2 {
         font-family: 'Roboto', Arial, sans-serif;
-        font-size: clamp(1.25rem, 2vw, 2rem);            /* Min, Preferred, maximum */
+        font-size: 27px;
         font-style: italic;
         font-weight: 400;
         line-height: 1.3;
