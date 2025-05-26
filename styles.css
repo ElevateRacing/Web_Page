@@ -105,6 +105,38 @@ body {
     outline: 2px solid var(--button-focus);
 }
 
+/* Specific styling for the hero section */
+.section_hero {
+    position: relative; /* Allow absolute positioning of video */
+    min-height: calc(100vh - var(--navbar-height));
+    margin-top: var(--navbar-height);
+    background-color: #f0f0f0; /* Grey background as fallback */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent video overflow */
+}
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers the entire section */
+    object-position: 50% 50%; /* Default center focus */
+    z-index: 1; /* Behind content */
+}
+.hero-content {
+    position: relative;
+    z-index: 2; /* Above video */
+    color: #fff; /* White text for better contrast on video */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional: text shadow for readability */
+}
+
 @media screen and (min-width: 1367px) {                      /* Large Desktop */
     .logo1-container {
         left: 50%;
@@ -147,6 +179,9 @@ body {
     .nav-button {
         font-size: 0.8rem;                                    /* 10% reduction from desktop */
     }
+    .hero-video {
+        object-position: 40% 30%;                             /* Tablet: focus on 40% horizontal, 30% vertical */
+    }
 }
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                        /* Mobile styles */
@@ -177,6 +212,9 @@ body {
     .nav-buttons {
         display: none;                                        /* Hide buttons on mobile */
     }
+    .hero-video {
+        object-position: 35% 60%;                             /* Mobile: focus on 35% horizontal, 60% vertical */
+    }
 }
 @media screen and (max-width: 320px) {                        /* Small mobile */
     :root {
@@ -202,10 +240,12 @@ body {
     .nav-buttons {
         display: none;                                        /* Hide buttons on mobile */
     }
+    .hero-video {
+        object-position: 35% 60%;                             /* Same as mobile for small screens */
+    }
 }
 
 /* General styling for all section elements */
-.section_hero,
 .section_page2,
 .section_page3,
 .section_page4 {
@@ -218,12 +258,7 @@ body {
     box-sizing: border-box;      /* Include padding in size calculations */
 }
 
-/* Specific styling for the hero section */
-.section_hero {
-    min-height: calc(100vh - var(--navbar-height));     /* Full viewport height minus navbar */
-    margin-top: var(--navbar-height);                   /* Offset to start below fixed navbar */
-    background-color: #f0f0f0;                          /* Light gray background */
-}
+
 
 /* Styling for page 2 section */
 .section_page2 {
