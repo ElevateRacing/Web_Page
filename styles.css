@@ -13,8 +13,9 @@ body {
     --logo2-height-mobile: 1.62rem;                                             /* Logo height for mobile screens */
     --logo2-height-small: 1.35rem;                                              /* Logo height for very small screens */
     /* navbar spacing */
-    --navbar-padding: 0.75rem;                                                  /* Default top/bottom padding for navbar */
-    --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding));     /* Navbar height: logo + padding */
+    --navbar-padding-h: 0.75rem;                                                /* Default top/bottom padding for navbar */
+    --navbar-padding-v: 1rem;                                                   /* Default right/left padding for navbar */
+    --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding-h));   /* Navbar height: logo + padding */
     /* Colors */
     --nav-bar-color: #ffffff;                                                   /* Navbar background color (white) */
     --shadow-color: rgba(0, 0, 0, 0.1);                                         /* Subtle shadow color for navbar */
@@ -22,20 +23,20 @@ body {
 
 /* Style the navigation bar */
 .navbar {
-    display: flex;                                 /* Use flexbox to align items horizontally */
-    justify-content: space-between;                /* Space logo and other content (if added) apart */
-    align-items: center;                           /* Vertically center content within navbar */
-    background-color: var(--nav-bar-color);        /* Set navbar background color */
-    box-shadow: 0 2px 4px var(--shadow-color);     /* Add subtle shadow for depth */
-    position: fixed;                               /* Fix navbar to the top of the viewport */
-    top: 0;                                        /* Align to top edge */
-    left: 0;                                       /* Align to left edge */
-    width: 100%;                                   /* Span full viewport width */
-    padding: var(--navbar-padding) 1rem;           /* Apply vertical and horizontal padding */
-    transition: padding 0.3s ease;                 /* Smooth transition for padding changes on scroll */
+    display: flex;                                                 /* Use flexbox to align items horizontally */
+    justify-content: space-between;                                /* Space logo and other content (if added) apart */
+    align-items: center;                                           /* Vertically center content within navbar */
+    background-color: var(--nav-bar-color);                        /* Set navbar background color */
+    box-shadow: 0 2px 4px var(--shadow-color);                     /* Add subtle shadow for depth */
+    position: fixed;                                               /* Fix navbar to the top of the viewport */
+    top: 0;                                                        /* Align to top edge */
+    left: 0;                                                       /* Align to left edge */
+    width: 100%;                                                   /* Span full viewport width */
+    padding: var(--navbar-padding-h) var(--navbar-padding-v);      /* Apply vertical and horizontal padding */
+    transition: padding 0.3s ease;                                 /* Smooth transition for padding changes on scroll */
     min-height: fit-content;                                                                                    /* delete if not working properly */
-    box-sizing: border-box;                        /* Include padding in width calculations */                  /* delete if not working properly */
-    z-index: 1000;                                 /* Ensure navbar stays above other content */
+    box-sizing: border-box;                                        /* Include padding in width calculations */                  /* delete if not working properly */
+    z-index: 1000;                                             /* Ensure navbar stays above other content */
 }
 
 /* Style the container holding the logo */
@@ -153,21 +154,21 @@ body {
 
 /* Adjust navbar padding when scrolled */
 .navbar.scrolled {
-    padding: calc(var(--navbar-padding) / 2) 1rem;     /* Reduce vertical padding when scrolled */
+    padding: calc(var(--navbar-padding-h) / 2) var(--navbar-padding-v);     /* Reduce vertical padding when scrolled */
 }
 
 /* Tablet screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
     :root {
         --logo2-height: var(--logo2-height-tablet);                                 /* Use tablet logo height */
-        --navbar-padding: 0.6rem;                                                   /* Slightly smaller padding for tablets */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding));     /* Update navbar height */
+        --navbar-padding-v: 0.75rem;                                                /* Slightly smaller right/left padding for tablets */
+        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding-h));   /* Update navbar height */
     }
     .navbar {
         gap: 1rem; /* Space between elements */
     }
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding) / 2) 1rem;                              /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding-h) / 2) var(--navbar-padding-v);                              /* Maintain reduced padding on scroll */
     }
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
@@ -185,8 +186,8 @@ body {
 @media screen and (max-width: 480px) {
     :root {
         --logo2-height: var(--logo2-height-mobile);                                 /* Use mobile logo height */
-        --navbar-padding: 0.5rem;                                                   /* Smaller padding for mobile */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding));     /* Update navbar height */
+        --navbar-padding-v: 0.75rem;                                                   /* Smaller padding for mobile */
+        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding-h));     /* Update navbar height */
     }
     .navbar {
         justify-content: flex-start; /* Align items to the start */
@@ -194,7 +195,7 @@ body {
         flex-wrap: nowrap;
     }
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding) / 2) 1rem;                              /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding-h) / 2) 1rem;                              /* Maintain reduced padding on scroll */
     }
     
     .nav-buttons {
@@ -206,11 +207,11 @@ body {
 @media screen and (max-width: 320px) {
     :root {
         --logo2-height: var(--logo2-height-small);                                  /* Use smallest logo height */
-        --navbar-padding: 0.4rem;                                                   /* Minimal padding for very small screens */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding));     /* Update navbar height */
+        --navbar-padding-v: 0.75rem;                                                   /* Minimal padding for very small screens */
+        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding-h));     /* Update navbar height */
     }
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding) / 2) 1rem;                              /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding-h) / 2) 1rem;                              /* Maintain reduced padding on scroll */
     }
     .nav-buttons {
         display: none; /* Hide buttons on mobile */
