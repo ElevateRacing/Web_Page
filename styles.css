@@ -35,15 +35,24 @@ body {
 }
 
 /* Style the container holding the logo */
-.logo2-container {
-    flex-shrink: 0;                      /* Prevent logo from shrinking disproportionately */
+.logo2-container,
+.logo1-container {
+    flex-shrink: 0;                             /* Prevent logo from shrinking disproportionately */
 }
 
-/* Style the logo image */
-.logo2 {
-    height: var(--logo2-height);         /* Set logo height using variable */
-    transition: transform 0.3s ease;     /* Smooth transition for scaling effect */
-}
+    /* Style the logo image */
+    .logo2 {
+        height: var(--logo2-height);                /* Set logo height using variable */
+        transition: transform 0.3s ease;            /* Smooth transition for scaling effect */
+    }
+
+    .logo1 {
+        height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
+        transition: transform 0.3s ease;            /* Smooth transition for scaling effect */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
 /* Shrink logo size when scrolled */
 .logo2.shrink,
