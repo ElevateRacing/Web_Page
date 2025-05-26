@@ -39,35 +39,65 @@ body {
 
     /* Style the container holding the logo */
     .logo-container {
-        flex-shrink: 0;                                                         /* Prevent logo from shrinking disproportionately */
+        display: flex;                                                          /* Use flexbox to align items horizontally */
         flex-shrink: 0;                                                         /* Prevent logo from shrinking disproportionately */
         align-items: center;                                                    /* Vertically center content */
         justify-content: center;                                                /* Center content vertically */
     }
 
-
-    .logo2-container {
-        display: flex;                                                          /* Use flexbox to align items horizontally */
-        
+    .logo2 {
+        margin-left: 0.5rem;
     }
 
-    /* Style the logo image */
-    .logo2 .logo-image {
-        height: var(--logo2-height);                                            /* Set logo height using variable */
-        width: auto;                                                            /* Ensure width scales proportionally with height */
-        object-fit: contain;                                                    /* Prevent image distortion while respecting height */
-        transition: transform 0.3s ease;                                        /* Smooth transition for scaling effect on scroll */
+    .logo1 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
+        /* Dynamic positioning to avoid button overlap */
+        @media screen and (min-width: 1401px) {
+            .logo1 {
+                left: calc(50% - 150px);
+            }
+        }               
+        @media screen and (min-width: 1281px) and (max-width: 1400px) {
+            .logo1 {
+                left: calc(50% - 250px);
+            }
+        }
+        @media screen and (max-width: 1280px) {
+            .logo1 {
+                left: calc(50% - 300px);
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
+            .logo1 {
+                position: static;                                                           /* Remove absolute positioning */
+                flex-grow: 1;                                                               /* Allow logo1 to take available space */
+                transform: none;                                                            /* Remove translateX */}}
+        @media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
+            .logo1 {
+                flex-grow: 1;                                                               /* Allow logo1 to take available space */
+                position: static;                                                           /* Remove absolute positioning */
+                transform: none;                                                            /* Remove translateX */}}
 
-    .logo1 .logo-image {
-        height: calc(var(--logo2-height) * 0.8);                                /* 20% smaller than Logo 2 */
-        width: auto;                                                            /* Ensure width scales proportionally with height */
-        object-fit: contain;                                                    /* Prevent image distortion while respecting height */
-        transition: transform 0.3s ease;                                        /* Smooth transition for scaling effect on scroll */
-    }
+        /* Style the logo image */
+        .logo2 .logo-image {
+            height: var(--logo2-height);                                            /* Set logo height using variable */
+            width: auto;                                                            /* Ensure width scales proportionally with height */
+            object-fit: contain;                                                    /* Prevent image distortion while respecting height */
+            transition: transform 0.3s ease;                                        /* Smooth transition for scaling effect on scroll */
+        }
+
+        .logo1 .logo-image {
+            height: calc(var(--logo2-height) * 0.8);                                /* 20% smaller than Logo 2 */
+            width: auto;                                                            /* Ensure width scales proportionally with height */
+            object-fit: contain;                                                    /* Prevent image distortion while respecting height */
+            transition: transform 0.3s ease;                                        /* Smooth transition for scaling effect on scroll */
+        }
 
     /* Shrink logo size when scrolled */
-    .logo.shrink {
+    .logo-container.shrink {
         transform: scale(0.8);                                                  /* Reduce logo to 80% of original size */
     }
 
@@ -120,6 +150,10 @@ body {
     :root {
         --navbar-height: calc(var(--logo2-height-tablet) + 2 * var(--navbar-padding-tablet));     /* Adjust navbar height */
     }
+
+    .logo2 {
+        margin-left: 0.5rem;
+    }
     
     .logo2 {
         height: var(--logo2-height-tablet);                                                       /* Explicitly set logo height for tablets */
@@ -141,6 +175,10 @@ body {
     :root {
         --navbar-height: calc(var(--logo2-height-mobile) + 2 * var(--navbar-padding-mobile));     /* Adjust navbar height */
     }
+
+    .logo2 {
+        margin-left: 0.5rem;
+    }
     
     .logo2 {
         height: var(--logo2-height-mobile);                                                       /* Explicitly set logo height for mobile */
@@ -161,6 +199,10 @@ body {
 @media screen and (max-width: 320px) {
     :root {
         --navbar-height: calc(var(--logo2-height-small) + 2 * var(--navbar-padding-small));       /* Adjust navbar height */
+    }
+
+    .logo2 {
+        margin-left: 0.5rem;
     }
     
     .logo2 {
