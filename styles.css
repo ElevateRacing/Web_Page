@@ -1,10 +1,16 @@
 /* Reset default browser margins and set a fallback font for consistency */
-body {
+* {
+    box-sizing: border-box; 
     margin: 0;                          /* Remove default margins */
-    font-family: Arial, sans-serif;     /* Use Arial as default font, with sans-serif fallback */
-    scroll-behavior: smooth;            /* Enable smooth scrolling for anchor links */
+    padding: 0;                         /* Remove default padding */
 }
-
+html, body {
+    height: 100%;                       /*Ensure body takes full height for scroll calculation if needed */
+    overflow-x: hidden;                 /* Prevent horizontal scroll */}
+    scroll-behavior: smooth;            /* Enable smooth scrolling for anchor links */
+    font-size: 16px;                    /* Root font size */
+    font-family: Arial, sans-serif;     /* Use Arial as default font, with sans-serif fallback */
+}
 /* Define CSS custom properties (variables) for reusable values */
 :root {
 /* Logo 2 sizing */
@@ -36,7 +42,7 @@ body {
     left: 0;                                                       /* Align to left edge */
     width: 100%;                                                   /* Span full viewport width */
     padding: var(--navbar-padding-h) var(--navbar-padding-v);      /* Apply vertical and horizontal padding */
-    transition: padding 0.3s ease;                                 /* Smooth transition for padding changes on scroll */
+    transition: all 0.3s ease;                                 /* Smooth transition for padding changes on scroll */
     min-height: fit-content;                                                                                    /* delete if not working properly */
     box-sizing: border-box;                                        /* Include padding in width calculations */                  /* delete if not working properly */
     z-index: 1000;                                             /* Ensure navbar stays above other content */
