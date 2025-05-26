@@ -35,29 +35,33 @@ body {
 }
 
 /* Style the container holding the logo */
+.logo2-container,
+.logo1-container {
+    display: flex;                                 /* Use flexbox to align items horizontally */
+    align-items: center;                           /* Vertically center content within logo-containers */
+    justify-content: center;
+    flex-shrink: 0;                                /* Prevent logo from shrinking disproportionately */
+}
+
 .logo2-container {
-    flex-shrink: 0;                             /* Prevent logo from shrinking disproportionately */
+    margin-left: 0.5rem;                           /* Added slight margin from left edge */
 }
 
 .logo1-container {
-    flex-shrink: 0;                             /* Prevent container from shrinking disproportionately */
-    flex-grow: 1;                               /* Allow container to take available space for navbar layout */
-    position: relative;                         /* Serve as a positioning context if needed */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
     /* Style the logo image */
     .logo2 {
         height: var(--logo2-height);                /* Set logo height using variable */
-        transition: transform 0.3s ease;            /* Smooth transition for scaling effect */
+        width: auto;                                /* Maintain aspect ratio */
+        object-fit: contain;
     }
 
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
-        transition: transform 0.3s ease;            /* Smooth transition for scaling effect */
-        position: absolute;                         /* Position relative to viewport */
-        top: var(--navbar-padding);                 /* Align with navbar’s top padding */
-        left: 50%;                                  /* Center horizontally */
-        transform: translateX(-50%);                /* Offset by half its width for true centering */
     }
 
 /* Shrink logo size when scrolled */
