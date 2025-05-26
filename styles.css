@@ -143,12 +143,9 @@ body {
     bottom: var(--hero-text-margin-bottom-desktop);   /* Bottom margin for desktop */
     left: var(--hero-text-margin-left-desktop);       /* Left margin for desktop */
     color: var(--primary-font-color);
-    max-width: 56.25rem;                              /* 900px */
-    /*display: flex;
-    flex-direction: column; */
-    justify-content: left;
+    max-width: clamp(45rem, 56.25rem, 56.25rem);      /* 900px */
     text-align: left;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: text shadow for readability */
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.1); /* Optional: text shadow for readability */
     z-index: 2; /* Above video */
 }
 .hero-content h1 {
@@ -175,12 +172,9 @@ body {
         bottom: var(--hero-text-margin-bottom-desktop);   /* Bottom margin for desktop */
         left: var(--hero-text-margin-left-desktop);       /* Left margin for desktop */
         color: var(--primary-font-color);
-        max-width: 56.25rem;                              /* 900px */
-        /* display: flex;
-        flex-direction: column; */
-        justify-content: left;
+        max-width: clamp(45rem, 56.25rem, 56.25rem);      /* 900px */
         text-align: left;
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: text shadow for readability */
+        text-shadow: 0 0 7px rgba(0, 0, 0, 0.1); /* Optional: text shadow for readability */
         z-index: 2; /* Above video */
     }
     .hero-content h1 {
@@ -210,11 +204,8 @@ body {
         left: var(--hero-text-margin-left-desktop);       /* Left margin for desktop */
         color: var(--primary-font-color);
         max-width: 56.25rem;                              /* 900px */
-        /* display: flex;
-        flex-direction: column; */
-        justify-content: left;
         text-align: left;
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: text shadow for readability */
+        text-shadow: 0 0 7px rgba(0, 0, 0, 0.1); /* Optional: text shadow for readability */
         z-index: 2; /* Above video */
     }
     .hero-content h1 {
