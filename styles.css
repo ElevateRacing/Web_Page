@@ -51,28 +51,22 @@ body {
     box-sizing: border-box;                        /* Include padding in width calculations */               
     z-index: 1000;                                 /* Ensure navbar stays above other content */
 }
-
-/* Style the container holding the logo */
 .logo2-container,
-.logo1-container {
+.logo1-container {                                 /* Style the container holding the logo */
     display: flex;                                 /* Use flexbox to align items horizontally */
     align-items: center;                           /* Vertically center content within logo-containers */
     justify-content: center;
     flex-shrink: 0;                                /* Prevent logo from shrinking disproportionately */
 }
-
 .logo2-container {
     margin-left: 0.5rem;                           /* Added slight margin from left edge */
 }
-
 .logo1-container {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
-
-    /* Style the logo image */
-    .logo2 {
+    .logo2 {                                                   /* Style the logo image */
         height: var(--logo2-height);                           /* Set logo height using variable */
         width: auto;                                           /* Maintain aspect ratio */
         object-fit: contain;
@@ -81,20 +75,16 @@ body {
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);               /* Set logo height using variable */
     }
-
-/* Shrink logo size when scrolled */
 .logo2.shrink,
 .logo1.shrink,
-.nav-button.shrink {
-    transform: scale(0.8);               /* Reduce logo to 80% of original size */
+.nav-button.shrink {                /* Shrink logo size when scrolled */
+    transform: scale(0.8);          /* Reduce logo to 80% of original size */
 }
-
 .nav-buttons {
-    display: flex;                       /* Use flexbox to align items horizontally */
+    display: flex;                  /* Use flexbox to align items horizontally */
     gap: 1rem;
     flex-shrink: 0;
 }
-
 .nav-button {
     padding: 8px 16px;
     text-decoration: none;
@@ -146,7 +136,7 @@ body {
         margin-left: 0.5rem;
     }
     .logo1-container {
-        left: calc(50% - 200px);
+        left: calc(50% - 170px);
     }
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);              /* Set logo height using variable */
@@ -179,24 +169,25 @@ body {
         margin-left: 0.5rem;
     }
     .logo1-container {
-        left: calc(50% - 400px);
+        left: calc(50% - 50px);
     }
     .logo1 {
-        height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
+        height: calc(var(--logo2-height) * 0.8);              /* Set logo height using variable */
     }
     .nav-buttons {
-        display: none; /* Hide buttons on mobile */
+        display: none;                                        /* Hide buttons on mobile */
     }
 }
-@media screen and (max-width: 320px) {                             /* Small mobile */
+@media screen and (max-width: 320px) {                        /* Small mobile */
     :root {
-        --logo2-height: var(--logo2-height-small);                                  /* Use smallest logo height */
-        --navbar-padding-v: 0.75rem;                                                   /* Minimal padding for very small screens */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding-h));     /* Update navbar height */
+        --logo2-height: var(--logo2-height-small);            /* Use smallest logo height */
+        --navbar-padding-v: 0.75rem;                          /* Minimal padding for very small screens */
+        --navbar-height: calc(var(--logo2-height) + 2 * 
+                              var(--navbar-padding-h));       /* Update navbar height */
     }
     .navbar {
-        justify-content: flex-start; /* Align items to the start */
-        gap: 0.75rem; /* Space between logo2 and logo1 */
+        justify-content: flex-start;                          /* Align items to the start */
+        gap: 0.75rem;                                         /* Space between logo2 and logo1 */
         flex-wrap: nowrap;
     }
     .navbar.scrolled {
