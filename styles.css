@@ -120,14 +120,14 @@ body {
         left: 50%;
     }
 } 
-@media screen and (min-width: 1024px) 
+@media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
     .logo1-container {
-        left: calc(50% - 100px);
+        left: calc(50% - 130px);
     }
 }
 @media screen and (min-width: 768px) 
-              and (max-width: 1023px) {                       /* Tablet */
+              and (max-width: 1280px) {                       /* Tablet */
     :root {
         --logo2-height: var(--logo2-height-tablet);           /* Use tablet logo height */
         --navbar-padding-v: 0.75rem;                          /* Slightly smaller right/left padding for tablets */
@@ -135,44 +135,47 @@ body {
                               var(--navbar-padding-h));       /* Update navbar height */
     }
     .navbar {
-        gap: 1rem; /* Space between elements */
+        gap: 1rem;                                            /* Space between elements */
     }
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding-h) / 2) var(--navbar-padding-v);         /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding-h) / 2) 
+                      var(--navbar-padding-v);                /* Maintain reduced padding on scroll */
     }
     .logo2-container {
         flex-shrink: 0;
         margin-left: 0.5rem;
     }
     .logo1-container {
-        left: calc(50% - 350px);
+        left: calc(50% - 200px);
     }
     .logo1 {
-        height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
+        height: calc(var(--logo2-height) * 0.8);              /* Set logo height using variable */
     }
     .nav-buttons {
         gap: 0.75rem;
     }
     .nav-button {
-        font-size: 0.8rem; /* 10% reduction from desktop */
+        font-size: 0.8rem;                                    /* 10% reduction from desktop */
     }
 }
-@media screen and (min-width: 321px) and (max-width: 767px) {      /* Mobile styles */
+@media screen and (min-width: 321px) 
+              and (max-width: 767px) {                        /* Mobile styles */
     :root {
-        --logo2-height: var(--logo2-height-mobile);                                   /* Use mobile logo height */
-        --navbar-padding-v: 0.75rem;                                                  /* Smaller padding for mobile */
-        --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding-h));     /* Update navbar height */
+        --logo2-height: var(--logo2-height-mobile);           /* Use mobile logo height */
+        --navbar-padding-v: 0.75rem;                          /* Smaller padding for mobile */
+        --navbar-height: calc(var(--logo2-height) + 2 * 
+                              var(--navbar-padding-h));       /* Update navbar height */
     }
     .navbar {
-        justify-content: flex-start; /* Align items to the start */
-        gap: 0.75rem; /* Space between logo2 and logo1 */
+        justify-content: flex-start;                          /* Align items to the start */
+        gap: 0.75rem;                                         /* Space between logo2 and logo1 */
         flex-wrap: nowrap;
     }
     .navbar.scrolled {
-        padding: calc(var(--navbar-padding-h) / 2) 1rem;                              /* Maintain reduced padding on scroll */
+        padding: calc(var(--navbar-padding-h) / 2) 1rem;      /* Maintain reduced padding on scroll */
     }
     .logo2-container {
-        flex-shrink: 0; /* Prevent logo2 from shrinking */
+        flex-shrink: 0;                                       /* Prevent logo2 from shrinking */
         margin-left: 0.5rem;
     }
     .logo1-container {
