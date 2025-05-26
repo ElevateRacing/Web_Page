@@ -1,37 +1,37 @@
 /* Reset default browser margins and set a fallback font for consistency */
 body {
-    margin: 0; /* Remove default margins */
-    font-family: Arial, sans-serif; /* Use Arial as default font, with sans-serif fallback */
-    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+    margin: 0;                          /* Remove default margins */
+    font-family: Arial, sans-serif;     /* Use Arial as default font, with sans-serif fallback */
+    scroll-behavior: smooth;            /* Enable smooth scrolling for anchor links */
 }
 
 /* Define CSS custom properties (variables) for reusable values */
 :root {
-    --logo2-height: 1.89rem;           /* Default logo height for desktop screens */
-    --logo2-height-tablet: 1.323rem;   /* Logo height for tablet screens */
-    --logo2-height-mobile: 1.62rem;    /* Logo height for mobile screens */
-    --logo2-height-small: 1.35rem;     /* Logo height for very small screens */
-    --navbar-padding: 0.75rem;         /* Default top/bottom padding for navbar */
+    --logo2-height: 1.89rem;                                                    /* Default logo height for desktop screens */
+    --logo2-height-tablet: 1.323rem;                                            /* Logo height for tablet screens */
+    --logo2-height-mobile: 1.62rem;                                             /* Logo height for mobile screens */
+    --logo2-height-small: 1.35rem;                                              /* Logo height for very small screens */
+    --navbar-padding: 0.75rem;                                                  /* Default top/bottom padding for navbar */
     --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding));     /* Navbar height: logo + padding */
-    --nav-bar-color: #ffffff;          /* Navbar background color (white) */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow color for navbar */
+    --nav-bar-color: #ffffff;                                                   /* Navbar background color (white) */
+    --shadow-color: rgba(0, 0, 0, 0.1);                                         /* Subtle shadow color for navbar */
 }
 
 /* Style the navigation bar */
 .navbar {
     display: flex; /* Use flexbox to align items horizontally */
-    justify-content: space-between; /* Space logo and other content (if added) apart */
-    align-items: center; /* Vertically center content within navbar */
-    background-color: var(--nav-bar-color); /* Set navbar background color */
-    box-shadow: 0 2px 4px var(--shadow-color); /* Add subtle shadow for depth */
-    position: fixed; /* Fix navbar to the top of the viewport */
-    top: 0; /* Align to top edge */
-    left: 0; /* Align to left edge */
-    width: 100%; /* Span full viewport width */
-    padding: var(--navbar-padding) 1rem; /* Apply vertical and horizontal padding */
-    transition: padding 0.3s ease; /* Smooth transition for padding changes on scroll */
-    box-sizing: border-box; /* Include padding in width calculations */
-    z-index: 1000; /* Ensure navbar stays above other content */
+    justify-content: space-between;                /* Space logo and other content (if added) apart */
+    align-items: center;                           /* Vertically center content within navbar */
+    background-color: var(--nav-bar-color);        /* Set navbar background color */
+    box-shadow: 0 2px 4px var(--shadow-color);     /* Add subtle shadow for depth */
+    position: fixed;                               /* Fix navbar to the top of the viewport */
+    top: 0;                                        /* Align to top edge */
+    left: 0;                                       /* Align to left edge */
+    width: 100%;                                   /* Span full viewport width */
+    padding: var(--navbar-padding) 1rem;           /* Apply vertical and horizontal padding */
+    transition: padding 0.3s ease;                 /* Smooth transition for padding changes on scroll */
+    box-sizing: border-box;                        /* Include padding in width calculations */
+    z-index: 1000;                                 /* Ensure navbar stays above other content */
 }
 
 /* Style the container holding the logo */
