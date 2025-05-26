@@ -45,7 +45,7 @@ body {
     display: flex;                                 /* Use flexbox to align items horizontally */
     align-items: center;                           /* Vertically center content within logo-containers */
     justify-content: center;
-    flex-shrink: 0;                                /* Prevent logo from shrinking disproportionately */
+    flex-shrink: 0;                                /* Prevent logo from shrinking disproportionately */                        /* delete if not working properly */
 }
 
 .logo2-container {
@@ -57,6 +57,38 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
+/* Dynamic positioning of Logo1 */
+@media screen and (min-width: 1401px) {            /* Very large screens */
+    .logo1 {
+        left: calc(50% - 150px);
+    }
+}               
+@media screen and (min-width: 1281px) and (max-width: 1400px) { /* Large screens */
+    .logo1 {
+        left: calc(50% - 250px);
+    }
+}
+@media screen and (max-width: 1280px) {            /* Large screens */
+    .logo1 {
+        left: calc(50% - 300px);
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {                      /* Tablet styles (768px to 1023px) */
+    .logo1 {
+        position: static; /* Remove absolute positioning */
+        flex-grow: 1; /* Allow logo1 to take available space */
+        transform: none; /* Remove translateX */
+    }
+}
+@media screen and (max-width: 767px) {                                              /* Mobile styles (below 768px) */
+    .logo1 {
+        flex-grow: 1; /* Allow logo1 to take available space */
+        position: static; /* Remove absolute positioning */
+        transform: none; /* Remove translateX */
+    }
+}
+
+
 
     /* Style the logo image */
     .logo2 {
@@ -170,6 +202,10 @@ body {
     .navbar.scrolled {
         padding: calc(var(--navbar-padding-h) / 2) var(--navbar-padding-v);                              /* Maintain reduced padding on scroll */
     }
+    .logo2-container {
+        flex-shrink: 0;
+        margin-left: 0.5rem;
+    }
     .logo1 {
         height: calc(var(--logo2-height) * 0.8);    /* Set logo height using variable */
     }
@@ -197,7 +233,10 @@ body {
     .navbar.scrolled {
         padding: calc(var(--navbar-padding-h) / 2) 1rem;                              /* Maintain reduced padding on scroll */
     }
-    
+    .logo2-container {
+        flex-shrink: 0; /* Prevent logo2 from shrinking */
+        margin-left: 0.75rem;
+    }
     .nav-buttons {
         display: none; /* Hide buttons on mobile */
     }
@@ -209,6 +248,11 @@ body {
         --logo2-height: var(--logo2-height-small);                                  /* Use smallest logo height */
         --navbar-padding-v: 0.75rem;                                                   /* Minimal padding for very small screens */
         --navbar-height: calc(var(--logo2-height) + 2 * var(--navbar-padding-h));     /* Update navbar height */
+    }
+    .navbar {
+        justify-content: flex-start; /* Align items to the start */
+        gap: 0.75rem; /* Space between logo2 and logo1 */
+        flex-wrap: nowrap;
     }
     .navbar.scrolled {
         padding: calc(var(--navbar-padding-h) / 2) 1rem;                              /* Maintain reduced padding on scroll */
