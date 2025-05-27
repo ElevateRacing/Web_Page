@@ -175,13 +175,13 @@ body {
 
 /* - - - - - - PAGE_3 SECTION - - - - - - */
 .section_page3 {
-    display: flex;               /* Use flexbox for content layout */
-    flex-direction: column;      /* Stack content vertically */
+    display: block;             /* Use block to avoid flexbox gaps */
     background-color: var(--Page3-background-color);
-    height: auto;               /* Let the scaled image dictate height */
-    position: relative;         /* For absolute positioning of text */
-    overflow: hidden;           /* Hide overflowing image */
-    padding: 0;                /* Remove padding to tightly wrap image */
+    height: auto;              /* Match scaled image height */
+    position: relative;       /* For absolute positioning of text if present */
+    overflow: hidden;          /* Prevent overflow from adding space */
+    padding: 0;                /* Remove padding */
+    margin: 0;                 /* Remove margins */
 }
 
 @media screen and (min-width: 1367px) {                      /* Large Desktop */
@@ -255,24 +255,28 @@ body {
         display: block;
     }
     .section_page3 {
-        height: auto; /* Let image dictate height */
-        position: relative; /* For absolute positioning of text */
-        overflow: hidden; /* Hide overflowing image */
-        padding: 0;
+        display: block;        /* Use block to avoid flexbox gaps */
+        height: auto;          /* Match scaled image height */
+        position: relative;    /* For absolute positioning of text if present */
+        overflow: hidden;      /* Prevent overflow */
+        padding: 0;           /* Remove padding */
+        margin: 0;            /* Remove margins */
     }
     .page3-graphic1 {
         width: 100%;
-        height: auto; /* Let scaled image dictate height */
-        overflow: hidden; /* Hide excess image */
+        height: auto;         /* Match scaled image height */
+        overflow: hidden;     /* Hide excess image */
+        margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
-        height: auto; /* Maintain aspect ratio */
+        width: 166.67%;       /* Show only 60% of image (100/0.6 = 166.67%) */
+        height: auto;         /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
         transform: scale(0.8); /* Reduce size to 80% */
-        transform-origin: 0 50%; /* Scale from left-center to align with object-position */
+        transform-origin: 0 0; /* Scale from top-left for consistent height */
+        margin: 0;            /* Remove margins */
     }
 } 
 @media screen and (min-width: 1281px) 
@@ -346,24 +350,28 @@ body {
         display: block;
     }
     .section_page3 {
-        height: auto; /* Let image dictate height */
-        position: relative; /* For absolute positioning of text */
-        overflow: hidden; /* Hide overflowing image */
-        padding: 0;
+        display: block;        /* Use block to avoid flexbox gaps */
+        height: auto;          /* Match scaled image height */
+        position: relative;    /* For absolute positioning of text if present */
+        overflow: hidden;      /* Prevent overflow */
+        padding: 0;           /* Remove padding */
+        margin: 0;            /* Remove margins */
     }
     .page3-graphic1 {
         width: 100%;
-        height: auto; /* Let scaled image dictate height */
-        overflow: hidden; /* Hide excess image */
+        height: auto;         /* Match scaled image height */
+        overflow: hidden;     /* Hide excess image */
+        margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
-        height: auto; /* Maintain aspect ratio */
+        width: 166.67%;       /* Show only 60% of image (100/0.6 = 166.67%) */
+        height: auto;         /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
         transform: scale(0.8); /* Reduce size to 80% */
-        transform-origin: 0 50%; /* Scale from left-center to align with object-position */
+        transform-origin: 0 0; /* Scale from top-left for consistent height */
+        margin: 0;            /* Remove margins */
     }
 }
 @media screen and (min-width: 768px) 
@@ -466,24 +474,28 @@ body {
         display: block;
     }
     .section_page3 {
-        height: auto; /* Let image dictate height */
-        position: relative; /* For absolute positioning of text */
-        overflow: hidden; /* Hide overflowing image */
-        padding: 0;
+        display: block;        /* Use block to avoid flexbox gaps */
+        height: auto;          /* Match scaled image height */
+        position: relative;    /* For absolute positioning of text if present */
+        overflow: hidden;      /* Prevent overflow */
+        padding: 0;           /* Remove padding */
+        margin: 0;            /* Remove margins */
     }
     .page3-graphic1 {
         width: 100%;
-        height: auto; /* Let scaled image dictate height */
-        overflow: hidden; /* Hide excess image */
+        height: auto;         /* Match scaled image height */
+        overflow: hidden;     /* Hide excess image */
+        margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
-        height: auto; /* Maintain aspect ratio */
+        width: 166.67%;       /* Show only 60% of image (100/0.6 = 166.67%) */
+        height: auto;         /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
         transform: scale(0.8); /* Reduce size to 80% */
-        transform-origin: 0 50%; /* Scale from left-center to align with object-position */
+        transform-origin: 0 0; /* Scale from top-left for consistent height */
+        margin: 0;            /* Remove margins */
     }
 }
 @media screen and (min-width: 321px) 
@@ -583,28 +595,31 @@ body {
         display: block;
     }
     .section_page3 {
-        height: auto; /* Height driven by scaled image */
-        flex-direction: column; /* Stack content vertically */
-        position: relative; /* For absolute positioning of text */
-        overflow-x: hidden; /* Hide horizontal overflow */
-        overflow-y: visible; /* Allow vertical overflow for full image */
-        padding: 0; /* Remove padding to tightly wrap image */
+        display: block;        /* Use block to avoid flexbox gaps */
+        height: auto;          /* Match scaled image height */
+        position: relative;    /* For absolute positioning of text if present */
+        overflow-x: hidden;    /* Hide horizontal overflow */
+        overflow-y: auto;     /* Allow image to dictate height */
+        padding: 0;           /* Remove padding */
+        margin: 0;            /* Remove margins */
     }
     .page3-graphic1 {
         width: 100%;
-        height: auto; /* Let image height dictate container */
-        overflow-x: hidden; /* Hide horizontal overflow only */
-        overflow-y: visible; /* Allow vertical overflow to show full image */
+        height: auto;         /* Match scaled image height */
+        overflow-x: hidden;   /* Hide horizontal overflow */
+        overflow-y: auto;     /* Allow image to dictate height */
+        margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure full image is visible without cropping */
+        width: 250%;          /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
+        height: auto;         /* Maintain aspect ratio */
+        object-fit: contain;  /* Ensure full image is visible without cropping */
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
-        margin-left: -40%; /* Shift image left to show more of the left side */
+        margin-left: -40%;    /* Shift image left to show more of the left side */
         display: block;
         transform: scale(0.8); /* Reduce size to 80% */
-        transform-origin: 0 0; /* Scale from top-left to align with object-position */
+        transform-origin: 0 0; /* Scale from top-left for consistent height */
+        margin: 0;            /* Remove margins */
     }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
@@ -698,28 +713,31 @@ body {
         display: block;
     }
     .section_page3 {
-        height: auto; /* Height driven by scaled image */
-        flex-direction: column; /* Stack content vertically */
-        position: relative; /* For absolute positioning of text */
-        overflow-x: hidden; /* Hide horizontal overflow */
-        overflow-y: visible; /* Allow vertical overflow for full image */
-        padding: 0; /* Remove padding to tightly wrap image */
+        display: block;        /* Use block to avoid flexbox gaps */
+        height: auto;          /* Match scaled image height */
+        position: relative;    /* For absolute positioning of text if present */
+        overflow-x: hidden;    /* Hide horizontal overflow */
+        overflow-y: auto;     /* Allow image to dictate height */
+        padding: 0;           /* Remove padding */
+        margin: 0;            /* Remove margins */
     }
     .page3-graphic1 {
         width: 100%;
-        height: auto; /* Let image height dictate container */
-        overflow-x: hidden; /* Hide horizontal overflow only */
-        overflow-y: visible; /* Allow vertical overflow to show full image */
+        height: auto;         /* Match scaled image height */
+        overflow-x: hidden;   /* Hide horizontal overflow */
+        overflow-y: auto;     /* Allow image to dictate height */
+        margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure full image is visible without cropping */
+        width: 250%;          /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
+        height: auto;         /* Maintain aspect ratio */
+        object-fit: contain;  /* Ensure full image is visible without cropping */
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
-        margin-left: -40%; /* Shift image left to show more of the left side */
+        margin-left: -40%;    /* Shift image left to show more of the left side */
         display: block;
         transform: scale(0.8); /* Reduce size to 80% */
-        transform-origin: 0 0; /* Scale from top-left to align with object-position */
+        transform-origin: 0 0; /* Scale from top-left for consistent height */
+        margin: 0;            /* Remove margins */
     }
 }
 
