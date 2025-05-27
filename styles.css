@@ -502,17 +502,16 @@ body {
     }
     .page2-graphic1 {
         width: 100%;
-        height: auto;
-        overflow: hidden;
+        height: auto; /* Let image height dictate container */
+        overflow-x: hidden; /* Hide horizontal overflow only */
+        overflow-y: visible; /* Allow vertical overflow to show full image */
     }
     .page2-graphic1 .page2-image1 {
-        width: 95.2%; /* Show 60% of 100% scaled image (100/0.6/1.75 = 95.2%) */
+        width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
         height: auto; /* Maintain aspect ratio */
         object-fit: contain; /* Ensure full image is visible without cropping */
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
-        transform: scale(1.75); /* Increase image size by 50% */
-        transform-origin: top left; /* Scale from top-left to align with 60% visibility */
     }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
