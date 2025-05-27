@@ -510,7 +510,8 @@ body {
         width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
         height: auto; /* Maintain aspect ratio */
         object-fit: contain; /* Ensure full image is visible without cropping */
-        object-position: left top; /* Align to top-left for left-side focus */
+        object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
+        margin-left: -50%; /* Shift image left to show more of the left side */
         display: block;
     }
 }
