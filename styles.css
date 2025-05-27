@@ -175,10 +175,9 @@ body {
 
 /* - - - - - - PAGE_3 SECTION - - - - - - */
 .section_page3 {
-    position: relative;
-    background-color: var(--Page3-background-color);
-    margin: 0;
-    padding: 0;
+    display: flex;               /* Use flexbox for content layout */
+    flex-direction: column;      /* Stack content vertically */
+    background-color: var(--Page2-background-color);
 }
 .page3-text1, .page3-text2, .page3-text3 {
     text-align: center;
@@ -289,10 +288,9 @@ body {
         display: block;
     }
     .section_page3 {
-        height: auto;
-        position: relative;
-        overflow: hidden;
-        margin: 0;
+        height: auto; /* Let image dictate height */
+        position: relative; /* For absolute positioning of text */
+        overflow: hidden; /* Hide overflowing image */
         padding: 0;
     }
     .page3-text1, .page3-text2, .page3-text3 {
