@@ -193,7 +193,7 @@ body {
     width: auto; /* Allow image to dictate width */
     height: 100%; /* Match image height */
 }
-.page3-image {
+.page3-image1 {
     height: 100%; /* Image sets section height */
     width: auto; /* Maintain aspect ratio, allow right side to extend */
     object-fit: contain; /* Preserve image integrity */
@@ -323,13 +323,13 @@ body {
     .page3-content {
         position: relative;
     }
-    .page3-graphic {
+    .page3-graphic1 {
         position: absolute;
         left: 0;
         top: 0;
         height: 100%;
     }
-    .page3-image {
+    .page3-image1 {
         display: block; /* Show desktop image */
     }
     .page3-text {
@@ -416,13 +416,13 @@ body {
     .page3-content {
         position: relative;
     }
-    .page3-graphic {
+    .page3-graphic1 {
         position: absolute;
         left: 0;
         top: 0;
         height: 100%;
     }
-    .page3-image {
+    .page3-image1 {
         display: block;
     }
     .page3-text {
@@ -538,13 +538,13 @@ body {
     .page3-content {
         position: relative;
     }
-    .page3-graphic {
+    .page3-graphic1 {
         position: absolute;
         left: 0;
         top: 0;
         height: 100%;
     }
-    .page3-image {
+    .page3-image1 {
         display: block;
     }
     .page3-text {
@@ -672,12 +672,9 @@ body {
     .page3-content {
         flex-direction: column; /* Stack text above image */
     }
-    .page3-graphic {
+    .page3-graphic1 {
         width: 100%;
         height: auto;
-    }
-    .page3-image-mobile {
-        display: block; /* Show mobile image */
     }
     .page3-text {
         position: static;
@@ -797,12 +794,9 @@ body {
     .page3-content {
         flex-direction: column;
     }
-    .page3-graphic {
+    .page3-graphic1 {
         width: 100%;
         height: auto;
-    }
-    .page3-image-mobile {
-        display: block;
     }
     .page3-text {
         position: static;
