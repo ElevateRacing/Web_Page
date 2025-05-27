@@ -605,7 +605,7 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 200%;          /* 250% * 0.8 to scale to 80% of original size */
+        width: 240%;          /* 300% * 0.8 to scale to 80% of original size */
         height: auto;         /* Maintain aspect ratio */
         object-fit: contain;  /* Ensure full image is visible without cropping */
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
@@ -722,7 +722,7 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 200%;          /* 250% * 0.8 to scale to 80% of original size */
+        width: 240%;          /* 300% * 0.8 to scale to 80% of original size */
         height: auto;         /* Maintain aspect ratio */
         object-fit: contain;  /* Ensure full image is visible without cropping */
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
