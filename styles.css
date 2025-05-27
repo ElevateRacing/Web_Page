@@ -498,13 +498,15 @@ body {
         color: #000000;
         max-width: 90%;
         margin: 0 auto 15px;
+        text-shadow: none;
     }
     .page2-graphic1 {
         width: 100%;
         overflow: hidden;
     }
     .page2-graphic1 .page2-image1 {
-        width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
+        /* width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
+        width: 166.7%; /* Show 60% of 100% scaled image (100/0.6 = 166.7%) */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
