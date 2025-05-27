@@ -177,61 +177,8 @@ body {
 .section_page3 {
     display: flex;               /* Use flexbox for content layout */
     flex-direction: column;      /* Stack content vertically */
-    background-color: var(--Page2-background-color);
+    background-color: var(--Page3-background-color);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-.page3-text1,
-.page3-text2,
-.page3-text3 {
-    margin-bottom: 1.5rem; /* Space between text blocks */
-    text-align: center;
-}
-
-.page3-text1 p,
-.page3-text2 p,
-.page3-text3 p {
-    margin: 0.5rem 0;
-}
-
-.page3-text1 .p1,
-.page3-text2 .p1,
-.page3-text3 .p1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: clamp(1.5rem, 2vw, 1.75rem);
-}
-
-.page3-text1 .p2,
-.page3-text2 .p2,
-.page3-text3 .p2 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-}
-
-.page3-text1 .p3,
-.page3-text2 .p3,
-.page3-text3 .p3 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: clamp(0.875rem, 1vw, 1rem);
-}
-
-
-
-
-
 
 @media screen and (min-width: 1367px) {                      /* Large Desktop */
     .logo1-container {
@@ -309,28 +256,12 @@ body {
         overflow: hidden; /* Hide overflowing image */
         padding: 0;
     }
-    .page3-content {
-        position: absolute; /* Position text over image */
-        top: 5rem; /* Keep generous top margin */
-        left: 0;
-        width: 50%; /* Left column (column1) */
-        text-align: center; /* Center text in column1 */
-        padding: 1rem;
-        z-index: 2; /* Above image */
-    }
-    .page3-text {
-        position: absolute;
-        right: 0;
-        width: 33.33%; /* Rightmost third (column3) */
-        height: 100%;
-        padding: 2rem;
-    }
     .page3-graphic1 {
         width: 100%;
         height: 100%; /* Image sets section height */
         overflow: hidden; /* Hide excess image */
     }
-    .page3-image1 {
+    .page3-graphic1 .page3-image1 {
         width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover;
@@ -409,26 +340,22 @@ body {
         display: block;
     }
     .section_page3 {
-        height: auto;
-    }
-    .page3-content {
-        position: relative;
+        height: auto; /* Let image dictate height */
+        position: relative; /* For absolute positioning of text */
+        overflow: hidden; /* Hide overflowing image */
+        padding: 0;
     }
     .page3-graphic1 {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
+        width: 100%;
+        height: 100%; /* Image sets section height */
+        overflow: hidden; /* Hide excess image */
     }
-    .page3-image1 {
+    .page3-graphic1 .page3-image1 {
+        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+        object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
-    }
-    .page3-text {
-        position: absolute;
-        right: 0;
-        width: 33.33%;
-        height: 100%;
-        padding: 2rem;
     }
 }
 @media screen and (min-width: 768px) 
@@ -531,41 +458,22 @@ body {
         display: block;
     }
     .section_page3 {
-        height: auto;
-    }
-    .page3-content {
-        position: relative;
+        height: auto; /* Let image dictate height */
+        position: relative; /* For absolute positioning of text */
+        overflow: hidden; /* Hide overflowing image */
+        padding: 0;
     }
     .page3-graphic1 {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
+        width: 100%;
+        height: 100%; /* Image sets section height */
+        overflow: hidden; /* Hide excess image */
     }
-    .page3-image1 {
+    .page3-graphic1 .page3-image1 {
+        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+        object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
-    }
-    .page3-text {
-        position: absolute;
-        right: 0;
-        width: 33.33%;
-        height: 100%;
-        padding: 1.5rem;
-    }
-    .page3-text1 .p1,
-    .page3-text2 .p1,
-    .page3-text3 .p1 {
-        font-size: clamp(1.25rem, 1.8vw, 1.5rem);
-    }
-    .page3-text1 .p2,
-    .page3-text2 .p2,
-    .page3-text3 .p2 {
-        font-size: clamp(0.875rem, 1.3vw, 1rem);
-    }
-    .page3-text1 .p3,
-    .page3-text2 .p3,
-    .page3-text3 .p3 {
-        font-size: clamp(0.75rem, 1vw, 0.875rem);
     }
 }
 @media screen and (min-width: 321px) 
@@ -665,41 +573,22 @@ body {
         display: block;
     }
     .section_page3 {
-        height: auto;
-    }
-    .page3-content {
-        flex-direction: column; /* Stack text above image */
+        height: auto; /* Height driven by text + image */
+        flex-direction: column; /* Stack text and image vertically */
     }
     .page3-graphic1 {
         width: 100%;
-        height: auto;
-        position: relative;
+        height: auto; /* Let image height dictate container */
+        overflow-x: hidden; /* Hide horizontal overflow only */
+        overflow-y: visible; /* Allow vertical overflow to show full image */
     }
-    .page3-image1 {
+    .page3-graphic1 .page3-image1 {
+        width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure full image is visible without cropping */
+        object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
+        margin-left: -40%; /* Shift image left to show more of the left side */
         display: block;
-        position: relative;
-        left: 0;
-    }
-    .page3-text {
-        position: static;
-        width: 100%;
-        height: auto;
-        padding: 1rem;
-    }
-    .page3-text1 .p1,
-    .page3-text2 .p1,
-    .page3-text3 .p1 {
-        font-size: clamp(1rem, 1.5vw, 1.25rem);
-    }
-    .page3-text1 .p2,
-    .page3-text2 .p2,
-    .page3-text3 .p2 {
-        font-size: clamp(0.75rem, 1.2vw, 0.875rem);
-    }
-    .page3-text1 .p3,
-    .page3-text2 .p3,
-    .page3-text3 .p3 {
-        font-size: clamp(0.625rem, 1vw, 0.75rem);
     }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
@@ -793,47 +682,28 @@ body {
         display: block;
     }
     .section_page3 {
-        height: auto;
-    }
-    .page3-content {
-        flex-direction: column;
+        height: auto; /* Height driven by text + image */
+        flex-direction: column; /* Stack text and image vertically */
     }
     .page3-graphic1 {
         width: 100%;
-        height: auto;
-        position: relative;
+        height: auto; /* Let image height dictate container */
+        overflow-x: hidden; /* Hide horizontal overflow only */
+        overflow-y: visible; /* Allow vertical overflow to show full image */
     }
-    .page3-image1 {
+    .page3-graphic1 .page3-image1 {
+        width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure full image is visible without cropping */
+        object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
+        margin-left: -40%; /* Shift image left to show more of the left side */
         display: block;
-        position: relative;
-        left: 0;
-    }
-    .page3-text {
-        position: static;
-        width: 100%;
-        height: auto;
-        padding: 0.75rem;
-    }
-    .page3-text1 .p1,
-    .page3-text2 .p1,
-    .page3-text3 .p1 {
-        font-size: clamp(0.875rem, 1.3vw, 1rem);
-    }
-    .page3-text1 .p2,
-    .page3-text2 .p2,
-    .page3-text3 .p2 {
-        font-size: clamp(0.625rem, 1vw, 0.75rem);
-    }
-    .page3-text1 .p3,
-    .page3-text2 .p3,
-    .page3-text3 .p3 {
-        font-size: clamp(0.5rem, 0.8vw, 0.625rem);
     }
 }
 
 /* General styling for all section elements */
-.section_page3,
-.section_page4 {
+.section_page4,
+.section_page5 {
     display: flex;               /* Use flexbox for content layout */
     flex-direction: column;      /* Stack content vertically */
     justify-content: center;     /* Center content vertically */
@@ -847,11 +717,7 @@ body {
 
 
 
-/* Styling for page 3 section */
-.section_page3 {
-    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
-    background-color: #d0d0d0;                          /* Darker gray background */
-}
+
 
 /* Styling for page 4 section */
 .section_page4 {
