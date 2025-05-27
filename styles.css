@@ -308,7 +308,7 @@ body {
         height: auto; /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
-        margin-left: -12.5%; /* Hide part of the picture behind left edge */
+        margin-left: -25%; /* Hide part of the picture behind left edge */
         display: block;
     }
 } 
