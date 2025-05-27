@@ -174,50 +174,7 @@ body {
 }
 
 /* - - - - - - PAGE_3 SECTION - - - - - - */
-.section_page3 {
-    display: flex;               /* Use flexbox for content layout */
-    flex-direction: column;      /* Stack content vertically */
-    background-color: var(--Page3-background-color);
-    position: relative;          /* Allow absolute positioning of text */
-    margin: 0;                   /* Remove any margins to ensure image fits perfectly */
-    padding: 0;                  /* Remove padding to match image dimensions */
-    height: auto;                /* Height will be set by image in media queries */
-    overflow: hidden;            /* Prevent any overflow */
-}
-.page3-text1, .page3-text2, .page3-text3 {
-    text-align: center;
-}
-.p1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    color: #000000;
-}
-.p2 {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 400;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    color: #000000;
-}
-.p3 {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 300;
-    font-size: clamp(0.875rem, 1.2vw, 1rem);
-    color: #000000;
-}
-.page3-graphic1 {
-    width: 100%;                 /* Full width of the section */
-    height: 100%;                /* Match the section height */
-    overflow: hidden;            /* Hide any overflowing image content */
-}
-.page3-graphic1 .page3-image1 {
-    width: 125%;                 /* Increase width to account for 20% hidden on left (100/0.8) */
-    height: 80%;                 /* Reduce height by 20% to scale image down */
-    object-fit: cover;           /* Ensure image covers the area without distortion */
-    object-position: 0% 50%;     /* Align to left edge, centered vertically */
-    transform: translateX(-20%);  /* Hide 20% of the image behind the left edge */
-    display: block;              /* Ensure image is a block element */
-}
+
 
 
 
@@ -294,52 +251,6 @@ body {
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
-    .section_page3 {
-        height: auto;                /* Let reduced image height dictate section height */
-        position: relative;          /* For absolute positioning of text */
-        overflow: hidden;            /* Hide overflowing image */
-        padding: 0;                 /* Remove padding to match image dimensions */
-        margin: 0;                  /* Remove margins to ensure full coverage */
-    }
-    .page3-text1, .page3-text2, .page3-text3 {
-        position: absolute;
-        right: 0;
-        width: 33.33%; /* Third column */
-        height: 33.33%; /* Divide height into three equal parts */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        z-index: 2;
-    }
-    .page3-text1 {
-        top: 0; /* Top third */
-    }
-    .page3-text2 {
-        top: 33.33%; /* Middle third */
-    }
-    .page3-text3 {
-        top: 66.66%; /* Bottom third */
-    }
-    .page3-text1 p, .page3-text2 p, .page3-text3 p {
-        margin: 0.5rem 0;
-    }
-    .page3-graphic1 {
-        width: 100%;                /* Full section width */
-        height: 100%;               /* Match section height */
-        overflow: hidden;           /* Hide excess image */
-    }
-    .page3-graphic1 .page3-image1 {
-        width: 125%;                /* Account for 20% hidden on left (100/0.8) */
-        height: 80%;                /* Reduce image height by 20% */
-        object-fit: cover;          /* Cover the area without distortion */
-        object-position: 0% 50%;    /* Align to left, center vertically */
-        transform: translateX(-20%); /* Hide 20% behind left edge */
-        display: block;             /* Ensure block display */
-    }
-    
-    
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -409,50 +320,6 @@ body {
         height: auto; /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
-        display: block;
-    }
-    .section_page3 {
-        height: auto;
-        position: relative;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-    }
-    .page3-text1, .page3-text2, .page3-text3 {
-        position: absolute;
-        right: 0;
-        width: 33.33%; /* Third column */
-        height: 33.33%; /* Divide height into three equal parts */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        z-index: 2;
-    }
-    .page3-text1 {
-        top: 0; /* Top third */
-    }
-    .page3-text2 {
-        top: 33.33%; /* Middle third */
-    }
-    .page3-text3 {
-        top: 66.66%; /* Bottom third */
-    }
-    .page3-text1 p, .page3-text2 p, .page3-text3 p {
-        margin: 0.5rem 0;
-    }
-    .page3-graphic1 {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-    .page3-graphic1 .page3-image1 {
-        width: auto;
-        height: 100%; /* Image height defines section height */
-        object-fit: cover;
-        object-position: 0% 50%; /* Align left, keep vertical center */
-        transform: translateX(-20%); /* Hide 20% behind left edge */
         display: block;
     }
 }
@@ -555,50 +422,6 @@ body {
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
-    .section_page3 {
-        height: auto;
-        position: relative;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-    }
-    .page3-text1, .page3-text2, .page3-text3 {
-        position: absolute;
-        right: 0;
-        width: 33.33%; /* Third column */
-        height: 33.33%; /* Divide height into three equal parts */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        z-index: 2;
-    }
-    .page3-text1 {
-        top: 0; /* Top third */
-    }
-    .page3-text2 {
-        top: 33.33%; /* Middle third */
-    }
-    .page3-text3 {
-        top: 66.66%; /* Bottom third */
-    }
-    .page3-text1 p, .page3-text2 p, .page3-text3 p {
-        margin: 0.5rem 0;
-    }
-    .page3-graphic1 {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-    .page3-graphic1 .page3-image1 {
-        width: auto;
-        height: 100%; /* Image height defines section height */
-        object-fit: cover;
-        object-position: 0% 50%; /* Align left, keep vertical center */
-        transform: translateX(-20%); /* Hide 20% behind left edge */
-        display: block;
-    }
 }
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                        /* Mobile styles */
@@ -696,35 +519,6 @@ body {
         margin-left: -40%; /* Shift image left to show more of the left side */
         display: block;
     }
-    .section_page3 {
-        height: auto;
-        flex-direction: column;
-        margin: 0;
-        padding: 1rem;
-    }
-    .page3-text1, .page3-text2, .page3-text3 {
-        position: static;
-        width: 100%;
-        padding: 0.5rem;
-        z-index: 2;
-    }
-    .page3-text1 p, .page3-text2 p, .page3-text3 p {
-        margin: 0.5rem 0;
-    }
-    .page3-graphic1 {
-        width: 100%;
-        height: auto;
-        overflow-x: hidden;
-        overflow-y: visible;
-    }
-    .page3-graphic1 .page3-image1 {
-        width: auto;
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain;
-        object-position: 0% 0%;
-        transform: translateX(-20%); /* Hide 20% behind left edge */
-        display: block;
-    }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -814,35 +608,6 @@ body {
         object-fit: contain; /* Ensure full image is visible without cropping */
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
         margin-left: -40%; /* Shift image left to show more of the left side */
-        display: block;
-    }
-    .section_page3 {
-        height: auto;
-        flex-direction: column;
-        margin: 0;
-        padding: 1rem;
-    }
-    .page3-text1, .page3-text2, .page3-text3 {
-        position: static;
-        width: 100%;
-        padding: 0.5rem;
-        z-index: 2;
-    }
-    .page3-text1 p, .page3-text2 p, .page3-text3 p {
-        margin: 0.5rem 0;
-    }
-    .page3-graphic1 {
-        width: 100%;
-        height: auto;
-        overflow-x: hidden;
-        overflow-y: visible;
-    }
-    .page3-graphic1 .page3-image1 {
-        width: auto;
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain;
-        object-position: 0% 0%;
-        transform: translateX(-20%); /* Hide 20% behind left edge */
         display: block;
     }
 }
