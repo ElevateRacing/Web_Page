@@ -181,6 +181,7 @@ body {
     width: 100%;
     overflow-x: hidden; /* Prevent horizontal scroll from image overflow */
 }
+
 .page3-content {
     display: flex;
     flex-direction: row; /* Default: image and text side by side */
@@ -188,18 +189,24 @@ body {
     width: 100%;
     height: 100%; /* Height dictated by image */
 }
+
 .page3-graphic1 {
     flex-shrink: 0; /* Prevent image container from shrinking */
     width: auto; /* Allow image to dictate width */
     height: 100%; /* Match image height */
+    position: relative; /* Ensure image positioning */
 }
+
 .page3-image1 {
     height: 100%; /* Image sets section height */
     width: auto; /* Maintain aspect ratio, allow right side to extend */
     object-fit: contain; /* Preserve image integrity */
     object-position: 0 50%; /* Align to left edge, center vertically */
-    display: none; /* Hidden by default, shown based on media query */
+    position: absolute; /* Ensure precise positioning */
+    left: 0; /* Align left edge with browser */
+    top: 0;
 }
+
 .page3-text {
     display: flex;
     flex-direction: column; /* Stack text blocks vertically */
@@ -209,17 +216,20 @@ body {
     padding: 1rem;
     color: var(--primary-font-color); /* White text for contrast */
 }
+
 .page3-text1,
 .page3-text2,
 .page3-text3 {
     margin-bottom: 1.5rem; /* Space between text blocks */
     text-align: center;
 }
+
 .page3-text1 p,
 .page3-text2 p,
 .page3-text3 p {
     margin: 0.5rem 0;
 }
+
 .page3-text1 .p1,
 .page3-text2 .p1,
 .page3-text3 .p1 {
@@ -227,6 +237,7 @@ body {
     font-weight: 700;
     font-size: clamp(1.5rem, 2vw, 1.75rem);
 }
+
 .page3-text1 .p2,
 .page3-text2 .p2,
 .page3-text3 .p2 {
@@ -234,6 +245,7 @@ body {
     font-weight: 400;
     font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
+
 .page3-text1 .p3,
 .page3-text2 .p3,
 .page3-text3 .p3 {
@@ -330,7 +342,7 @@ body {
         height: 100%;
     }
     .page3-image1 {
-        display: block; /* Show desktop image */
+        display: block; /* Show image */
     }
     .page3-text {
         position: absolute;
@@ -675,6 +687,12 @@ body {
     .page3-graphic1 {
         width: 100%;
         height: auto;
+        position: relative;
+    }
+    .page3-image1 {
+        display: block;
+        position: relative;
+        left: 0;
     }
     .page3-text {
         position: static;
@@ -797,6 +815,12 @@ body {
     .page3-graphic1 {
         width: 100%;
         height: auto;
+        position: relative;
+    }
+    .page3-image1 {
+        display: block;
+        position: relative;
+        left: 0;
     }
     .page3-text {
         position: static;
