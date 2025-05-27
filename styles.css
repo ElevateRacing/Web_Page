@@ -260,11 +260,11 @@ body {
     }
     .page3-text1, .page3-text2, .page3-text3 {
         position: absolute; /* Position text in column3 */
-        top: 5rem; /* Keep generous top margin */
-        bottom: 5rem; /* Keep generous bottom margin */
+        /*top: 5rem; /* Keep generous top margin */
+        /*bottom: 5rem; /* Keep generous bottom margin */
         right: 0;
         width: 33.33%; /* Right column (column3) */
-        /* height: 100%; /* Full height of section */
+        height: 100%; /* Full height of section */
         display: flex;
         flex-direction: column; /* Stack text elements vertically */
         justify-content: center; /* Center vertically */
@@ -304,11 +304,11 @@ body {
         color: #000000;
     }
     .page3-graphic1 .page3-image1 {
-        width: 125%; /* Show 80% of image (100/0.8 = 125%) */
+        width: 112.5%; /* Show 80% of image scaled (90%) image (90/0.8 = 112.5%) */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
-        /*margin-left: -25%; /* Hide 20% behind left edge */
+        margin-left: -12.5%; /* Hide part of the picture behind left edge */
         display: block;
     }
 } 
