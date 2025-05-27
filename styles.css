@@ -174,7 +174,73 @@ body {
 }
 
 /* - - - - - - PAGE_3 SECTION - - - - - - */
-
+.section_page3 {
+    margin: 0; /* Ensure no margins between page2 and page3 */
+    padding: 0; /* Remove padding to align with requirements */
+    background-color: var(--Page3-background-color); /* Use defined background color */
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll from image overflow */
+}
+.page3-content {
+    display: flex;
+    flex-direction: row; /* Default: image and text side by side */
+    align-items: stretch; /* Ensure content stretches to match image height */
+    width: 100%;
+    height: 100%; /* Height dictated by image */
+}
+.page3-graphic1 {
+    flex-shrink: 0; /* Prevent image container from shrinking */
+    width: auto; /* Allow image to dictate width */
+    height: 100%; /* Match image height */
+}
+.page3-image {
+    height: 100%; /* Image sets section height */
+    width: auto; /* Maintain aspect ratio, allow right side to extend */
+    object-fit: contain; /* Preserve image integrity */
+    object-position: 0 50%; /* Align to left edge, center vertically */
+    display: none; /* Hidden by default, shown based on media query */
+}
+.page3-text {
+    display: flex;
+    flex-direction: column; /* Stack text blocks vertically */
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    flex: 1; /* Take remaining space */
+    padding: 1rem;
+    color: var(--primary-font-color); /* White text for contrast */
+}
+.page3-text1,
+.page3-text2,
+.page3-text3 {
+    margin-bottom: 1.5rem; /* Space between text blocks */
+    text-align: center;
+}
+.page3-text1 p,
+.page3-text2 p,
+.page3-text3 p {
+    margin: 0.5rem 0;
+}
+.page3-text1 .p1,
+.page3-text2 .p1,
+.page3-text3 .p1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 2vw, 1.75rem);
+}
+.page3-text1 .p2,
+.page3-text2 .p2,
+.page3-text3 .p2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+.page3-text1 .p3,
+.page3-text2 .p3,
+.page3-text3 .p3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+}
 
 
 
@@ -251,6 +317,28 @@ body {
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
+    .section_page3 {
+        height: auto; /* Height dictated by image */
+    }
+    .page3-content {
+        position: relative;
+    }
+    .page3-graphic {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+    .page3-image {
+        display: block; /* Show desktop image */
+    }
+    .page3-text {
+        position: absolute;
+        right: 0;
+        width: 33.33%; /* Rightmost third (column3) */
+        height: 100%;
+        padding: 2rem;
+    }
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -321,6 +409,28 @@ body {
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
+    }
+    .section_page3 {
+        height: auto;
+    }
+    .page3-content {
+        position: relative;
+    }
+    .page3-graphic {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+    .page3-image {
+        display: block;
+    }
+    .page3-text {
+        position: absolute;
+        right: 0;
+        width: 33.33%;
+        height: 100%;
+        padding: 2rem;
     }
 }
 @media screen and (min-width: 768px) 
@@ -422,6 +532,43 @@ body {
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
+    .section_page3 {
+        height: auto;
+    }
+    .page3-content {
+        position: relative;
+    }
+    .page3-graphic {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+    .page3-image {
+        display: block;
+    }
+    .page3-text {
+        position: absolute;
+        right: 0;
+        width: 33.33%;
+        height: 100%;
+        padding: 1.5rem;
+    }
+    .page3-text1 .p1,
+    .page3-text2 .p1,
+    .page3-text3 .p1 {
+        font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+    }
+    .page3-text1 .p2,
+    .page3-text2 .p2,
+    .page3-text3 .p2 {
+        font-size: clamp(0.875rem, 1.3vw, 1rem);
+    }
+    .page3-text1 .p3,
+    .page3-text2 .p3,
+    .page3-text3 .p3 {
+        font-size: clamp(0.75rem, 1vw, 0.875rem);
+    }
 }
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                        /* Mobile styles */
@@ -519,6 +666,40 @@ body {
         margin-left: -40%; /* Shift image left to show more of the left side */
         display: block;
     }
+    .section_page3 {
+        height: auto;
+    }
+    .page3-content {
+        flex-direction: column; /* Stack text above image */
+    }
+    .page3-graphic {
+        width: 100%;
+        height: auto;
+    }
+    .page3-image-mobile {
+        display: block; /* Show mobile image */
+    }
+    .page3-text {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+    .page3-text1 .p1,
+    .page3-text2 .p1,
+    .page3-text3 .p1 {
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+    }
+    .page3-text1 .p2,
+    .page3-text2 .p2,
+    .page3-text3 .p2 {
+        font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+    }
+    .page3-text1 .p3,
+    .page3-text2 .p3,
+    .page3-text3 .p3 {
+        font-size: clamp(0.625rem, 1vw, 0.75rem);
+    }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -609,6 +790,40 @@ body {
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
         margin-left: -40%; /* Shift image left to show more of the left side */
         display: block;
+    }
+    .section_page3 {
+        height: auto;
+    }
+    .page3-content {
+        flex-direction: column;
+    }
+    .page3-graphic {
+        width: 100%;
+        height: auto;
+    }
+    .page3-image-mobile {
+        display: block;
+    }
+    .page3-text {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 0.75rem;
+    }
+    .page3-text1 .p1,
+    .page3-text2 .p1,
+    .page3-text3 .p1 {
+        font-size: clamp(0.875rem, 1.3vw, 1rem);
+    }
+    .page3-text1 .p2,
+    .page3-text2 .p2,
+    .page3-text3 .p2 {
+        font-size: clamp(0.625rem, 1vw, 0.75rem);
+    }
+    .page3-text1 .p3,
+    .page3-text2 .p3,
+    .page3-text3 .p3 {
+        font-size: clamp(0.5rem, 0.8vw, 0.625rem);
     }
 }
 
