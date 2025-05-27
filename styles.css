@@ -605,11 +605,11 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 280%;          /* 350% * 0.8 to scale to 80% of original size */
+        width: 240%;          /* 300% * 0.8 to scale to 80% of original size */
         height: auto;         /* Maintain aspect ratio */
         object-fit: contain;  /* Ensure full image is visible without cropping */
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
-        margin-left: -40%;    /* Shift image left to show more of the left side */
+        margin-left: -30%;    /* Shift image left to show more of the left side */
         display: block;
         margin-top: 0;        /* Explicitly remove top margin */
         margin-bottom: 0;     /* Explicitly remove bottom margin */
@@ -722,11 +722,11 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 280%;          /* 350% * 0.8 to scale to 80% of original size */
+        width: 240%;          /* 300% * 0.8 to scale to 80% of original size */
         height: auto;         /* Maintain aspect ratio */
         object-fit: contain;  /* Ensure full image is visible without cropping */
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
-        margin-left: -40%;    /* Shift image left to show more of the left side */
+        margin-left: -30%;    /* Shift image left to show more of the left side */
         display: block;
         margin-top: 0;        /* Explicitly remove top margin */
         margin-bottom: 0;     /* Explicitly remove bottom margin */
