@@ -269,13 +269,11 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 166.67%;       /* Show only 60% of image (100/0.6 = 166.67%) */
+        width: 133.34%;       /* 166.67% * 0.8 to scale to 80% of original size */
         height: auto;         /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
-        transform: scale(0.8); /* Reduce size to 80% */
-        transform-origin: 0 0; /* Scale from top-left for consistent height */
         margin: 0;            /* Remove margins */
     }
 } 
@@ -364,13 +362,11 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 166.67%;       /* Show only 60% of image (100/0.6 = 166.67%) */
+        width: 133.34%;       /* 166.67% * 0.8 to scale to 80% of original size */
         height: auto;         /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
-        transform: scale(0.8); /* Reduce size to 80% */
-        transform-origin: 0 0; /* Scale from top-left for consistent height */
         margin: 0;            /* Remove margins */
     }
 }
@@ -488,13 +484,11 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 166.67%;       /* Show only 60% of image (100/0.6 = 166.67%) */
+        width: 133.34%;       /* 166.67% * 0.8 to scale to 80% of original size */
         height: auto;         /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
-        transform: scale(0.8); /* Reduce size to 80% */
-        transform-origin: 0 0; /* Scale from top-left for consistent height */
         margin: 0;            /* Remove margins */
     }
 }
@@ -611,15 +605,14 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 250%;          /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
+        width: 200%;          /* 250% * 0.8 to scale to 80% of original size */
         height: auto;         /* Maintain aspect ratio */
         object-fit: contain;  /* Ensure full image is visible without cropping */
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
         margin-left: -40%;    /* Shift image left to show more of the left side */
         display: block;
-        transform: scale(0.8); /* Reduce size to 80% */
-        transform-origin: 0 0; /* Scale from top-left for consistent height */
-        margin: 0;            /* Remove margins */
+        margin-top: 0;        /* Explicitly remove top margin */
+        margin-bottom: 0;     /* Explicitly remove bottom margin */
     }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
@@ -729,15 +722,14 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page3-graphic1 .page3-image1 {
-        width: 250%;          /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
+        width: 200%;          /* 250% * 0.8 to scale to 80% of original size */
         height: auto;         /* Maintain aspect ratio */
         object-fit: contain;  /* Ensure full image is visible without cropping */
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
         margin-left: -40%;    /* Shift image left to show more of the left side */
         display: block;
-        transform: scale(0.8); /* Reduce size to 80% */
-        transform-origin: 0 0; /* Scale from top-left for consistent height */
-        margin: 0;            /* Remove margins */
+        margin-top: 0;        /* Explicitly remove top margin */
+        margin-bottom: 0;     /* Explicitly remove bottom margin */
     }
 }
 
