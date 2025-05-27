@@ -33,6 +33,7 @@ body {
     --button-focus:#ff7f33;
     --primary-font-color:#ffffff;
     --Page2-background-color:#e0e0e0;
+    --Page3-background-color:#e0e0e0;
 /* Hero text margins for easy adjustment */
     --hero-text-margin-left-desktop: 3rem;           /* Desktop left margin for hero text */
     --hero-text-margin-bottom-desktop: 3.75rem;      /* Desktop bottom margin for hero text */
@@ -172,6 +173,13 @@ body {
     background-color: var(--Page2-background-color);                          /* Slightly darker gray background */
 }
 
+/* - - - - - - PAGE_3 SECTION - - - - - - */
+.section_page3 {
+    display: flex;               /* Use flexbox for content layout */
+    flex-direction: column;      /* Stack content vertically */
+    background-color: var(--Page3-background-color); /* Keep default background color #e0e0e0 */
+}
+
 
 
 
@@ -246,6 +254,14 @@ body {
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
+    .section_page3 {
+        height: auto; /* Let image dictate height */
+        position: relative; /* For absolute positioning of text */
+        overflow: hidden; /* Hide overflowing image */
+    }
+
+
+    
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -633,6 +649,12 @@ body {
 .section_page4 {
     min-height: 100vh;                                 /* Allow content to dictate height, with minimum full viewport */
     background-color: #c0c0c0;                         /* Darkest gray background */
+}
+
+/* Styling for page 5 section */
+.section_page5 {
+    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
+    background-color: #d0d0d0;                          /* Darker gray background */
 }
 
 /* Adjust navbar padding when scrolled */
