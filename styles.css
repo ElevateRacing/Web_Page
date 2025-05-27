@@ -177,7 +177,41 @@ body {
 .section_page3 {
     display: flex;               /* Use flexbox for content layout */
     flex-direction: column;      /* Stack content vertically */
+    margin: 0;
+    padding: 0;
     background-color: var(--Page3-background-color); /* Keep default background color #e0e0e0 */
+}
+.page3-text1, .page3-text2, .page3-text3 {
+    text-align: center;
+}
+.p1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #000000;
+}
+.p2 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: #000000;
+}
+.p3 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    color: #000000;
+}
+.page3-graphic1 {
+    width: 100%;
+    overflow: hidden;
+}
+.page3-graphic1 .page3-image1 {
+    display: block;
+    width: 125%; /* Show 80% of image (100/0.8 = 125%) */
+    height: auto;
+    object-fit: cover;
+    object-position: 0% 50%; /* Align left, keep vertical center */
 }
 
 
@@ -256,71 +290,49 @@ body {
         display: block;
     }
     .section_page3 {
-        height: auto; /* Let image dictate height */
-        position: relative; /* For absolute positioning of text */
-        overflow: hidden; /* Hide overflowing image */
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
     }
     .page3-text1, .page3-text2, .page3-text3 {
-        position: absolute; /* Position text in column3 */
-        top: 0;
+        position: absolute;
         right: 0;
-        width: 33.33%; /* Right column (column3) */
-        /*height: 100%; /* Full height of section */
+        width: 33.33%; /* Third column */
+        height: 33.33%; /* Divide height into three equal parts */
         display: flex;
-        flex-direction: column; /* Stack text elements vertically */
-        justify-content: center; /* Center vertically */
-        align-items: center; /* Center horizontally */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 1rem;
-        z-index: 2; /* Above image */
+        z-index: 2;
     }
     .page3-text1 {
-        transform: translateY(-33.33%); /* Offset to top third */
+        top: 0; /* Top third */
     }
     .page3-text2 {
-        transform: translateY(0); /* Center in middle third */
+        top: 33.33%; /* Middle third */
     }
     .page3-text3 {
-        transform: translateY(33.33%); /* Offset to bottom third */
+        top: 66.66%; /* Bottom third */
     }
     .page3-text1 p, .page3-text2 p, .page3-text3 p {
-        /*margin: 0.5rem 0; /* Generous spacing between text elements */
-        /*text-align: center;*/
-    }
-    .p1 {
-        /*font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        color: #000000;*/
-    }
-    .p2 {
-        /*font-family: 'Open Sans', Arial, sans-serif;
-        font-weight: 400;
-        font-size: clamp(1rem, 1.5vw, 1.25rem);
-        color: #000000;*/
-    }
-    .p3 {
-        /*font-family: 'Open Sans', Arial, sans-serif;
-        font-weight: 300;
-        font-size: clamp(0.875rem, 1.2vw, 1rem);
-        color: #000000;*/
+        margin: 0.5rem 0;
     }
     .page3-graphic1 {
         width: 100%;
-        height: 100%; /* Image sets section height */
-        overflow: hidden; /* Hide excess image */
+        height: 100%;
+        overflow: hidden;
     }
     .page3-graphic1 .page3-image1 {
         width: 125%; /* Show 80% of image (100/0.8 = 125%) */
-        height: auto; /* Maintain aspect ratio */
+        height: auto;
         object-fit: cover;
-        object-position: 0% 50%; /* Align left, keep vertical center */
+        object-position: 0% 50%;
         margin-left: -25%; /* Hide 20% behind left edge */
         display: block;
     }
-
-
-
-    
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -390,6 +402,50 @@ body {
         height: auto; /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
+        display: block;
+    }
+    .section_page3 {
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .page3-text1, .page3-text2, .page3-text3 {
+        position: absolute;
+        right: 0;
+        width: 33.33%; /* Third column */
+        height: 33.33%; /* Divide height into three equal parts */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        z-index: 2;
+    }
+    .page3-text1 {
+        top: 0; /* Top third */
+    }
+    .page3-text2 {
+        top: 33.33%; /* Middle third */
+    }
+    .page3-text3 {
+        top: 66.66%; /* Bottom third */
+    }
+    .page3-text1 p, .page3-text2 p, .page3-text3 p {
+        margin: 0.5rem 0;
+    }
+    .page3-graphic1 {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .page3-graphic1 .page3-image1 {
+        width: 125%; /* Show 80% of image (100/0.8 = 125%) */
+        height: auto;
+        object-fit: cover;
+        object-position: 0% 50%;
+        margin-left: -25%; /* Hide 20% behind left edge */
         display: block;
     }
 }
@@ -492,6 +548,50 @@ body {
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
+    .section_page3 {
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .page3-text1, .page3-text2, .page3-text3 {
+        position: absolute;
+        right: 0;
+        width: 33.33%; /* Third column */
+        height: 33.33%; /* Divide height into three equal parts */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        z-index: 2;
+    }
+    .page3-text1 {
+        top: 0; /* Top third */
+    }
+    .page3-text2 {
+        top: 33.33%; /* Middle third */
+    }
+    .page3-text3 {
+        top: 66.66%; /* Bottom third */
+    }
+    .page3-text1 p, .page3-text2 p, .page3-text3 p {
+        margin: 0.5rem 0;
+    }
+    .page3-graphic1 {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .page3-graphic1 .page3-image1 {
+        width: 125%; /* Show 80% of image (100/0.8 = 125%) */
+        height: auto;
+        object-fit: cover;
+        object-position: 0% 50%;
+        margin-left: -25%; /* Hide 20% behind left edge */
+        display: block;
+    }
 }
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                        /* Mobile styles */
@@ -589,6 +689,35 @@ body {
         margin-left: -40%; /* Shift image left to show more of the left side */
         display: block;
     }
+    .section_page3 {
+        height: auto;
+        flex-direction: column;
+        margin: 0;
+        padding: 1rem;
+    }
+    .page3-text1, .page3-text2, .page3-text3 {
+        position: static;
+        width: 100%;
+        padding: 0.5rem;
+        z-index: 2;
+    }
+    .page3-text1 p, .page3-text2 p, .page3-text3 p {
+        margin: 0.5rem 0;
+    }
+    .page3-graphic1 {
+        width: 100%;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+    .page3-graphic1 .page3-image1 {
+        width: 125%; /* Show 80% of image (100/0.8 = 125%) */
+        height: auto;
+        object-fit: contain;
+        object-position: 0% 0%;
+        margin-left: -25%; /* Hide 20% behind left edge */
+        display: block;
+    }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -678,6 +807,35 @@ body {
         object-fit: contain; /* Ensure full image is visible without cropping */
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
         margin-left: -40%; /* Shift image left to show more of the left side */
+        display: block;
+    }
+    .section_page3 {
+        height: auto;
+        flex-direction: column;
+        margin: 0;
+        padding: 1rem;
+    }
+    .page3-text1, .page3-text2, .page3-text3 {
+        position: static;
+        width: 100%;
+        padding: 0.5rem;
+        z-index: 2;
+    }
+    .page3-text1 p, .page3-text2 p, .page3-text3 p {
+        margin: 0.5rem 0;
+    }
+    .page3-graphic1 {
+        width: 100%;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+    .page3-graphic1 .page3-image1 {
+        width: 125%; /* Show 80% of image (100/0.8 = 125%) */
+        height: auto;
+        object-fit: contain;
+        object-position: 0% 0%;
+        margin-left: -25%; /* Hide 20% behind left edge */
         display: block;
     }
 }
