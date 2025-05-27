@@ -175,11 +175,10 @@ body {
 
 /* - - - - - - PAGE_3 SECTION - - - - - - */
 .section_page3 {
-    display: flex;               /* Use flexbox for content layout */
-    flex-direction: column;      /* Stack content vertically */
+    position: relative;
+    background-color: var(--Page3-background-color);
     margin: 0;
     padding: 0;
-    background-color: var(--Page3-background-color); /* Keep default background color #e0e0e0 */
 }
 .page3-text1, .page3-text2, .page3-text3 {
     text-align: center;
@@ -208,8 +207,8 @@ body {
 }
 .page3-graphic1 .page3-image1 {
     display: block;
-    width: 125%; /* Show 80% of image (100/0.8 = 125%) */
-    height: auto;
+    width: auto;
+    height: 100%;
     object-fit: cover;
     object-position: 0% 50%; /* Align left, keep vertical center */
 }
@@ -322,17 +321,19 @@ body {
     }
     .page3-graphic1 {
         width: 100%;
-        height: 100%;
+        height: auto;
         overflow: hidden;
     }
     .page3-graphic1 .page3-image1 {
-        width: 125%; /* Show 80% of image (100/0.8 = 125%) */
-        height: auto;
+        width: auto;
+        height: 100%; /* Image height defines section height */
         object-fit: cover;
-        object-position: 0% 50%;
-        margin-left: -25%; /* Hide 20% behind left edge */
+        object-position: 0% 50%; /* Align left, keep vertical center */
+        transform: translateX(-20%); /* Hide 20% behind left edge */
         display: block;
     }
+    
+    
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -437,15 +438,15 @@ body {
     }
     .page3-graphic1 {
         width: 100%;
-        height: 100%;
+        height: auto;
         overflow: hidden;
     }
     .page3-graphic1 .page3-image1 {
-        width: 125%; /* Show 80% of image (100/0.8 = 125%) */
-        height: auto;
+        width: auto;
+        height: 100%; /* Image height defines section height */
         object-fit: cover;
-        object-position: 0% 50%;
-        margin-left: -25%; /* Hide 20% behind left edge */
+        object-position: 0% 50%; /* Align left, keep vertical center */
+        transform: translateX(-20%); /* Hide 20% behind left edge */
         display: block;
     }
 }
@@ -581,15 +582,15 @@ body {
     }
     .page3-graphic1 {
         width: 100%;
-        height: 100%;
+        height: auto;
         overflow: hidden;
     }
     .page3-graphic1 .page3-image1 {
-        width: 125%; /* Show 80% of image (100/0.8 = 125%) */
-        height: auto;
+        width: auto;
+        height: 100%; /* Image height defines section height */
         object-fit: cover;
-        object-position: 0% 50%;
-        margin-left: -25%; /* Hide 20% behind left edge */
+        object-position: 0% 50%; /* Align left, keep vertical center */
+        transform: translateX(-20%); /* Hide 20% behind left edge */
         display: block;
     }
 }
@@ -711,11 +712,11 @@ body {
         overflow-y: visible;
     }
     .page3-graphic1 .page3-image1 {
-        width: 125%; /* Show 80% of image (100/0.8 = 125%) */
-        height: auto;
+        width: auto;
+        height: auto; /* Maintain aspect ratio */
         object-fit: contain;
         object-position: 0% 0%;
-        margin-left: -25%; /* Hide 20% behind left edge */
+        transform: translateX(-20%); /* Hide 20% behind left edge */
         display: block;
     }
 }
@@ -831,11 +832,11 @@ body {
         overflow-y: visible;
     }
     .page3-graphic1 .page3-image1 {
-        width: 125%; /* Show 80% of image (100/0.8 = 125%) */
-        height: auto;
+        width: auto;
+        height: auto; /* Maintain aspect ratio */
         object-fit: contain;
         object-position: 0% 0%;
-        margin-left: -25%; /* Hide 20% behind left edge */
+        transform: translateX(-20%); /* Hide 20% behind left edge */
         display: block;
     }
 }
