@@ -239,14 +239,14 @@ body {
         height: 100%; /* Image sets section height */
         overflow: hidden; /* Hide excess image */
     }
-    .page2-graphic1 .desktop-image {
+    .page2-graphic1 .page2-image1 {
         width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
-    .page2-graphic1 .mobile-image {
+    .page2-graphic1 .page2-image1-mobile {
         display: none; /* Hide mobile image */
     }
 } 
@@ -313,14 +313,14 @@ body {
         height: 100%; /* Image sets section height */
         overflow: hidden; /* Hide excess image */
     }
-    .page2-graphic1 .desktop-image {
+    .page2-graphic1 .page2-image1 {
         width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
-    .page2-graphic1 .mobile-image {
+    .page2-graphic1 .page2-image1-mobile {
         display: none; /* Hide mobile image */
     }
 }
@@ -416,14 +416,14 @@ body {
         height: 100%; /* Image sets section height */
         overflow: hidden; /* Hide excess image */
     }
-    .page2-graphic1 .desktop-image {
+    .page2-graphic1 .page2-image1 {
         width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
-    .page2-graphic1 .mobile-image {
+    .page2-graphic1 .page2-image1-mobile {
         display: none; /* Hide mobile image */
     }
 }
@@ -513,10 +513,10 @@ body {
         width: 100%;
         overflow: hidden;
     }
-    .page2-graphic1 .desktop-image {
+    .page2-graphic1 .page2-image1 {
         display: none; /* Hide desktop image */
     }
-    .page2-graphic1 .mobile-image {
+    .page2-graphic1 .page2-image1-mobile {
         width: 100%; /* Cover full browser width */
         height: 100%; /* Fill remaining space */
         object-fit: cover; /* Maintain aspect ratio */
@@ -605,10 +605,10 @@ body {
         width: 100%;
         overflow: hidden;
     }
-    .page2-graphic1 .desktop-image {
+    .page2-graphic1 .page2-image1 {
         display: none; /* Hide desktop image */
     }
-    .page2-graphic1 .mobile-image {
+    .page2-graphic1 .page2-image1-mobile {
         width: 100%; /* Cover full browser width */
         height: 100%; /* Fill remaining space */
         object-fit: cover; /* Maintain aspect ratio */
