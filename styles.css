@@ -169,17 +169,47 @@ body {
 .section_page2 {
     display: flex;               /* Use flexbox for content layout */
     flex-direction: column;      /* Stack content vertically */
-    justify-content: center;     /* Center content vertically */
-    align-items: center;         /* Center content horizontally */
-    text-align: center;          /* Center text content */
-    padding: 20px;               /* Add inner spacing */
-    box-sizing: border-box;      /* Include padding in size calculations */
-}
-/* Styling for page 2 section */
-.section_page2 {
     min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
     background-color: var(--Page2-background-color);                          /* Slightly darker gray background */
+
+    /*justify-content: center;     /* Center content vertically */
+    /*align-items: center;         /* Center content horizontally */
+    /*text-align: center;          /* Center text content */
+    /*padding: 20px;               /* Add inner spacing */
+    /*box-sizing: border-box;      /* Include padding in size calculations */
 }
+.page2-header {
+    text-align: center;
+    margin-top: 5rem; /* Generous top margin */
+    padding: 1rem;
+}
+.page2-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #000000;
+    margin-bottom: 15px;
+}
+.page2-header h2 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: #000000;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+}
+.page2-graphics1 {
+    flex-grow: 1; /* Fills remaining space */
+    width: 100%;
+    overflow: hidden;
+}
+.page2-graphics1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintains aspect ratio, fills space */
+    display: block;
+}
+
 
 
 
