@@ -246,9 +246,6 @@ body {
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
-    .page2-graphic1 .page2-image1-mobile {
-        display: none; /* Hide mobile image */
-    }
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -319,9 +316,6 @@ body {
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
-    }
-    .page2-graphic1 .page2-image1-mobile {
-        display: none; /* Hide mobile image */
     }
 }
 @media screen and (min-width: 768px) 
@@ -423,9 +417,6 @@ body {
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
-    .page2-graphic1 .page2-image1-mobile {
-        display: none; /* Hide mobile image */
-    }
 }
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                        /* Mobile styles */
@@ -485,7 +476,7 @@ body {
         margin: 0 0 16px 0;
     }
     .section_page2 {
-        min-height: 100vh; /* Match mobile browser height */
+        height: auto; /* Height driven by text + image */
         flex-direction: column; /* Stack text and image vertically */
     }
     .page2-header {
@@ -509,18 +500,14 @@ body {
         margin: 0 auto 15px;
     }
     .page2-graphic1 {
-        flex-grow: 1; /* Image fills remaining space */
         width: 100%;
         overflow: hidden;
     }
     .page2-graphic1 .page2-image1 {
-        display: none; /* Hide desktop image */
-    }
-    .page2-graphic1 .page2-image1-mobile {
-        width: 100%; /* Cover full browser width */
-        height: 100%; /* Fill remaining space */
-        object-fit: cover; /* Maintain aspect ratio */
-        object-position: 50% 50%; /* Center image */
+        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+        object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
 }
@@ -577,7 +564,7 @@ body {
         margin: 0 0 16px 0;
     }
     .section_page2 {
-        min-height: 100vh; /* Match mobile browser height */
+        height: auto; /* Height driven by text + image */
         flex-direction: column; /* Stack text and image vertically */
     }
     .page2-header {
@@ -601,18 +588,14 @@ body {
         margin: 0 auto 15px;
     }
     .page2-graphic1 {
-        flex-grow: 1; /* Image fills remaining space */
         width: 100%;
         overflow: hidden;
     }
     .page2-graphic1 .page2-image1 {
-        display: none; /* Hide desktop image */
-    }
-    .page2-graphic1 .page2-image1-mobile {
-        width: 100%; /* Cover full browser width */
-        height: 100%; /* Fill remaining space */
-        object-fit: cover; /* Maintain aspect ratio */
-        object-position: 50% 50%; /* Center image */
+        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+        object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
     }
 }
