@@ -267,6 +267,8 @@ body {
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
+        transform: scale(0.8); /* Reduce size to 80% */
+        transform-origin: 0 50%; /* Scale from left-center to align with object-position */
     }
 } 
 @media screen and (min-width: 1281px) 
@@ -356,6 +358,8 @@ body {
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
+        transform: scale(0.8); /* Reduce size to 80% */
+        transform-origin: 0 50%; /* Scale from left-center to align with object-position */
     }
 }
 @media screen and (min-width: 768px) 
@@ -474,6 +478,8 @@ body {
         object-fit: cover;
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
+        transform: scale(0.8); /* Reduce size to 80% */
+        transform-origin: 0 50%; /* Scale from left-center to align with object-position */
     }
 }
 @media screen and (min-width: 321px) 
@@ -589,6 +595,8 @@ body {
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
         margin-left: -40%; /* Shift image left to show more of the left side */
         display: block;
+        transform: scale(0.8); /* Reduce size to 80% */
+        transform-origin: 0 0; /* Scale from top-left to align with object-position */
     }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
@@ -698,6 +706,8 @@ body {
         object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
         margin-left: -40%; /* Shift image left to show more of the left side */
         display: block;
+        transform: scale(0.8); /* Reduce size to 80% */
+        transform-origin: 0 0; /* Scale from top-left to align with object-position */
     }
 }
 
