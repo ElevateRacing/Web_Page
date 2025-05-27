@@ -265,7 +265,7 @@ body {
         top: 0;
         right: 0;
         width: 33.33%; /* Right column (column3) */
-        height: 100%; /* Full height of section */
+        /*height: 100%; /* Full height of section */
         display: flex;
         flex-direction: column; /* Stack text elements vertically */
         justify-content: center; /* Center vertically */
