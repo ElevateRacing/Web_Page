@@ -63,6 +63,8 @@
         width: 27%; /* Occupy the third column */
         height: 100%; /* Span full section height */
         transform: translateY(-50%); /* Center vertically */
+        padding-top: 2rem; /* Margin from top to text1 */
+        padding-bottom: 2rem; /* Margin from text3 to bottom */
         
         
         /*display: flex;
