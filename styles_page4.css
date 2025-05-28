@@ -13,15 +13,15 @@
     margin: 0;
     text-align: center;
 }
+.section_page4 .p1 {
+    font-size: clamp(1.5rem, 2vw, 2.25rem);
+    font-weight: 900;
+    margin: 0;
+}
 
 @media screen and (min-width: 1367px) { /* Large Desktop */
     .section_page4 {
         padding: 4% 0; /* Reduced padding for banner style */
-    }
-    .section_page4 .p1 {
-        font-size: 38px;
-        font-weight: 900;
-        margin: 0;
     }
     .section_page4 .p2 {
         font-size: 27px;
@@ -34,11 +34,6 @@
     .section_page4 {
         padding: 3% 0; /* Reduced padding */
     }
-    .section_page4 .p1 {
-        font-size: 38px;
-        font-weight: 900;
-        margin: 0;
-    }
     .section_page4 .p2 {
         font-size: 27px;
         font-weight: 500;
@@ -49,11 +44,6 @@
 @media screen and (min-width: 768px) and (max-width: 1280px) { /* Tablet */
     .section_page4 {
         padding: 2% 0;
-    }
-    .section_page4 .p1 {
-        font-size: 30px;
-        font-weight: 900;
-        margin: 0;
     }
     .section_page4 .p2 {
         font-size: 27px;
@@ -66,11 +56,6 @@
     .section_page4 {
         padding: 1rem 0;
     }
-    .section_page4 .p1 {
-        font-size: 24px;
-        font-weight: 900;
-        margin: 0;
-    }
     .section_page4 .p2 {
         font-size: 18px;
         font-weight: 500;
@@ -81,11 +66,6 @@
 @media screen and (max-width: 380px) { /* Small mobile */
     .section_page4 {
         padding: 1rem 0;
-    }
-    .section_page4 .p1 {
-        font-size: 8px;
-        font-weight: 500;
-        margin: 0;
     }
     .section_page4 .p2 {
         font-size: 10px;
