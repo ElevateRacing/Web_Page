@@ -205,8 +205,8 @@ body {
 
 .p1 {
     font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 400; /* Normal weight by default */
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 500; /* Normal weight by default */
+    font-size: clamp(1rem, 1.75vw, 1.5rem);
     margin-bottom: 5px;
 }
 
@@ -309,9 +309,27 @@ body {
         width: 27%; /* Occupy the third column */
         transform: translateY(-50%); /* Center vertically */
         display: flex;
-        justify-content: center; /* Center horizontally within the column */
-        align-items: center;
+        flex-direction: column; /* Stack text vertically */
+        justify-content: space-between; /* Distribute space for uniform margins */
+        align-items: center; /* Center content horizontally */
+        padding-top: 2rem; /* Uniform margin from top to text1 */
+        padding-bottom: 2rem; /* Uniform margin from bottom to text3 */
     }
+    .page3-text {
+        width: 100%; /* Ensure text spans container */
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; /* Space between text blocks */
+    }
+    .page3-text1, .page3-text3 {
+        align-items: center; /* Maintain centering for text1 and text3 */
+        text-align: center;
+    }
+    .page3-text2 {
+        align-self: center; /* Ensure text2 is centered horizontally */
+        text-align: center;
+    }
+    
     .page3-graphic1 {
         width: 100%;
         height: auto;         /* Match scaled image height */
@@ -407,7 +425,7 @@ body {
     .page3-content {
         position: absolute;
         top: 50%;
-        left: 60%; /* Start at 2/3 of the width for third column */
+        left: 63%; /* Start at 2/3 of the width for third column */
         width: 27%; /* Occupy the third column */
         transform: translateY(-50%); /* Center vertically */
         display: flex;
