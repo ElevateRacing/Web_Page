@@ -48,8 +48,8 @@
         display: grid;
         grid-template-rows: 1fr 1fr 1fr; /* Split into three equal rows */
         align-items: center; /* Center content vertically in grid */
-        padding-top: 7%; /* Margin from top to text1 */
-        padding-bottom: 7%; /* Margin from text3 to bottom */
+        padding-top: 6%; /* Margin from top to text1 */
+        padding-bottom: 6%; /* Margin from text3 to bottom */
     }
     .page3-text {
         display: contents; /* Remove flex container to allow grid rows */
@@ -112,8 +112,8 @@
         display: grid;
         grid-template-rows: 1fr 1fr 1fr; /* Split into three equal rows */
         align-items: center; /* Center content vertically in grid */
-        padding-top: 7%; /* Margin from top to text1 */
-        padding-bottom: 7%; /* Margin from text3 to bottom */
+        padding-top: 6%; /* Margin from top to text1 */
+        padding-bottom: 6%; /* Margin from text3 to bottom */
     }
     .page3-text {
         display: contents; /* Remove flex container to allow grid rows */
@@ -128,19 +128,19 @@
     .p1 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 500; /* Normal weight by default */
-        font-size: 27px;
+        font-size: 26px;
         margin-bottom: 5px;
     }
     .p2 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 900;
-        font-size: 38px;
+        font-size: 36px;
         margin-bottom: 5px;
     }
     .p3 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 16px;
     }
     .page3-graphic1 {
         width: 100%;
@@ -176,8 +176,8 @@
         display: grid;
         grid-template-rows: 1fr 1fr 1fr; /* Split into three equal rows */
         align-items: center; /* Center content vertically in grid */
-        padding-top: 7%; /* Margin from top to text1 */
-        padding-bottom: 7%; /* Margin from text3 to bottom */
+        padding-top: 5%; /* Margin from top to text1 */
+        padding-bottom: 5%; /* Margin from text3 to bottom */
     }
     .page3-text {
         display: contents; /* Remove flex container to allow grid rows */
@@ -192,19 +192,19 @@
     .p1 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 500; /* Normal weight by default */
-        font-size: 27px;
+        font-size: 24px;
         margin-bottom: 5px;
     }
     .p2 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 900;
-        font-size: 38px;
+        font-size: 34px;
         margin-bottom: 5px;
     }
     .p3 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 14px;
     }
     .page3-graphic1 {
         width: 100%;
@@ -248,21 +248,21 @@
     .p1 {
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 500; /* Normal weight by default */
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
 .p2 {
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 900;
-    font-size: 21px;
+    font-size: 24px;
     margin-bottom: 5px;
 }
 
 .p3 {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 300;
-    font-size: 9px;
+    font-size: 11px;
 }
 
 
