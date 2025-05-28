@@ -192,19 +192,19 @@
     .p1 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 500; /* Normal weight by default */
-        font-size: 20px;
+        font-size: clamp(18px, 12px + 0.78125vw, 22px);
         margin-bottom: 5px;
     }
     .p2 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 900;
-        font-size: 26px;
+        font-size: clamp(22px, 10px + 1.5625vw, 30px);
         margin-bottom: 5px;
     }
     .p3 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
-        font-size: 14px;
+        font-size: clamp(13px, 10px + 0.390625vw, 15px);
     }
     .page3-graphic1 {
         width: 100%;
