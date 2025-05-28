@@ -93,7 +93,7 @@
     }
     .page2-header {
         position: absolute; /* Position text over image */
-        top: 150px; /* Keep generous top margin */
+        top: 140px; /* Keep generous top margin */
         left: 0;
         width: 50%; /* Left column (column1) */
         text-align: center; /* Center text in column1 */
@@ -110,7 +110,9 @@
     .page2-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: 20px;
+        font-weight: 400;
         color: #000000;
+        text-shadow: none;
         /* max-width: 80% */
         max-width: 550px;                               /* 50% width * 86% * 1281px = 550px */
         margin: 0 auto 20px;
@@ -137,7 +139,7 @@
     }
     .page2-header {
         position: absolute; /* Position text over image */
-        top: 64px; /* Keep generous top margin */
+        top: 60px; /* Keep generous top margin */
         left: 0;
         width: 50%; /* Left column (column1) */
         text-align: center; /* Center text in column1 */
@@ -154,8 +156,10 @@
     .page2-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: clamp(0.875rem, 1.2vw, 1rem);
+        font-weight: 300;
         color: #000000;
-        max-width: 85%; /* Restrict text width within column */
+        text-shadow: none;
+        max-width: 80%; /* Restrict text width within column */
         margin: 0 auto 20px;
     }
     .page2-graphic1 {
@@ -179,21 +183,23 @@
     }
     .page2-header {
         text-align: center;
-        margin-top: 2rem; /* Reduced top margin for mobile */
+        margin-top: 32px; /* Reduced top margin for mobile */
         padding: 1rem;
         flex-shrink: 0; /* Prevent header from shrinking */
     }
     .page2-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: clamp(1.5rem, 4vw, 2rem);
+        font-size: 32px;
         color: #000000;
         margin-bottom: 10px;
     }
     .page2-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
-        font-size: clamp(0.875rem, 1.2vw, 1rem);
+        font-size: 10px;
+        font-weight: 300;
         color: #000000;
+        text-shadow: none;
         max-width: 90%;
         margin: 0 auto 15px;
         text-shadow: none;
@@ -220,21 +226,23 @@
     }
     .page2-header {
         text-align: center;
-        margin-top: 2rem; /* Reduced top margin for mobile */
+        margin-top: 32px; /* Reduced top margin for mobile */
         padding: 1rem;
         flex-shrink: 0; /* Prevent header from shrinking */
     }
     .page2-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        font-size: 12px;
         color: #000000;
         margin-bottom: 10px;
     }
     .page2-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
-        font-size: clamp(0.75rem, 1vw, 0.875rem);
+        font-size: 4px;
+        font-weight: 300;
         color: #000000;
+        text-shadow: none;
         max-width: 90%;
         margin: 0 auto 15px;
     }
