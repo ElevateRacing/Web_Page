@@ -9,7 +9,7 @@
     margin: 0;                 /* Remove margins */
 }
 .page3-content {
-    color: var(--primary-font-color); /* White text for contrast on dark background */
+    color: #000000; /* White text for contrast on dark background */
     font-family: 'Montserrat', Arial, sans-serif;
     z-index: 2; /* Ensure text is above the image */
 }
@@ -59,7 +59,7 @@
     .page3-content {
         position: absolute;
         top: 50%;
-        left: 60%; /* Start at 2/3 of the width for third column */
+        left: 64%;
         width: 27%; /* Occupy the third column */
         transform: translateY(-50%); /* Center vertically */
         display: flex;
@@ -82,6 +82,23 @@
     .page3-text2 {
         align-self: center; /* Ensure text2 is centered horizontally */
         text-align: center;
+    }
+    .p1 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 500; /* Normal weight by default */
+        font-size: 27px;
+        margin-bottom: 5px;
+    }
+    .p2 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 900;
+        font-size: 38px;
+        margin-bottom: 5px;
+    }
+    .p3 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-weight: 300;
+        font-size: 18px;
     }
     
     .page3-graphic1 {
