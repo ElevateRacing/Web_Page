@@ -66,6 +66,7 @@
         font-size: 20px;
         font-weight: 300;
         color: #000000;
+        text-shadow: none;
         /* max-width: 80% */
         max-width: 550px;                               /* 50% width * 80% * 1367px = 550px */
         margin: 0 auto 20px;
