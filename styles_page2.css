@@ -64,6 +64,7 @@
     .page2-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: 20px;
+        font-weight: 300;
         color: #000000;
         /* max-width: 80% */
         max-width: 550px;                               /* 50% width * 80% * 1367px = 550px */
