@@ -176,8 +176,8 @@
         display: grid;
         grid-template-rows: 1fr 1fr 1fr; /* Split into three equal rows */
         align-items: center; /* Center content vertically in grid */
-        padding-top: 3%; /* Margin from top to text1 */
-        padding-bottom: 3%; /* Margin from text3 to bottom */
+        padding-top: 2%; /* Margin from top to text1 */
+        padding-bottom: 2%; /* Margin from text3 to bottom */
     }
     .page3-text {
         display: contents; /* Remove flex container to allow grid rows */
@@ -192,13 +192,13 @@
     .p1 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 500; /* Normal weight by default */
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 5px;
     }
     .p2 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 900;
-        font-size: 34px;
+        font-size: 30px;
         margin-bottom: 5px;
     }
     .p3 {
