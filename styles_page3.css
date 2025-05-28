@@ -28,25 +28,7 @@
     text-align: center;
 }
 
-.p1 {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 500; /* Normal weight by default */
-    font-size: clamp(1rem, 1.75vw, 1.5rem);
-    margin-bottom: 5px;
-}
 
-.p2 {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 900;
-    font-size: clamp(1rem, 2.75vw, 2.75rem);
-    margin-bottom: 5px;
-}
-
-.p3 {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 300;
-    font-size: clamp(0.875rem, 1.2vw, 1rem);
-}
 
 @media screen and (min-width: 1367px) {                      /* Large Desktop */
     .section_page3 {
@@ -63,27 +45,13 @@
         width: 27%; /* Occupy the third column */
         height: 100%; /* Span full section height */
         transform: translateY(-50%); /* Center vertically */
-        padding-top: 10%; /* Margin from top to text1 */
-        padding-bottom: 10%; /* Margin from text3 to bottom */
-        
-        
-        /*display: flex;
-        flex-direction: column; /* Stack text vertically */
-        /*justify-content: space-between; /* Distribute space for uniform margins */
-        /*align-items: center; /* Center content horizontally */
-        /*padding-top: 2rem; /* Uniform margin from top to text1 */
-        /*padding-bottom: 2rem; /* Uniform margin from bottom to text3 */
-
         display: grid;
         grid-template-rows: 1fr 1fr 1fr; /* Split into three equal rows */
         align-items: center; /* Center content vertically in grid */
+        padding-top: 7%; /* Margin from top to text1 */
+        padding-bottom: 7%; /* Margin from text3 to bottom */
     }
     .page3-text {
-        /*width: 100%; /* Ensure text spans container */
-        /*display: flex;
-        flex-direction: column;
-        /*gap: 2.5rem; /* Space between text blocks */
-
         display: contents; /* Remove flex container to allow grid rows */
     }
     .page3-text1, .page3-text2, .page3-text3 {
@@ -93,8 +61,6 @@
         align-items: center; /* Center horizontally in each grid row */
         text-align: center;
     }
-    
-    
     .p1 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 500; /* Normal weight by default */
@@ -112,7 +78,6 @@
         font-weight: 300;
         font-size: 18px;
     }
-    
     .page3-graphic1 {
         width: 100%;
         height: auto;         /* Match scaled image height */
@@ -140,12 +105,42 @@
     .page3-content {
         position: absolute;
         top: 50%;
-        left: 63%; /* Start at 2/3 of the width for third column */
+        left: 64%;
         width: 27%; /* Occupy the third column */
+        height: 100%; /* Span full section height */
         transform: translateY(-50%); /* Center vertically */
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr; /* Split into three equal rows */
+        align-items: center; /* Center content vertically in grid */
+        padding-top: 7%; /* Margin from top to text1 */
+        padding-bottom: 7%; /* Margin from text3 to bottom */
+    }
+    .page3-text {
+        display: contents; /* Remove flex container to allow grid rows */
+    }
+    .page3-text1, .page3-text2, .page3-text3 {
         display: flex;
-        justify-content: center; /* Center horizontally within the column */
-        align-items: center;
+        flex-direction: column;
+        justify-content: center; /* Center vertically in each grid row */
+        align-items: center; /* Center horizontally in each grid row */
+        text-align: center;
+    }
+    .p1 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 500; /* Normal weight by default */
+        font-size: 27px;
+        margin-bottom: 5px;
+    }
+    .p2 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 900;
+        font-size: 38px;
+        margin-bottom: 5px;
+    }
+    .p3 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-weight: 300;
+        font-size: 18px;
     }
     .page3-graphic1 {
         width: 100%;
@@ -164,25 +159,52 @@
 }
 @media screen and (min-width: 768px) 
               and (max-width: 1280px) {                       /* Tablet */
-    .page3-content {
-        position: absolute;
-        top: 50%;
-        left: 60%; /* Start at 2/3 of the width for third column */
-        width: 27%; /* Occupy the third column */
-        transform: translateY(-50%); /* Center vertically */
-        display: flex;
-        justify-content: center; /* Center horizontally within the column */
-        align-items: center;
+    .section_page3 {
+        position: relative; /* For absolute positioning of content */
+        height: auto; /* Image dictates height */
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
     }
     .page3-content {
         position: absolute;
         top: 50%;
-        left: 66.66%; /* Start at 2/3 of the width for third column */
-        width: 33.33%; /* Occupy the third column */
+        left: 64%;
+        width: 27%; /* Occupy the third column */
+        height: 100%; /* Span full section height */
         transform: translateY(-50%); /* Center vertically */
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr; /* Split into three equal rows */
+        align-items: center; /* Center content vertically in grid */
+        padding-top: 7%; /* Margin from top to text1 */
+        padding-bottom: 7%; /* Margin from text3 to bottom */
+    }
+    .page3-text {
+        display: contents; /* Remove flex container to allow grid rows */
+    }
+    .page3-text1, .page3-text2, .page3-text3 {
         display: flex;
-        justify-content: center; /* Center horizontally within the column */
-        align-items: center;
+        flex-direction: column;
+        justify-content: center; /* Center vertically in each grid row */
+        align-items: center; /* Center horizontally in each grid row */
+        text-align: center;
+    }
+    .p1 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 500; /* Normal weight by default */
+        font-size: 27px;
+        margin-bottom: 5px;
+    }
+    .p2 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 900;
+        font-size: 38px;
+        margin-bottom: 5px;
+    }
+    .p3 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-weight: 300;
+        font-size: 18px;
     }
     .page3-graphic1 {
         width: 100%;
@@ -223,6 +245,28 @@
     .page3-text {
         width: 90%; /* Restrict width for readability */
     }
+    .p1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500; /* Normal weight by default */
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.p2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.p3 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 9px;
+}
+
+
+    
     .page3-graphic1 {
         width: 100%;
         height: auto;         /* Match scaled image height */
@@ -262,6 +306,28 @@
     .page3-text {
         width: 90%; /* Restrict width for readability */
     }
+    .p1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500; /* Normal weight by default */
+    font-size: 8px;
+    margin-bottom: 5px;
+}
+
+.p2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.p3 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 5px;
+}
+
+
+    
     .page3-graphic1 {
         width: 100%;
         height: auto;         /* Match scaled image height */
