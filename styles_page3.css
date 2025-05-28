@@ -112,8 +112,8 @@
         display: grid;
         grid-template-rows: 1fr 1fr 1fr; /* Split into three equal rows */
         align-items: center; /* Center content vertically in grid */
-        padding-top: 6%; /* Margin from top to text1 */
-        padding-bottom: 6%; /* Margin from text3 to bottom */
+        padding-top: 5%; /* Margin from top to text1 */
+        padding-bottom: 5%; /* Margin from text3 to bottom */
     }
     .page3-text {
         display: contents; /* Remove flex container to allow grid rows */
@@ -134,7 +134,7 @@
     .p2 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 900;
-        font-size: 36px;
+        font-size: 34px;
         margin-bottom: 5px;
     }
     .p3 {
@@ -176,8 +176,8 @@
         display: grid;
         grid-template-rows: 1fr 1fr 1fr; /* Split into three equal rows */
         align-items: center; /* Center content vertically in grid */
-        padding-top: 5%; /* Margin from top to text1 */
-        padding-bottom: 5%; /* Margin from text3 to bottom */
+        padding-top: 3%; /* Margin from top to text1 */
+        padding-bottom: 3%; /* Margin from text3 to bottom */
     }
     .page3-text {
         display: contents; /* Remove flex container to allow grid rows */
@@ -192,7 +192,7 @@
     .p1 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 500; /* Normal weight by default */
-        font-size: 24px;
+        font-size: 22px;
         margin-bottom: 5px;
     }
     .p2 {
@@ -249,14 +249,14 @@
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 500; /* Normal weight by default */
     font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .p2 {
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 900;
     font-size: 24px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .p3 {
