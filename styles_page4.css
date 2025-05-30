@@ -1,75 +1,71 @@
 /* - - - - - - PAGE_4 SECTION - - - - - - */
 .section_page4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
     background-color: #1a1a1a; /* Very dark background */
     color: #ffffff; /* White text */
-    font-family: 'Montserrat', Arial, sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Top/bottom margin and side padding */
     min-height: fit-content; /* Height based on content */
-    padding: 2rem 1rem; /* Top/bottom margin and side padding */
-    margin: 0;
-    text-align: center;
+    box-sizing: border-box;
 }
-.section_page4 .p1 {
-    font-size: clamp(1.5rem, 2vw, 2.25rem);
-    font-weight: 900;
-    margin: 0;
+.page4-content {
+    text-aligh: center;
+    padding: 0 20px; /* Horizontal padding for cpntent */
+}
+.page4-content h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.page4-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
 }
 
 @media screen and (min-width: 1367px) { /* Large Desktop */
-    .section_page4 {
-        padding: 4% 0; /* Reduced padding for banner style */
+    .page4-content h1 {
+        font-size: 24px;
     }
-    .section_page4 .p2 {
-        font-size: 27px;
-        font-weight: 500;
-        margin: 0;
+    .page4-content h2 {
+        font-size: 16px;
     }
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1366px) { /* Desktop */
-    .section_page4 {
-        padding: 3% 0; /* Reduced padding */
+    .page4-content h1 {
+        font-size: 24px;
     }
-    .section_page4 .p2 {
-        font-size: 27px;
-        font-weight: 500;
-        margin: 0;
+    .page4-content h2 {
+        font-size: 16px;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) { /* Tablet */
-    .section_page4 {
-        padding: 2% 0;
+    .page4-content h1 {
+        font-size: 24px;
     }
-    .section_page4 .p2 {
-        font-size: 27px;
-        font-weight: 500;
-        margin: 0;
+    .page4-content h2 {
+        font-size: 16px;
     }
 }
 
 @media screen and (min-width: 321px) and (max-width: 767px) { /* Mobile */
-    .section_page4 {
-        padding: 1rem 0;
+    .page4-content h1 {
+        font-size: 24px;
     }
-    .section_page4 .p2 {
-        font-size: 18px;
-        font-weight: 500;
-        margin: 0;
+    .page4-content h2 {
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 380px) { /* Small mobile */
-    .section_page4 {
-        padding: 1rem 0;
+    .page4-content h1 {
+        font-size: 24px;
     }
-    .section_page4 .p2 {
-        font-size: 10px;
-        font-weight: 900;
-        margin: 0;
+    .page4-content h2 {
+        font-size: 16px;
     }
 }
