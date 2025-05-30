@@ -33,7 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let isDragging = false;
-    const tan30 = Math.tan(30 * Math.PI / 180); // tan(30deg) ≈ 0.577
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const skewAngle = isMobile ? 10 : 30; // 10deg for mobile, 30deg for desktop
+    const tanSkew = Math.tan(skewAngle * Math.PI / 180); // tan(10deg) ≈ 0.176, tan(30deg) ≈ 0.577
 
     const updateClipPath = (xPos) => {
         const sectionWidth = section.offsetWidth;
@@ -41,33 +43,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const percentage = (xPos / sectionWidth) * 100;
         const boundedPercentage = Math.max(0, Math.min(100, percentage));
         
-        // Calculate x-offset for 30-degree skew, adjusted for aspect ratio
-        const offset = (sectionHeight / sectionWidth) * 100 * tan30 / 2;
+        // Calculate x-offset for skew, adjusted for aspect ratio
+        const offset = (sectionHeight / sectionWidth) * 100 * tanSkew / 2;
         const xTop = boundedPercentage - offset;
         const xBottom = boundedPercentage + offset;
 
-        // Update clip paths to align with handle's 30-degree skew
+        // Update clip paths to align with handle's skew
         rentLayer.style.clipPath = `polygon(${xTop}% 0%, 100% 0%, 100% 100%, ${xBottom}% 100%)`;
         buyLayer.style.clipPath = `polygon(0% 0%, ${xTop}% 0%, ${xBottom}% 100%, 0% 100%)`;
         
-        // Move handle to mouse position
+        // Move handle to mouse/touch position
         handle.style.left = `${boundedPercentage}%`;
     };
 
     // Mouse events: follow mouse without clicking (desktop)
     section.addEventListener('mousemove', (e) => {
+        if (isMobile) return; // Skip mouse events on mobile
         const rect = section.getBoundingClientRect();
         const xPos = e.clientX - rect.left;
         updateClipPath(xPos);
     });
 
-    // Touch events: require touch to drag (mobile)
-    handle.addEventListener('touchstart', (e) => {
+    // Touch events: move handle when touching anywhere on section (mobile)
+    section.addEventListener('touchstart', (e) => {
         isDragging = true;
-        e.preventDefault();
+        const rect = section.getBoundingClientRect();
+        const xPos = e.touches[0].clientX - rect.left;
+        updateClipPath(xPos);
+        e.preventDefault(); // Prevent default touch behavior except scrolling
     });
 
-    document.addEventListener('touchmove', (e) => {
+    section.addEventListener('touchmove', (e) => {
         if (!isDragging) return;
         const rect = section.getBoundingClientRect();
         const xPos = e.touches[0].clientX - rect.left;
