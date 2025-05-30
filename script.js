@@ -19,24 +19,17 @@ document.addEventListener('DOMContentLoaded', function(){
             let wrapper = document.getElementById('page5');
             let topLayer = wrapper.querySelector('.buy');
             let handle = wrapper.querySelector('.handle');
+            let skew = 0;
             let delta = 0;
 
-            function updateSlider(clientX) {
-                        delta = (clientX - window.innerWidth / 2) *0.5;
-                        handle.style.left = clientX + delta + 'px';
-                        topLayer.style.width = clientX + delta + 'px';
+            if(wrapper.className.indexOf('section_page5') != -1) {
+                        skew = 1000;
             }
 
-            // Mouse move handler
             wrapper.addEventListener('mounsemove', function(e) {
-                        updateSlider(e.clientX);
+                        delta = (e.clientX - window.innerWidth /2) * 0.5;
+                        handle.style.left = e.clientX + delta + 'px';
+                        topLayer.style.width = e.clientX + skew + delta + 'px';
             });
-
-            // Touch move handler
-            wrapper.addEventListener('touchmove', function(e) {
-                        e.preventDefault();            //Prevent scrolling
-                        let touch = e.touches[0];
-                        updateSlider(touch.clientX);
-            } { passive: false });
 });
             
