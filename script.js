@@ -1,3 +1,4 @@
+// Logo Shrinkage Script //
 window.addEventListener('scroll', () => {
             const navbox = document.querySelector('.navbar');
             const logo2 = document.querySelector('.logo2');
@@ -12,3 +13,23 @@ window.addEventListener('scroll', () => {
                 navbox.classList.remove('scrolled');
             }
         });
+
+// Split Screen Slider Script //
+document.addEventListener('DOMContentLoaded', function(){
+            let wrapper = document.getElementById('page5');
+            let topLayer = wrapper.querySelector('.buy');
+            let handle = wrapper.querySelector('.handle');
+            let skew = 0;
+            let delta = 0;
+
+            if(wrapper.className.indexOf('section-page5') != -1) {
+                        skew = 1000;
+            }
+
+            wrapper.addEventListener('mousemove', function(e) {
+                        delta = (e.clientX - window.innerWidth / 2) * 0.5;
+
+                        handle.style.left = e.clientX + delta + 'px';
+            });
+});
+            
