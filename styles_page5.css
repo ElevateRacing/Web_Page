@@ -2,21 +2,31 @@
 #page5 {
     position: relative;
     width: 100%;
-    min-height: 100vh;                             /* Full viewport height */
+    min-height: 55vw;
     overflow: hidden;
 }
 
 .layer {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh; /* Full viewport height */
-    background-size: cover; /* Cover entire layer */
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 55vw;
     overflow: hidden;
 }
+
+.layer .page5-content {
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;
+}
+
+.layer .page5-text {
+    width:25%
+    position: absolute;
+    top: 50%;
+    text-align: center;
+}
+
+
 
 .rent {
     background-image: url('Images/img_right.png'); /* Background for rent */
