@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const percentage = (xPos / sectionWidth) * 100;
         const boundedPercentage = Math.max(0, Math.min(100, percentage));
         
-        // Calculate x-offset for 30-degree skew, scaled by aspect ratio
-        const offset = (sectionHeight / sectionWidth) * 100 * tan30;
+        // Calculate x-offset for 30-degree skew, adjusted for aspect ratio
+        const offset = (sectionHeight / sectionWidth) * 100 * tan30 / 2;
         const xTop = boundedPercentage - offset;
         const xBottom = boundedPercentage + offset;
 
