@@ -17,12 +17,12 @@
 
 .layer.rent {
     z-index: 1;
-    clip-path: polygon(calc(50% - 50% * tan(30deg)) 0%, 100% 0%, 100% 100%, calc(50% + 50% * tan(30deg)) 100%);
+    clip-path: polygon(calc(50% + 50% / tan(30deg)) 0%, 100% 0%, 100% 100%, calc(50% - 50% / tan(30deg)) 100%);
 }
 
 .layer.buy {
     z-index: 2;
-    clip-path: polygon(0% 0%, calc(50% - 50% * tan(30deg)) 0%, calc(50% + 50% * tan(30deg)) 100%, 0% 100%);
+    clip-path: polygon(0% 0%, calc(50% + 50% / tan(30deg)) 0%, calc(50% - 50% / tan(30deg)) 100%, 0% 100%);
 }
 
 .page5-content {
