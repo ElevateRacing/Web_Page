@@ -27,37 +27,37 @@
 
 @media screen and (min-width: 1367px) { /* Large Desktop */
     .page4-content h1 {
-        font-size: 24px;
+        font-size: 30px;
     }
     .page4-content h2 {
-        font-size: 16px;
+        font-size: 22px;
     }
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1366px) { /* Desktop */
     .page4-content h1 {
-        font-size: 24px;
+        font-size: 30px;
     }
     .page4-content h2 {
-        font-size: 16px;
+        font-size: 22px;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) { /* Tablet */
     .page4-content h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
     .page4-content h2 {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
 @media screen and (min-width: 321px) and (max-width: 767px) { /* Mobile */
     .page4-content h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
     .page4-content h2 {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
