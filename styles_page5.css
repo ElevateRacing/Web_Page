@@ -6,77 +6,81 @@
     overflow: hidden;
 }
 
-
-
-
-
-.section_page4 {
-    background-color: #1a1a1a; /* Very dark background */
-    color: #ffffff; /* White text */
-    
-    display: flex;
-    justify-content: center;
-    padding: 20px 0; /* Top/bottom margin and side padding */
-    min-height: fit-content; /* Height based on content */
-    box-sizing: border-box;
-}
-.page4-content {
-    text-aligh: center;
-    padding: 0 20px; /* Horizontal padding for cpntent */
-}
-.page4-content h1 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    margin: 10px 0;
+.layer {
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;                            /* 55 viewport width - defines height of the page*/
+    overflow: hidden;
 }
 
-.page4-content h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    margin: 10px 0;
+.layer .page5-content {
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;                            /* 55 viewport width - defines height of the page*/
 }
+
+.layer .page5-text {
+    width: 25%;
+    position: absolute;
+    top:50%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.layer img {
+    position: absolute;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.layer h1 {
+    font-size: 2em;
+}
+
+.rent {
+    background: #222;
+    z-index:1;
+}
+
+.rent .page5-text {
+    right: 5%;                /* Text right margin */
+}
+
+.rent h1 {
+    color: #FDAB00;
+}
+
+.buy {
+    background: #eee;
+    color: #222;
+    z-index: 2;
+    width: 50vw;
+}
+
+.buy .page5-text {
+    left: 5%                 /* Text left margin */
+    color: #222;
+}
+
 
 @media screen and (min-width: 1367px) { /* Large Desktop */
-    .page4-content h1 {
-        font-size: 30px;
-    }
-    .page4-content h2 {
-        font-size: 22px;
-    }
+    
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1366px) { /* Desktop */
-    .page4-content h1 {
-        font-size: 30px;
-    }
-    .page4-content h2 {
-        font-size: 22px;
-    }
+    
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) { /* Tablet */
-    .page4-content h1 {
-        font-size: 26px;
-    }
-    .page4-content h2 {
-        font-size: 20px;
-    }
+    
 }
 
 @media screen and (min-width: 321px) and (max-width: 767px) { /* Mobile */
-    .page4-content h1 {
-        font-size: 26px;
-    }
-    .page4-content h2 {
-        font-size: 20px;
-    }
+    
 }
 
 @media screen and (max-width: 380px) { /* Small mobile */
-    .page4-content h1 {
-        font-size: 24px;
-    }
-    .page4-content h2 {
-        font-size: 16px;
-    }
+    
 }
