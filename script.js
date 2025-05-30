@@ -33,28 +33,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let isDragging = false;
-    const tan30 = Math.tan(30 * Math.PI / 180); // Calculate tan(30deg) for skew
+    const tan30 = Math.tan(30 * Math.PI / 180); // tan(30deg) for skew calculations
 
     const updateClipPath = (xPos) => {
         const sectionWidth = section.offsetWidth;
         const percentage = (xPos / sectionWidth) * 100;
         const boundedPercentage = Math.max(0, Math.min(100, percentage));
         
-        // Update clip paths with skewed coordinates
-        rentLayer.style.clipPath = `polygon(${boundedPercentage}% 0%, 100% calc(${boundedPercentage}% * ${tan30}), 100% calc(100% - ${100 - boundedPercentage}% * ${tan30}), ${boundedPercentage}% 100%)`;
-        buyLayer.style.clipPath = `polygon(0% 0%, ${boundedPercentage}% 0%, ${boundedPercentage}% 100%, 0% calc(100% - ${100 - boundedPercentage}% * ${tan30}))`;
+        // Calculate x-coordinates for the slanted line at top and bottom
+        const xTop = boundedPercentage - (100 - boundedPercentage) * tan30;
+        const xBottom = boundedPercentage + boundedPercentage * tan30;
+
+        // Update clip paths to follow the 30-degree skewed line
+        rentLayer.style.clipPath = `polygon(${xTop}% 0%, 100% 0%, 100% 100%, ${xBottom}% 100%)`;
+        buyLayer.style.clipPath = `polygon(0% 0%, ${xTop}% 0%, ${xBottom}% 100%, 0% 100%)`;
         
+        // Move handle to the mouse position
         handle.style.left = `${boundedPercentage}%`;
     };
 
-    // Mouse events (follow mouse without click on desktop)
+    // Mouse events: follow mouse without clicking (desktop)
     section.addEventListener('mousemove', (e) => {
         const rect = section.getBoundingClientRect();
         const xPos = e.clientX - rect.left;
         updateClipPath(xPos);
     });
 
-    // Touch events (require touch to drag on mobile)
+    // Touch events: require touch to drag (mobile)
     handle.addEventListener('touchstart', (e) => {
         isDragging = true;
         e.preventDefault();
@@ -71,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isDragging = false;
     });
 
-    // Initialize clip path
+    // Initialize clip path at center
     updateClipPath(section.offsetWidth / 2);
 
     // Update on window resize
