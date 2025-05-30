@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function(){
                         delta = (e.clientX - window.innerWidth / 2) * 0.5;
 
                         handle.style.left = e.clientX + delta + 'px';
+
+                        topLayer.style.width = e.clientX + skew + delta + 'px';
             });
 });
             
