@@ -1,8 +1,19 @@
 /* - - - - - - PAGE_5 SECTION - - - - - - */
+#page5 {
+    position: relative;
+    width: 100%;
+    min-height: 55vw;                             /* 55 viewport width - defines height of the page*/
+    overflow: hidden;
+}
+
+
+
+
+
 .section_page4 {
     background-color: #1a1a1a; /* Very dark background */
     color: #ffffff; /* White text */
-    width: 100%;
+    
     display: flex;
     justify-content: center;
     padding: 20px 0; /* Top/bottom margin and side padding */
