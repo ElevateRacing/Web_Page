@@ -26,72 +26,69 @@
     text-align: center;
 }
 
+.layer img {
+    position: absolute;
+    width: 35%;
+}
 
+.layer h1 {
+    font-size: 2em;
+}
 
 .rent {
-    background-image: url('Images/img_right.png'); /* Background for rent */
+    background: #222;
     z-index: 1;
 }
 
-.buy {
-    background-image: url('Images/img_left.png'); /* Background for buy */
-    z-index: 2;
-    width: 50%; /* Initial width, adjusted by JS */
-}
-
-.layer .page5-content {
-    position: relative; /* Ensure content stays within layer */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.layer .page5-text {
-    position: relative;
-    width: 40%; /* Wider text area for readability */
-    max-width: 500px; /* Prevent text from becoming too wide */
-    text-align: center;
-    color: #fff; /* White text for readability on dark backgrounds */
-    padding: 20px;
-    box-sizing: border-box;
-}
 .rent .page5-text {
-    margin-left: auto; /* Align text to the right */
-    margin-right: 5%;
+    right:5%;
 }
+
+.rent h1 {
+    color: #FDAB00;
+}
+
+.buy {
+    background: #eee;
+    color: x222;
+    z-index: 2;
+    width: 50vw;
+}
+
 .buy .page5-text {
-    margin-right: auto; /* Align text to the left */
-    margin-left: 5%;
+    left:5%;
+    color:#222;
 }
-.layer h2 {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-.layer p {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    line-height: 1.5;
-}
-.layer img {
-    display: none; /* Remove placeholder images, as background images are used */
-}
+
 .handle {
     position: absolute;
-    top: 0;
-    width: 5px;
     height: 100%;
-    background-color: #fdab00; /* Orange handle */
-    z-index: 3;
-    left: 50%; /* Initial position */
-    cursor: ew-resize; /* Horizontal resize cursor */
-    transform: rotate(30deg); /* 30-degree angle */
-    transform-origin: center; /* Rotate around center */
-    touch-action: none; /* Prevent default touch behaviors */
+    display: block;
+    background-color:#FDAB00;
+    width:5px;
+    Top:0;
+    left:50%;
+    z-index:3;
 }
+
+.section-page5 .handle {
+    top:50%;
+    transform: rotate(30deg) translateY(-50%);
+    height:200%;
+    transform-origin:top;
+}
+
+.section-page5 .buy {
+    transform: skew(-30deg);
+    margin-left:-1000px;
+    width: calc(50vw + 1000px);
+}
+
+.section-page5 .buy .page5-content {
+    transform: skew(30deg);
+    margin-left:1000px;
+}
+    
 
 
 @media screen and (min-width: 1367px) { /* Large Desktop */
