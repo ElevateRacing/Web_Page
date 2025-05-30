@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+    let isHorizontal = false;
     const isMobile = window.matchMedia("(min-width: 321px) and (max-width: 767px)").matches;
     const skewAngle = isMobile ? 10 : 30; // 10deg for mobile, 30deg for desktop
     const tanSkew = Math.tan(skewAngle * Math.PI / 180); // tan(10deg) ≈ 0.176, tan(30deg) ≈ 0.577
@@ -67,21 +70,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // Touch events: move handle when touching anywhere on section (mobile)
     section.addEventListener('touchstart', (e) => {
         isDragging = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        isHorizontal = false; // Reset direction detection
         const rect = section.getBoundingClientRect();
-        const xPos = e.touches[0].clientX - rect.left;
+        const xPos = startX - rect.left;
         updateClipPath(xPos);
-        e.preventDefault(); // Prevent default touch behavior except scrolling
     });
 
     section.addEventListener('touchmove', (e) => {
         if (!isDragging) return;
-        const rect = section.getBoundingClientRect();
-        const xPos = e.touches[0].clientX - rect.left;
-        updateClipPath(xPos);
+        const currentX = e.touches[0].clientX;
+        const currentY = e.touches[0].clientY;
+        const deltaX = Math.abs(currentX - startX);
+        const deltaY = Math.abs(currentY - startY);
+
+        // Determine primary direction (horizontal or vertical)
+        if (!isHorizontal && (deltaX > deltaY || deltaX > 10)) {
+            isHorizontal = true; // Lock to horizontal movement
+        }
+
+        if (isHorizontal) {
+            e.preventDefault(); // Prevent scrolling for horizontal movement
+            const rect = section.getBoundingClientRect();
+            const xPos = currentX - rect.left;
+            updateClipPath(xPos);
+        }
+        // Vertical movement allows default scrolling (no e.preventDefault)
     });
 
     document.addEventListener('touchend', () => {
         isDragging = false;
+        isHorizontal = false;
     });
 
     // Initialize clip path at center
