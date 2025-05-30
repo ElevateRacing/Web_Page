@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let isDragging = false;
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const isMobile = window.matchMedia("(min-width: 321px) and (max-width: 767px)").matches;
     const skewAngle = isMobile ? 10 : 30; // 10deg for mobile, 30deg for desktop
     const tanSkew = Math.tan(skewAngle * Math.PI / 180); // tan(10deg) ≈ 0.176, tan(30deg) ≈ 0.577
 
