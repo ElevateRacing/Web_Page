@@ -33,33 +33,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let isDragging = false;
+    const tan30 = Math.tan(30 * Math.PI / 180); // Calculate tan(30deg) for skew
 
     const updateClipPath = (xPos) => {
         const sectionWidth = section.offsetWidth;
         const percentage = (xPos / sectionWidth) * 100;
         const boundedPercentage = Math.max(0, Math.min(100, percentage));
         
-        rentLayer.style.clipPath = `polygon(${boundedPercentage}% 0%, 100% 0%, 100% 100%, ${boundedPercentage}% 100%)`;
-        buyLayer.style.clipPath = `polygon(0% 0%, ${boundedPercentage}% 0%, ${boundedPercentage}% 100%, 0% 100%)`;
+        // Update clip paths with skewed coordinates
+        rentLayer.style.clipPath = `polygon(${boundedPercentage}% 0%, 100% calc(${boundedPercentage}% * ${tan30}), 100% calc(100% - ${100 - boundedPercentage}% * ${tan30}), ${boundedPercentage}% 100%)`;
+        buyLayer.style.clipPath = `polygon(0% 0%, ${boundedPercentage}% 0%, ${boundedPercentage}% 100%, 0% calc(100% - ${100 - boundedPercentage}% * ${tan30}))`;
+        
         handle.style.left = `${boundedPercentage}%`;
     };
 
-    handle.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        e.preventDefault();
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
+    // Mouse events (follow mouse without click on desktop)
+    section.addEventListener('mousemove', (e) => {
         const rect = section.getBoundingClientRect();
         const xPos = e.clientX - rect.left;
         updateClipPath(xPos);
     });
 
-    document.addEventListener('mouseup', () => {
-        isDragging = false;
-    });
-
+    // Touch events (require touch to drag on mobile)
     handle.addEventListener('touchstart', (e) => {
         isDragging = true;
         e.preventDefault();
@@ -76,8 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
         isDragging = false;
     });
 
+    // Initialize clip path
     updateClipPath(section.offsetWidth / 2);
 
+    // Update on window resize
     window.addEventListener('resize', () => {
         const currentPercentage = parseFloat(handle.style.left) || 50;
         const newXPos = (currentPercentage / 100) * section.offsetWidth;
