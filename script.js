@@ -33,22 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let isDragging = false;
-    const tan30 = Math.tan(30 * Math.PI / 180); // tan(30deg) for skew calculations
+    const cot30 = 1 / Math.tan(30 * Math.PI / 180); // cot(30deg) = 1/tan(30deg) ≈ 1.732
 
     const updateClipPath = (xPos) => {
         const sectionWidth = section.offsetWidth;
+        const sectionHeight = section.offsetHeight;
         const percentage = (xPos / sectionWidth) * 100;
         const boundedPercentage = Math.max(0, Math.min(100, percentage));
         
-        // Calculate x-coordinates for the slanted line at top and bottom
-        const xTop = boundedPercentage - (100 - boundedPercentage) * tan30;
-        const xBottom = boundedPercentage + boundedPercentage * tan30;
+        // Calculate x-coordinates for the slanted line, adjusted for skew
+        const offset = (sectionHeight / sectionWidth) * 100 * cot30; // Normalize height to percentage
+        const xTop = boundedPercentage + offset;
+        const xBottom = boundedPercentage - offset;
 
-        // Update clip paths to follow the 30-degree skewed line
+        // Update clip paths to align with the handle's 30-degree skew
         rentLayer.style.clipPath = `polygon(${xTop}% 0%, 100% 0%, 100% 100%, ${xBottom}% 100%)`;
         buyLayer.style.clipPath = `polygon(0% 0%, ${xTop}% 0%, ${xBottom}% 100%, 0% 100%)`;
         
-        // Move handle to the mouse position
+        // Move handle to mouse position
         handle.style.left = `${boundedPercentage}%`;
     };
 
