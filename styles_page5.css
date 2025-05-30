@@ -75,6 +75,23 @@
     z-index: 3;
 }
 
+.section-page5 .handle {
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    transform-origin: top;
+}
+
+.section-page5 .buy {
+    transform: skew(-30deg);
+    margin-left:-1000px;
+    width: calc(50vw + 1000%);
+}
+
+.section-page5 .buy .page5-content {
+    transform: skew(30deg);
+    margin-left: 1000px;
+}
 
 @media screen and (min-width: 1367px) { /* Large Desktop */
     
