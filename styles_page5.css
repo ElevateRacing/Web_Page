@@ -77,6 +77,7 @@
     height: 100%;
     background: orange;
     transform: skewX(30deg);
+    transform-origin: center;
     cursor: ew-resize;
     z-index: 3;
     user-select: none;
