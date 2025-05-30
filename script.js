@@ -15,21 +15,73 @@ window.addEventListener('scroll', () => {
         });
 
 // Split Screen Slider Script //
-document.addEventListener('DOMContentLoaded', function(){
-            let wrapper = document.getElementById('page5');
-            let topLayer = wrapper.querySelector('.buy');
-            let handle = wrapper.querySelector('.handle');
-            let skew = 0;
-            let delta = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.section_page5');
+    
+    if (!section) {
+        console.error('Error: Element with class "section_page5" not found in the DOM.');
+        return;
+    }
 
-            if(wrapper.className.indexOf('section_page5') != -1) {
-                        skew = 1000;
-            }
+    const handle = section.querySelector('.handle');
+    const rentLayer = section.querySelector('.layer.rent');
+    const buyLayer = section.querySelector('.layer.buy');
+    
+    if (!handle || !rentLayer || !buyLayer) {
+        console.error('Error: One or more required elements (.handle, .layer.rent, .layer.buy) not found.');
+        return;
+    }
 
-            wrapper.addEventListener('mounsemove', function(e) {
-                        delta = (e.clientX - window.innerWidth /2) * 0.5;
-                        handle.style.left = e.clientX + delta + 'px';
-                        topLayer.style.width = e.clientX + skew + delta + 'px';
-            });
+    let isDragging = false;
+
+    const updateClipPath = (xPos) => {
+        const sectionWidth = section.offsetWidth;
+        const percentage = (xPos / sectionWidth) * 100;
+        const boundedPercentage = Math.max(0, Math.min(100, percentage));
+        
+        rentLayer.style.clipPath = `polygon(${boundedPercentage}% 0%, 100% 0%, 100% 100%, ${boundedPercentage}% 100%)`;
+        buyLayer.style.clipPath = `polygon(0% 0%, ${boundedPercentage}% 0%, ${boundedPercentage}% 100%, 0% 100%)`;
+        handle.style.left = `${boundedPercentage}%`;
+    };
+
+    handle.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const rect = section.getBoundingClientRect();
+        const xPos = e.clientX - rect.left;
+        updateClipPath(xPos);
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+
+    handle.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        e.preventDefault();
+    });
+
+    document.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const rect = section.getBoundingClientRect();
+        const xPos = e.touches[0].clientX - rect.left;
+        updateClipPath(xPos);
+    });
+
+    document.addEventListener('touchend', () => {
+        isDragging = false;
+    });
+
+    updateClipPath(section.offsetWidth / 2);
+
+    window.addEventListener('resize', () => {
+        const currentPercentage = parseFloat(handle.style.left) || 50;
+        const newXPos = (currentPercentage / 100) * section.offsetWidth;
+        updateClipPath(newXPos);
+    });
 });
             
