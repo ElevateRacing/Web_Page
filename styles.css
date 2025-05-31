@@ -688,6 +688,21 @@ body {
     background-color: #d0d0d0;                          /* Darker gray background */
 }
 
+.section_page10 {
+    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
+    background-color: #c0c0c0;                          /* Darker gray background */
+}
+
+.section_page11 {
+    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
+    background-color: #d0d0d0;                          /* Darker gray background */
+}
+
+.section_page12 {
+    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
+    background-color: #c0c0c0;                          /* Darker gray background */
+}
+
 
 
 /* Adjust navbar padding when scrolled */
