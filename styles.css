@@ -641,7 +641,10 @@ body {
 .section_page6, 
 .section_page7,
 .section_page8,
-.section_page9 {
+.section_page9,
+.section_page10,
+.section_page11,
+.section_page12 {
     display: flex;               /* Use flexbox for content layout */
     flex-direction: column;      /* Stack content vertically */
     justify-content: center;     /* Center content vertically */
@@ -667,7 +670,7 @@ body {
 
 .section_page6 {
     min-height: 100vh;                                 /* Allow content to dictate height, with minimum full viewport */
-    background-color: #c0c0c0;                         /* Darkest gray background */
+    background-color: #d0d0d0;                         /* Darkest gray background */
 }
 
 .section_page7 {
