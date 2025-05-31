@@ -1,7 +1,7 @@
-/* - - - - - - PAGE_4 SECTION - - - - - - */
-.section_page4 {
-    background-color: #1a1a1a; /* Very dark background */
-    color: #ffffff; /* White text */
+/* - - - - - - PAGE_6 SECTION - - - - - - */
+.section_page6 {
+    background-color: #d0d0d0; /* Light background */
+    color: #000000; /* Black text */
     width: 100%;
     display: flex;
     justify-content: center;
