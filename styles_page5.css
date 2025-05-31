@@ -65,6 +65,7 @@
 .page5-text h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
+    font-size: 30px;
     margin: 0 0 10px;
     font-size: 2rem;
 }
@@ -72,6 +73,7 @@
 .page5-text p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    font-size: 22px;
     margin: 0;
     font-size: 1rem;
 }
