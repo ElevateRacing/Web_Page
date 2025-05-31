@@ -41,7 +41,7 @@
     top: 20px;
     padding: 20px;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
     max-width: 400px;
     z-index: 2;
 }
@@ -64,7 +64,7 @@
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 400;
     font-size: 20px;
-    color: #000000;
+    /* color: #000000; */
     text-shadow: none;
     /* max-width: 80% */
     max-width: 550px;               /* 50% width * 80% * 1367px = 550px */
