@@ -9,8 +9,11 @@
 }
 
 .page7-content {
+    position: absolute;
+    bottom: 20px; /* Small margin from the bottom */
+    left: 20px; /* Small margin from the left */
+    right: 20px; /* Small margin from the right */
     text-align: center;
-    padding: 0 20px;
 }
 
 .section_page7 img {
