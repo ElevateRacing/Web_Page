@@ -14,8 +14,8 @@
     left: 20px; /* Small margin from the left */
     right: 20px; /* Small margin from the right */
     text-align: center;
-    background: rgba(211, 211, 211, 0.8); /* Light grey semi-transparent background */
-    padding: 10px; /* Padding for the text box */
+    background: rgba(211, 211, 211, 0.5); /* Light grey semi-transparent background */
+    /* padding: 10px; /* Padding for the text box */
 }
 
 .section_page7 img {
