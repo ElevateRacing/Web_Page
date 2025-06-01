@@ -1,12 +1,41 @@
 /* - - - - - - PAGE_4 SECTION - - - - - - */
-.section_page4 {
-    background-color: #1a1a1a; /* Very dark background */
-    color: #ffffff; /* White text */
+.section_page7 {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.section_page7 img {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    min-height: fit-content; /* Height based on content */
-    box-sizing: border-box;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.page7-content {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+    max-width: 800px;
+}
+
+.page7-content h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.page7-content h2 {
+    margin: 10px 0 0;
+    font-size: 1.5rem;
+    font-weight: normal;
 }
 
 @media screen and (min-width: 1367px) { /* Large Desktop */
