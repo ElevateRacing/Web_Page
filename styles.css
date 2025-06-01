@@ -674,7 +674,7 @@ body {
 }
 
 .section_page7 {
-    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
+    /* min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
     background-color: #d0d0d0;                          /* Darker gray background */
 }
 
