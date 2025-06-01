@@ -8,16 +8,6 @@
     overflow: hidden;
 }
 
-.page7-content {
-    position: absolute;
-    bottom: 20px; /* Small margin from the bottom */
-    left: 20px; /* Small margin from the left */
-    right: 20px; /* Small margin from the right */
-    text-align: center;
-    background: rgba(211, 211, 211, 0.5); /* Light grey semi-transparent background */
-    /* padding: 10px; /* Padding for the text box */
-}
-
 .section_page7 img {
     width: 100%;
     height: auto;
@@ -25,25 +15,10 @@
     object-fit: cover;
 }
 
-.page7-content h1 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    margin: 10px 0;
-}
 
-.page7-content h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    margin: 10px 0;
-}
 
 @media screen and (min-width: 1367px) { /* Large Desktop */
-    .page7-content h1 {
-        font-size: 30px;
-    }
-    .page7-content h2 {
-        font-size: 22px;
-    }
+    
     
 }
 
