@@ -8,22 +8,16 @@
     overflow: hidden;
 }
 
+.page7-content {
+    text-align: center;
+    padding: 0 20px;
+}
+
 .section_page7 img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
-}
-
-.page7-content {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-    width: 80%;
-    max-width: 800px;
 }
 
 .page7-content h1 {
@@ -39,6 +33,12 @@
 }
 
 @media screen and (min-width: 1367px) { /* Large Desktop */
+    .page7-content h1 {
+        font-size: 30px;
+    }
+    .page7-content h2 {
+        font-size: 22px;
+    }
     
 }
 
