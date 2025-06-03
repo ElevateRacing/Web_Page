@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let startX = 0;
     let startY = 0;
     let isHorizontal = false;
+    let currentPercentage = 50; // Track handle position as percentage
     const isMobile = window.matchMedia("(min-width: 321px) and (max-width: 767px)").matches;
     const skewAngle = isMobile ? 10 : 30; // 10deg for mobile, 30deg for desktop
     const tanSkew = Math.tan(skewAngle * Math.PI / 180); // tan(10deg) ≈ 0.176, tan(30deg) ≈ 0.577
@@ -43,20 +44,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateClipPath = (xPos) => {
         const sectionWidth = section.offsetWidth;
         const sectionHeight = section.offsetHeight;
-        const percentage = (xPos / sectionWidth) * 100;
-        const boundedPercentage = Math.max(0, Math.min(100, percentage));
+        let percentage = (xPos / sectionWidth) * 100;
+        
+        // Bound the handle to 20% from edges on desktop
+        if (!isMobile) {
+            percentage = Math.max(20, Math.min(80, percentage));
+        } else {
+            percentage = Math.max(0, Math.min(100, percentage));
+        }
+        
+        currentPercentage = percentage; // Update current position
         
         // Calculate x-offset for skew, adjusted for aspect ratio
         const offset = (sectionHeight / sectionWidth) * 100 * tanSkew / 2;
-        const xTop = boundedPercentage - offset;
-        const xBottom = boundedPercentage + offset;
+        const xTop = percentage - offset;
+        const xBottom = percentage + offset;
 
         // Update clip paths to align with handle's skew
         rentLayer.style.clipPath = `polygon(${xTop}% 0%, 100% 0%, 100% 100%, ${xBottom}% 100%)`;
         buyLayer.style.clipPath = `polygon(0% 0%, ${xTop}% 0%, ${xBottom}% 100%, 0% 100%)`;
         
         // Move handle to mouse/touch position
-        handle.style.left = `${boundedPercentage}%`;
+        handle.style.left = `${percentage}%`;
     };
 
     // Mouse events: follow mouse without clicking (desktop)
@@ -67,15 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
         updateClipPath(xPos);
     });
 
-    // Touch events: move handle when touching anywhere on section (mobile)
+    // Touch events: move handle only when sliding (mobile)
     section.addEventListener('touchstart', (e) => {
         isDragging = true;
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
         isHorizontal = false; // Reset direction detection
-        const rect = section.getBoundingClientRect();
-        const xPos = startX - rect.left;
-        updateClipPath(xPos);
     });
 
     section.addEventListener('touchmove', (e) => {
@@ -109,9 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update on window resize
     window.addEventListener('resize', () => {
-        const currentPercentage = parseFloat(handle.style.left) || 50;
         const newXPos = (currentPercentage / 100) * section.offsetWidth;
         updateClipPath(newXPos);
     });
 });
-            
+
+   
+    
