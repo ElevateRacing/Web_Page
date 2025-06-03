@@ -56,19 +56,15 @@
     top: 20px;
     padding: 20px;
     color: white;
-    background: rgba(200, 200, 200, 0.5);
-    border-radius: 8px; /* Optional: adds rounded corners for a smoother look */
     max-width: 400px;
     z-index: 2;
 }
 .layer.rent .page5-text {
     right: 20px;
-    left: 30px;            /* Opposite margin */
     text-align: right;
 }
 .layer.buy .page5-text {
     left: 20px;
-    right: 40px;           /* Opposite margin */
     text-align: left;
 }
 .page5-text h1 {
@@ -133,6 +129,11 @@
 }
 
 @media screen and (min-width: 321px) and (max-width: 767px) { /* Mobile */
+    .page5-text {
+        background: rgba(200, 200, 200, 0.5);
+        border-radius: 8px; /* Optional: adds rounded corners for a smoother look */
+        max-width: 400px;
+}
     .handle {
         transform: skewX(5deg);
     }
