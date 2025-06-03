@@ -28,7 +28,7 @@
     height: 100%;
 }
 .page5-content img {
-    width: auto;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
@@ -93,7 +93,21 @@
 }
     
 @media screen and (min-width: 1367px) { /* Large Desktop */
-    
+    .page5-content img {
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .layer.rent .page5-content img {
+        object-position: 30% 40%;
+    }
+    .layer.buy .page5-content img {
+        object-position: 50% 40%;
+    }
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1366px) { /* Desktop */
