@@ -133,24 +133,24 @@
 
 @media screen and (min-width: 321px) and (max-width: 767px) { /* Mobile */
     .handle {
-        transform: skewX(10deg);
+        transform: skewX(5deg);
     }
     .layer.rent {
-        clip-path: polygon(calc(50% - 50% * tan(10deg)) 0%, 100% 0%, 100% 100%, calc(50% + 50% * tan(10deg)) 100%);
+        clip-path: polygon(calc(50% - 50% * tan(5deg)) 0%, 100% 0%, 100% 100%, calc(50% + 50% * tan(5deg)) 100%);
     }
     .layer.buy {
-        clip-path: polygon(0% 0%, calc(50% - 50% * tan(10deg)) 0%, calc(50% + 50% * tan(10deg)) 100%, 0% 100%);
+        clip-path: polygon(0% 0%, calc(50% - 50% * tan(5deg)) 0%, calc(50% + 50% * tan(5deg)) 100%, 0% 100%);
     }
 }
 
 @media screen and (max-width: 380px) { /* Small mobile */
     .handle {
-        transform: skewX(10deg);
+        transform: skewX(5deg);
     }
     .layer.rent {
-        clip-path: polygon(calc(50% - 50% * tan(10deg)) 0%, 100% 0%, 100% 100%, calc(50% + 50% * tan(10deg)) 100%);
+        clip-path: polygon(calc(50% - 50% * tan(5deg)) 0%, 100% 0%, 100% 100%, calc(50% + 50% * tan(5deg)) 100%);
     }
     .layer.buy {
-        clip-path: polygon(0% 0%, calc(50% - 50% * tan(10deg)) 0%, calc(50% + 50% * tan(10deg)) 100%, 0% 100%);
+        clip-path: polygon(0% 0%, calc(50% - 50% * tan(5deg)) 0%, calc(50% + 50% * tan(5deg)) 100%, 0% 100%);
     }
 }
