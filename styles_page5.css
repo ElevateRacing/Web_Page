@@ -46,17 +46,18 @@
     z-index: 1;
 }
 .layer.rent .page5-content img {
-    object-position: 30% 40%;
+    /* object-position: 30% 40%; */
 }
 .layer.buy .page5-content img {
-    object-position: 50% 40%;
+    /* object-position: 50% 40%; */
 }
 .page5-text {
     position: absolute;
     top: 20px;
     padding: 20px;
     color: white;
-    /* background: rgba(0, 0, 0, 0.5); */
+    background: rgba(200, 200, 200, 0.5);
+    border-radius: 8px; /* Optional: adds rounded corners for a smoother look */
     max-width: 400px;
     z-index: 2;
 }
@@ -67,7 +68,7 @@
 }
 .layer.buy .page5-text {
     left: 20px;
-    right: 30px;           /* Opposite margin */
+    right: 40px;           /* Opposite margin */
     text-align: left;
 }
 .page5-text h1 {
