@@ -37,7 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let startY = 0;
     let isHorizontal = false;
     let currentPercentage = 50; // Track handle position as percentage
-    const isMobile = window.matchMedia("(min-width: 321px) and (max-width: 767px)").matches;
+
+    // Define media queries
+    const mediaQueries = {
+        largeDesktop: window.matchMedia("(min-width: 1367px)"),
+        desktop: window.matchMedia("(min-width: 1281px) and (max-width: 1366px)"),
+        tablet: window.matchMedia("(min-width: 768px) and (max-width: 1280px)"),
+        mobile: window.matchMedia("(min-width: 321px) and (max-width: 767px)"),
+        smallMobile: window.matchMedia("(max-width: 380px)")
+    };
+
+    // Determine skew angle based on device
+    const isMobile = mediaQueries.mobile.matches || mediaQueries.smallMobile.matches;
     const skewAngle = isMobile ? 10 : 30; // 10deg for mobile, 30deg for desktop
     const tanSkew = Math.tan(skewAngle * Math.PI / 180); // tan(10deg) ≈ 0.176, tan(30deg) ≈ 0.577
 
@@ -45,14 +56,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const sectionWidth = section.offsetWidth;
         const sectionHeight = section.offsetHeight;
         let percentage = (xPos / sectionWidth) * 100;
-        
-        // Bound the handle to 20% from edges on desktop
-        if (!isMobile) {
+
+        // Apply boundaries based on media query
+        if (mediaQueries.largeDesktop.matches || mediaQueries.desktop.matches) {
+            // Desktops: 20% from each edge (20% to 80%)
             percentage = Math.max(20, Math.min(80, percentage));
-        } else {
-            percentage = Math.max(0, Math.min(100, percentage));
+        } else if (mediaQueries.tablet.matches) {
+            // Tablet: 15% from each edge (15% to 85%)
+            percentage = Math.max(15, Math.min(85, percentage));
+        } else if (mediaQueries.mobile.matches || mediaQueries.smallMobile.matches) {
+            // Mobile: 10% from each edge (10% to 90%)
+            percentage = Math.max(10, Math.min(90, percentage));
         }
-        
+
         currentPercentage = percentage; // Update current position
         
         // Calculate x-offset for skew, adjusted for aspect ratio
@@ -70,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mouse events: follow mouse without clicking (desktop)
     section.addEventListener('mousemove', (e) => {
-        if (isMobile) return; // Skip mouse events on mobile
+        if (mediaQueries.mobile.matches || mediaQueries.smallMobile.matches) return; // Skip mouse events on mobile
         const rect = section.getBoundingClientRect();
         const xPos = e.clientX - rect.left;
         updateClipPath(xPos);
@@ -120,5 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
+            
+            
    
-    
