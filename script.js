@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Desktops: 30% from left, 20% from right (30% to 80%)
             percentage = Math.max(30, Math.min(80, percentage));
         } else if (mediaQueries.tablet.matches) {
-            // Tablet: 15% from each edge (15% to 85%)
-            percentage = Math.max(15, Math.min(85, percentage));
+            // Tablet: 25% from each edge (15% to 80%)
+            percentage = Math.max(25, Math.min(80, percentage));
         } else if (mediaQueries.mobile.matches || mediaQueries.smallMobile.matches) {
             // Mobile: 10% from each edge (10% to 90%)
             percentage = Math.max(10, Math.min(90, percentage));
