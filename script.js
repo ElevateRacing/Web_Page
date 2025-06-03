@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Determine skew angle based on device
     const isMobile = mediaQueries.mobile.matches || mediaQueries.smallMobile.matches;
-    const skewAngle = isMobile ? 10 : 30; // 10deg for mobile, 30deg for desktop
-    const tanSkew = Math.tan(skewAngle * Math.PI / 180); // tan(10deg) ≈ 0.176, tan(30deg) ≈ 0.577
+    const skewAngle = isMobile ? 5 : 30; // 5deg for mobile, 30deg for desktop
+    const tanSkew = Math.tan(skewAngle * Math.PI / 180); // tan(5deg) ≈ 0.087, tan(30deg) ≈ 0.577
 
     const updateClipPath = (xPos) => {
         const sectionWidth = section.offsetWidth;
