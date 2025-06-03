@@ -5,6 +5,15 @@
     height: 100vh;
     overflow: hidden;
     touch-action: pan-y; /* Allows vertical scrolling on touch */
+    display: flex;               /* Use flexbox for content layout */
+    flex-direction: column;      /* Stack content vertically */
+    justify-content: center;     /* Center content vertically */
+    align-items: center;         /* Center content horizontally */
+    text-align: center;          /* Center text content */
+    padding: 20px;               /* Add inner spacing */
+    box-sizing: border-box;      /* Include padding in size calculations */
+    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
+    background-color: #d0d0d0;                          /* Darker gray background */
 }
 .layer {
     position: absolute;
