@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Apply boundaries based on media query
         if (mediaQueries.largeDesktop.matches || mediaQueries.desktop.matches) {
-            // Desktops: 20% from each edge (20% to 80%)
-            percentage = Math.max(20, Math.min(80, percentage));
+            // Desktops: 30% from left, 20% from right (30% to 80%)
+            percentage = Math.max(30, Math.min(80, percentage));
         } else if (mediaQueries.tablet.matches) {
             // Tablet: 15% from each edge (15% to 85%)
             percentage = Math.max(15, Math.min(85, percentage));
