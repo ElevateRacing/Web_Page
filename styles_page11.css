@@ -21,11 +21,11 @@
 }
 
 .section_top {
-    background-image: url('path/to/background1.jpg');
+    background-image: url('Images/page5-left.PNG');
 }
 
 .section_bottom {
-    background-image: url('path/to/background2.jpg');
+    background-image: url('Images/page5-right.png');
 }
 
 /* Optional: Add a semi-transparent overlay for better text readability */
