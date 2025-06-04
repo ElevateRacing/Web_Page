@@ -642,7 +642,6 @@ body {
 .section_page8,
 .section_page9,
 .section_page10,
-.section_page11,
 .section_page12 {
     display: flex;               /* Use flexbox for content layout */
     flex-direction: column;      /* Stack content vertically */
@@ -688,11 +687,11 @@ body {
     background-color: #c0c0c0;                          /* Darker gray background */
 }
 
-.section_page11 {
+/*.section_page11 {
     min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
     background-color: #d0d0d0;                          /* Darker gray background */
 }
-
+*/
 .section_page12 {
     min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
     background-color: #c0c0c0;                          /* Darker gray background */
