@@ -202,6 +202,31 @@ body {
 }
 
 /* - - - - - - PAGE_4 SECTION - - - - - - */
+.section_page4 {
+    background-color: #1a1a1a; /* Very dark background */
+    color: #ffffff; /* White text */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Top/bottom margin and side padding */
+    min-height: fit-content; /* Height based on content */
+    box-sizing: border-box;
+}
+.page4-content {
+    text-aligh: center;
+    padding: 0 20px; /* Horizontal padding for cpntent */
+}
+.page4-content h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.page4-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
 
 /* - - - - - - PAGE_5 SECTION - - - - - - */
 
@@ -352,6 +377,12 @@ body {
         display: block;
         margin: 0;            /* Remove margins */
     }
+    .page4-content h1 {
+        font-size: 30px;
+    }
+    .page4-content h2 {
+        font-size: 22px;
+    }
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -486,6 +517,12 @@ body {
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
         margin: 0;            /* Remove margins */
+    }
+    .page4-content h1 {
+        font-size: 30px;
+    }
+    .page4-content h2 {
+        font-size: 22px;
     }
 }
 @media screen and (min-width: 768px) 
@@ -650,6 +687,12 @@ body {
         display: block;
         margin: 0;            /* Remove margins */
     }
+    .page4-content h1 {
+        font-size: 26px;
+    }
+    .page4-content h2 {
+        font-size: 20px;
+    }
 }
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                        /* Mobile styles */
@@ -803,6 +846,12 @@ body {
         margin-top: 0;        /* Explicitly remove top margin */
         margin-bottom: 0;     /* Explicitly remove bottom margin */
     }
+    .page4-content h1 {
+        font-size: 26px;
+    }
+    .page4-content h2 {
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -950,10 +999,15 @@ body {
         margin-top: 0;        /* Explicitly remove top margin */
         margin-bottom: 0;     /* Explicitly remove bottom margin */
     }
+    .page4-content h1 {
+        font-size: 24px;
+    }
+    .page4-content h2 {
+        font-size: 16px;
+    }
 }
 
 /* General styling for all section elements */
-.section_page4,
 .section_page6, 
 .section_page7,
 .section_page8,
@@ -971,11 +1025,7 @@ body {
 
 
 
-/* Styling for page 4 section */
-.section_page4 {
-    min-height: 100vh;                                 /* Allow content to dictate height, with minimum full viewport */
-    background-color: #c0c0c0;                         /* Darkest gray background */
-}
+
 
 
 
