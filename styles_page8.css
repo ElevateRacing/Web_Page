@@ -2,7 +2,7 @@
 .section_page8 {
     padding: 4rem;
 }
-.h1 {
+.section_page8 h1 {
     text-align: left;
     margin: 0 0 3rem 0;
 
@@ -21,6 +21,7 @@
 }
 .desktop-img {
     display: block;
+    transform: scale(0.5);
 }
 .mobile-img {
     display: none;
