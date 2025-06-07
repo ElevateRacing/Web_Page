@@ -16,14 +16,11 @@
         margin-bottom: 15px;
     }
     .page8-header h2 {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        color: #000000;
-        text-shadow: none;
-        /* max-width: 80% */
-        max-width: 550px;                               /* 50% width * 80% * 1367px = 550px */
-        margin: 0 auto 20px;
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        margin: 0 0 10px;
+        font-size: 2rem;
     }
     .page8-content-top {
         width: 100%;
