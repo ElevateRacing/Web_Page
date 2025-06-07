@@ -63,14 +63,22 @@
         margin-top: 0;
     }
     .page8-bottom-right h1 {
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        margin: 0 0 10px;
         font-size: 2rem;
-        margin: 0 0 15px 0;
     }
     .page8-bottom-right p {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        /* color: #000000; */
+        text-shadow: none;
+        /* max-width: 80% */
+        max-width: 550px;               /* 50% width * 80% * 1367px = 550px */
+        margin: 0 0 30px; /* Increased margin to add space before button */
         font-size: 1rem;
-        text-align: left;
-        margin: 0 0 15px 0;
-        line-height: 1.5;
     } 
 }
 
