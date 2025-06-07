@@ -1,74 +1,77 @@
 /* - - - - - - PAGE_8 SECTION - - - - - - */
-.section_page8 {
-    width: 100%;
-    box-sizing: border-box;
-}
 
-.page8-header {
-    margin: 50px 0 20px 50px;
-}
 
-.page8-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    line-height: 1.2;
-}
 
-.page8-header h2 {
-    font-size: 1.5rem;
-    margin: 10px 0 0 0;
-    font-weight: normal;
-}
 
-.page8-content-top {
-    width: 100%;
-}
 
-.image8_desktop {
-    width: 100%;
-    height: auto;
-    display: block;
-}
 
-.page8-content-bottom {
-    display: flex;
-    align-items: flex-start;
-    margin: 20px 50px;
-}
 
-.page8-bottom-left {
-    flex: 1;
-    margin-right: 30px;
-}
 
-.image8_bottom {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
 
-.page8-bottom-right {
-    flex: 1;
-    margin-top: 0;
-}
-
-.page8-bottom-right h1 {
-    font-size: 2rem;
-    margin: 0 0 15px 0;
-}
-
-.page8-bottom-right p {
-    font-size: 1rem;
-    text-align: left;
-    margin: 0 0 15px 0;
-    line-height: 1.5;
-}
 
 
 
 @media screen and (min-width: 1367px) { /* Large Desktop */
-    
-    
+    .section_page8 {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .page8-header {
+        margin: 160px 0 0px 50px;
+    }
+    .page8-header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 68px;
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    .page8-header h2 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        color: #000000;
+        text-shadow: none;
+        /* max-width: 80% */
+        max-width: 550px;                               /* 50% width * 80% * 1367px = 550px */
+        margin: 0 auto 20px;
+    }
+    .page8-content-top {
+        width: 100%;
+    }
+    .image8_desktop {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .page8-content-bottom {
+        display: flex;
+        align-items: flex-start;
+        margin: 20px 50px;
+    }
+    .page8-bottom-left {
+        flex: 1;
+        margin-right: 30px;
+    }
+    .image8_bottom {
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+    }
+    .page8-bottom-right {
+        flex: 1;
+        margin-top: 0;
+    }
+    .page8-bottom-right h1 {
+        font-size: 2rem;
+        margin: 0 0 15px 0;
+    }
+    .page8-bottom-right p {
+        font-size: 1rem;
+        text-align: left;
+        margin: 0 0 15px 0;
+        line-height: 1.5;
+    } 
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1366px) { /* Desktop */
