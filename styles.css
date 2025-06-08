@@ -386,6 +386,11 @@ body {
 }
 
 /* - - - - - - PAGE_8 SECTION - - - - - - */
+.section_page2 {
+    display: flex;                                       /* Use flexbox for content layout */
+    flex-direction: column;                              /* Stack content vertically */
+    background-color: #E6E6E6;
+}
 
 /* - - - - - - PAGE_9 SECTION - - - - - - */
 
@@ -542,6 +547,38 @@ body {
     .page6-content h2 {
         font-size: 22px;
     }
+    .section_page8 {
+        height: auto;                                    /* Let image dictate height */
+        position: relative;                              /* For absolute positioning of text */
+        overflow: hidden;                                /* Hide overflowing image */
+        padding: 0;
+    }
+    .page8-header {
+        position: absolute;                              /* Position text over image */
+        top: 160px;                                      /* Keep generous top margin */
+        left: 0;
+        width: 50%;                                      /* Left column (column1) */
+        text-align: center;                              /* Center text in column1 */
+        padding: 1rem;
+        z-index: 2;                                      /* Above image */
+    }
+    .page8-header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 68px;
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    .page8-header h2 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        color: #000000;
+        text-shadow: none;
+        /* max-width: 80% */
+        max-width: 550px;                               /* 50% width * 80% * 1367px = 550px */
+        margin: 0 auto 20px;
+    }
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -688,6 +725,38 @@ body {
     }
     .page6-content h2 {
         font-size: 22px;
+    }
+    .section_page8 {
+        height: auto;                                    /* Let image dictate height */
+        position: relative;                              /* For absolute positioning of text */
+        overflow: hidden;                                /* Hide overflowing image */
+        padding: 0;
+    }
+    .page8-header {
+        position: absolute;                              /* Position text over image */
+        top: 160px;                                      /* Keep generous top margin */
+        left: 0;
+        width: 50%;                                      /* Left column (column1) */
+        text-align: center;                              /* Center text in column1 */
+        padding: 1rem;
+        z-index: 2;                                      /* Above image */
+    }
+    .page8-header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 68px;
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    .page8-header h2 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        color: #000000;
+        text-shadow: none;
+        /* max-width: 80% */
+        max-width: 550px;                               /* 50% width * 80% * 1367px = 550px */
+        margin: 0 auto 20px;
     }
 }
 @media screen and (min-width: 768px) 
