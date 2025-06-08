@@ -1040,6 +1040,14 @@ body {
     .page6-content h2 {
         font-size: 20px;
     }
+    .section_page7 img {
+        width: 125%; /* Crop 20% from left and right (100/0.8 = 125%) */
+        height: auto; /* Maintain aspect ratio for taller appearance */
+        object-fit: cover; /* Ensure image fills container, cropping sides */
+        object-position: 50% 50%; /* Center horizontally to crop 20% from both sides */
+        display: block;
+        margin: 0 auto; /* Center the image within the container */
+    }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -1211,6 +1219,14 @@ body {
     }
     .page6-content h2 {
         font-size: 16px;
+    }
+    .section_page7 img {
+        width: 125%; /* Crop 20% from left and right (100/0.8 = 125%) */
+        height: auto; /* Maintain aspect ratio for taller appearance */
+        object-fit: cover; /* Ensure image fills container, cropping sides */
+        object-position: 50% 50%; /* Center horizontally to crop 20% from both sides */
+        display: block;
+        margin: 0 auto; /* Center the image within the container */
     }
 }
 
