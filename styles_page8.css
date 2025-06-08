@@ -2,58 +2,58 @@
 .section_page8 {
         width: 100%;
         box-sizing: border-box;
-    }
-    .page8-header {
+}
+.page8-header {
         margin: 200px 0 0px 80px;
-    }
-    .page8-header h1 {
+}
+.page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 80px;
+        font-size: 96px;
         color: #000000;
         margin-bottom: 15px;
-    }
-    .page8-header h2 {
-        font-family: 'Exo 2', sans-serif;
-        font-weight: 700;
-        font-size: 20px;
-        margin: 0 0 10px;
-        font-size: 2rem;
-    }
-    .page8-content-top {
-        width: 100%;
-    }
-    .image8_desktop {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    .page8-content-bottom {
-        display: flex;
-        align-items: flex-start;
-        margin: 20px 50px;
-    }
-    .page8-bottom-left {
-        flex: 0 0 40%; /* Changed from 50% to 40% width */
-        margin-right: 30px;
-    }
-    .image8_bottom {
-        width: 100%;
-        height: auto;
-        border-radius: 25px;
-    }
-    .page8-bottom-right {
-        flex: 1;
-        margin-top: 0;
-    }
-    .page8-bottom-right h1 {
+}
+.page8-header h2 {
         font-family: 'Exo 2', sans-serif;
         font-weight: 700;
         font-size: 30px;
         margin: 0 0 10px;
         font-size: 2rem;
-    }
-    .page8-bottom-right p {
+}
+.page8-content-top {
+        width: 100%;
+}
+.image8_desktop {
+        width: 100%;
+        height: auto;
+        display: block;
+}
+.page8-content-bottom {
+        display: flex;
+        align-items: flex-start;
+        margin: 20px 50px;
+}
+.page8-bottom-left {
+        flex: 0 0 40%; /* Changed from 50% to 40% width */
+        margin-right: 30px;
+}
+.image8_bottom {
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+}
+.page8-bottom-right {
+        flex: 1;
+        margin-top: 0;
+}
+.page8-bottom-right h1 {
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 700;
+        font-size: 96px;
+        margin: 0 0 15px;
+        font-size: 2rem;
+}
+.page8-bottom-right p {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 400;
         font-size: 25px;
@@ -63,63 +63,63 @@
         max-width: 550px;               /* 50% width * 80% * 1367px = 550px */
         margin: 0 0 30px; /* Increased margin to add space before button */
         font-size: 1rem;
-    } 
+} 
 @media screen and (min-width: 1367px) { /* Large Desktop */
         .section_page8 {
         width: 100%;
         box-sizing: border-box;
-    }
-    .page8-header {
+}
+.page8-header {
         margin: 200px 0 0px 80px;
-    }
-    .page8-header h1 {
+}
+.page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 80px;
+        font-size: 96px;
         color: #000000;
         margin-bottom: 15px;
-    }
-    .page8-header h2 {
-        font-family: 'Exo 2', sans-serif;
-        font-weight: 700;
-        font-size: 20px;
-        margin: 0 0 10px;
-        font-size: 2rem;
-    }
-    .page8-content-top {
-        width: 100%;
-    }
-    .image8_desktop {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    .page8-content-bottom {
-        display: flex;
-        align-items: flex-start;
-        margin: 20px 50px;
-    }
-    .page8-bottom-left {
-        flex: 0 0 40%; /* Changed from 50% to 40% width */
-        margin-right: 30px;
-    }
-    .image8_bottom {
-        width: 100%;
-        height: auto;
-        border-radius: 25px;
-    }
-    .page8-bottom-right {
-        flex: 1;
-        margin-top: 0;
-    }
-    .page8-bottom-right h1 {
+}
+.page8-header h2 {
         font-family: 'Exo 2', sans-serif;
         font-weight: 700;
         font-size: 30px;
         margin: 0 0 10px;
         font-size: 2rem;
-    }
-    .page8-bottom-right p {
+}
+.page8-content-top {
+        width: 100%;
+}
+.image8_desktop {
+        width: 100%;
+        height: auto;
+        display: block;
+}
+.page8-content-bottom {
+        display: flex;
+        align-items: flex-start;
+        margin: 20px 50px;
+}
+.page8-bottom-left {
+        flex: 0 0 40%; /* Changed from 50% to 40% width */
+        margin-right: 30px;
+}
+.image8_bottom {
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+}
+.page8-bottom-right {
+        flex: 1;
+        margin-top: 0;
+}
+.page8-bottom-right h1 {
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 700;
+        font-size: 96px;
+        margin: 0 0 15px;
+        font-size: 2rem;
+}
+.page8-bottom-right p {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 400;
         font-size: 25px;
@@ -129,7 +129,7 @@
         max-width: 550px;               /* 50% width * 80% * 1367px = 550px */
         margin: 0 0 30px; /* Increased margin to add space before button */
         font-size: 1rem;
-    } 
+} 
     
 }
 
