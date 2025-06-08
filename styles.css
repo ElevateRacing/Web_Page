@@ -323,7 +323,6 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
 .page5-button:hover {
     background-color: #e55a00;
 }
@@ -341,7 +340,33 @@ body {
     user-select: none;
     touch-action: none;
 }
+
 /* - - - - - - PAGE_6 SECTION - - - - - - */
+.section_page6 {
+    background-color: #e0e0e0; /* Light background */
+    color: #000000; /* Black text */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Top/bottom margin and side padding */
+    min-height: fit-content; /* Height based on content */
+    box-sizing: border-box;
+}
+.page6-content {
+    text-aligh: center;
+    padding: 0 20px; /* Horizontal padding for cpntent */
+}
+.page6-content h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.page6-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
 
 /* - - - - - - PAGE_7 SECTION - - - - - - */
 
@@ -494,6 +519,12 @@ body {
     .page4-content h2 {
         font-size: 22px;
     }
+    .page6-content h1 {
+        font-size: 30px;
+    }
+    .page6-content h2 {
+        font-size: 22px;
+    }
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -633,6 +664,12 @@ body {
         font-size: 30px;
     }
     .page4-content h2 {
+        font-size: 22px;
+    }
+    .page6-content h1 {
+        font-size: 30px;
+    }
+    .page6-content h2 {
         font-size: 22px;
     }
 }
@@ -802,6 +839,12 @@ body {
         font-size: 26px;
     }
     .page4-content h2 {
+        font-size: 20px;
+    }
+    .page6-content h1 {
+        font-size: 26px;
+    }
+    .page6-content h2 {
         font-size: 20px;
     }
 }
@@ -976,6 +1019,12 @@ body {
     .layer.buy {
         clip-path: polygon(0% 0%, calc(50% - 50% * tan(5deg)) 0%, calc(50% + 50% * tan(5deg)) 100%, 0% 100%);
     }
+    .page6-content h1 {
+        font-size: 26px;
+    }
+    .page6-content h2 {
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -1142,10 +1191,15 @@ body {
     .layer.buy {
         clip-path: polygon(0% 0%, calc(50% - 50% * tan(5deg)) 0%, calc(50% + 50% * tan(5deg)) 100%, 0% 100%);
     }
+    .page6-content h1 {
+        font-size: 24px;
+    }
+    .page6-content h2 {
+        font-size: 16px;
+    }
 }
 
-/* General styling for all section elements */
-.section_page6, 
+/* General styling for all section elements */ 
 .section_page7,
 .section_page9,
 .section_page10,
@@ -1159,16 +1213,6 @@ body {
     box-sizing: border-box;      /* Include padding in size calculations */
 }
 
-
-
-
-
-
-
-.section_page6 {
-    min-height: 100vh;                                 /* Allow content to dictate height, with minimum full viewport */
-    background-color: #e0e0e0;
-}
 
 .section_page7 {
     /* min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
