@@ -391,15 +391,6 @@ body {
     background-color: #E6E6E6;                         /* Darkest gray background */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0;
-    box-sizing: border-box;
-}
-.page8-header {
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
-    max-width: 50rem; /* Match page2's max-width for consistency */
 }
 .page8-content-top {
     width: 100%;
@@ -765,6 +756,21 @@ body {
     .page6-content h2 {
         font-size: 22px;
     }
+    .section_page8 {
+        height: auto;                                    /* Let image dictate height */
+        position: relative;                              /* For absolute positioning of text */
+        overflow: hidden;                                /* Hide overflowing image */
+        padding: 0;
+    }
+    .page8-header {
+        position: absolute;                              /* Position text over image */
+        top: 160px;                                      /* Keep generous top margin */
+        left: 0;
+        width: 50%;                                      /* Left column (column1) */
+        text-align: center;                              /* Center text in column1 */
+        padding: 1rem;
+        z-index: 2;                                      /* Above image */
+    }
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -780,6 +786,7 @@ body {
         margin: 0 auto 20px;
         max-width: 550px;
     }
+    
     .page8-bottom-right h1 {
         font-family: 'Exo 2', sans-serif;
         font-weight: 700;
