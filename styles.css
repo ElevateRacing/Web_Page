@@ -554,13 +554,13 @@ body {
         padding: 0;
     }
     .page8-header {
-        position: absolute;                              /* Position text over image */
-        top: 160px;                                      /* Keep generous top margin */
-        left: 0;
-        width: 50%;                                      /* Left column (column1) */
-        text-align: center;                              /* Center text in column1 */
+        position: static;                               /* Remove absolute positioning */
+        margin-top: 5rem;                              /* Generous top margin */
+        margin-left: 3rem;                             /* Generous left margin */
+        width: 50%;                                    /* Left column (column1) */
+        text-align: left;                              /* Align text to the left */
         padding: 1rem;
-        z-index: 2;                                      /* Above image */
+        z-index: 2;                                    /* Above image */
     }
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
@@ -578,6 +578,18 @@ body {
         /* max-width: 80% */
         max-width: 550px;                               /* 50% width * 80% * 1367px = 550px */
         margin: 0 auto 20px;
+    }
+    .page8-content-top {
+        width: 100%;
+        height: auto;                                  /* Let image height dictate */
+        overflow: hidden;                              /* Hide excess image */
+    }
+    .page8-content-top .image8_desktop {
+        width: 100%;                                  /* Full browser width */
+        height: auto;                                 /* Maintain aspect ratio */
+        object-fit: cover;                            /* Cover the container */
+        object-position: 50% 50%;                     /* Center the image */
+        display: block;
     }
 } 
 @media screen and (min-width: 1281px) 
@@ -733,13 +745,13 @@ body {
         padding: 0;
     }
     .page8-header {
-        position: absolute;                              /* Position text over image */
-        top: 160px;                                      /* Keep generous top margin */
-        left: 0;
-        width: 50%;                                      /* Left column (column1) */
-        text-align: center;                              /* Center text in column1 */
+        position: static;                               /* Remove absolute positioning */
+        margin-top: 5rem;                              /* Generous top margin */
+        margin-left: 3rem;                             /* Generous left margin */
+        width: 50%;                                    /* Left column (column1) */
+        text-align: left;                              /* Align text to the left */
         padding: 1rem;
-        z-index: 2;                                      /* Above image */
+        z-index: 2;                                    /* Above image */
     }
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
@@ -757,6 +769,18 @@ body {
         /* max-width: 80% */
         max-width: 550px;                               /* 50% width * 80% * 1367px = 550px */
         margin: 0 auto 20px;
+    }
+    .page8-content-top {
+        width: 100%;
+        height: auto;                                  /* Let image height dictate */
+        overflow: hidden;                              /* Hide excess image */
+    }
+    .page8-content-top .image8_desktop {
+        width: 100%;                                  /* Full browser width */
+        height: auto;                                 /* Maintain aspect ratio */
+        object-fit: cover;                            /* Cover the container */
+        object-position: 50% 50%;                     /* Center the image */
+        display: block;
     }
 }
 @media screen and (min-width: 768px) 
@@ -932,6 +956,49 @@ body {
     }
     .page6-content h2 {
         font-size: 20px;
+    }
+    .section_page8 {
+        height: auto;                                    /* Let content dictate height */
+        position: relative;                              /* For absolute positioning of text */
+        overflow: hidden;                                /* Hide overflowing image */
+        padding: 0;
+    }
+    .page8-header {
+        position: static;                               /* Remove absolute positioning */
+        margin-top: 4rem;                              /* Generous top margin */
+        margin-left: 2rem;                             /* Generous left margin */
+        width: 50%;                                    /* Left column (column1) */
+        text-align: left;                              /* Align text to the left */
+        padding: 1rem;
+        z-index: 2;                                    /* Above image */
+    }
+    .page8-header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    .page8-header h2 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: clamp(0.875rem, 1.2vw, 1rem);
+        font-weight: 400;
+        color: #000000;
+        text-shadow: none;
+        max-width: 80%;                               /* Restrict text width */
+        margin: 0 0 20px 0;                           /* Margin below text */
+    }
+    .page8-content-top {
+        width: 100%;
+        height: auto;                                 /* Let image height dictate */
+        overflow: hidden;                             /* Hide excess image */
+    }
+    .page8-content-top .image8_desktop {
+        width: 100%;                                 /* Full browser width */
+        height: auto;                                /* Maintain aspect ratio */
+        object-fit: cover;                           /* Cover the container */
+        object-position: 50% 50%;                    /* Center the image */
+        display: block;
     }
 }
 @media screen and (min-width: 321px) 
@@ -1119,6 +1186,46 @@ body {
         display: block;
         margin: 0 auto; /* Center the image within the container */
     }
+    .section_page8 {
+        height: auto;                                    /* Let content dictate height */
+        flex-direction: column;                          /* Stack content vertically */
+        padding: 0;
+    }
+    .page8-header {
+        margin-top: 3rem;                              /* Generous top margin */
+        margin-left: 1.5rem;                           /* Generous left margin */
+        width: 80%;                                    /* Wider for readability */
+        text-align: left;                              /* Align text to the left */
+        padding: 1rem;
+    }
+    .page8-header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 32px;
+        color: #000000;
+        margin-bottom: 10px;
+    }
+    .page8-header h2 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        color: #000000;
+        text-shadow: none;
+        max-width: 90%;
+        margin: 0 0 15px 0;
+    }
+    .page8-content-top {
+        width: 100%;
+        height: auto;                                 /* Let image height dictate */
+        overflow: hidden;                             /* Hide excess image */
+    }
+    .page8-content-top .image8_desktop {
+        width: 100%;                                 /* Full browser width */
+        height: auto;                                /* Maintain aspect ratio */
+        object-fit: cover;                           /* Cover the container */
+        object-position: 50% 50%;                    /* Center the image */
+        display: block;
+    }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -1298,6 +1405,46 @@ body {
         object-position: 50% 50%; /* Center horizontally to crop 20% from both sides */
         display: block;
         margin: 0 auto; /* Center the image within the container */
+    }
+    .section_page8 {
+        height: auto;                                    /* Let content dictate height */
+        flex-direction: column;                          /* Stack content vertically */
+        padding: 0;
+    }
+    .page8-header {
+        margin-top: 2rem;                              /* Generous top margin */
+        margin-left: 1rem;                             /* Generous left margin */
+        width: 90%;                                    /* Wider for readability */
+        text-align: left;                              /* Align text to the left */
+        padding: 1rem;
+    }
+    .page8-header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 12px;
+        color: #000000;
+        margin-bottom: 10px;
+    }
+    .page8-header h2 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 4px;
+        font-weight: 300;
+        color: #000000;
+        text-shadow: none;
+        max-width: 90%;
+        margin: 0 0 15px 0;
+    }
+    .page8-content-top {
+        width: 100%;
+        height: auto;                                 /* Let image height dictate */
+        overflow: hidden;                             /* Hide excess image */
+    }
+    .page8-content-top .image8_desktop {
+        width: 100%;                                 /* Full browser width */
+        height: auto;                                /* Maintain aspect ratio */
+        object-fit: cover;                           /* Cover the container */
+        object-position: 50% 50%;                    /* Center the image */
+        display: block;
     }
 }
 
