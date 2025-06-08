@@ -528,6 +528,10 @@ body {
         display: block;
         margin: 0;            /* Remove margins */
     }
+    .page4-content {
+        text-aligh: center;
+        padding: 0 20px; /* Horizontal padding for cpntent */
+    }
     .page4-content h1 {
         font-size: 30px;
     }
@@ -674,6 +678,10 @@ body {
         object-position: 0% 50%; /* Align left, keep vertical center */
         display: block;
         margin: 0;            /* Remove margins */
+    }
+    .page4-content {
+        text-aligh: center;
+        padding: 0 20px; /* Horizontal padding for cpntent */
     }
     .page4-content h1 {
         font-size: 30px;
@@ -850,6 +858,10 @@ body {
         display: block;
         margin: 0;            /* Remove margins */
     }
+    .page4-content {
+        text-aligh: center;
+        padding: 0 20px; /* Horizontal padding for cpntent */
+    }
     .page4-content h1 {
         font-size: 26px;
     }
@@ -1014,6 +1026,10 @@ body {
         display: block;
         margin-top: 0;        /* Explicitly remove top margin */
         margin-bottom: 0;     /* Explicitly remove bottom margin */
+    }
+    .page4-content {
+        text-aligh: center;
+        padding: 0 20px; /* Horizontal padding for cpntent */
     }
     .page4-content h1 {
         font-size: 26px;
@@ -1186,6 +1202,10 @@ body {
         display: block;
         margin-top: 0;        /* Explicitly remove top margin */
         margin-bottom: 0;     /* Explicitly remove bottom margin */
+    }
+    .page4-content {
+        text-aligh: center;
+        padding: 0 20px; /* Horizontal padding for cpntent */
     }
     .page4-content h1 {
         font-size: 24px;
