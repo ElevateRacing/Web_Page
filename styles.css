@@ -386,46 +386,6 @@ body {
 }
 
 /* - - - - - - PAGE_8 SECTION - - - - - - */
-.section_page8 {
-    min-height: 100vh;                                 /* Allow content to dictate height, with minimum full viewport */
-    background-color: #E6E6E6;                         /* Darkest gray background */
-    display: flex;
-    flex-direction: column;
-}
-.page8-content-top {
-    width: 100%;
-    overflow: hidden;
-}
-.page8-content-top img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-.page8-content-bottom {
-    display: flex;
-    width: 100%;
-    max-width: 80rem; /* Constrain content width for larger screens */
-    padding: 1rem;
-    box-sizing: border-box;
-}
-.page8-bottom-left {
-    width: 40%;
-    padding: 0.5rem 0 0 0.5rem; /* Small margin from top image and left edge */
-}
-.page8-bottom-left img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-.page8-bottom-right {
-    width: 60%;
-    padding: 0.5rem 0 0 0.5rem; /* Small margin to right edge of left image */
-    text-align: left;
-}
-
-
 
 /* - - - - - - PAGE_9 SECTION - - - - - - */
 
@@ -582,33 +542,6 @@ body {
     .page6-content h2 {
         font-size: 22px;
     }
-    .page8-header h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: 68px;
-        color: #000000;
-        margin-bottom: 15px;
-    }
-    .page8-header h2 {
-        font-family: 'Exo 2', sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        color: #000000;
-        margin: 0 auto 20px;
-        max-width: 550px;
-    }
-    .page8-bottom-right h1 {
-        font-family: 'Exo 2', sans-serif;
-        font-weight: 700;
-        font-size: 30px;
-        margin: 10px 0;
-    }
-    .page8-bottom-right p {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        margin: 10px 0;
-    }
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -755,49 +688,6 @@ body {
     }
     .page6-content h2 {
         font-size: 22px;
-    }
-    .section_page8 {
-        height: auto;                                    /* Let image dictate height */
-        position: relative;                              /* For absolute positioning of text */
-        overflow: hidden;                                /* Hide overflowing image */
-        padding: 0;
-    }
-    .page8-header {
-        position: absolute;                              /* Position text over image */
-        top: 160px;                                      /* Keep generous top margin */
-        left: 0;
-        width: 50%;                                      /* Left column (column1) */
-        text-align: center;                              /* Center text in column1 */
-        padding: 1rem;
-        z-index: 2;                                      /* Above image */
-    }
-    .page8-header h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: 68px;
-        color: #000000;
-        margin-bottom: 15px;
-    }
-    .page8-header h2 {
-        font-family: 'Exo 2', sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        color: #000000;
-        margin: 0 auto 20px;
-        max-width: 550px;
-    }
-    
-    .page8-bottom-right h1 {
-        font-family: 'Exo 2', sans-serif;
-        font-weight: 700;
-        font-size: 30px;
-        margin: 10px 0;
-    }
-    .page8-bottom-right p {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        margin: 10px 0;
     }
 }
 @media screen and (min-width: 768px) 
@@ -973,33 +863,6 @@ body {
     }
     .page6-content h2 {
         font-size: 20px;
-    }
-    .page8-header h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: clamp(2rem, 4vw, 3rem);
-        color: #000000;
-        margin-bottom: 15px;
-    }
-    .page8-header h2 {
-        font-family: 'Exo 2', sans-serif;
-        font-size: clamp(0.875rem, 1.2vw, 1rem);
-        font-weight: 400;
-        color: #000000;
-        margin: 0 auto 20px;
-        max-width: 80%;
-    }
-    .page8-bottom-right h1 {
-        font-family: 'Exo 2', sans-serif;
-        font-weight: 700;
-        font-size: 26px;
-        margin: 10px 0;
-    }
-    .page8-bottom-right p {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        margin: 10px 0;
     }
 }
 @media screen and (min-width: 321px) 
@@ -1187,44 +1050,6 @@ body {
         display: block;
         margin: 0 auto; /* Center the image within the container */
     }
-    .page8-header h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: 32px;
-        color: #000000;
-        margin-bottom: 10px;
-    }
-    .page8-header h2 {
-        font-family: 'Exo 2', sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        color: #000000;
-        margin: 0 auto 15px;
-        max-width: 90%;
-    }
-    .page8-content-bottom {
-        flex-direction: column;
-    }
-    .page8-bottom-left {
-        width: 100%;
-        padding: 0.5rem;
-    }
-    .page8-bottom-right {
-        width: 100%;
-        padding: 0.5rem;
-    }
-    .page8-bottom-right h1 {
-        font-family: 'Exo 2', sans-serif;
-        font-weight: 700;
-        font-size: 26px;
-        margin: 10px 0;
-    }
-    .page8-bottom-right p {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        margin: 10px 0;
-    }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -1405,47 +1230,10 @@ body {
         display: block;
         margin: 0 auto; /* Center the image within the container */
     }
-    .page8-header h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: 12px;
-        color: #000000;
-        margin-bottom: 10px;
-    }
-    .page8-header h2 {
-        font-family: 'Exo 2', sans-serif;
-        font-size: 4px;
-        font-weight: 400;
-        color: #000000;
-        margin: 0 auto 15px;
-        max-width: 90%;
-    }
-    .page8-content-bottom {
-        flex-direction: column;
-    }
-    .page8-bottom-left {
-        width: 100%;
-        padding: 0.5rem;
-    }
-    .page8-bottom-right {
-        width: 100%;
-        padding: 0.5rem;
-    }
-    .page8-bottom-right h1 {
-        font-family: 'Exo 2', sans-serif;
-        font-weight: 700;
-        font-size: 24px;
-        margin: 10px 0;
-    }
-    .page8-bottom-right p {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        margin: 10px 0;
-    }
 }
 
 /* General styling for all section elements */ 
+.section_page8,
 .section_page9,
 .section_page10,
 .section_page12 {
