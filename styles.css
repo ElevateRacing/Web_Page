@@ -1302,7 +1302,6 @@ body {
 }
 
 /* General styling for all section elements */ 
-.section_page8,
 .section_page9,
 .section_page10,
 .section_page12 {
@@ -1316,10 +1315,7 @@ body {
 }
 
 
-.section_page8 {
-    min-height: 100vh;                                 /* Allow content to dictate height, with minimum full viewport */
-    background-color: #E6E6E6;                         /* Darkest gray background */
-}
+
 
 .section_page9 {
     min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
