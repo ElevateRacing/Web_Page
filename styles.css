@@ -395,17 +395,26 @@ body {
     flex-direction: column; /* Stack content vertically */
     background-color: #E6E6E6; /* Match existing page2 background */
 }
-
+.page8-video {
+    position: absolute;
+    top: 8rem; /* Margin from top of page */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 60%; /* Adjust width to fit content, responsive */
+    max-width: 800px; /* Cap maximum width for large screens */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure video covers its container */
+    z-index: 1; /* Behind header text */
+}
 .page8-header {
-    position: static; /* Remove absolute positioning */
+    position: relative; /* Changed to relative to stack naturally */
     margin-top: 5rem; /* Generous top margin */
     margin-left: 3rem; /* Generous left margin */
     width: 50%; /* Left column (column1) */
     text-align: left; /* Align text to the left */
     padding: 1rem;
-    z-index: 2; /* Above sprite animation */
+    z-index: 2; /* Above video and sprite animation */
 }
-
 .page8-header h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -413,7 +422,6 @@ body {
     color: #000000;
     margin-bottom: 15px;
 }
-
 .page8-header h2 {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 20px;
@@ -423,31 +431,12 @@ body {
     max-width: 550px; /* 50% width * 80% * 1367px = 550px */
     margin: 0 auto 20px;
 }
-
 .page8-content-top {
     width: 100%;
     display: flex; /* Center sprite horizontally */
     justify-content: center; /* Center horizontally */
     margin-top: 6rem; /* Margin from top of page8 */
     z-index: 1; /* Behind page8-header */
-}
-
-.sprite-container {
-    width: 420px; /* Scaled size: 2100px * 20% */
-    height: 300px; /* Scaled size: 1500px * 20% */
-    overflow: hidden; /* Hide overflow to show only one frame */
-}
-
-.sprite {
-    width: 30240px; /* Total width: 72 frames * 420px */
-    height: 300px; /* Height of sprite sheet */
-    background: url('Images/Anim_1/sprite.png') 0 0 no-repeat; /* Load sprite sheet */
-    background-size: 800px 200px; /* Ensure sprite sheet scales correctly */
-    animation: sprite-animation 7.2s steps(72) infinite; /* 72 frames * 0.1s = 7.2s */
-}
-@keyframes sprite-animation {
-    from { background-position: 0 0; } /* Start at first frame */
-    to { background-position: -30240px 0; } /* Shift to last frame (72 * 420px) */
 }
 
 /* - - - - - - PAGE_9 SECTION - - - - - - */
@@ -611,7 +600,11 @@ body {
         overflow: hidden; /* Hide overflowing content */
         padding: 0;
     }
-
+    .page8-video {
+        top: 8rem;
+        width: 60%;
+        max-width: 800px;
+    }
     .page8-header {
         margin-top: 5rem; /* Generous top margin */
         margin-left: 3rem; /* Generous left margin */
@@ -620,7 +613,6 @@ body {
         padding: 1rem;
         z-index: 2; /* Above sprite animation */
     }
-
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -628,7 +620,6 @@ body {
         color: #000000;
         margin-bottom: 15px;
     }
-
     .page8-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: 20px;
@@ -638,21 +629,9 @@ body {
         max-width: 550px; /* 50% width * 80% * 1367px = 550px */
         margin: 0 auto 20px;
     }
-
     .page8-content-top {
         margin-top: 6rem; /* Margin from top */
         z-index: 1; /* Behind page8-header */
-    }
-
-    .sprite-container {
-        width: 200px; /* Scaled size of one frame */
-        height: 200px; /* Scaled size of one frame */
-    }
-
-    .sprite {
-        width: 800px; /* Total width of sprite sheet */
-        height дає: 200px; /* Height of sprite sheet */
-        background-size: 800px 200px; /* Scale sprite sheet */
     }
 } 
 @media screen and (min-width: 1281px) 
@@ -807,7 +786,11 @@ body {
         overflow: hidden; /* Hide overflowing content */
         padding: 0;
     }
-
+    .page8-video {
+        top: 8rem;
+        width: 70%; /* Slightly wider for smaller desktop */
+        max-width: 700px;
+    }
     .page8-header {
         margin-top: 5rem; /* Generous top margin */
         margin-left: 3rem; /* Generous left margin */
@@ -816,7 +799,6 @@ body {
         padding: 1rem;
         z-index: 2; /* Above sprite animation */
     }
-
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -824,7 +806,6 @@ body {
         color: #000000;
         margin-bottom: 15px;
     }
-
     .page8-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: 20px;
@@ -834,21 +815,9 @@ body {
         max-width: 550px; /* 50% width * 80% * 1367px = 550px */
         margin: 0 auto 20px;
     }
-
     .page8-content-top {
         margin-top: 6rem; /* Margin from top */
         z-index: 1; /* Behind page8-header */
-    }
-
-    .sprite-container {
-        width: 180px; /* Slightly smaller for smaller desktop */
-        height: 180px;
-    }
-
-    .sprite {
-        width: 720px; /* Total width of sprite sheet (4 frames * 180px) */
-        height: 180px;
-        background-size: 720px 180px;
     }
 }
 @media screen and (min-width: 768px) 
@@ -1030,7 +999,11 @@ body {
         flex-direction: column; /* Stack content vertically */
         padding: 0;
     }
-
+    .page8-video {
+        top: 8rem;
+        width: 80%; /* Wider for tablet */
+        max-width: 600px;
+    }
     .page8-header {
         margin-top: 4rem; /* Reduced top margin */
         margin-left: 2rem; /* Reduced left margin */
@@ -1039,7 +1012,6 @@ body {
         padding: 1rem;
         z-index: 2; /* Above sprite animation */
     }
-
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -1047,7 +1019,6 @@ body {
         color: #000000;
         margin-bottom: 15px;
     }
-
     .page8-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: clamp(0.875rem, 1.2vw, 1rem);
@@ -1057,21 +1028,9 @@ body {
         max-width: 80%;
         margin: 0 0 20px 0;
     }
-
     .page8-content-top {
         margin-top: 5rem; /* Slightly reduced top margin */
         z-index: 1; /* Behind page8-header */
-    }
-
-    .sprite-container {
-        width: 150px; /* Smaller for tablet */
-        height: 150px;
-    }
-
-    .sprite {
-        width: 600px; /* Total width of sprite sheet (4 frames * 150px) */
-        height: 150px;
-        background-size: 600px 150px;
     }
 }
 @media screen and (min-width: 321px) 
@@ -1264,7 +1223,11 @@ body {
         flex-direction: column; /* Stack content vertically */
         padding: 0;
     }
-
+    .page8-video {
+        top: 8rem;
+        width: 90%; /* Wider for mobile */
+        max-width: 500px;
+    }
     .page8-header {
         margin-top: 3rem; /* Reduced top margin */
         margin-left: 1.5rem; /* Reduced left margin */
@@ -1273,7 +1236,6 @@ body {
         padding: 1rem;
         z-index: 2; /* Above sprite animation */
     }
-
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -1281,7 +1243,6 @@ body {
         color: #000000;
         margin-bottom: 10px;
     }
-
     .page8-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: 16px;
@@ -1291,21 +1252,9 @@ body {
         max-width: 90%;
         margin: 0 0 15px 0;
     }
-
     .page8-content-top {
         margin-top: 4rem; /* Reduced top margin */
         z-index: 1; /* Behind page8-header */
-    }
-
-    .sprite-container {
-        width: 120px; /* Smaller for mobile */
-        height: 120px;
-    }
-
-    .sprite {
-        width: 480px; /* Total width of sprite sheet (4 frames * 120px) */
-        height: 120px;
-        background-size: 480px 120px;
     }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
@@ -1492,7 +1441,11 @@ body {
         flex-direction: column; /* Stack content vertically */
         padding: 0;
     }
-
+    .page8-video {
+        top: 8rem;
+        width: 95%; /* Almost full width for small mobile */
+        max-width: 350px;
+    }
     .page8-header {
         margin-top: 2rem; /* Reduced top margin */
         margin-left: 1rem; /* Reduced left margin */
@@ -1501,7 +1454,6 @@ body {
         padding: 1rem;
         z-index: 2; /* Above sprite animation */
     }
-
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -1509,7 +1461,6 @@ body {
         color: #000000;
         margin-bottom: 10px;
     }
-
     .page8-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: 4px;
@@ -1519,21 +1470,9 @@ body {
         max-width: 90%;
         margin: 0 0 15px 0;
     }
-
     .page8-content-top {
         margin-top: 3rem; /* Reduced top margin */
         z-index: 1; /* Behind page8-header */
-    }
-
-    .sprite-container {
-        width: 100px; /* Smallest for small mobile */
-        height: 100px;
-    }
-
-    .sprite {
-        width: 400px; /* Total width of sprite sheet (4 frames * 100px) */
-        height: 100px;
-        background-size: 400px 100px;
     }
 }
 
