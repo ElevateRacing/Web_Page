@@ -386,10 +386,68 @@ body {
 }
 
 /* - - - - - - PAGE_8 SECTION - - - - - - */
-.section_page2 {
-    display: flex;                                       /* Use flexbox for content layout */
-    flex-direction: column;                              /* Stack content vertically */
-    background-color: #E6E6E6;
+.section_page8 {
+    height: auto; /* Let content dictate height */
+    position: relative; /* For absolute positioning of content */
+    overflow: hidden; /* Hide overflowing content */
+    padding: 0;
+    display: flex; /* Use flexbox for content layout */
+    flex-direction: column; /* Stack content vertically */
+    background-color: #E6E6E6; /* Match existing page2 background */
+}
+
+.page8-header {
+    position: static; /* Remove absolute positioning */
+    margin-top: 5rem; /* Generous top margin */
+    margin-left: 3rem; /* Generous left margin */
+    width: 50%; /* Left column (column1) */
+    text-align: left; /* Align text to the left */
+    padding: 1rem;
+    z-index: 2; /* Above sprite animation */
+}
+
+.page8-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 68px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.page8-header h2 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    text-shadow: none;
+    max-width: 550px; /* 50% width * 80% * 1367px = 550px */
+    margin: 0 auto 20px;
+}
+
+.page8-content-top {
+    width: 100%;
+    display: flex; /* Center sprite horizontally */
+    justify-content: center; /* Center horizontally */
+    margin-top: 6rem; /* Margin from top of page8 */
+    z-index: 1; /* Behind page8-header */
+}
+
+.sprite-container {
+    width: 200px; /* Scaled size of one frame */
+    height: 200px; /* Scaled size of one frame */
+    overflow: hidden; /* Hide overflow to show only one frame */
+}
+
+.sprite {
+    width: 800px; /* Total width of sprite sheet (4 frames * 200px) */
+    height: 200px; /* Height of sprite sheet */
+    background: url('Images/sprite.png') 0 0 no-repeat; /* Load sprite sheet */
+    background-size: 800px 200px; /* Ensure sprite sheet scales correctly */
+    animation: sprite-animation 1s steps(4) infinite; /* Loop animation */
+}
+@keyframes sprite-animation {
+    from { background-position: 0 0; } /* Start at first frame */
+    to { background-position: -800px 0; } /* Shift to last frame */
 }
 
 /* - - - - - - PAGE_9 SECTION - - - - - - */
@@ -548,20 +606,21 @@ body {
         font-size: 22px;
     }
     .section_page8 {
-        height: auto;                                    /* Let image dictate height */
-        position: relative;                              /* For absolute positioning of text */
-        overflow: hidden;                                /* Hide overflowing image */
+        height: auto; /* Let content dictate height */
+        position: relative; /* For absolute positioning of content */
+        overflow: hidden; /* Hide overflowing content */
         padding: 0;
     }
+
     .page8-header {
-        position: static;                               /* Remove absolute positioning */
-        margin-top: 5rem;                              /* Generous top margin */
-        margin-left: 3rem;                             /* Generous left margin */
-        width: 50%;                                    /* Left column (column1) */
-        text-align: left;                              /* Align text to the left */
+        margin-top: 5rem; /* Generous top margin */
+        margin-left: 3rem; /* Generous left margin */
+        width: 50%; /* Left column (column1) */
+        text-align: left; /* Align text to the left */
         padding: 1rem;
-        z-index: 2;                                    /* Above image */
+        z-index: 2; /* Above sprite animation */
     }
+
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -569,27 +628,31 @@ body {
         color: #000000;
         margin-bottom: 15px;
     }
+
     .page8-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: 20px;
         font-weight: 400;
         color: #000000;
         text-shadow: none;
-        /* max-width: 80% */
-        max-width: 550px;                               /* 50% width * 80% * 1367px = 550px */
+        max-width: 550px; /* 50% width * 80% * 1367px = 550px */
         margin: 0 auto 20px;
     }
+
     .page8-content-top {
-        width: 100%;
-        height: auto;                                  /* Let image height dictate */
-        overflow: hidden;                              /* Hide excess image */
+        margin-top: 6rem; /* Margin from top */
+        z-index: 1; /* Behind page8-header */
     }
-    .page8-content-top .image8_desktop {
-        width: 100%;                                  /* Full browser width */
-        height: auto;                                 /* Maintain aspect ratio */
-        object-fit: cover;                            /* Cover the container */
-        object-position: 50% 50%;                     /* Center the image */
-        display: block;
+
+    .sprite-container {
+        width: 200px; /* Scaled size of one frame */
+        height: 200px; /* Scaled size of one frame */
+    }
+
+    .sprite {
+        width: 800px; /* Total width of sprite sheet */
+        height дає: 200px; /* Height of sprite sheet */
+        background-size: 800px 200px; /* Scale sprite sheet */
     }
 } 
 @media screen and (min-width: 1281px) 
@@ -739,20 +802,21 @@ body {
         font-size: 22px;
     }
     .section_page8 {
-        height: auto;                                    /* Let image dictate height */
-        position: relative;                              /* For absolute positioning of text */
-        overflow: hidden;                                /* Hide overflowing image */
+        height: auto; /* Let content dictate height */
+        position: relative; /* For absolute positioning of content */
+        overflow: hidden; /* Hide overflowing content */
         padding: 0;
     }
+
     .page8-header {
-        position: static;                               /* Remove absolute positioning */
-        margin-top: 5rem;                              /* Generous top margin */
-        margin-left: 3rem;                             /* Generous left margin */
-        width: 50%;                                    /* Left column (column1) */
-        text-align: left;                              /* Align text to the left */
+        margin-top: 5rem; /* Generous top margin */
+        margin-left: 3rem; /* Generous left margin */
+        width: 50%; /* Left column (column1) */
+        text-align: left; /* Align text to the left */
         padding: 1rem;
-        z-index: 2;                                    /* Above image */
+        z-index: 2; /* Above sprite animation */
     }
+
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -760,27 +824,31 @@ body {
         color: #000000;
         margin-bottom: 15px;
     }
+
     .page8-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: 20px;
         font-weight: 400;
         color: #000000;
         text-shadow: none;
-        /* max-width: 80% */
-        max-width: 550px;                               /* 50% width * 80% * 1367px = 550px */
+        max-width: 550px; /* 50% width * 80% * 1367px = 550px */
         margin: 0 auto 20px;
     }
+
     .page8-content-top {
-        width: 100%;
-        height: auto;                                  /* Let image height dictate */
-        overflow: hidden;                              /* Hide excess image */
+        margin-top: 6rem; /* Margin from top */
+        z-index: 1; /* Behind page8-header */
     }
-    .page8-content-top .image8_desktop {
-        width: 100%;                                  /* Full browser width */
-        height: auto;                                 /* Maintain aspect ratio */
-        object-fit: cover;                            /* Cover the container */
-        object-position: 50% 50%;                     /* Center the image */
-        display: block;
+
+    .sprite-container {
+        width: 180px; /* Slightly smaller for smaller desktop */
+        height: 180px;
+    }
+
+    .sprite {
+        width: 720px; /* Total width of sprite sheet (4 frames * 180px) */
+        height: 180px;
+        background-size: 720px 180px;
     }
 }
 @media screen and (min-width: 768px) 
@@ -958,20 +1026,20 @@ body {
         font-size: 20px;
     }
     .section_page8 {
-        height: auto;                                    /* Let content dictate height */
-        position: relative;                              /* For absolute positioning of text */
-        overflow: hidden;                                /* Hide overflowing image */
+        height: auto; /* Let content dictate height */
+        flex-direction: column; /* Stack content vertically */
         padding: 0;
     }
+
     .page8-header {
-        position: static;                               /* Remove absolute positioning */
-        margin-top: 4rem;                              /* Generous top margin */
-        margin-left: 2rem;                             /* Generous left margin */
-        width: 50%;                                    /* Left column (column1) */
-        text-align: left;                              /* Align text to the left */
+        margin-top: 4rem; /* Reduced top margin */
+        margin-left: 2rem; /* Reduced left margin */
+        width: 80%; /* Wider for readability */
+        text-align: left; /* Align text to the left */
         padding: 1rem;
-        z-index: 2;                                    /* Above image */
+        z-index: 2; /* Above sprite animation */
     }
+
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -979,26 +1047,31 @@ body {
         color: #000000;
         margin-bottom: 15px;
     }
+
     .page8-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: clamp(0.875rem, 1.2vw, 1rem);
         font-weight: 400;
         color: #000000;
         text-shadow: none;
-        max-width: 80%;                               /* Restrict text width */
-        margin: 0 0 20px 0;                           /* Margin below text */
+        max-width: 80%;
+        margin: 0 0 20px 0;
     }
+
     .page8-content-top {
-        width: 100%;
-        height: auto;                                 /* Let image height dictate */
-        overflow: hidden;                             /* Hide excess image */
+        margin-top: 5rem; /* Slightly reduced top margin */
+        z-index: 1; /* Behind page8-header */
     }
-    .page8-content-top .image8_desktop {
-        width: 100%;                                 /* Full browser width */
-        height: auto;                                /* Maintain aspect ratio */
-        object-fit: cover;                           /* Cover the container */
-        object-position: 50% 50%;                    /* Center the image */
-        display: block;
+
+    .sprite-container {
+        width: 150px; /* Smaller for tablet */
+        height: 150px;
+    }
+
+    .sprite {
+        width: 600px; /* Total width of sprite sheet (4 frames * 150px) */
+        height: 150px;
+        background-size: 600px 150px;
     }
 }
 @media screen and (min-width: 321px) 
@@ -1187,17 +1260,20 @@ body {
         margin: 0 auto; /* Center the image within the container */
     }
     .section_page8 {
-        height: auto;                                    /* Let content dictate height */
-        flex-direction: column;                          /* Stack content vertically */
+        height: auto; /* Let content dictate height */
+        flex-direction: column; /* Stack content vertically */
         padding: 0;
     }
+
     .page8-header {
-        margin-top: 3rem;                              /* Generous top margin */
-        margin-left: 1.5rem;                           /* Generous left margin */
-        width: 80%;                                    /* Wider for readability */
-        text-align: left;                              /* Align text to the left */
+        margin-top: 3rem; /* Reduced top margin */
+        margin-left: 1.5rem; /* Reduced left margin */
+        width: 90%; /* Wider for readability */
+        text-align: left; /* Align text to the left */
         padding: 1rem;
+        z-index: 2; /* Above sprite animation */
     }
+
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -1205,6 +1281,7 @@ body {
         color: #000000;
         margin-bottom: 10px;
     }
+
     .page8-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: 16px;
@@ -1214,17 +1291,21 @@ body {
         max-width: 90%;
         margin: 0 0 15px 0;
     }
+
     .page8-content-top {
-        width: 100%;
-        height: auto;                                 /* Let image height dictate */
-        overflow: hidden;                             /* Hide excess image */
+        margin-top: 4rem; /* Reduced top margin */
+        z-index: 1; /* Behind page8-header */
     }
-    .page8-content-top .image8_desktop {
-        width: 100%;                                 /* Full browser width */
-        height: auto;                                /* Maintain aspect ratio */
-        object-fit: cover;                           /* Cover the container */
-        object-position: 50% 50%;                    /* Center the image */
-        display: block;
+
+    .sprite-container {
+        width: 120px; /* Smaller for mobile */
+        height: 120px;
+    }
+
+    .sprite {
+        width: 480px; /* Total width of sprite sheet (4 frames * 120px) */
+        height: 120px;
+        background-size: 480px 120px;
     }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
@@ -1407,17 +1488,20 @@ body {
         margin: 0 auto; /* Center the image within the container */
     }
     .section_page8 {
-        height: auto;                                    /* Let content dictate height */
-        flex-direction: column;                          /* Stack content vertically */
+        height: auto; /* Let content dictate height */
+        flex-direction: column; /* Stack content vertically */
         padding: 0;
     }
+
     .page8-header {
-        margin-top: 2rem;                              /* Generous top margin */
-        margin-left: 1rem;                             /* Generous left margin */
-        width: 90%;                                    /* Wider for readability */
-        text-align: left;                              /* Align text to the left */
+        margin-top: 2rem; /* Reduced top margin */
+        margin-left: 1rem; /* Reduced left margin */
+        width: 90%; /* Wider for readability */
+        text-align: left; /* Align text to the left */
         padding: 1rem;
+        z-index: 2; /* Above sprite animation */
     }
+
     .page8-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -1425,6 +1509,7 @@ body {
         color: #000000;
         margin-bottom: 10px;
     }
+
     .page8-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-size: 4px;
@@ -1434,17 +1519,21 @@ body {
         max-width: 90%;
         margin: 0 0 15px 0;
     }
+
     .page8-content-top {
-        width: 100%;
-        height: auto;                                 /* Let image height dictate */
-        overflow: hidden;                             /* Hide excess image */
+        margin-top: 3rem; /* Reduced top margin */
+        z-index: 1; /* Behind page8-header */
     }
-    .page8-content-top .image8_desktop {
-        width: 100%;                                 /* Full browser width */
-        height: auto;                                /* Maintain aspect ratio */
-        object-fit: cover;                           /* Cover the container */
-        object-position: 50% 50%;                    /* Center the image */
-        display: block;
+
+    .sprite-container {
+        width: 100px; /* Smallest for small mobile */
+        height: 100px;
+    }
+
+    .sprite {
+        width: 400px; /* Total width of sprite sheet (4 frames * 100px) */
+        height: 100px;
+        background-size: 400px 100px;
     }
 }
 
