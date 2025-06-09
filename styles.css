@@ -433,21 +433,21 @@ body {
 }
 
 .sprite-container {
-    width: 200px; /* Scaled size of one frame */
-    height: 200px; /* Scaled size of one frame */
+    width: 420px; /* Scaled size: 2100px * 20% */
+    height: 300px; /* Scaled size: 1500px * 20% */
     overflow: hidden; /* Hide overflow to show only one frame */
 }
 
 .sprite {
-    width: 800px; /* Total width of sprite sheet (4 frames * 200px) */
-    height: 200px; /* Height of sprite sheet */
-    background: url('Images/sprite.png') 0 0 no-repeat; /* Load sprite sheet */
+    width: 30240px; /* Total width: 72 frames * 420px */
+    height: 300px; /* Height of sprite sheet */
+    background: url('Images/Anim_1/sprite.png') 0 0 no-repeat; /* Load sprite sheet */
     background-size: 800px 200px; /* Ensure sprite sheet scales correctly */
-    animation: sprite-animation 1s steps(4) infinite; /* Loop animation */
+    animation: sprite-animation 7.2s steps(72) infinite; /* 72 frames * 0.1s = 7.2s */
 }
 @keyframes sprite-animation {
     from { background-position: 0 0; } /* Start at first frame */
-    to { background-position: -800px 0; } /* Shift to last frame */
+    to { background-position: -30240px 0; } /* Shift to last frame (72 * 420px) */
 }
 
 /* - - - - - - PAGE_9 SECTION - - - - - - */
