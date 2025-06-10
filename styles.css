@@ -396,24 +396,21 @@ body {
     background-color: #E6E6E6; /* Match existing page2 background */
 }
 .page8-video {
-    position: absolute;
-    top: 6rem; /* Margin from top of page */
-    left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
-    width: 80%; /* Adjust width to fit content, responsive */
-    max-width: 800px; /* Cap maximum width for large screens */
+    position: relative; /* Changed to relative for natural flow */
+    width: 90%; /* Larger video */
+    max-width: 1200px; /* Increased max-width for larger screens */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure video covers its container */
     z-index: 1; /* Behind header text */
+    margin: 6rem auto 2rem; /* Center with top and bottom margin */
 }
 .page8-header {
     position: relative; /* Changed to relative to stack naturally */
-    margin-top: 4rem; /* Generous top margin */
-    margin-left: 3rem; /* Generous left margin */
-    width: 50%; /* Left column (column1) */
+    margin: 0 0 0 3rem; /* Align left with h1 margin */
+    width: 50%; /* Left column */
     text-align: left; /* Align text to the left */
     padding: 1rem;
-    z-index: 2; /* Above video and sprite animation */
+    z-index: 2; /* Above video */
 }
 .page8-header h1 {
     font-family: 'Montserrat', sans-serif;
@@ -431,13 +428,39 @@ body {
     max-width: 550px; /* 50% width * 80% * 1367px = 550px */
     margin: 0 auto 0;
 }
-.page8-content-top {
-    width: 100%;
-    display: flex; /* Center sprite horizontally */
-    justify-content: center; /* Center horizontally */
-    margin-top: 6rem; /* Margin from top of page8 */
-    z-index: 1; /* Behind page8-header */
+.page8-content-bottom {
+    display: flex; /* Two-column layout */
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+.page8-bottom-left {
+    flex: 1;
+}
+.image8_bottom {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded edges */
+    object-fit: cover;
+}
+.page8-bottom-right {
+    flex: 1;
+    text-align: left;
+}
+.page8-bottom-right h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.page8-bottom-right p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
 
 /* - - - - - - PAGE_9 SECTION - - - - - - */
 
@@ -595,44 +618,35 @@ body {
         font-size: 22px;
     }
     .section_page8 {
-        height: auto; /* Let content dictate height */
-        position: relative; /* For absolute positioning of content */
-        overflow: hidden; /* Hide overflowing content */
+        height: auto;
+        position: relative;
+        overflow: hidden;
         padding: 0;
     }
     .page8-video {
-        top: 6rem;
-        width: 80%;
-        max-width: 800px;
+        width: 90%;
+        max-width: 1200px;
+        margin: 6rem auto 2rem;
     }
     .page8-header {
-        margin-top: 4rem; /* Generous top margin */
-        margin-left: 3rem; /* Generous left margin */
-        width: 50%; /* Left column (column1) */
-        text-align: left; /* Align text to the left */
+        margin: 0 0 0 3rem;
+        width: 50%;
         padding: 1rem;
-        z-index: 2; /* Above sprite animation */
+        z-index: 2;
     }
     .page8-header h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
         font-size: 68px;
-        color: #000000;
-        margin-bottom: 15px;
     }
     .page8-header h2 {
-        font-family: 'Open Sans', Arial, sans-serif;
         font-size: 20px;
-        font-weight: 400;
-        color: #000000;
-        text-shadow: none;
-        max-width: 550px; /* 50% width * 80% * 1367px = 550px */
-        margin: 0 auto 0;
+        margin: 0 0 15px 0;
     }
-    .page8-content-top {
-        margin-top: 6rem; /* Margin from top */
-        z-index: 1; /* Behind page8-header */
+    .page8-content-bottom {
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1200px;
     }
+    
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -781,44 +795,35 @@ body {
         font-size: 22px;
     }
     .section_page8 {
-        height: auto; /* Let content dictate height */
-        position: relative; /* For absolute positioning of content */
-        overflow: hidden; /* Hide overflowing content */
+        height: auto;
+        position: relative;
+        overflow: hidden;
         padding: 0;
     }
     .page8-video {
-        top: 8rem;
-        width: 70%; /* Slightly wider for smaller desktop */
-        max-width: 700px;
+        width: 85%;
+        max-width: 1000px;
+        margin: 5rem auto 2rem;
     }
     .page8-header {
-        margin-top: 5rem; /* Generous top margin */
-        margin-left: 3rem; /* Generous left margin */
-        width: 50%; /* Left column (column1) */
-        text-align: left; /* Align text to the left */
+        margin: 0 0 0 3rem;
+        width: 50%;
         padding: 1rem;
-        z-index: 2; /* Above sprite animation */
+        z-index: 2;
     }
     .page8-header h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: 68px;
-        color: #000000;
-        margin-bottom: 15px;
+        font-size: 60px;
     }
     .page8-header h2 {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        color: #000000;
-        text-shadow: none;
-        max-width: 550px; /* 50% width * 80% * 1367px = 550px */
-        margin: 0 auto 20px;
+        font-size: 18px;
+        margin: 0 0 15px 0;
     }
-    .page8-content-top {
-        margin-top: 6rem; /* Margin from top */
-        z-index: 1; /* Behind page8-header */
+    .page8-content-bottom {
+        gap: 1.5rem;
+        padding: 1.5rem;
+        max-width: 1000px;
     }
+    
 }
 @media screen and (min-width: 768px) 
               and (max-width: 1280px) {                       /* Tablet */
@@ -995,43 +1000,35 @@ body {
         font-size: 20px;
     }
     .section_page8 {
-        height: auto; /* Let content dictate height */
-        flex-direction: column; /* Stack content vertically */
+        height: auto;
+        flex-direction: column;
         padding: 0;
     }
     .page8-video {
-        top: 8rem;
-        width: 80%; /* Wider for tablet */
-        max-width: 600px;
+        width: 90%;
+        max-width: 800px;
+        margin: 4rem auto 2rem;
     }
     .page8-header {
-        margin-top: 4rem; /* Reduced top margin */
-        margin-left: 2rem; /* Reduced left margin */
-        width: 80%; /* Wider for readability */
-        text-align: left; /* Align text to the left */
+        margin: 0 0 0 2rem;
+        width: 80%;
         padding: 1rem;
-        z-index: 2; /* Above sprite animation */
+        z-index: 2;
     }
     .page8-header h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: clamp(2rem, 4vw, 3rem);
-        color: #000000;
-        margin-bottom: 15px;
+        font-size: 48px;
     }
     .page8-header h2 {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: clamp(0.875rem, 1.2vw, 1rem);
-        font-weight: 400;
-        color: #000000;
-        text-shadow: none;
-        max-width: 80%;
-        margin: 0 0 20px 0;
+        font-size: 16px;
+        margin: 0 0 15px 0;
     }
-    .page8-content-top {
-        margin-top: 5rem; /* Slightly reduced top margin */
-        z-index: 1; /* Behind page8-header */
+    .page8-content-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        max-width: 800px;
     }
+    
 }
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                        /* Mobile styles */
@@ -1219,43 +1216,35 @@ body {
         margin: 0 auto; /* Center the image within the container */
     }
     .section_page8 {
-        height: auto; /* Let content dictate height */
-        flex-direction: column; /* Stack content vertically */
+        height: auto;
+        flex-direction: column;
         padding: 0;
     }
     .page8-video {
-        top: 8rem;
-        width: 90%; /* Wider for mobile */
+        width: 95%;
         max-width: 500px;
+        margin: 3rem auto 1rem;
     }
     .page8-header {
-        margin-top: 3rem; /* Reduced top margin */
-        margin-left: 1.5rem; /* Reduced left margin */
-        width: 90%; /* Wider for readability */
-        text-align: left; /* Align text to the left */
+        margin: 0 0 0 1.5rem;
+        width: 90%;
         padding: 1rem;
-        z-index: 2; /* Above sprite animation */
+        z-index: 2;
     }
     .page8-header h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
         font-size: 32px;
-        color: #000000;
-        margin-bottom: 10px;
     }
     .page8-header h2 {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 300;
-        color: #000000;
-        text-shadow: none;
-        max-width: 90%;
-        margin: 0 0 15px 0;
+        font-size: 14px;
+        margin: 0 0 10px 0;
     }
-    .page8-content-top {
-        margin-top: 4rem; /* Reduced top margin */
-        z-index: 1; /* Behind page8-header */
+    .page8-content-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        max-width: 500px;
     }
+    
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -1436,44 +1425,7 @@ body {
         display: block;
         margin: 0 auto; /* Center the image within the container */
     }
-    .section_page8 {
-        height: auto; /* Let content dictate height */
-        flex-direction: column; /* Stack content vertically */
-        padding: 0;
-    }
-    .page8-video {
-        top: 8rem;
-        width: 95%; /* Almost full width for small mobile */
-        max-width: 350px;
-    }
-    .page8-header {
-        margin-top: 2rem; /* Reduced top margin */
-        margin-left: 1rem; /* Reduced left margin */
-        width: 90%; /* Wider for readability */
-        text-align: left; /* Align text to the left */
-        padding: 1rem;
-        z-index: 2; /* Above sprite animation */
-    }
-    .page8-header h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: 12px;
-        color: #000000;
-        margin-bottom: 10px;
-    }
-    .page8-header h2 {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 4px;
-        font-weight: 300;
-        color: #000000;
-        text-shadow: none;
-        max-width: 90%;
-        margin: 0 0 15px 0;
-    }
-    .page8-content-top {
-        margin-top: 3rem; /* Reduced top margin */
-        z-index: 1; /* Behind page8-header */
-    }
+    
 }
 
 /* General styling for all section elements */ 
@@ -1488,6 +1440,35 @@ body {
     padding: 20px;               /* Add inner spacing */
     box-sizing: border-box;      /* Include padding in size calculations */
 }
+.section_page8 {
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+    }
+    .page8-video {
+        width: 95%;
+        max-width: 350px;
+        margin: 2rem auto 1rem;
+    }
+    .page8-header {
+        margin: 0 0 0 1rem;
+        width: 90%;
+        padding: 1rem;
+        z-index: 2;
+    }
+    .page8-header h1 {
+        font-size: 24px;
+    }
+    .page8-header h2 {
+        font-size: 12px;
+        margin: 0 0 10px 0;
+    }
+    .page8-content-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        max-width: 350px;
+    }
 
 
 
