@@ -630,6 +630,14 @@ body {
     .page6-content h2 {
         font-size: 22px;
     }
+    .page8-video {
+        width: 70%;
+        margin: 100px auto 0; /* Center with small top margin */
+    }
+    .page8-header {
+        top: 5rem; /* Generous top margin */
+        left: 4rem; /* Generous left margin */
+    }
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
