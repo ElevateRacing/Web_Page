@@ -399,7 +399,6 @@ body {
 .page8-video {
     position: relative; /* Natural flow */
     width: 1280px;
-    max-width: 1200px; /* Prevent excessive scaling */
     height: 720px;
     object-fit: contain; /* Show entire video without black bars */
     object-position: 50% 50%; /* Center video */
