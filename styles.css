@@ -387,14 +387,34 @@ body {
 
 /* - - - - - - PAGE_8 SECTION - - - - - - */
 .section_page8 {
-    height: auto; /* Content dictates height */
-    position: relative; /* For absolute positioning of header */
+    height: 100vh; /* Full viewport height for video background */
+    position: relative; /* For absolute positioning of header and video */
     overflow: hidden; /* Hide overflowing content */
     display: flex; /* Flexbox for layout */
     flex-direction: column; /* Stack content vertically */
     background-color: #E6E6E6; /* Match existing page2 background */
     padding: 0;
     box-sizing: border-box;
+}
+.page8-video-wrapper {
+    position: absolute; /* Position video to fill section */
+    top: 0; /* Zero top margin */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset to center */
+    width: 100%; /* Full width of section */
+    height: 100%; /* Full height of section */
+    max-width: none; /* Remove max-width constraint */
+    overflow: hidden; /* Crop overflow */
+    z-index: 1; /* Behind header text */
+}
+.page8-video {
+    width: 100%; /* Fill wrapper width */
+    height: 100%; /* Fill wrapper height */
+    object-fit: cover; /* Cover the section, may crop edges */
+    object-position: 50% 50%; /* Center video */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .page8-header {
     position: absolute; /* Position over video */
@@ -418,24 +438,7 @@ body {
     color: #000000;
     text-shadow: none;
     max-width: 550px; /* 50% width * 80% * 1367px = 550px */
-    margin: 0 0 1rem 0; /* Added bottom margin for spacing */
-}
-.page8-video-wrapper {
-    position: relative; /* For positioning video */
-    width: 80%; /* 80% of browser width */
-    height: auto;
-    margin: 0 auto; /* Center horizontally, 0 top margin */
-    max-width: 1200px; /* Prevent excessive scaling */
-    overflow: hidden; /* Crop video */
-    z-index: 1; /* Behind header text */
-}
-.page8-video {
-    position: absolute; /* Fill wrapper */
-    top: 0;
-    left: 0;
-    width: 100%; /* Fill wrapper width */
-    height: 100%; /* Fill wrapper height */
-    object-fit: contain; /* Scale to fit without letterboxing */
+    margin: 0 0 0.8rem 0; /* Added bottom margin for spacing */
 }
 .page8-content-bottom {
     display: flex; /* Two-column layout */
@@ -444,6 +447,8 @@ body {
     padding: 2rem 1rem;
     max-width: none;
     margin: 0;
+    position: relative; /* Ensure it stacks below video */
+    z-index: 2; /* Above video */
 }
 .page8-bottom-left {
     flex: 0 0 50%; /* Image takes 50% of container width */
