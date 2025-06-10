@@ -403,7 +403,7 @@ body {
     object-fit: contain; /* Show entire video without black bars */
     object-position: 50% 50%; /* Center video */
     z-index: 1; /* Behind header text */
-    margin: 10vw auto 0; /* Center with small top margin */
+    margin: 12vw auto 0; /* Center with small top margin */
     display: block; /* Remove inline gaps */
     border: none; /* Ensure no border */
     padding: 0; /* Remove padding */
@@ -632,7 +632,7 @@ body {
     }
     .page8-video {
         width: 70%;
-        margin: 200px auto 0; /* Center with small top margin */
+        margin: 12vw auto 0; /* Center with small top margin */
     }
     .page8-header {
         top: 5rem; /* Generous top margin */
@@ -794,11 +794,11 @@ body {
         left: 4rem; /* Generous left margin */
     }
     .page8-header h1 {
-        font-size: 68px;
+        font-size: 66px;
         margin-bottom: 15px;
     }
     .page8-header h2 {
-        font-size: 24px;
+        font-size: 22px;
         max-width: 550px; /* 50% width * 80% * 1367px = 550px */
         margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
     }
@@ -986,11 +986,11 @@ body {
         left: 4rem; /* Generous left margin */
     }
     .page8-header h1 {
-        font-size: 68px;
+        font-size: clamp(2rem, 4vw, 3rem);
         margin-bottom: 15px;
     }
     .page8-header h2 {
-        font-size: 24px;
+        font-size: clamp(0.875rem, 1.2vw, 1rem);
         max-width: 550px; /* 50% width * 80% * 1367px = 550px */
         margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
     }
