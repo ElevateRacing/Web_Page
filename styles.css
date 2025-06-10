@@ -399,13 +399,14 @@ body {
 .page8-video {
     position: relative; /* Relative for natural flow */
     width: 80%; /* 80% of section width */
-    max-width: 1200px; /* Prevent excessive scaling */
     height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Fill container without black bars */
+    object-fit: contain; /* Show entire video without black bars */
     object-position: 50% 50%; /* Center video */
     z-index: 1; /* Behind header text */
+    margin: 1rem auto 0; /* Center with small top margin */
     display: block; /* Remove inline gaps */
     border: none; /* Ensure no border causes black box */
+    padding: 0; /* Remove any padding */
 }
 .page8-header {
     position: absolute; /* Position over video */
