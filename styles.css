@@ -401,10 +401,11 @@ body {
     width: 80%; /* 80% of section width */
     max-width: 1200px; /* Prevent excessive scaling */
     height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Show entire video */
+    object-fit: cover; /* Fill container without black bars */
     object-position: 50% 50%; /* Center video */
     z-index: 1; /* Behind header text */
-    margin: 1rem auto 0; /* Small top margin, centered */
+    display: block; /* Remove inline gaps */
+    border: none; /* Ensure no border causes black box */
 }
 .page8-header {
     position: absolute; /* Position over video */
