@@ -486,9 +486,15 @@ body {
     left: 0;
     z-index: -1; /* Places image behind text */
 }
-.section_left, .section_right {
+.section_left {
     position: absolute;
     top: 20px; /* Margin from top */
+    color: white; /* Text color for visibility */
+    padding: 20px;
+}
+.section_right {
+    position: absolute;
+    top: 40px; /* Margin from top */
     color: white; /* Text color for visibility */
     padding: 20px;
 }
@@ -498,7 +504,12 @@ body {
     font-size: 30px;
     margin-bottom: 15px;
 }
-.section_left p, section_right p {
+.section_left p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+.section_right p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
     margin-bottom: 1rem;
@@ -506,12 +517,12 @@ body {
 .section_left {
     left: 20px; /* Margin from left */
     text-align: left;
-    max-width: 40%;
+    max-width: 35%;
 }
 .section_right {
     right: 20px; /* Margin from right */
     text-align: right;
-    max-width: 40%;
+    max-width: 35%;
 }
 
 /* - - - - - - PAGE_10 SECTION - - - - - - */
