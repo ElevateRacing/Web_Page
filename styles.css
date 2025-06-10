@@ -471,10 +471,37 @@ body {
 }
 
 /* - - - - - - PAGE_9 SECTION - - - - - - */
-.page9-video {
+.section_page9 {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Matches the height of the background image */
+    overflow: hidden;
+}
+.image9 {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensures image covers the section without distortion */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Places image behind text */
+}
+.section_left, .section_right {
+    position: absolute;
+    top: 20px; /* Margin from top */
+    color: white; /* Text color for visibility */
+    padding: 20px;
+}
+.section_left {
+    left: 20px; /* Margin from left */
+    text-align: left;
+    max-width: 40%;
+}
+
+.section_right {
+    right: 20px; /* Margin from right */
+    text-align: right;
+    max-width: 40%;
 }
 
 /* - - - - - - PAGE_10 SECTION - - - - - - */
@@ -1238,6 +1265,18 @@ body {
         margin: 0 auto; /* Center image */
         order: 2; /* Image after text */
     }
+    .section_left, .section_right {
+        position: static; /* Remove absolute positioning for stacking */
+        text-align: center;
+        max-width: 90%; /* Wider content for readability */
+        margin: 20px auto; /* Centered with margin from top */
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners for aesthetics */
+    }
+    .section_right {
+        margin-top: 10px; /* Space between sections */
+    }
     
    
     
@@ -1446,6 +1485,19 @@ body {
     .page8-bottom-right p {
         font-size: 16px;
     }
+    .section_left, .section_right {
+        position: static; /* Remove absolute positioning for stacking */
+        text-align: center;
+        max-width: 90%; /* Wider content for readability */
+        margin: 20px auto; /* Centered with margin from top */
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners for aesthetics */
+    }
+
+    .section_right {
+        margin-top: 10px; /* Space between sections */
+    }
     
     
     
@@ -1455,7 +1507,9 @@ body {
 /* General styling for all section elements */ 
 .section_page9,
 .section_page10,
-.section_page12 {
+.section_page12,
+.section_page13,
+.section_page14 {
     display: flex;               /* Use flexbox for content layout */
     flex-direction: column;      /* Stack content vertically */
     justify-content: center;     /* Center content vertically */
@@ -1476,12 +1530,21 @@ body {
     background-color: #c0c0c0;                          /* Darker gray background */
 }
 
-/*.section_page11 {
+.section_page11 {
     min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
     background-color: #d0d0d0;                          /* Darker gray background */
 }
-*/
 .section_page12 {
+    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
+    background-color: #c0c0c0;                          /* Darker gray background */
+}
+
+.section_page13 {
+    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
+    background-color: #d0d0d0;                          /* Darker gray background */
+}
+
+.section_page14 {
     min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
     background-color: #c0c0c0;                          /* Darker gray background */
 }
