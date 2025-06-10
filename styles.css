@@ -398,15 +398,26 @@ body {
 }
 .page8-video {
     position: relative; /* Relative for natural flow */
-    width: auto; /* 80% of section width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Show entire video without black bars */
+    width: 80%; /* 80% of section width */
+    max-width: 1200px; /* Prevent excessive scaling */
+    height: 0; /* Allow aspect ratio to control height */
+    padding-bottom: 45%; /* 16:9 aspect ratio (9/16 = 0.5625, adjusted to ~45% for common video ratios) */
+    object-fit: cover; /* Fill container, cropping to avoid black bars */
     object-position: 50% 50%; /* Center video */
     z-index: 1; /* Behind header text */
     margin: 1rem auto 0; /* Center with small top margin */
     display: block; /* Remove inline gaps */
     border: none; /* Ensure no border causes black box */
     padding: 0; /* Remove any padding */
+}
+.page8-video video {
+    position: absolute; /* Fill the container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full container width */
+    height: 100%; /* Full container height */
+    object-fit: cover; /* Ensure video fills without black bars */
+    object-position: 50% 50%; /* Center video */
 }
 .page8-header {
     position: absolute; /* Position over video */
@@ -1163,11 +1174,18 @@ body {
     }
 
     .page8-video {
-        position: relative; /* Natural flow */
         width: 100%; /* Full width */
         max-width: none; /* No max-width limit */
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio for mobile */
         margin: 0; /* No margins */
         order: 2; /* Second in layout */
+    }
+    .page8-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Fill container without black bars */
+        object-position: 50% 50%; /* Center video */
     }
 
     .page8-content-bottom {
