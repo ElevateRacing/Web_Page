@@ -492,12 +492,22 @@ body {
     color: white; /* Text color for visibility */
     padding: 20px;
 }
+.section_left h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.section_left p, section_right p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
 .section_left {
     left: 20px; /* Margin from left */
     text-align: left;
     max-width: 40%;
 }
-
 .section_right {
     right: 20px; /* Margin from right */
     text-align: right;
