@@ -400,7 +400,7 @@ body {
     position: relative; /* Relative to section for centering */
     width: 80%; /* 80% of section width */
     max-width: 1200px; /* Prevent excessive scaling */
-    height: 50vh; /* Fixed height for video */
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio (9/16 = 56.25%) */
     margin: 0 auto; /* Center horizontally */
     overflow: hidden; /* Crop overflow */
     z-index: 1; /* Behind header text */
@@ -408,7 +408,7 @@ body {
 .page8-video {
     width: 100%; /* Fill wrapper width */
     height: 100%; /* Fill wrapper height */
-    object-fit: cover; /* Cover the wrapper, may crop edges */
+    object-fit: contain; /* Show entire video without cropping */
     object-position: 50% 50%; /* Center video */
     position: absolute;
     top: 0;
