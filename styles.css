@@ -1299,7 +1299,7 @@ body {
         position: static; /* Remove absolute positioning for stacking */
         text-align: center;
         max-width: 90%; /* Wider content for readability */
-        margin: auto 20px;
+        margin: calc(100vh - 200px) auto 10px auto; /* Large top margin to push to bottom, small bottom margin */
         background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
         padding: 15px;
         border-radius: 8px; /* Rounded corners for aesthetics */
@@ -1520,7 +1520,7 @@ body {
         position: static; /* Remove absolute positioning for stacking */
         text-align: center;
         max-width: 90%; /* Wider content for readability */
-        margin: auto 20px;
+        margin: calc(100vh - 200px) auto 10px auto; /* Large top margin to push to bottom, small bottom margin */
         background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
         padding: 15px;
         border-radius: 8px; /* Rounded corners for aesthetics */
