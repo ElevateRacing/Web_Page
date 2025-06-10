@@ -403,7 +403,7 @@ body {
     object-fit: contain; /* Show entire video without black bars */
     object-position: 50% 50%; /* Center video */
     z-index: 1; /* Behind header text */
-    margin: 100px auto 0; /* Center with small top margin */
+    margin: 10vw auto 0; /* Center with small top margin */
     display: block; /* Remove inline gaps */
     border: none; /* Ensure no border */
     padding: 0; /* Remove padding */
@@ -632,7 +632,7 @@ body {
     }
     .page8-video {
         width: 70%;
-        margin: 100px auto 0; /* Center with small top margin */
+        margin: 200px auto 0; /* Center with small top margin */
     }
     .page8-header {
         top: 5rem; /* Generous top margin */
@@ -787,7 +787,7 @@ body {
     }
     .page8-video {
         width: 70%;
-        margin: 100px auto 0; /* Center with small top margin */
+        margin: 20vw auto 0; /* Center with small top margin */
     }
     .page8-header {
         top: 5rem; /* Generous top margin */
@@ -979,7 +979,7 @@ body {
     }
     .page8-video {
         width: 70%;
-        margin: 100px auto 0; /* Center with small top margin */
+        margin: 20vw auto 0; /* Center with small top margin */
     }
     .page8-header {
         top: 5rem; /* Generous top margin */
