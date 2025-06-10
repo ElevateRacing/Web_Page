@@ -403,7 +403,7 @@ body {
     object-fit: contain; /* Show entire video without black bars */
     object-position: 50% 50%; /* Center video */
     z-index: 1; /* Behind header text */
-    margin: 1rem auto 0; /* Center with small top margin */
+    margin: 1.5rem auto 0; /* Center with small top margin */
     display: block; /* Remove inline gaps */
     border: none; /* Ensure no border */
     padding: 0; /* Remove padding */
@@ -425,12 +425,12 @@ body {
 }
 .page8-header h2 {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 400;
     color: #000000;
     text-shadow: none;
     max-width: 550px; /* 50% width * 80% * 1367px = 550px */
-    margin: 0 0 0.8rem 0; /* Added bottom margin for spacing */
+    margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
 }
 .page8-content-bottom {
     display: flex; /* Two-column layout */
@@ -440,8 +440,7 @@ body {
     margin-top: 1rem; /* Small margin below video */
     position: relative; /* Ensure it stacks below video */
     z-index: 2; /* Above video */
-    max-width: 1200px; /* Match video max-width */
-    width: 80%; /* Match video width */
+    width: 90%; /* Match video width */
     margin-left: auto; /* Center */
     margin-right: auto; /* Center */
 }
