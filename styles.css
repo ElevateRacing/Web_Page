@@ -387,30 +387,28 @@ body {
 
 /* - - - - - - PAGE_8 SECTION - - - - - - */
 .section_page8 {
-    height: 100vh; /* Full viewport height for video background */
     position: relative; /* For absolute positioning of header and video */
-    overflow: hidden; /* Hide overflowing content */
+    min-height: 100vh; /* Ensure full viewport height */
     display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column; /* Stack video and bottom content vertically */
     background-color: #E6E6E6; /* Match existing page2 background */
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 .page8-video-wrapper {
-    position: absolute; /* Position video to fill section */
-    top: 0; /* Zero top margin */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Offset to center */
-    width: 100%; /* Full width of section */
-    height: 100%; /* Full height of section */
-    max-width: none; /* Remove max-width constraint */
+    position: relative; /* Relative to section for centering */
+    width: 80%; /* 80% of section width */
+    max-width: 1200px; /* Prevent excessive scaling */
+    height: 50vh; /* Fixed height for video */
+    margin: 0 auto; /* Center horizontally */
     overflow: hidden; /* Crop overflow */
     z-index: 1; /* Behind header text */
 }
 .page8-video {
     width: 100%; /* Fill wrapper width */
     height: 100%; /* Fill wrapper height */
-    object-fit: cover; /* Cover the section, may crop edges */
+    object-fit: cover; /* Cover the wrapper, may crop edges */
     object-position: 50% 50%; /* Center video */
     position: absolute;
     top: 0;
