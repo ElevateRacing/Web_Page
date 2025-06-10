@@ -1305,6 +1305,8 @@ body {
         background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
         padding: 15px;
         border-radius: 8px; /* Rounded corners for aesthetics */
+        align-items: center; /* Vertically center text within the background */
+        justify-content: center; /* Horizontally center text within the background */
     }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
@@ -1528,6 +1530,8 @@ body {
         background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
         padding: 15px;
         border-radius: 8px; /* Rounded corners for aesthetics */
+        align-items: center; /* Vertically center text within the background */
+        justify-content: center; /* Horizontally center text within the background */
     }
 }
 
