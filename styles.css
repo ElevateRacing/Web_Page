@@ -418,16 +418,26 @@ body {
     color: #000000;
     text-shadow: none;
     max-width: 550px; /* 50% width * 80% * 1367px = 550px */
-    margin: 0 0 1.5rem 0; /* Added bottom margin for spacing */
+    margin: 0 0 1rem 0; /* Added bottom margin for spacing */
+}
+.page8-video-wrapper {
+    position: relative; /* For positioning video */
+    width: 70%; /* Matches video width */
+    height: 0; /* Will be set by padding-bottom for aspect ratio */
+    padding-bottom: calc(70% * 0.78 * (9 / 16)); /* 78% height (100% - 20% - 2%) with 16:9 aspect ratio */
+    margin: 10rem auto 2rem; /* Reduced top margin to move up */
+    max-width: 1200px; /* Prevent excessive scaling */
+    overflow: hidden; /* Crop video */
+    z-index: 1; /* Behind header text */
 }
 .page8-video {
-    position: relative; /* Natural flow with z-index */
-    width: 70%; /* 50% of browser width */
-    height: auto; /* Auto-adjust height */
-    object-fit: cover; /* Cover container */
-    z-index: 1; /* Behind header text */
-    margin: 10rem auto 2rem; /* Center with top margin to account for header */
-    max-width: 1200px; /* Prevent excessive scaling */
+    position: absolute; /* Fill wrapper */
+    top: 0;
+    left: 0;
+    width: 100%; /* Fill wrapper width */
+    height: 100%; /* Fill wrapper height */
+    object-fit: cover; /* Maintain aspect ratio */
+    transform: translateY(-25.64%); /* Shift up to crop top 20% (20 / 78 = 25.64%) */
 }
 .page8-content-bottom {
     display: flex; /* Two-column layout */
