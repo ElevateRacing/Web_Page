@@ -403,7 +403,7 @@ body {
     object-fit: contain; /* Show entire video without black bars */
     object-position: 50% 50%; /* Center video */
     z-index: 1; /* Behind header text */
-    margin: 5rem auto 0; /* Center with small top margin */
+    margin: 100px auto 0; /* Center with small top margin */
     display: block; /* Remove inline gaps */
     border: none; /* Ensure no border */
     padding: 0; /* Remove padding */
@@ -777,6 +777,23 @@ body {
     .page6-content h2 {
         font-size: 22px;
     }
+    .page8-video {
+        width: 70%;
+        margin: 100px auto 0; /* Center with small top margin */
+    }
+    .page8-header {
+        top: 5rem; /* Generous top margin */
+        left: 4rem; /* Generous left margin */
+    }
+    .page8-header h1 {
+        font-size: 68px;
+        margin-bottom: 15px;
+    }
+    .page8-header h2 {
+        font-size: 24px;
+        max-width: 550px; /* 50% width * 80% * 1367px = 550px */
+        margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
+    }
 }
 @media screen and (min-width: 768px) 
               and (max-width: 1280px) {                       /* Tablet */
@@ -951,6 +968,23 @@ body {
     }
     .page6-content h2 {
         font-size: 20px;
+    }
+    .page8-video {
+        width: 70%;
+        margin: 100px auto 0; /* Center with small top margin */
+    }
+    .page8-header {
+        top: 5rem; /* Generous top margin */
+        left: 4rem; /* Generous left margin */
+    }
+    .page8-header h1 {
+        font-size: 68px;
+        margin-bottom: 15px;
+    }
+    .page8-header h2 {
+        font-size: 24px;
+        max-width: 550px; /* 50% width * 80% * 1367px = 550px */
+        margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
     }
 }
 @media screen and (min-width: 321px) 
@@ -1387,7 +1421,7 @@ body {
     }
 
     .page8-header h1 {
-        font-size: 24px; /* Even smaller for small screens */
+        font-size: 12px; /* Even smaller for small screens */
     }
 
     .page8-header h2 {
