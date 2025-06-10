@@ -398,12 +398,12 @@ body {
 }
 .page8-video {
     position: relative; /* Natural flow */
-    width: 80%;
+    width: 70%;
     height: auto;
     object-fit: contain; /* Show entire video without black bars */
     object-position: 50% 50%; /* Center video */
     z-index: 1; /* Behind header text */
-    margin: 1.5rem auto 0; /* Center with small top margin */
+    margin: 2rem auto 0; /* Center with small top margin */
     display: block; /* Remove inline gaps */
     border: none; /* Ensure no border */
     padding: 0; /* Remove padding */
