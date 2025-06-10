@@ -399,7 +399,7 @@ body {
 .page8-video {
     position: relative; /* Natural flow */
     width: 1280px;
-    height: 720px;
+    height: auto;
     object-fit: contain; /* Show entire video without black bars */
     object-position: 50% 50%; /* Center video */
     z-index: 1; /* Behind header text */
