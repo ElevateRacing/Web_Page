@@ -517,7 +517,7 @@ body {
 .section_left {
     left: 20px; /* Margin from left */
     text-align: left;
-    max-width: 35%;
+    max-width: 30%;
 }
 .section_right {
     right: 20px; /* Margin from right */
