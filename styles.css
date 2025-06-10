@@ -494,7 +494,7 @@ body {
 }
 .section_right {
     position: absolute;
-    top: 40px; /* Margin from top */
+    top: 50px; /* Margin from top */
     color: white; /* Text color for visibility */
     padding: 20px;
 }
@@ -1286,7 +1286,7 @@ body {
         margin: 0 auto; /* Center image */
         order: 2; /* Image after text */
     }
-    .section_left, .section_right {
+    .section_left {
         position: static; /* Remove absolute positioning for stacking */
         text-align: center;
         max-width: 90%; /* Wider content for readability */
@@ -1296,13 +1296,16 @@ body {
         border-radius: 8px; /* Rounded corners for aesthetics */
     }
     .section_right {
-        margin-top: 10px; /* Space between sections */
+        position: absolute; /* Keep absolute positioning for bottom placement */
+        bottom: 20px; /* Position at bottom with margin */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        text-align: center;
+        max-width: 90%; /* Wider content for readability */
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners for aesthetics */
     }
-    
-   
-    
-  
-    
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -1506,7 +1509,7 @@ body {
     .page8-bottom-right p {
         font-size: 16px;
     }
-    .section_left, .section_right {
+    .section_left {
         position: static; /* Remove absolute positioning for stacking */
         text-align: center;
         max-width: 90%; /* Wider content for readability */
@@ -1515,14 +1518,17 @@ body {
         padding: 15px;
         border-radius: 8px; /* Rounded corners for aesthetics */
     }
-
     .section_right {
-        margin-top: 10px; /* Space between sections */
+        position: absolute; /* Keep absolute positioning for bottom placement */
+        bottom: 20px; /* Position at bottom with margin */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        text-align: center;
+        max-width: 90%; /* Wider content for readability */
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners for aesthetics */
     }
-    
-    
-    
-    
 }
 
 /* General styling for all section elements */ 
