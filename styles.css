@@ -1296,18 +1296,17 @@ body {
         border-radius: 8px; /* Rounded corners for aesthetics */
     }
     .section_right {
-        position: absolute; /* Keep absolute positioning for bottom placement */
+        position: absolute; /* Absolute positioning for bottom placement */
         bottom: 20px; /* Position at bottom with margin */
         left: 50%;
         transform: translateX(-50%); /* Center horizontally */
         text-align: center;
-        max-width: 90%; /* Wider content for readability */
+        max-width: 90%; /* Match section_left width */
         background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
         padding: 15px;
         border-radius: 8px; /* Rounded corners for aesthetics */
-        display: flex; /* Use flex to center content */
-        align-items: center; /* Vertically center text within the background */
-        justify-content: center; /* Horizontally center text within the background */
+        height: auto; /* Adjust height to content */
+        display: block; /* Remove flex to allow natural height */
     }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
@@ -1522,18 +1521,17 @@ body {
         border-radius: 8px; /* Rounded corners for aesthetics */
     }
     .section_right {
-        position: absolute; /* Keep absolute positioning for bottom placement */
+        position: absolute; /* Absolute positioning for bottom placement */
         bottom: 20px; /* Position at bottom with margin */
         left: 50%;
         transform: translateX(-50%); /* Center horizontally */
         text-align: center;
-        max-width: 90%; /* Wider content for readability */
+        max-width: 90%; /* Match section_left width */
         background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
         padding: 15px;
         border-radius: 8px; /* Rounded corners for aesthetics */
-        display: flex; /* Use flex to center content */
-        align-items: center; /* Vertically center text within the background */
-        justify-content: center; /* Horizontally center text within the background */
+        height: auto; /* Adjust height to content */
+        display: block; /* Remove flex to allow natural height */
     }
 }
 
