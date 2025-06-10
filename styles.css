@@ -1515,7 +1515,6 @@ body {
 }
 
 /* General styling for all section elements */ 
-.section_page9,
 .section_page10,
 .section_page12,
 .section_page13,
@@ -1529,11 +1528,6 @@ body {
     box-sizing: border-box;      /* Include padding in size calculations */
 }
 
-
-.section_page9 {
-    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
-    background-color: #d0d0d0;                          /* Darker gray background */
-}
 
 .section_page10 {
     min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
