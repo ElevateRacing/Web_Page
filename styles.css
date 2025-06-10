@@ -399,7 +399,7 @@ body {
 .page8-header {
     position: absolute; /* Position over video */
     top: 5rem; /* Generous top margin */
-    left: 3rem; /* Generous left margin */
+    left: 4rem; /* Generous left margin */
     text-align: left; /* Left-aligned text */
     z-index: 2; /* Above video */
     max-width: 50%; /* Limit text width */
@@ -413,29 +413,29 @@ body {
 }
 .page8-header h2 {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 400;
     color: #000000;
     text-shadow: none;
     max-width: 550px; /* 50% width * 80% * 1367px = 550px */
-    margin: 0 auto 0;
+    margin: 0 0 1.5rem 0; /* Added bottom margin for spacing */
 }
 .page8-video {
     position: relative; /* Natural flow with z-index */
-    width: 50%; /* 50% of browser width */
+    width: 70%; /* 50% of browser width */
     height: auto; /* Auto-adjust height */
     object-fit: cover; /* Cover container */
     z-index: 1; /* Behind header text */
-    margin: 20rem auto 2rem; /* Center with top margin to account for header */
+    margin: 10rem auto 2rem; /* Center with top margin to account for header */
     max-width: 1200px; /* Prevent excessive scaling */
 }
 .page8-content-bottom {
     display: flex; /* Two-column layout */
-    justify-content: center;
+    justify-content: flex-start;
     gap: 2rem; /* Space between columns */
-    padding: 2rem;
-    max-width: 1200px; /* Consistent max-width */
-    margin: 0 auto; /* Center content */
+    padding: 2rem 1rem;
+    max-width: none;
+    margin: 0;
 }
 .page8-bottom-left {
     flex: 0 0 60%; /* Image takes 60% of container width */
@@ -443,7 +443,7 @@ body {
 .image8_bottom {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* Rounded edges */
+    border-radius: 30px; /* Rounded edges */
     object-fit: cover;
 }
 .page8-bottom-right {
@@ -459,7 +459,7 @@ body {
 }
 .page8-bottom-right p {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 1rem;
 }
 
