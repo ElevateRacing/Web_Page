@@ -532,7 +532,7 @@ body {
     box-sizing: border-box;
 }
 .page10-top {
-    margin: 20px 0 30px 20px; /* top | right | bottom | left */
+    margin: 20px 20px 30px 20px; /* top | right | bottom | left */
     text-align: left;
 }
 .page10-top h1 {
@@ -549,7 +549,7 @@ body {
 .page10-top-pictures {
     display: flex;
     flex-direction: row;
-    gap: 50px; /* Increased gap between pictures */
+    gap: 70px; /* Increased gap between pictures */
     margin-bottom: 40px;
     justify-content: center; /* Center pictures */
     width: 100%; /* Ensure full width for centering */
