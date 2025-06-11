@@ -526,6 +526,81 @@ body {
 }
 
 /* - - - - - - PAGE_10 SECTION - - - - - - */
+.section_page10 {
+    background-color: #E6E6E6;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+.page10-top {
+    margin-bottom: 30px;
+    margin-left: 40px;
+    text-align: left;
+}
+.page10-top h1 {
+    font-size: 2.5rem;
+    margin: 0 0 15px;
+}
+.page10-top p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+.page10-top-pictures {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+.page10-top-pictures img {
+    width: 32%;
+    height: auto;
+    object-fit: cover;
+}
+.page10-middle {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+.page10-middle img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.page10-middle h1 {
+    font-size: 2rem;
+    margin: 20px 0 15px;
+}
+.page10-middle p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+.page10-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+.page10-bottom img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.page10-bottom h1 {
+    font-size: 2rem;
+    margin: 20px 0 15px;
+}
+.page10-bottom p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+
+
 
 /* - - - - - - PAGE_11 SECTION - - - - - - */
 
@@ -1304,6 +1379,41 @@ body {
         padding: 15px;
         border-radius: 8px; /* Rounded corners for aesthetics */
     }
+    .page10-top {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .page10-top-pictures img {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .page10-middle {
+        text-align: center;
+    }
+
+    .page10-middle img {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .page10-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .page10-bottom img {
+        width: 100%;
+        margin-left: auto;
+    }
+
+
+
+
+    
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -1524,6 +1634,36 @@ body {
         background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
         padding: 15px;
         border-radius: 8px; /* Rounded corners for aesthetics */
+    }
+    .page10-top {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .page10-top-pictures img {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .page10-middle {
+        text-align: center;
+    }
+
+    .page10-middle img {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .page10-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .page10-bottom img {
+        width: 100%;
+        margin-left: auto;
     }
 }
 
