@@ -1156,6 +1156,26 @@ body {
         max-width: 550px; /* 50% width * 80% * 1367px = 550px */
         margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
     }
+    .page10-top h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+    .page10-top p {
+        font-size: clamp(0.875rem, 1.2vw, 1rem);
+        max-width: 75%;
+        margin-bottom: 30px;
+    }
+    .page10-top-pictures {
+        gap: 40px; /* Increased gap between pictures */
+        margin-bottom: 40px;
+    }
+    .page10-middle h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 80px 0 5px; /* Increased top margin to 80px, reduced bottom margin to 10px for closer p text */
+    }
+    .page10-middle p {
+        font-size: clamp(0.875rem, 1.2vw, 1rem);
+        margin: 0 0 10px; /* Explicitly set zero top margin to follow h1, small bottom margin */
+    }
 }
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                        /* Mobile styles */
