@@ -583,12 +583,13 @@ body {
     flex-direction: column; /* Stack h1 and p vertically */
     gap: 0; /* Minimize spacing between h1 and p */
     margin-right: 30px; /* Added right margin for desktop */
+    margin-top: 0; /* Ensure no top margin */
 }
 .page10-middle h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
     font-size: 30px;
-    margin: 80px 0 5px; /* Increased top margin to 80px, reduced bottom margin to 10px for closer p text */
+    margin: 0 0 5px; /* Increased top margin to 80px, reduced bottom margin to 10px for closer p text */
 }
 .page10-middle p {
     font-family: 'Open Sans', Arial, sans-serif;
