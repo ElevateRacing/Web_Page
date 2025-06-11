@@ -555,7 +555,7 @@ body {
     width: 100%; /* Ensure full width for centering */
 }
 .page10-top-pictures img {
-    width: 25.6%; /* Reduced by 20% from 32% */
+    width: 20%; /* Reduced by 20% from 32% */
     height: auto;
     object-fit: cover;
     border-radius: 40px; /* Added 40px border-radius */
