@@ -531,68 +531,93 @@ body {
     padding: 40px 20px;
     box-sizing: border-box;
 }
+
 .page10-top {
-    margin-bottom: 30px;
-    margin-left: 40px;
+    margin: 5rem 0 30px 5rem; /* Generous top and left margins */
     text-align: left;
 }
+
 .page10-top h1 {
     font-size: 2.5rem;
     margin: 0 0 15px;
 }
+
 .page10-top p {
     font-size: 1.1rem;
     line-height: 1.6;
     max-width: 600px;
+    text-align: left; /* Left-justified text */
 }
+
 .page10-top-pictures {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 30px; /* Increased gap between pictures */
     margin-bottom: 40px;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align pictures to start */
 }
+
 .page10-top-pictures img {
-    width: 32%;
+    width: 25.6%; /* Reduced by 20% from 32% */
     height: auto;
     object-fit: cover;
+    border-radius: 40px; /* Added 40px border-radius */
 }
+
 .page10-middle {
     margin-bottom: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    align-items: center;
+    align-items: start; /* Align content to top */
 }
+
 .page10-middle img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    grid-column: 1; /* Image in left column */
 }
+
+.page10-middle-text {
+    grid-column: 2; /* Text in right column */
+}
+
 .page10-middle h1 {
     font-size: 2rem;
-    margin: 20px 0 15px;
+    margin: 0 0 15px; /* Adjusted margin to align with top of image */
 }
+
 .page10-middle p {
     font-size: 1rem;
     line-height: 1.6;
     max-width: 600px;
 }
+
 .page10-bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: center;
 }
+
 .page10-bottom img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    grid-column: 2; /* Image in right column */
+    margin-right: 0; /* No margin from right edge */
 }
+
+.page10-bottom-text {
+    grid-column: 1; /* Text in left column */
+}
+
 .page10-bottom h1 {
     font-size: 2rem;
     margin: 20px 0 15px;
 }
+
 .page10-bottom p {
     font-size: 1rem;
     line-height: 1.6;
@@ -1381,34 +1406,57 @@ body {
     }
     .page10-top {
         text-align: center;
-        margin-top: 20px;
+        margin: 2rem auto 30px; /* Centered with top margin */
+        max-width: 90%;
+    }
+
+    .page10-top-pictures {
+        flex-direction: column; /* Stack pictures vertically */
+        gap: 20px; /* Maintain gap for mobile */
+        justify-content: center;
+        align-items: center;
     }
 
     .page10-top-pictures img {
-        width: 90%;
-        margin: 0 auto;
+        width: 90%; /* 90% of browser width */
+        border-radius: 40px; /* Maintain border-radius */
     }
 
     .page10-middle {
+        display: flex;
+        flex-direction: column; /* Stack text and image vertically */
         text-align: center;
+        align-items: center;
     }
 
     .page10-middle img {
-        width: 90%;
+        width: 100%; /* 100% of browser width */
         margin: 0 auto 20px;
+    }
+
+    .page10-middle-text {
+        max-width: 90%;
     }
 
     .page10-bottom {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 7fr 3fr; /* Left 70%, right 30% */
         gap: 20px;
         align-items: center;
     }
 
     .page10-bottom img {
         width: 100%;
-        margin-left: auto;
+        margin-left: auto; /* No margin from right edge */
+        grid-column: 2; /* Image in right column */
     }
+
+    .page10-bottom-text {
+        grid-column: 1; /* Text in left column */
+        text-align: left;
+        max-width: 100%; /* Full width of left column (70%) */
+    }
+    
 
 
 
@@ -1637,38 +1685,43 @@ body {
     }
     .page10-top {
         text-align: center;
-        margin-top: 20px;
+        margin: 2rem auto 30px;
+        max-width: 90%;
     }
 
     .page10-top-pictures img {
         width: 90%;
-        margin: 0 auto;
+        border-radius: 40px;
     }
 
     .page10-middle {
         text-align: center;
+        flex-direction: column;
     }
 
     .page10-middle img {
-        width: 90%;
+        width: 100%;
         margin: 0 auto 20px;
     }
 
     .page10-bottom {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 7fr 3fr;
         gap: 20px;
-        align-items: center;
     }
 
     .page10-bottom img {
         width: 100%;
         margin-left: auto;
     }
+
+    .page10-bottom-text {
+        text-align: left;
+        max-width: 100%;
+    }
+    
 }
 
 /* General styling for all section elements */ 
-.section_page10,
 .section_page12,
 .section_page13,
 .section_page14 {
@@ -1681,11 +1734,6 @@ body {
     box-sizing: border-box;      /* Include padding in size calculations */
 }
 
-
-.section_page10 {
-    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
-    background-color: #c0c0c0;                          /* Darker gray background */
-}
 
 .section_page11 {
     min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
