@@ -577,13 +577,13 @@ body {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
     font-size: 30px;
-    margin-bottom: 15px;
+    margin: 80px 0 10px; /* Increased top margin to 80px, reduced bottom margin to 10px for closer p text */
     grid-column: 2; /* Text in right column */
 }
 .page10-middle p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
-    margin-bottom: 1rem;
+    margin: 0; /* Ensure p text is just below h1 with no extra top margin */
     grid-column: 2; /* Text in right column */
 }
 .page10-bottom {
