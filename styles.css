@@ -573,12 +573,18 @@ body {
     object-fit: cover;
     grid-column: 1; /* Image in left column */
 }
+.page10-middle-text {
+    grid-column: 2; /* Text wrapper in right column */
+    align-self: start; /* Align wrapper to top of grid cell */
+    display: flex;
+    flex-direction: column; /* Stack h1 and p vertically */
+    gap: 0; /* Minimize spacing between h1 and p */
+}
 .page10-middle h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
     font-size: 30px;
-    margin: 80px 0 10px; /* Increased top margin to 80px, reduced bottom margin to 10px for closer p text */
-    grid-column: 2; /* Text in right column */
+    margin: 80px 0 5px; /* Increased top margin to 80px, reduced bottom margin to 10px for closer p text */
 }
 .page10-middle p {
     font-family: 'Open Sans', Arial, sans-serif;
