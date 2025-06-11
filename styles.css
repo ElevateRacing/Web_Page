@@ -575,6 +575,7 @@ body {
     height: auto;
     object-fit: cover;
     grid-column: 1; /* Image in left column */
+    align-self: start; /* Align image to top */
 }
 .page10-middle-text {
     grid-column: 2; /* Text wrapper in right column */
