@@ -582,6 +582,7 @@ body {
     display: flex;
     flex-direction: column; /* Stack h1 and p vertically */
     gap: 0; /* Minimize spacing between h1 and p */
+    margin-right: 30px; /* Added right margin for desktop */
 }
 .page10-middle h1 {
     font-family: 'Exo 2', sans-serif;
@@ -1441,7 +1442,7 @@ body {
     .page10-top {
         text-align: center;
         margin: 2rem auto 40px; /* Reduced bottom margin for mobile */
-        max-width: 90%;
+        max-width: 100%;
     }
     .page10-top-pictures {
         flex-direction: column;
@@ -1451,7 +1452,7 @@ body {
     }
     .page10-top-pictures img {
         width: 90%;
-        border-radius: 40px;
+        border-radius: 30px;
     }
     .page10-middle {
         display: flex;
@@ -1463,9 +1464,12 @@ body {
     .page10-middle img {
         width: 100%;
         margin: 0 auto 10px; /* Reduced bottom margin */
+        order: 2; /* Image comes after text */
     }
     .page10-middle-text {
         max-width: 90%;
+        order: 1; /* Text comes first */
+        margin-right: 0; /* Remove right margin for mobile */
     }
     .page10-middle h1 {
         margin: 20px 0 5px; /* Reduced top margin to raise title */
@@ -1730,11 +1734,11 @@ body {
     .page10-top {
         text-align: center;
         margin: 2rem auto 40px;
-        max-width: 90%;
+        max-width: 100%;
     }
     .page10-top-pictures img {
         width: 90%;
-        border-radius: 40px;
+        border-radius: 30px;
     }
     .page10-middle {
         text-align: center;
@@ -1744,6 +1748,12 @@ body {
     .page10-middle img {
         width: 100%;
         margin: 0 auto 10px;
+        order: 2;
+    }
+    .page10-middle-text {
+        max-width: 90%;
+        order: 1;
+        margin-right: 0;
     }
     .page10-middle h1 {
         margin: 20px 0 5px;
