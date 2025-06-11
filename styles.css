@@ -610,11 +610,10 @@ body {
     grid-column: 1; /* Text wrapper in left column */
     display: flex;
     flex-direction: column; /* Stack h1 and p vertically */
-    justify-content: center; /* Center content vertically within wrapper */
     text-align: left; /* Left-justify text */
-    margin-left: 200px; /* Increased left margin for generous spacing */
+    margin-left: 300px; /* Even more generous left margin */
     max-width: 600px; /* Limit text width for readability */
-    min-height: 100%; /* Ensure wrapper spans image height for centering */
+    transform: translateY(-50%); /* Shift text upward to align h1 top with image middle */
 }
 .page10-bottom h1 {
     font-family: 'Exo 2', sans-serif;
