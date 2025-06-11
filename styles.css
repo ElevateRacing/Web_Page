@@ -528,8 +528,8 @@ body {
 /* - - - - - - PAGE_10 SECTION - - - - - - */
 .section_page10 {
     background-color: #E6E6E6;
-    padding: 40px 20px;
     box-sizing: border-box;
+    width: 100%;
 }
 .page10-top {
     margin: 20px 20px 30px 20px; /* top | right | bottom | left */
@@ -631,10 +631,13 @@ body {
     margin: 0 0 10px; /* Minimal margins, consistent with middle section */
 }
 
-
-
-
 /* - - - - - - PAGE_11 SECTION - - - - - - */
+.section_page11 {
+    background-color: #E6E6E6;
+    box-sizing: border-box;
+    width: 100%;
+}
+
 
 /* - - - - - - PAGE_12 SECTION - - - - - - */
 
@@ -1445,39 +1448,6 @@ body {
         max-width: 90%;
     }
 
-    .page10-bottom {
-        display: grid;
-        grid-template-columns: 1fr; /* Single column for overlap */
-        gap: 0; /* No gap to allow overlap */
-        position: relative; /* For positioning text over image */
-    }
-
-    .page10-bottom img {
-        width: 200%; /* Increased by 2x */
-        height: auto;
-        object-fit: cover;
-        grid-column: 1; /* Image in single column */
-        grid-row: 1; /* Same row as text */
-        margin-left: auto; /* No margin from right edge */
-        z-index: 1; /* Image behind text */
-    }
-
-    .page10-bottom-text {
-        grid-column: 1; /* Text in single column */
-        grid-row: 1; /* Same row as image */
-        text-align: left; /* Left-justified */
-        max-width: 70%; /* Maintain 70% width */
-        z-index: 2; /* Text in front of image */
-        padding: 20px; /* Padding for readability */
-        background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for text */
-    }
-    
-    
-
-
-
-
-    
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -1719,32 +1689,6 @@ body {
         width: 100%;
         margin: 0 auto 20px;
     }
-
-    .page10-bottom {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0;
-        position: relative;
-    }
-
-    .page10-bottom img {
-        width: 200%; /* Increased by 2x */
-        height: auto;
-        grid-column: 1;
-        grid-row: 1;
-        margin-left: auto;
-        z-index: 1;
-    }
-
-    .page10-bottom-text {
-        grid-column: 1;
-        grid-row: 1;
-        text-align: left;
-        max-width: 70%;
-        z-index: 2;
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.8);
-    }
     
 }
 
@@ -1761,11 +1705,6 @@ body {
     box-sizing: border-box;      /* Include padding in size calculations */
 }
 
-
-.section_page11 {
-    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
-    background-color: #d0d0d0;                          /* Darker gray background */
-}
 .section_page12 {
     min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
     background-color: #c0c0c0;                          /* Darker gray background */
