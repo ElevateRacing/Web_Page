@@ -531,41 +531,35 @@ body {
     padding: 40px 20px;
     box-sizing: border-box;
 }
-
 .page10-top {
-    margin: 5rem 0 30px 5rem; /* Generous top and left margins */
+    margin: 20px 0 30px 20px; /* top | right | bottom | left */
     text-align: left;
 }
-
 .page10-top h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
     font-size: 30px;
     margin-bottom: 15px;
 }
-
 .page10-top p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
-    margin-bottom: 1rem;
     text-align: left; /* Left-justified text */
 }
-
 .page10-top-pictures {
     display: flex;
     flex-direction: row;
     gap: 50px; /* Increased gap between pictures */
     margin-bottom: 40px;
-    justify-content: flex-start; /* Align pictures to start */
+    justify-content: center; /* Center pictures */
+    width: 100%; /* Ensure full width for centering */
 }
-
 .page10-top-pictures img {
     width: 25.6%; /* Reduced by 20% from 32% */
     height: auto;
     object-fit: cover;
     border-radius: 40px; /* Added 40px border-radius */
 }
-
 .page10-middle {
     margin-bottom: 40px;
     display: grid;
@@ -573,62 +567,53 @@ body {
     gap: 30px;
     align-items: start; /* Align content to top */
 }
-
 .page10-middle img {
     width: 100%;
     height: auto;
     object-fit: cover;
     grid-column: 1; /* Image in left column */
 }
-
-.page10-middle-text {
-    grid-column: 2; /* Text in right column */
-}
-
 .page10-middle h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
     font-size: 30px;
     margin-bottom: 15px;
+    grid-column: 2; /* Text in right column */
 }
-
 .page10-middle p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
     margin-bottom: 1rem;
+    grid-column: 2; /* Text in right column */
 }
-
 .page10-bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    align-items: center;
+    align-items: start; /* Align text to top of image */
 }
 
 .page10-bottom img {
-    width: 70%;
+    width: 50%;
     height: auto;
     object-fit: cover;
     grid-column: 2; /* Image in right column */
     margin-right: 0; /* No margin from right edge */
     margin-left: auto; /* Ensure right alignment */
 }
-
-.page10-bottom-text {
-    grid-column: 1; /* Text in left column */
-}
-
 .page10-bottom h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
     font-size: 30px;
     margin: 20px 0 15px;
+    grid-column: 1; /* Text in left column */
 }
 
 .page10-bottom p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
     margin-bottom: 1rem;
+    grid-column: 1; /* Text in left column */
 }
 
 
