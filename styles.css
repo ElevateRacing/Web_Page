@@ -596,9 +596,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    align-items: start; /* Align text to top of image */
+    align-items: center; /* Align text to top of image */
 }
-
 .page10-bottom img {
     width: 50%;
     height: auto;
@@ -607,19 +606,23 @@ body {
     margin-right: 0; /* No margin from right edge */
     margin-left: auto; /* Ensure right alignment */
 }
+.page10-bottom-text {
+    grid-column: 1; /* Text wrapper in left column */
+    align-self: center; /* Center wrapper vertically in grid cell */
+    text-align: left; /* Left-justify text */
+    margin-left: 80px; /* Very generous left margin */
+    max-width: 600px; /* Limit text width for readability */
+}
 .page10-bottom h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
     font-size: 30px;
-    margin: 20px 0 15px;
-    grid-column: 1; /* Text in left column */
+    margin: 0 0 10px; /* Minimal margins, rely on wrapper for positioning */
 }
-
 .page10-bottom p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
-    margin-bottom: 1rem;
-    grid-column: 1; /* Text in left column */
+    margin: 0 0 10px; /* Minimal margins, consistent with middle section */
 }
 
 
