@@ -528,8 +528,9 @@ body {
 /* - - - - - - PAGE_10 SECTION - - - - - - */
 .section_page10 {
     background-color: #E6E6E6;
-    box-sizing: border-box;
+    position: relative;
     width: 100%;
+    overflow: hidden;
 }
 .page10-top {
     margin: 20px 20px 30px 20px; /* top | right | bottom | left */
@@ -545,6 +546,8 @@ body {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
     text-align: left; /* Left-justified text */
+    max-width: 50%;
+    margin-bottom: 30px;
 }
 .page10-top-pictures {
     display: flex;
