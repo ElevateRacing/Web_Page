@@ -594,28 +594,30 @@ body {
 }
 .page10-bottom {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center; /* Align text to top of image */
-    position: relative; /* Allow relative positioning of text wrapper */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px; /* Horizontal spacing between columns */
+    align-items: center; /* Center items vertically for baseline alignment */
+    position: relative; /* Support image overflow */
+    overflow: visible; /* Allow image to extend beyond right edge */
 }
 .page10-bottom img {
-    width: 50%;
+    width: 55%; /* 50% + 5% overflow */
     height: auto;
     object-fit: cover;
     grid-column: 2; /* Image in right column */
-    margin-right: 0; /* No margin from right edge */
-    margin-left: auto; /* Ensure right alignment */
+    margin: 0; /* No margins */
+    position: relative; /* Enable precise positioning */
+    left: 5%; /* Shift right to create 5% overflow beyond right edge */
 }
 .page10-bottom-text {
     grid-column: 1; /* Text wrapper in left column */
     display: flex;
     flex-direction: column; /* Stack h1 and p vertically */
     text-align: left; /* Left-justify text */
-    margin-left: 300px; /* Even more generous left margin */
+    margin-left: 300px; /* Very big left margin */
     max-width: 600px; /* Limit text width for readability */
-    position: relative; /* Enable precise vertical adjustment */
-    top: -25%; /* Shift text upward to align h1 top with image middle */
+    position: relative; /* Enable vertical adjustment */
+    top: -50%; /* Shift text upward to align h1 top with image middle */
 }
 .page10-bottom h1 {
     font-family: 'Exo 2', sans-serif;
