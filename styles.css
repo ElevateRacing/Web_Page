@@ -563,87 +563,9 @@ body {
     object-fit: cover;
     border-radius: 40px; /* Added 40px border-radius */
 }
-.page10-middle {
-    margin-bottom: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: start; /* Align content to top */
-}
-.page10-middle img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    grid-column: 1; /* Image in left column */
-    align-self: start; /* Align image to top */
-}
-.page10-middle-text {
-    grid-column: 2; /* Text wrapper in right column */
-    align-self: start; /* Align wrapper to top of grid cell */
-    display: flex;
-    flex-direction: column; /* Stack h1 and p vertically */
-    gap: 0; /* Minimize spacing between h1 and p */
-    margin-right: 30px; /* Added right margin for desktop */
-    margin-top: 0; /* Ensure no top margin */
-}
-.page10-middle h1 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    margin: 0 0 5px; /* Increased top margin to 80px, reduced bottom margin to 10px for closer p text */
-}
-.page10-middle p {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 18px;
-    margin: 0 0 10px; /* Explicitly set zero top margin to follow h1, small bottom margin */
-}
+
 /* - - - - - - PAGE_11 SECTION - - - - - - */
-.section_page11 {
-    background-color: #E6E6E6;
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-}
-.page11-content {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-.page11-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    padding: 20px;
-    max-width: 50%;
-}
-.page11-text h1 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-.page11-text p {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 18px;
-    margin-bottom: 1rem;
-}
-.page11-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.page11-image img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-    margin-left: 0;
-}
+
 
 
 /* - - - - - - PAGE_12 SECTION - - - - - - */
@@ -1171,14 +1093,6 @@ body {
         gap: 40px; /* Increased gap between pictures */
         margin-bottom: 40px;
     }
-    .page10-middle h1 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        margin: 80px 0 5px; /* Increased top margin to 80px, reduced bottom margin to 10px for closer p text */
-    }
-    .page10-middle p {
-        font-size: clamp(0.875rem, 1.2vw, 1rem);
-        margin: 0 0 10px; /* Explicitly set zero top margin to follow h1, small bottom margin */
-    }
 }
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                        /* Mobile styles */
@@ -1456,62 +1370,6 @@ body {
         width: 90%;
         border-radius: 30px;
     }
-    .page10-middle {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        gap: 10px; /* Reduced gap for tighter layout */
-    }
-    .page10-middle img {
-        width: 100%;
-        margin: 0 auto 10px; /* Reduced bottom margin */
-        order: 2; /* Image comes after text */
-    }
-    .page10-middle-text {
-        max-width: 90%;
-        order: 1; /* Text comes first */
-        margin-right: 0; /* Remove right margin for mobile */
-    }
-    .page10-middle h1 {
-        margin: 20px 0 5px; /* Reduced top margin to raise title */
-    }
-    .section_page11 {
-        flex-direction: column;
-        min-height: 100vh;
-        position: relative;
-        overflow: hidden;
-    }
-    .page11-content {
-        flex-direction: column;
-        position: relative;
-        height: 100%;
-    }
-    .page11-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
-    .page11-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        margin-left: 0;
-    }
-    .page11-text {
-        position: relative;
-        z-index: 2;
-        max-width: 90%;
-        margin: 20px auto;
-        padding: 20px;
-        text-align: left;
-        background: rgba(0, 0, 0, 0.6);
-        border-radius: 8px;
-    }
-
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -1742,60 +1600,6 @@ body {
         width: 90%;
         border-radius: 30px;
     }
-    .page10-middle {
-        text-align: center;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .page10-middle img {
-        width: 100%;
-        margin: 0 auto 10px;
-        order: 2;
-    }
-    .page10-middle-text {
-        max-width: 90%;
-        order: 1;
-        margin-right: 0;
-    }
-    .page10-middle h1 {
-        margin: 20px 0 5px;
-    }
-    .section_page11 {
-        flex-direction: column;
-        min-height: 100vh;
-        position: relative;
-        overflow: hidden;
-    }
-    .page11-content {
-        flex-direction: column;
-        position: relative;
-        height: 100%;
-    }
-    .page11-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
-    .page11-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        margin-left: 0;
-    }
-    .page11-text {
-        position: relative;
-        z-index: 2;
-        max-width: 90%;
-        margin: 20px auto;
-        padding: 15px;
-        text-align: left;
-        background: rgba(0, 0, 0, 0.6);
-        border-radius: 8px;
-    }
-    
 }
 
 /* General styling for all section elements */ 
