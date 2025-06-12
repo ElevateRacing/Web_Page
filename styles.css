@@ -565,8 +565,35 @@ body {
 }
 
 /* - - - - - - PAGE_11 SECTION - - - - - - */
-
-
+.section_page11 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: fit-content;
+    width: 100%;
+}
+.image11_mono {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+}
+.page11-text {
+    width: 55%;
+    padding: 0 5%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.page11-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.page11-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+}
 
 /* - - - - - - PAGE_12 SECTION - - - - - - */
 
@@ -1370,6 +1397,38 @@ body {
         width: 90%;
         border-radius: 30px;
     }
+    .section_page11 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: fit-content;
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    .page11-text {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .page11-text h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .page11-text p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .image11_mono {
+        width: 90%;
+        height: auto;
+        object-fit: cover;
+    }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -1599,6 +1658,38 @@ body {
     .page10-top-pictures img {
         width: 90%;
         border-radius: 30px;
+    }
+    .section_page11 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: fit-content;
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    .page11-text {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .page11-text h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .page11-text p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .image11_mono {
+        width: 90%;
+        height: auto;
+        object-fit: cover;
     }
 }
 
