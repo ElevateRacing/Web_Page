@@ -739,13 +739,13 @@ body {
     .page2-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 68px;
+        font-size: var(--page2-header-desktop-large);
         color: #000000;
         margin-bottom: 15px;
     }
     .page2-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 20px;
+        font-size: var(--page2-text-desktop-large);
         font-weight: 400;
         color: #000000;
         text-shadow: none;
@@ -894,13 +894,13 @@ body {
     .page2-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 68px;
+        font-size: var(--page2-header-desktop);
         color: #000000;
         margin-bottom: 15px;
     }
     .page2-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 20px;
+        font-size: var(--page2-text-desktop);
         font-weight: 400;
         color: #000000;
         text-shadow: none;
@@ -1087,13 +1087,13 @@ body {
     .page2-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: clamp(2rem, 4vw, 3rem);
+        font-size: var(--page2-header-tablet);
         color: #000000;
         margin-bottom: 15px;
     }
     .page2-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
-        font-size: clamp(0.875rem, 1.2vw, 1rem);
+        font-size: var(--page2-text-tablet);
         font-weight: 300;
         color: #000000;
         text-shadow: none;
@@ -1285,13 +1285,13 @@ body {
     .page2-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 32px;
+        font-size: var(--page2-header-mobile);
         color: #000000;
         margin-bottom: 10px;
     }
     .page2-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 16px;
+        font-size: var(--page2-text-mobile);
         font-weight: 300;
         color: #000000;
         text-shadow: none;
@@ -1613,13 +1613,13 @@ body {
     .page2-header h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 12px;
+        font-size: var(--page2-header-small-mobile);
         color: #000000;
         margin-bottom: 10px;
     }
     .page2-header h2 {
         font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 4px;
+        font-size: var(--page2-text-small-mobile);
         font-weight: 300;
         color: #000000;
         text-shadow: none;
