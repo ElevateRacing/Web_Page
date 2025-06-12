@@ -1315,7 +1315,6 @@ body {
         margin: 0; /* Remove centering margin */
         flex-direction: column; /* Stack vertically */
     }
-
     .page8-header {
         position: relative; /* Natural flow */
         top: 0;
@@ -1325,11 +1324,9 @@ body {
         padding: 1rem;
         order: 1; /* First in layout */
     }
-
     .page8-header h1 {
         font-size: 32px; /* Smaller for mobile */
     }
-
     .page8-header h2 {
         font-size: 14px; /* Smaller for mobile */
         margin: 0 0 10px 0;
@@ -1337,7 +1334,6 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
-
     .page8-video {
         width: 100%; /* Full width */
         max-width: none; /* No max-width limit */
@@ -1346,7 +1342,6 @@ body {
         object-fit: contain; /* Show entire video without black bars */
         order: 2; /* Second in layout */
     }
-
     .page8-content-bottom {
         flex-direction: column; /* Stack vertically */
         gap: 1rem; /* Space between elements */
@@ -1355,13 +1350,11 @@ body {
         width: 100%; /* Full width */
         order: 3; /* Third in layout */
     }
-
     .page8-bottom-right {
         text-align: center; /* Centered text */
         order: 1; /* Text before image */
         margin-left: 0; /* Remove margin for mobile */
     }
-
     .page8-bottom-left {
         flex: none; /* Remove fixed width */
         width: 90%; /* Image 90% width */
@@ -1394,8 +1387,11 @@ body {
     .page10-top h1 {
         text-align: center;
     }
-    .page-top p {
-        text-align: center;
+    .page10-top p {
+        text-align: center; /* Center-justified text */
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .page10-top-pictures {
         flex-direction: column;
@@ -1668,8 +1664,11 @@ body {
     .page10-top h1 {
         text-align: center;
     }
-    .page-top p {
-        text-align: center;
+    .page10-top p {
+        text-align: center; /* Center-justified text */
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .page10-top-pictures img {
         width: 90%;
@@ -1683,25 +1682,21 @@ body {
         width: 100%;
         padding: 2rem 0;
     }
-
     .page11-text {
         width: 90%;
         text-align: center;
         margin-bottom: 1.5rem;
         margin-top: 1rem;
     }
-
     .page11-text h1 {
         font-size: 2rem;
         margin-bottom: 1rem;
     }
-
     .page11-text p {
         font-size: 1rem;
         line-height: 1.5;
         text-align: center;
     }
-
     .image11_mono {
         width: 90%;
         height: auto;
