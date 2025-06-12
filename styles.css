@@ -619,7 +619,6 @@ body {
     max-width: 600px; /* Limit text width for readability */
     margin-left: 5rem; /* Generous left margin */
     text-align: center; /* Center text horizontally */
-    color: white; /* Assuming white text for contrast */
 }
 .page12-text-wrapper h1 {
     font-family: 'Exo 2', sans-serif;
