@@ -609,7 +609,7 @@ body {
     align-items: center; /* Vertically center content */
     overflow: hidden; /* Hide overflow for wide image */
     background-size: cover; /* Ensure image covers the section */
-    background-position: right 10%; /* 10% of image hidden on right */
+    background-position: right 30%; /* 10% of image hidden on right */
     background-image: url('Images/page12-duct-test.png'); /* Background image */
 }
 .image12_duct {
