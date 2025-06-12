@@ -41,6 +41,55 @@ body {
     --hero-text-margin-bottom-tablet: 2.5rem;        /* Tablet bottom margin (reduced) */
     --hero-text-margin-left-mobile: 1.5rem;          /* Mobile left margin (unchanged) */
     --hero-text-margin-top-mobile: 2.5rem;           /* Mobile top margin (unchanged) */
+/* Font size */
+    --hero-header-desktop: 1px;
+    --hero-header-tablet: 1px;
+    --hero-header-mobile: 1px;
+    --hero-header-small-mobile: 1px;
+    --hero-text-desktop: 1px;
+    --hero-text-tablet: 1px;
+    --hero-text-mobile: 1px;
+    --hero-text-small-mobile: 1px;
+    
+    --page2-header-desktop: 1px;
+    --page2-header-tablet: 1px;
+    --page2-header-mobile: 1px;
+    --page2-header-small-mobile: 1px;
+    --page2-text-desktop: 1px;
+    --page2-text-tablet: 1px;
+    --page2-text-mobile: 1px;
+    --page2-text-small-mobile: 1px;
+
+    --page3-header-desktop: 1px;
+    --page3-header-tablet: 1px;
+    --page3-header-mobile: 1px;
+    --page3-header-small-mobile: 1px;
+    --page3-bold-desktop: 1px;
+    --page3-bold-tablet: 1px;
+    --page3-bold-mobile: 1px;
+    --page3-bold-small-mobile: 1px;
+    --page3-bottom-desktop: 1px;
+    --page3-bottom-tablet: 1px;
+    --page3-bottom-mobile: 1px;
+    --page3-bottom-small-mobile: 1px;
+
+    --content-header-desktop: 1px;
+    --content-header-tablet: 1px;
+    --content-header-mobile: 1px;
+    --content-header-small-mobile: 1px;
+    --content-title-desktop: 1px;
+    --content-title-tablet: 1px;
+    --content-title-mobile: 1px;
+    --content-title-small-mobile: 1px;
+    --content-textL-desktop: 1px;
+    --content-textL-tablet: 1px;
+    --content-textL-mobile: 1px;
+    --content-textL-small-mobile: 1px;
+    --content-textS-desktop: 1px;
+    --content-textS-tablet: 1px;
+    --content-textS-mobile: 1px;
+    --content-textS-small-mobile: 1px;
+
 }
 
 /* Style the navigation bar */
