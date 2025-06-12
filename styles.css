@@ -600,6 +600,40 @@ body {
 }
 
 /* - - - - - - PAGE_12 SECTION - - - - - - */
+.section_page12 {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    overflow: hidden; /* Hide overflow for wide image */
+    background-size: cover; /* Ensure image covers the section */
+    background-position: right 10%; /* 10% of image hidden on right */
+    background-image: url('Images/page12-duct-test.png'); /* Background image */
+}
+.image12_duct {
+    display: none; /* Hide the img tag since background is used */
+}
+.page12-text-wrapper {
+    max-width: 600px; /* Limit text width for readability */
+    margin-left: 5rem; /* Generous left margin */
+    text-align: center; /* Center text horizontally */
+    color: white; /* Assuming white text for contrast */
+}
+.page12-text-wrapper h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.page12-text-wrapper p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* - - - - - - PAGE_13 SECTION - - - - - - */
+
+/* - - - - - - PAGE_14 SECTION - - - - - - */
 
 
 @media screen and (min-width: 1367px) {                      /* Large Desktop */
@@ -1435,6 +1469,28 @@ body {
         height: auto;
         object-fit: cover;
     }
+    .section_page12 {
+        height: 100vh; /* Full viewport height */
+        background-position: right 30%; /* 30% of image hidden on right */
+        background-size: cover; /* Cover the viewport */
+    }
+
+    .page12-text-wrapper {
+        margin: 2rem auto; /* Margin from top and centered horizontally */
+        max-width: 90%; /* Responsive width */
+        text-align: center; /* Justify text to center */
+        background-color: rgba(211, 211, 211, 0.7); /* Light grey semi-transparent box */
+        padding: 1.5rem; /* Padding for readability */
+        border-radius: 8px; /* Optional: rounded corners */
+    }
+
+    .page12-text-wrapper h1 {
+        font-size: 2rem; /* Slightly smaller for mobile */
+    }
+
+    .page12-text-wrapper p {
+        font-size: 1rem; /* Adjusted for mobile */
+    }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
     :root {
@@ -1702,10 +1758,31 @@ body {
         height: auto;
         object-fit: cover;
     }
+    .section_page12 {
+        height: 100vh; /* Full viewport height */
+        background-position: right 30%; /* 30% of image hidden on right */
+        background-size: cover; /* Cover the viewport */
+    }
+
+    .page12-text-wrapper {
+        margin: 2rem auto; /* Margin from top and centered horizontally */
+        max-width: 90%; /* Responsive width */
+        text-align: center; /* Justify text to center */
+        background-color: rgba(211, 211, 211, 0.7); /* Light grey semi-transparent box */
+        padding: 1.5rem; /* Padding for readability */
+        border-radius: 8px; /* Optional: rounded corners */
+    }
+
+    .page12-text-wrapper h1 {
+        font-size: 2rem; /* Slightly smaller for mobile */
+    }
+
+    .page12-text-wrapper p {
+        font-size: 1rem; /* Adjusted for mobile */
+    }
 }
 
 /* General styling for all section elements */ 
-.section_page12,
 .section_page13,
 .section_page14 {
     display: flex;               /* Use flexbox for content layout */
@@ -1715,11 +1792,6 @@ body {
     text-align: center;          /* Center text content */
     padding: 20px;               /* Add inner spacing */
     box-sizing: border-box;      /* Include padding in size calculations */
-}
-
-.section_page12 {
-    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
-    background-color: #c0c0c0;                          /* Darker gray background */
 }
 
 .section_page13 {
