@@ -574,12 +574,12 @@ body {
     width: 100%;
 }
 .image11_mono {
-    width: 45%;
+    width: 55%;
     height: auto;
     object-fit: cover;
 }
 .page11-text {
-    width: 55%;
+    width: 45%;
     padding: 0 5%;
     text-align: left;
     display: flex;
@@ -622,13 +622,14 @@ body {
     color: white; /* Assuming white text for contrast */
 }
 .page12-text-wrapper h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 .page12-text-wrapper p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 18px;
 }
 
 /* - - - - - - PAGE_13 SECTION - - - - - - */
