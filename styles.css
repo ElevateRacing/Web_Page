@@ -665,7 +665,7 @@ body {
     align-items: center; /* Vertically center content */
     overflow: hidden; /* Hide overflow for wide image */
     background-size: cover; /* Ensure image covers the section */
-    background-position: calc(100% - 20%) center; /* Shift image right, hiding 10% beyond right edge */
+    background-position: calc(100% - 30%) center; /* Shift image right, hiding 10% beyond right edge */
     background-image: url('Images/page12-duct.png'); /* Background image */
 }
 .image12_duct {
@@ -1527,7 +1527,7 @@ body {
     }
     .section_page12 {
         height: 100vh; /* Full viewport height */
-        background-position: calc(100% + 30%) center; /* Shift image right, hiding 30% beyond right edge */
+        background-position: calc(100% - 40%) center; /* Shift image right, hiding 30% beyond right edge */
         background-size: cover; /* Cover the viewport */
     }
 
@@ -1816,7 +1816,7 @@ body {
     }
     .section_page12 {
         height: 100vh; /* Full viewport height */
-        background-position: calc(100% + 30%) center; /* Shift image right, hiding 30% beyond right edge */
+        background-position: calc(100% - 40%) center; /* Shift image right, hiding 30% beyond right edge */
         background-size: cover; /* Cover the viewport */
     }
 
