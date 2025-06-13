@@ -81,23 +81,31 @@ body {
     --page3-bottom-small-mobile: 7px;
 
     
-    --content-header-desktop: 1px;
-    --content-header-tablet: 1px;
-    --content-header-mobile: 1px;
-    --content-header-small-mobile: 1px;
-    --content-title-desktop: 1px;
-    --content-title-tablet: 1px;
-    --content-title-mobile: 1px;
-    --content-title-small-mobile: 1px;
-    --content-textL-desktop: 1px;
-    --content-textL-tablet: 1px;
-    --content-textL-mobile: 1px;
-    --content-textL-small-mobile: 1px;
-    --content-textS-desktop: 1px;
-    --content-textS-tablet: 1px;
-    --content-textS-mobile: 1px;
-    --content-textS-small-mobile: 1px;
-
+    --content-header-desktop-large: 68px;
+    --content-header-desktop: 66px;
+    --content-header-tablet: clamp(2rem, 4vw, 3rem);
+    --content-header-mobile: 32px;
+    --content-header-small-mobile: 26px;
+    --content-header2-desktop-large: 24px;
+    --content-header2-desktop: 22px;
+    --content-header2-tablet: clamp(0.875rem, 1.2vw, 1rem);
+    --content-header2-mobile: 16px;
+    --content-header2-small-mobile: 16px;
+    --content-title-desktop-large: 30px;
+    --content-title-desktop: 30px;
+    --content-title-tablet: 26px;
+    --content-title-mobile: 26px;
+    --content-title-small-mobile: 24px;
+    --content-textL-desktop-large: 22px;
+    --content-textL-desktop: 22px;
+    --content-textL-tablet: 20px;
+    --content-textL-mobile: 20px;
+    --content-textL-small-mobile: 16px;
+    --content-textS-desktop-large: 20px;
+    --content-textS-desktop: 20px;
+    --content-textS-tablet: 20px;
+    --content-textS-mobile: 20px;
+    --content-textS-small-mobile: 20px;
 }
 
 /* Style the navigation bar */
@@ -353,14 +361,14 @@ body {
 .page5-text h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: var(--content-title-desktop-large);
     margin: 0 0 10px;
     font-size: 2rem;
 }
 .page5-text p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: var(--content-textS-desktop-large);
     /* color: #000000; */
     text-shadow: none;
     /* max-width: 80% */
@@ -476,13 +484,13 @@ body {
 .page8-header h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 68px;
+    font-size: var(--content-header-desktop-large);
     color: #000000;
     margin-bottom: 15px;
 }
 .page8-header h2 {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 24px;
+    font-size: var(--content-header2-desktop-large);
     font-weight: 400;
     color: #000000;
     text-shadow: none;
@@ -518,12 +526,12 @@ body {
 .page8-bottom-right h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: var(--content-title-desktop-large);
     margin-bottom: 15px;
 }
 .page8-bottom-right p {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 18px;
+    font-size: var(--content-textL-desktop-large);
     margin-bottom: 1rem;
 }
 
@@ -558,17 +566,17 @@ body {
 .section_left h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: var(--content-title-desktop-large);
     margin-bottom: 15px;
 }
 .section_left p {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 18px;
+    font-size: var(--content-textL-desktop-large);
     margin-bottom: 1rem;
 }
 .section_right p {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 18px;
+    font-size: var(--content-textL-desktop-large);
     margin-bottom: 1rem;
 }
 .section_left {
@@ -596,12 +604,12 @@ body {
 .page10-top h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: var(--content-title-desktop-large);
     margin-bottom: 15px;
 }
 .page10-top p {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 18px;
+    font-size: var(--content-textL-desktop-large);
     text-align: left; /* Left-justified text */
     max-width: 50%;
     margin-bottom: 30px;
@@ -646,12 +654,12 @@ body {
 .page11-text h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: var(--content-title-desktop-large);
     margin-bottom: 15px;
 }
 .page11-text p {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 18px;
+    font-size: var(--content-textL-desktop-large);
     text-align: left; /* Left-justified text */
     margin-bottom: 30px;
 }
@@ -680,12 +688,12 @@ body {
 .page12-text-wrapper h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: var(--content-title-desktop-large);
     margin-bottom: 15px;
 }
 .page12-text-wrapper p {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 18px;
+    font-size: var(--content-textL-desktop-large);
 }
 
 /* - - - - - - PAGE_13 SECTION - - - - - - */
