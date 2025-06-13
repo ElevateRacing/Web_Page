@@ -799,19 +799,19 @@ body {
     .p1 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 500; /* Normal weight by default */
-        font-size: 27px;
+        font-size: var(--page3-header-desktop-large);
         margin-bottom: 5px;
     }
     .p2 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 900;
-        font-size: 38px;
+        font-size: var(--page3-bold-desktop-large);
         margin-bottom: 5px;
     }
     .p3 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
-        font-size: 18px;
+        font-size: var(--page3-bottom-desktop-large);
     }
     .page3-graphic1 {
         width: 100%;
@@ -954,19 +954,19 @@ body {
     .p1 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 500; /* Normal weight by default */
-        font-size: 26px;
+        font-size: var(--page3-header-desktop);
         margin-bottom: 5px;
     }
     .p2 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 900;
-        font-size: 34px;
+        font-size: var(--page3-bold-desktop);
         margin-bottom: 5px;
     }
     .p3 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
-        font-size: 16px;
+        font-size: var(--page3-bottom-desktop);
     }
     .page3-graphic1 {
         width: 100%;
@@ -1146,19 +1146,19 @@ body {
     .p1 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 500; /* Normal weight by default */
-        font-size: clamp(18px, 12px + 0.78125vw, 22px);
+        font-size: var(--page3-header-tablet);
         margin-bottom: 5px;
     }
     .p2 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 900;
-        font-size: clamp(22px, 10px + 1.5625vw, 30px);
+        font-size: var(--page3-bold-tablet);
         margin-bottom: 5px;
     }
     .p3 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
-        font-size: clamp(13px, 10px + 0.390625vw, 15px);
+        font-size: var(--page3-bottom-tablet);
     }
     .page3-graphic1 {
         width: 100%;
@@ -1337,19 +1337,19 @@ body {
     .p1 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 500; /* Normal weight by default */
-        font-size: 18px;
+        font-size: var(--page3-header-mobile);
         margin-bottom: 8px;
     }
     .p2 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 900;
-        font-size: 24px;
+        font-size: var(--page3-bold-mobile);
         margin-bottom: 8px;
     }
     .p3 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
-        font-size: 11px;
+        font-size: var(--page3-bottom-mobile);
     }
     .page3-graphic1 {
         width: 100%;
@@ -1664,19 +1664,19 @@ body {
     .p1 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 500; /* Normal weight by default */
-        font-size: 8px;
+        font-size: var(--page3-header-small-mobile);
         margin-bottom: 5px;
     }
     .p2 {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 900;
-        font-size: 10px;
+        font-size: var(--page3-bold-small-mobile);
         margin-bottom: 5px;
     }
     .p3 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
-        font-size: 5px;
+        font-size: var(--page3-bottom-small-mobile);
     }
     .page3-graphic1 {
         width: 100%;
