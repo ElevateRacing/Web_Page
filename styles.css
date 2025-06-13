@@ -1859,30 +1859,6 @@ body {
     }
 }
 
-/* General styling for all section elements */ 
-.section_page13,
-.section_page14 {
-    display: flex;               /* Use flexbox for content layout */
-    flex-direction: column;      /* Stack content vertically */
-    justify-content: center;     /* Center content vertically */
-    align-items: center;         /* Center content horizontally */
-    text-align: center;          /* Center text content */
-    padding: 20px;               /* Add inner spacing */
-    box-sizing: border-box;      /* Include padding in size calculations */
-}
-
-.section_page13 {
-    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
-    background-color: #d0d0d0;                          /* Darker gray background */
-}
-
-.section_page14 {
-    min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
-    background-color: #c0c0c0;                          /* Darker gray background */
-}
-
-
-
 /* Adjust navbar padding when scrolled */
 .navbar.scrolled {
     padding: calc(var(--navbar-padding-h) / 2) var(--navbar-padding-v);     /* Reduce vertical padding when scrolled */
