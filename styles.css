@@ -697,9 +697,21 @@ body {
 }
 
 /* - - - - - - PAGE_13 SECTION - - - - - - */
+.section_page13 {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
-/* - - - - - - PAGE_14 SECTION - - - - - - */
-
+.section_page13 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
 
 @media screen and (min-width: 1367px) {                      /* Large Desktop */
     .logo1-container {
