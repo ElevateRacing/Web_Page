@@ -64,22 +64,23 @@ body {
     --page2-text-mobile: 16px;
     --page2-text-small-mobile: 8px;
 
-
+    --page3-header-desktop-large: 27px;
+    --page3-header-desktop: 26px;
+    --page3-header-tablet: clamp(18px, 12px + 0.78125vw, 22px);
+    --page3-header-mobile: 18px;
+    --page3-header-small-mobile: 10px;
+    --page3-bold-desktop: 38px;
+    --page3-bold-desktop: 34px;
+    --page3-bold-tablet: clamp(22px, 10px + 1.5625vw, 30px);
+    --page3-bold-mobile: 24px;
+    --page3-bold-small-mobile: 12px;
+    --page3-bottom-desktop-large: 18px;
+    --page3-bottom-desktop: 16px;
+    --page3-bottom-tablet: clamp(13px, 10px + 0.390625vw, 15px);
+    --page3-bottom-mobile: 11px;
+    --page3-bottom-small-mobile: 7px;
 
     
-    --page3-header-desktop: 1px;
-    --page3-header-tablet: 1px;
-    --page3-header-mobile: 1px;
-    --page3-header-small-mobile: 1px;
-    --page3-bold-desktop: 1px;
-    --page3-bold-tablet: 1px;
-    --page3-bold-mobile: 1px;
-    --page3-bold-small-mobile: 1px;
-    --page3-bottom-desktop: 1px;
-    --page3-bottom-tablet: 1px;
-    --page3-bottom-mobile: 1px;
-    --page3-bottom-small-mobile: 1px;
-
     --content-header-desktop: 1px;
     --content-header-tablet: 1px;
     --content-header-mobile: 1px;
