@@ -836,16 +836,16 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page4-content h1 {
-        font-size: 30px;
+        font-size: var(--content-title-desktop-large);
     }
     .page4-content h2 {
-        font-size: 22px;
+        font-size: var(--content-textL-desktop-large);
     }
     .page6-content h1 {
-        font-size: 30px;
+        font-size: var(--content-title-desktop-large);
     }
     .page6-content h2 {
-        font-size: 22px;
+        font-size: var(--content-textL-desktop-large);
     }
     .page8-video {
         width: 70%;
@@ -991,16 +991,16 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page4-content h1 {
-        font-size: 30px;
+        font-size: var(--content-title-desktop);
     }
     .page4-content h2 {
-        font-size: 22px;
+        font-size: var(--content-textL-desktop);
     }
     .page6-content h1 {
-        font-size: 30px;
+        font-size: var(--content-title-desktop);
     }
     .page6-content h2 {
-        font-size: 22px;
+        font-size: var(--content-textL-desktop);
     }
     .page8-video {
         width: 70%;
@@ -1011,11 +1011,11 @@ body {
         left: 4rem; /* Generous left margin */
     }
     .page8-header h1 {
-        font-size: 66px;
+        font-size: var(--content-header-desktop);
         margin-bottom: 15px;
     }
     .page8-header h2 {
-        font-size: 22px;
+        font-size: var(--content-header2-desktop);
         max-width: 550px; /* 50% width * 80% * 1367px = 550px */
         margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
     }
@@ -1183,16 +1183,16 @@ body {
         margin: 0;            /* Remove margins */
     }
     .page4-content h1 {
-        font-size: 26px;
+        font-size: var(--content-title-tablet);
     }
     .page4-content h2 {
-        font-size: 20px;
+        font-size: var(--content-textL-tablet);
     }
     .page6-content h1 {
-        font-size: 26px;
+        font-size: var(--content-title-tablet);
     }
     .page6-content h2 {
-        font-size: 20px;
+        font-size: var(--content-textL-tablet);
     }
     .page8-video {
         width: 70%;
@@ -1203,19 +1203,19 @@ body {
         left: 4rem; /* Generous left margin */
     }
     .page8-header h1 {
-        font-size: clamp(2rem, 4vw, 3rem);
+        font-size: var(--content-header-tablet);
         margin-bottom: 15px;
     }
     .page8-header h2 {
-        font-size: clamp(0.875rem, 1.2vw, 1rem);
+        font-size: var(--content-header2-tablet);
         max-width: 550px; /* 50% width * 80% * 1367px = 550px */
         margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
     }
     .page10-top h1 {
-        font-size: clamp(2rem, 4vw, 3rem);
+        font-size: var(--content-title-tablet);
     }
     .page10-top p {
-        font-size: clamp(0.875rem, 1.2vw, 1rem);
+        font-size: var(--content-textL-tablet);
         max-width: 75%;
         margin-bottom: 30px;
     }
@@ -1377,10 +1377,10 @@ body {
         margin-bottom: 0;     /* Explicitly remove bottom margin */
     }
     .page4-content h1 {
-        font-size: 26px;
+        font-size: var(--content-title-mobile);
     }
     .page4-content h2 {
-        font-size: 20px;
+        font-size: var(--content-textL-mobile);
     }
     .page5-text {
         border-radius: 8px; /* Optional: adds rounded corners for a smoother look */
@@ -1396,10 +1396,10 @@ body {
         clip-path: polygon(0% 0%, calc(50% - 50% * tan(5deg)) 0%, calc(50% + 50% * tan(5deg)) 100%, 0% 100%);
     }
     .page6-content h1 {
-        font-size: 26px;
+        font-size: var(--content-title-mobile);
     }
     .page6-content h2 {
-        font-size: 20px;
+        font-size: var(--content-textL-mobile);
     }
     .section_page7 img {
         width: 125%; /* Crop 20% from left and right (100/0.8 = 125%) */
@@ -1424,10 +1424,10 @@ body {
         order: 1; /* First in layout */
     }
     .page8-header h1 {
-        font-size: 32px; /* Smaller for mobile */
+        font-size: var(--content-header-mobile);
     }
     .page8-header h2 {
-        font-size: 14px; /* Smaller for mobile */
+        font-size: var(--content-header2-mobile);
         margin: 0 0 10px 0;
         max-width: 90%; /* Restrict width */
         margin-left: auto;
@@ -1519,12 +1519,12 @@ body {
     }
 
     .page11-text h1 {
-        font-size: 2rem;
+        font-size: var(--content-title-mobile);
         margin-bottom: 1rem;
     }
 
     .page11-text p {
-        font-size: 1rem;
+        font-size: var(--content-textL-mobile);
         line-height: 1.5;
         text-align: center;
     }
@@ -1550,11 +1550,11 @@ body {
     }
 
     .page12-text-wrapper h1 {
-        font-size: 2rem; /* Slightly smaller for mobile */
+        font-size: var(--content-title-mobile);
     }
 
     .page12-text-wrapper p {
-        font-size: 1rem; /* Adjusted for mobile */
+        font-size: var(--content-textL-mobile); /* Adjusted for mobile */
     }
 }
 @media screen and (max-width: 380px) {                        /* Small mobile */
@@ -1704,10 +1704,10 @@ body {
         margin-bottom: 0;     /* Explicitly remove bottom margin */
     }
     .page4-content h1 {
-        font-size: 24px;
+        font-size: var(--content-title-small-mobile);
     }
     .page4-content h2 {
-        font-size: 16px;
+        font-size: var(--content-textL-small-mobile);
     }
     .page5-text {
         border-radius: 8px; /* Optional: adds rounded corners for a smoother look */
@@ -1723,10 +1723,10 @@ body {
         clip-path: polygon(0% 0%, calc(50% - 50% * tan(5deg)) 0%, calc(50% + 50% * tan(5deg)) 100%, 0% 100%);
     }
     .page6-content h1 {
-        font-size: 24px;
+        font-size: var(--content-title-small-mobile);
     }
     .page6-content h2 {
-        font-size: 16px;
+        font-size: var(--content-textL-small-mobile);
     }
     .section_page7 img {
         width: 125%; /* Crop 20% from left and right (100/0.8 = 125%) */
@@ -1742,22 +1742,22 @@ body {
     }
 
     .page8-header h1 {
-        font-size: 12px; /* Even smaller for small screens */
+        font-size: var(--content-header-small-mobile);
     }
 
     .page8-header h2 {
-        font-size: 12px;
+        font-size: var(--content-header2-small-mobile);
         max-width: 90%;
         margin-left: auto;
         margin-right: auto;
     }
 
     .page8-bottom-right h1 {
-        font-size: 24px;
+        font-size: var(--content-title-small-mobile);
     }
 
     .page8-bottom-right p {
-        font-size: 16px;
+        font-size: var(--content-textL-small-mobile);
     }
     .section_left {
         position: static; /* Remove absolute positioning for stacking */
@@ -1810,11 +1810,11 @@ body {
         margin-top: 1rem;
     }
     .page11-text h1 {
-        font-size: 2rem;
+        font-size: var(--content-title-small-mobile);
         margin-bottom: 1rem;
     }
     .page11-text p {
-        font-size: 1rem;
+        font-size: var(--content-textL-small-mobile);
         line-height: 1.5;
         text-align: center;
     }
@@ -1839,11 +1839,11 @@ body {
     }
 
     .page12-text-wrapper h1 {
-        font-size: 2rem; /* Slightly smaller for mobile */
+        font-size: var(--content-title-small-mobile); /* Slightly smaller for mobile */
     }
 
     .page12-text-wrapper p {
-        font-size: 1rem; /* Adjusted for mobile */
+        font-size: var(--content-textL-small-mobile); /* Adjusted for mobile */
     }
 }
 
