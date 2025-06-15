@@ -1035,7 +1035,7 @@ body {
     font-weight: 400;
     font-size: var(--content-textS-desktop-large);
     text-shadow: none;
-    /*max-width: 550px; */
+    max-width: 600px;
     margin: 0 0 30px;
 }
 .page5-button {
@@ -1085,7 +1085,6 @@ body {
         }
         .page5-text p {
                 font-size: var(--content-textS-desktop-large);
-                /* max-width: 550px; */
                 margin: 0 0 30px;
         }
         .page5-button {
@@ -1098,10 +1097,12 @@ body {
         .layer.rent .page5-text {
                 right: 20px;
                 text-align: right;
+                max-width: 550px;
         }
         .layer.buy .page5-text {
                 left: 20px;
                 text-align: left;
+                max-width: 550px;
         }
         .page5-text h1 {
                 font-size: var(--content-title-desktop);
@@ -1109,7 +1110,6 @@ body {
         }
         .page5-text p {
                 font-size: var(--content-textS-desktop);
-                max-width: 550px;
                 margin: 0 0 30px;
         }
         .page5-button {
@@ -1122,10 +1122,12 @@ body {
         .layer.rent .page5-text {
                 right: 20px;
                 text-align: right;
+                max-width: 500px;
         }
         .layer.buy .page5-text {
                 left: 20px;
                 text-align: left;
+                max-width: 500px;
         }
         .page5-text h1 {
                 font-size: var(--content-title-tablet);
@@ -1153,7 +1155,6 @@ body {
         }
         .page5-text p {
                 font-size: var(--content-textS-mobile);
-                max-width: 550px;
                 margin: 0 0 30px;
         }
         .page5-button {
@@ -1172,7 +1173,6 @@ body {
         }
         .page5-text p {
                 font-size: var(--content-textS-small-mobile);
-                max-width: 550px;
                 margin: 0 0 30px;
         }
         .page5-button {
