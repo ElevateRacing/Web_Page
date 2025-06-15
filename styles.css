@@ -473,7 +473,7 @@ body {
                 overflow: hidden; /* Hide excess image */
         }
         .page2-graphic1 .page2-image1 {
-                width: clamp(166.67%, 170% + 4vw, 190%); /* Show only 60% of image (100/0.6 = 166.67%) */
+                width: 190%;
                 height: auto; /* Maintain aspect ratio */
                 object-fit: cover;
                 object-position: 0% 50%; /* Align left, keep vertical center */
