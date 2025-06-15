@@ -32,7 +32,6 @@ body {
     --button-hover:#f3f3f3;
     --button-focus:#ff7f33;
     --white-font-color:#ffffff;
-    --black-font-color:#000000;
     --main-background-color: #f0f0f0;
     --Page2-background-color:#e0e0e0;
     --Page3-background-color:#DFDFDF;
@@ -61,12 +60,12 @@ body {
     --page2-header-desktop: 68px;
     --page2-header-tablet: clamp(2rem, 4vw, 3rem);
     --page2-header-mobile: 32px;
-    --page2-header-small-mobile: 28px;
+    --page2-header-small-mobile: 16px;
     --page2-text-desktop-large: 20px;
     --page2-text-desktop: 20px;
-    --page2-text-tablet: clamp(0.95rem, 1.4vw, 1.25rem);
-    --page2-text-mobile: 17px;
-    --page2-text-small-mobile: 15px;
+    --page2-text-tablet: clamp(0.875rem, 1.2vw, 1rem);
+    --page2-text-mobile: 16px;
+    --page2-text-small-mobile: 8px;
 
     --page3-header-desktop-large: 27px;
     --page3-header-desktop: 26px;
@@ -331,205 +330,22 @@ body {
         }
 }
 
+
+
+
+
+
+
+
+
+
+
 /* - - - - - - PAGE_2 SECTION - - - - - - */
 .section_page2 {
-    display: flex;                                           /* Use flexbox for content layout */
-    flex-direction: column;                                  /* Stack content vertically */
+    display: flex;                                       /* Use flexbox for content layout */
+    flex-direction: column;                              /* Stack content vertically */
     background-color: var(--Page2-background-color);
-    height: auto;                                            /* Let image dictate height */
-    position: relative;                                      /* For absolute positioning of text */
-    overflow: hidden;                                        /* Hide overflowing image */
-    padding: 0;
 }
-.page2-header {
-    position: absolute;                                      /* Position text over image */
-    top: 160px;                                              /* Keep generous top margin */
-    left: 0;
-    width: 50%;                                              /* Left column (column1) */
-    text-align: center;                                      /* Center text in column1 */
-    padding: 1rem;
-    z-index: 2;                                              /* Above image */
-}
-.page2-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: var(--page2-header-desktop-large);
-    color: var(--black-font-color);
-    margin-bottom: 15px;
-}
-.page2-header h2 {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: var(--page2-text-desktop-large);
-    font-weight: 400;
-    color: var(--black-font-color);
-    text-shadow: none;
-    max-width: 550px;                                       /* 50% width * 80% * 1367px = 550px */
-    margin: 0 auto 20px;
-}
-        .page2-graphic1 {
-            width: 100%;
-            height: 100%; /* Image sets section height */
-            overflow: hidden; /* Hide excess image */
-        }
-        .page2-graphic1 .page2-image1 {
-            width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: cover;
-            object-position: 0% 50%; /* Align left, keep vertical center */
-            display: block;
-        }
-
-@media screen and (min-width: 1367px) {                                                              /* Large Desktop */
-        .page2-header h1 {
-            font-size: var(--page2-header-desktop-large);
-            margin-bottom: 15px;
-        }
-        .page2-header h2 {
-            font-size: var(--page2-text-desktop-large);
-            max-width: 550px;                                       /* 50% width * 80% * 1367px = 550px */
-            margin: 0 auto 20px;
-        }
-}
-
-@media screen and (min-width: 1281px) 
-              and (max-width: 1366px) {                                                              /* Desktop */
-        .page2-header {
-            top: 140px; /* Keep generous top margin */
-            left: 0;
-            width: 50%; /* Left column (column1) */
-            padding: 1rem;
-        }
-        .page2-header h1 {
-            font-size: var(--page2-header-desktop);
-            margin-bottom: 15px;
-        }
-        .page2-header h2 {
-            font-size: var(--page2-text-desktop);
-            max-width: 550px;                               /* 50% width * 86% * 1281px = 550px */
-            margin: 0 auto 20px;
-        }
-    .page2-graphic1 {
-        width: 100%;
-        height: 100%; /* Image sets section height */
-        overflow: hidden; /* Hide excess image */
-    }
-    .page2-graphic1 .page2-image1 {
-        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover;
-        object-position: 0% 50%; /* Align left, keep vertical center */
-        display: block;
-    }
-}
-
-@media screen and (min-width: 768px) 
-              and (max-width: 1280px) {                                                              /* Tablet */
-        .page2-header {
-            top: 60px; /* Keep generous top margin */
-            left: 0;
-            width: 50%; /* Left column (column1) */
-            padding: 1rem;
-        }
-        .page2-header h1 {
-            font-size: var(--page2-header-tablet);
-            margin-bottom: 15px;
-        }
-        .page2-header h2 {
-            font-size: var(--page2-text-tablet);
-            font-weight: 300;
-            max-width: 80%; /* Restrict text width within column */
-            margin: 0 auto 20px;
-        }
-    .page2-graphic1 {
-        width: 100%;
-        height: 100%; /* Image sets section height */
-        overflow: hidden; /* Hide excess image */
-    }
-    .page2-graphic1 .page2-image1 {
-        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover;
-        object-position: 0% 50%; /* Align left, keep vertical center */
-        display: block;
-    }
-}
-
-@media screen and (min-width: 321px) 
-              and (max-width: 767px) {                                                               /* Mobile styles */
-        .section_page2 {
-            flex-direction: column; /* Stack text and image vertically */
-        }
-        .page2-header {
-            margin-top: 32px; /* Reduced top margin for mobile */
-            padding: 1rem;
-            flex-shrink: 0; /* Prevent header from shrinking */
-        }
-        .page2-header h1 {
-            font-size: var(--page2-header-mobile);
-            margin-bottom: 10px;
-        }
-        .page2-header h2 {
-            font-size: var(--page2-text-mobile);
-            font-weight: 300;
-            max-width: 90%;
-            margin: 0 auto 15px;
-        }
-    .page2-graphic1 {
-        width: 100%;
-        height: auto; /* Let image height dictate container */
-        overflow-x: hidden; /* Hide horizontal overflow only */
-        overflow-y: visible; /* Allow vertical overflow to show full image */
-    }
-    .page2-graphic1 .page2-image1 {
-        width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure full image is visible without cropping */
-        object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
-        margin-left: -40%; /* Shift image left to show more of the left side */
-        display: block;
-    }
-}
-
-@media screen and (max-width: 380px) {                                                               /* Small mobile */
-        .section_page2 {
-            flex-direction: column; /* Stack text and image vertically */
-        }
-        .page2-header {
-            margin-top: 32px; /* Reduced top margin for mobile */
-            padding: 1rem;
-            flex-shrink: 0; /* Prevent header from shrinking */
-        }
-        .page2-header h1 {
-            font-size: var(--page2-header-small-mobile);
-            margin-bottom: 10px;
-        }
-        .page2-header h2 {
-            font-size: var(--page2-text-small-mobile);
-            font-weight: 300;
-            max-width: 90%;
-            margin: 0 auto 15px;
-        }
-    .page2-graphic1 {
-        width: 100%;
-        height: auto; /* Let image height dictate container */
-        overflow-x: hidden; /* Hide horizontal overflow only */
-        overflow-y: visible; /* Allow vertical overflow to show full image */
-    }
-    .page2-graphic1 .page2-image1 {
-        width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure full image is visible without cropping */
-        object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
-        margin-left: -40%; /* Shift image left to show more of the left side */
-        display: block;
-    }
-}
-
-
-
-
-
-
 
 /* - - - - - - PAGE_3 SECTION - - - - - - */
 .section_page3 {
@@ -1011,7 +827,50 @@ body {
         left: 50%;
     }
     
-    
+    .section_page2 {
+        height: auto;                                    /* Let image dictate height */
+        position: relative;                              /* For absolute positioning of text */
+        overflow: hidden;                                /* Hide overflowing image */
+        padding: 0;
+    }
+    .page2-header {
+        position: absolute;                              /* Position text over image */
+        top: 160px;                                      /* Keep generous top margin */
+        left: 0;
+        width: 50%;                                      /* Left column (column1) */
+        text-align: center;                              /* Center text in column1 */
+        padding: 1rem;
+        z-index: 2;                                      /* Above image */
+    }
+    .page2-header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: var(--page2-header-desktop-large);
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    .page2-header h2 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: var(--page2-text-desktop-large);
+        font-weight: 400;
+        color: #000000;
+        text-shadow: none;
+        /* max-width: 80% */
+        max-width: 550px;                               /* 50% width * 80% * 1367px = 550px */
+        margin: 0 auto 20px;
+    }
+    .page2-graphic1 {
+        width: 100%;
+        height: 100%; /* Image sets section height */
+        overflow: hidden; /* Hide excess image */
+    }
+    .page2-graphic1 .page2-image1 {
+        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+        object-position: 0% 50%; /* Align left, keep vertical center */
+        display: block;
+    }
     .section_page3 {
         position: relative; /* For absolute positioning of content */
         height: auto; /* Image dictates height */
@@ -1100,7 +959,49 @@ body {
         left: calc(50% - 130px);
     }
     
-    
+    .section_page2 {
+        height: auto; /* Let image dictate height */
+        position: relative; /* For absolute positioning of text */
+        overflow: hidden; /* Hide overflowing image */
+    }
+    .page2-header {
+        position: absolute; /* Position text over image */
+        top: 140px; /* Keep generous top margin */
+        left: 0;
+        width: 50%; /* Left column (column1) */
+        text-align: center; /* Center text in column1 */
+        padding: 1rem;
+        z-index: 2; /* Above image */
+    }
+    .page2-header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: var(--page2-header-desktop);
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    .page2-header h2 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: var(--page2-text-desktop);
+        font-weight: 400;
+        color: #000000;
+        text-shadow: none;
+        /* max-width: 80% */
+        max-width: 550px;                               /* 50% width * 86% * 1281px = 550px */
+        margin: 0 auto 20px;
+    }
+    .page2-graphic1 {
+        width: 100%;
+        height: 100%; /* Image sets section height */
+        overflow: hidden; /* Hide excess image */
+    }
+    .page2-graphic1 .page2-image1 {
+        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+        object-position: 0% 50%; /* Align left, keep vertical center */
+        display: block;
+    }
     .section_page3 {
         position: relative; /* For absolute positioning of content */
         height: auto; /* Image dictates height */
@@ -1224,7 +1125,48 @@ body {
         font-size: 0.8rem;                                    /* 10% reduction from desktop */
     }
     
-    
+    .section_page2 {
+        height: auto; /* Let image dictate height */
+        position: relative; /* For absolute positioning of text */
+        overflow: hidden; /* Hide overflowing image */
+    }
+    .page2-header {
+        position: absolute; /* Position text over image */
+        top: 60px; /* Keep generous top margin */
+        left: 0;
+        width: 50%; /* Left column (column1) */
+        text-align: center; /* Center text in column1 */
+        padding: 1rem;
+        z-index: 2; /* Above image */
+    }
+    .page2-header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: var(--page2-header-tablet);
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    .page2-header h2 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: var(--page2-text-tablet);
+        font-weight: 300;
+        color: #000000;
+        text-shadow: none;
+        max-width: 80%; /* Restrict text width within column */
+        margin: 0 auto 20px;
+    }
+    .page2-graphic1 {
+        width: 100%;
+        height: 100%; /* Image sets section height */
+        overflow: hidden; /* Hide excess image */
+    }
+    .page2-graphic1 .page2-image1 {
+        width: 166.67%; /* Show only 60% of image (100/0.6 = 166.67%) */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+        object-position: 0% 50%; /* Align left, keep vertical center */
+        display: block;
+    }
     .section_page3 {
         position: relative; /* For absolute positioning of content */
         height: auto; /* Image dictates height */
@@ -1358,7 +1300,47 @@ body {
         display: none;                                        /* Hide buttons on mobile */
     }
     
-    
+    .section_page2 {
+        height: auto; /* Height driven by text + image */
+        flex-direction: column; /* Stack text and image vertically */
+    }
+    .page2-header {
+        text-align: center;
+        margin-top: 32px; /* Reduced top margin for mobile */
+        padding: 1rem;
+        flex-shrink: 0; /* Prevent header from shrinking */
+    }
+    .page2-header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: var(--page2-header-mobile);
+        color: #000000;
+        margin-bottom: 10px;
+    }
+    .page2-header h2 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: var(--page2-text-mobile);
+        font-weight: 300;
+        color: #000000;
+        text-shadow: none;
+        max-width: 90%;
+        margin: 0 auto 15px;
+        text-shadow: none;
+    }
+    .page2-graphic1 {
+        width: 100%;
+        height: auto; /* Let image height dictate container */
+        overflow-x: hidden; /* Hide horizontal overflow only */
+        overflow-y: visible; /* Allow vertical overflow to show full image */
+    }
+    .page2-graphic1 .page2-image1 {
+        width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure full image is visible without cropping */
+        object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
+        margin-left: -40%; /* Shift image left to show more of the left side */
+        display: block;
+    }
     .section_page3 {
         display: flex;
         flex-direction: column; /* Stack text above image */
@@ -1619,7 +1601,46 @@ body {
         display: none;                                        /* Hide buttons on mobile */
     }
     
-    
+    .section_page2 {
+        height: auto; /* Height driven by text + image */
+        flex-direction: column; /* Stack text and image vertically */
+    }
+    .page2-header {
+        text-align: center;
+        margin-top: 32px; /* Reduced top margin for mobile */
+        padding: 1rem;
+        flex-shrink: 0; /* Prevent header from shrinking */
+    }
+    .page2-header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: var(--page2-header-small-mobile);
+        color: #000000;
+        margin-bottom: 10px;
+    }
+    .page2-header h2 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: var(--page2-text-small-mobile);
+        font-weight: 300;
+        color: #000000;
+        text-shadow: none;
+        max-width: 90%;
+        margin: 0 auto 15px;
+    }
+    .page2-graphic1 {
+        width: 100%;
+        height: auto; /* Let image height dictate container */
+        overflow-x: hidden; /* Hide horizontal overflow only */
+        overflow-y: visible; /* Allow vertical overflow to show full image */
+    }
+    .page2-graphic1 .page2-image1 {
+        width: 250%; /* Show 60% of 150% scaled image (100/0.6 * 1.5 = 250%) */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure full image is visible without cropping */
+        object-position: 0% 0%; /* Align to top-left for maximum left-side focus */
+        margin-left: -40%; /* Shift image left to show more of the left side */
+        display: block;
+    }
     .section_page3 {
         display: flex;
         flex-direction: column; /* Stack text above image */
