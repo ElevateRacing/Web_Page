@@ -31,6 +31,8 @@ body {
     --nav-button-color: #000000;
     --button-hover:#f3f3f3;
     --button-focus:#ff7f33;
+    --button-orange:#ff6200;
+    --button-orange-hover:#e55a00;
     --white-font-color:#ffffff;
     --black-font-color:#000000;
     --main-background-color: #f0f0f0;
@@ -73,13 +75,11 @@ body {
     --page3-header-tablet: clamp(18px, 12px + 0.78125vw, 22px);
     --page3-header-mobile: 20px;
     --page3-header-small-mobile: 18px;
-    
     --page3-bold-desktop-large: 38px;
     --page3-bold-desktop: 38px;
     --page3-bold-tablet: clamp(22px, 10px + 1.5625vw, 30px);
     --page3-bold-mobile: 26px;
     --page3-bold-small-mobile: 22px;
-    
     --page3-bottom-desktop-large: 18px;
     --page3-bottom-desktop: 18px;
     --page3-bottom-tablet: clamp(13px, 10px + 0.390625vw, 15px);
@@ -91,21 +91,25 @@ body {
     --content-header-tablet: clamp(2rem, 4vw, 3rem);
     --content-header-mobile: 32px;
     --content-header-small-mobile: 26px;
+    
     --content-header2-desktop-large: 24px;
     --content-header2-desktop: 22px;
     --content-header2-tablet: clamp(0.875rem, 1.2vw, 1rem);
     --content-header2-mobile: 16px;
     --content-header2-small-mobile: 16px;
+    
     --content-title-desktop-large: 30px;
     --content-title-desktop: 30px;
     --content-title-tablet: 26px;
     --content-title-mobile: 26px;
     --content-title-small-mobile: 24px;
+    
     --content-textL-desktop-large: 22px;
     --content-textL-desktop: 22px;
     --content-textL-tablet: 20px;
     --content-textL-mobile: 20px;
     --content-textL-small-mobile: 16px;
+    
     --content-textS-desktop-large: 20px;
     --content-textS-desktop: 20px;
     --content-textS-tablet: 20px;
@@ -961,16 +965,16 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    touch-action: pan-y; /* Allows vertical scrolling on touch */
-    display: flex;               /* Use flexbox for content layout */
-    flex-direction: column;      /* Stack content vertically */
-    justify-content: center;     /* Center content vertically */
-    align-items: center;         /* Center content horizontally */
-    text-align: center;          /* Center text content */
-    padding: 20px;               /* Add inner spacing */
-    box-sizing: border-box;      /* Include padding in size calculations */
+    touch-action: pan-y;                                /* Allows vertical scrolling on touch */
+    display: flex;                                      /* Use flexbox for content layout */
+    flex-direction: column;                             /* Stack content vertically */
+    justify-content: center;                            /* Center content vertically */
+    align-items: center;                                /* Center content horizontally */
+    text-align: center;                                 /* Center text content */
+    padding: 20px;                                      /* Add inner spacing */
+    box-sizing: border-box;                             /* Include padding in size calculations */
     min-height: 100vh;                                  /* Allow content to dictate height, with minimum full viewport */
-    background-color: #d0d0d0;                          /* Darker gray background */
+    background-color: var(--main-background-color);
 }
 .layer {
     position: absolute;
@@ -1006,11 +1010,11 @@ body {
     position: absolute;
     top: 20px;
     padding: 20px;
-    color: white;
+    color: var(--white-font-color);
     max-width: 400px;
     z-index: 2;
     background: rgba(150, 150, 150, 0.5);
-    border-radius: 8px; /* Optional: adds rounded corners for a smoother look */
+    border-radius: 8px;                         /* Optional: adds rounded corners for a smoother look */
 }
 .layer.rent .page5-text {
     right: 20px;
@@ -1025,33 +1029,29 @@ body {
     font-weight: 700;
     font-size: var(--content-title-desktop-large);
     margin: 0 0 10px;
-    font-size: 2rem;
 }
 .page5-text p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 400;
     font-size: var(--content-textS-desktop-large);
-    /* color: #000000; */
     text-shadow: none;
-    /* max-width: 80% */
-    max-width: 550px;               /* 50% width * 80% * 1367px = 550px */
-    margin: 0 0 30px; /* Increased margin to add space before button */
-    font-size: 1rem;
+    max-width: 550px;
+    margin: 0 0 30px;
 }
 .page5-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff6200;
-    color: white;
+    background-color: var(--button-orange);
+    color: var(--white-font-color);
     text-decoration: none;
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: var(--content-textS-desktop-large);
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 .page5-button:hover {
-    background-color: #e55a00;
+    background-color: var(--button-orange-hover);
 }
 .handle {
     position: absolute;
@@ -1066,6 +1066,125 @@ body {
     z-index: 4;
     user-select: none;
     touch-action: none;
+}
+
+@media screen and (min-width: 1367px) {                                                              /* Large Desktop */
+        .layer.rent .page5-text {
+                right: 20px;
+                text-align: right;
+        }
+        .layer.buy .page5-text {
+                left: 20px;
+                text-align: left;
+        }
+        .page5-text h1 {
+                font-size: var(--content-title-desktop-large);
+                margin: 0 0 10px;
+        }
+        .page5-text p {
+                font-size: var(--content-textS-desktop-large);
+                max-width: 550px;
+                margin: 0 0 30px;
+        }
+        .page5-button {
+                font-size: var(--content-textS-desktop-large);
+        }
+}
+
+@media screen and (min-width: 1281px) 
+              and (max-width: 1366px) {                                                              /* Desktop */
+        .layer.rent .page5-text {
+                right: 20px;
+                text-align: right;
+        }
+        .layer.buy .page5-text {
+                left: 20px;
+                text-align: left;
+        }
+        .page5-text h1 {
+                font-size: var(--content-title-desktop);
+                margin: 0 0 10px;
+        }
+        .page5-text p {
+                font-size: var(--content-textS-desktop);
+                max-width: 550px;
+                margin: 0 0 30px;
+        }
+        .page5-button {
+                font-size: var(--content-textS-desktop);
+        }
+}
+
+@media screen and (min-width: 768px) 
+              and (max-width: 1280px) {                                                              /* Tablet */
+        .layer.rent .page5-text {
+                right: 20px;
+                text-align: right;
+        }
+        .layer.buy .page5-text {
+                left: 20px;
+                text-align: left;
+        }
+        .page5-text h1 {
+                font-size: var(--content-title-tablet);
+                margin: 0 0 10px;
+        }
+        .page5-text p {
+                font-size: var(--content-textS-tablet);
+                max-width: 550px;
+                margin: 0 0 30px;
+        }
+        .page5-button {
+                font-size: var(--content-textS-tablet);
+        }
+}
+
+@media screen and (min-width: 321px) 
+              and (max-width: 767px) {                                                               /* Mobile styles */
+        .page5-text {
+                border-radius: 8px;
+                max-width: 80%;
+        }
+        .page5-text h1 {
+                font-size: var(--content-title-mobile);
+                margin: 0 0 10px;
+        }
+        .page5-text p {
+                font-size: var(--content-textS-mobile);
+                max-width: 550px;
+                margin: 0 0 30px;
+        }
+        .page5-button {
+                font-size: var(--content-textS-mobile);
+        }
+}
+
+@media screen and (max-width: 380px) {                                                               /* Small mobile */
+        .page5-text {
+                border-radius: 8px;
+                max-width: 80%;
+        }
+        .page5-text h1 {
+                font-size: var(--content-title-small-mobile);
+                margin: 0 0 10px;
+        }
+        .page5-text p {
+                font-size: var(--content-textS-small-mobile);
+                max-width: 550px;
+                margin: 0 0 30px;
+        }
+        .page5-button {
+                font-size: var(--content-textS-small-mobile);
+        }
+        .handle {
+                transform: skewX(5deg);
+        }
+        .layer.rent {
+                clip-path: polygon(calc(50% - 50% * tan(5deg)) 0%, 100% 0%, 100% 100%, calc(50% + 50% * tan(5deg)) 100%);
+        }
+        .layer.buy {
+                clip-path: polygon(0% 0%, calc(50% - 50% * tan(5deg)) 0%, calc(50% + 50% * tan(5deg)) 100%, 0% 100%);
+        }
 }
 
 /* - - - - - - PAGE_6 SECTION - - - - - - */
@@ -1380,9 +1499,6 @@ body {
         left: 50%;
     }
     
-    
-    
-    
     .page6-content h1 {
         font-size: var(--content-title-desktop-large);
     }
@@ -1403,9 +1519,6 @@ body {
     .logo1-container {
         left: calc(50% - 130px);
     }
-    
-    
-    
     
     .page6-content h1 {
         font-size: var(--content-title-desktop);
@@ -1462,9 +1575,6 @@ body {
     .nav-button {
         font-size: 0.8rem;                                    /* 10% reduction from desktop */
     }
-    
-    
-    
     
     .page6-content h1 {
         font-size: var(--content-title-tablet);
@@ -1535,10 +1645,7 @@ body {
     
     
     
-    .page5-text {
-        border-radius: 8px; /* Optional: adds rounded corners for a smoother look */
-        max-width: 80%;
-    }
+    
     .handle {
         transform: skewX(5deg);
     }
@@ -1738,19 +1845,7 @@ body {
     
     
     
-    .page5-text {
-        border-radius: 8px; /* Optional: adds rounded corners for a smoother look */
-        max-width: 80%;
-    }
-    .handle {
-        transform: skewX(5deg);
-    }
-    .layer.rent {
-        clip-path: polygon(calc(50% - 50% * tan(5deg)) 0%, 100% 0%, 100% 100%, calc(50% + 50% * tan(5deg)) 100%);
-    }
-    .layer.buy {
-        clip-path: polygon(0% 0%, calc(50% - 50% * tan(5deg)) 0%, calc(50% + 50% * tan(5deg)) 100%, 0% 100%);
-    }
+    
     .page6-content h1 {
         font-size: var(--content-title-small-mobile);
     }
