@@ -60,12 +60,12 @@ body {
     --page2-header-desktop: 68px;
     --page2-header-tablet: clamp(2rem, 4vw, 3rem);
     --page2-header-mobile: 32px;
-    --page2-header-small-mobile: 16px;
+    --page2-header-small-mobile: 28px;
     --page2-text-desktop-large: 20px;
     --page2-text-desktop: 20px;
-    --page2-text-tablet: clamp(0.875rem, 1.2vw, 1rem);
-    --page2-text-mobile: 16px;
-    --page2-text-small-mobile: 8px;
+    --page2-text-tablet: clamp(1rem, 1.4vw, 1.25rem);
+    --page2-text-mobile: 17px;
+    --page2-text-small-mobile: 15px;
 
     --page3-header-desktop-large: 27px;
     --page3-header-desktop: 26px;
