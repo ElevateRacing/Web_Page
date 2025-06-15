@@ -1147,7 +1147,7 @@ body {
               and (max-width: 767px) {                                                               /* Mobile styles */
         .page5-text {
                 border-radius: 8px;
-                max-width: 80%;
+                max-width: 70%;
         }
         .page5-text h1 {
                 font-size: var(--content-title-mobile);
@@ -1165,7 +1165,7 @@ body {
 @media screen and (max-width: 380px) {                                                               /* Small mobile */
         .page5-text {
                 border-radius: 8px;
-                max-width: 80%;
+                max-width: 70%;
         }
         .page5-text h1 {
                 font-size: var(--content-title-small-mobile);
