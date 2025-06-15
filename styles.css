@@ -111,10 +111,10 @@ body {
     --content-textL-small-mobile: 16px;
     
     --content-textS-desktop-large: 20px;
-    --content-textS-desktop: 20px;
-    --content-textS-tablet: 20px;
-    --content-textS-mobile: 20px;
-    --content-textS-small-mobile: 20px;
+    --content-textS-desktop: 18px;
+    --content-textS-tablet: 16px;
+    --content-textS-mobile: 16px;
+    --content-textS-small-mobile: 14px;
 }
 
 /* Style the navigation bar */
