@@ -1072,12 +1072,12 @@ body {
         .layer.rent .page5-text {
                 right: 20px;
                 text-align: right;
-                max-width: 650px;
+                max-width: 600px;
         }
         .layer.buy .page5-text {
                 left: 20px;
                 text-align: left;
-                max-width: 650px;
+                max-width: 600px;
         }
         .page5-text h1 {
                 font-size: var(--content-title-desktop-large);
