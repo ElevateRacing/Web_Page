@@ -1035,7 +1035,7 @@ body {
     font-weight: 400;
     font-size: var(--content-textS-desktop-large);
     text-shadow: none;
-    max-width: 550px;
+    /*max-width: 550px; */
     margin: 0 0 30px;
 }
 .page5-button {
@@ -1072,10 +1072,12 @@ body {
         .layer.rent .page5-text {
                 right: 20px;
                 text-align: right;
+                max-width: 650px;
         }
         .layer.buy .page5-text {
                 left: 20px;
                 text-align: left;
+                max-width: 650px;
         }
         .page5-text h1 {
                 font-size: var(--content-title-desktop-large);
@@ -1083,7 +1085,7 @@ body {
         }
         .page5-text p {
                 font-size: var(--content-textS-desktop-large);
-                max-width: 550px;
+                /* max-width: 550px; */
                 margin: 0 0 30px;
         }
         .page5-button {
