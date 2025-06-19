@@ -1301,7 +1301,7 @@ body {
     object-fit: contain; /* Show entire video without black bars */
     object-position: 50% 50%; /* Center video */
     z-index: 1; /* Behind header text */
-    margin: 12vw auto 0; /* Center with small top margin */
+    margin: 15vw auto 0; /* Center with small top margin */
     display: block; /* Remove inline gaps */
     border: none; /* Ensure no border */
     padding: 0; /* Remove padding */
@@ -1318,14 +1318,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: var(--content-header-desktop-large);
-    color: #000000;
+    color: var(--black-font-color);
     margin-bottom: 15px;
 }
 .page8-header h2 {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: var(--content-header2-desktop-large);
     font-weight: 400;
-    color: #000000;
+    color: var(--black-font-color);
     text-shadow: none;
     max-width: 550px; /* 50% width * 80% * 1367px = 550px */
     margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
@@ -1371,11 +1371,12 @@ body {
 @media screen and (min-width: 1367px) {                                                              /* Large Desktop */
         .page8-video {
                 width: 70%;
-                margin: 12vw auto 0; /* Center with small top margin */
+                margin: 15vw auto 0; /* Center with small top margin */
         }
         .page8-header {
                 top: 3rem; /* Generous top margin */
                 left: 4rem; /* Generous left margin */
+                max-width: 50%; /* Limit text width */
         }
 }
 
@@ -1383,7 +1384,7 @@ body {
               and (max-width: 1366px) {                                                              /* Desktop */
         .page8-video {
                 width: 70%;
-                margin: 20vw auto 0; /* Center with small top margin */
+                margin: 15vw auto 0; /* Center with small top margin */
         }
         .page8-header {
                 top: 3rem; /* Generous top margin */
