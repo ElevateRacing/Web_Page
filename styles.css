@@ -1192,8 +1192,8 @@ body {
 
 /* - - - - - - PAGE_6 SECTION - - - - - - */
 .section_page6 {
-    background-color: #e0e0e0; /* Light background */
-    color: #000000; /* Black text */
+    background-color: var(--Page4-background-color);
+    color: var(--white-font-color);
     width: 100%;
     display: flex;
     justify-content: center;
