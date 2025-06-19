@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateClipPath = (xPos) => {
         const sectionWidth = section.offsetWidth;
         const sectionHeight = section.offsetHeight;
-        let percentage = (xPos / sectionWidth) * 100;
+        let percentage = Math.max(0, Math.min(100, (xPos / sectionWidth) * 100));
 
         // Apply boundaries based on media query
         if (mediaQueries.largeDesktop.matches || mediaQueries.desktop.matches) {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentPercentage = percentage; // Update current position
         
-        // Calculate skew dynamically
+        // Calculate skew and offset
         const skewAngle = getSkewAngle();
         const tanSkew = Math.tan(skewAngle * Math.PI / 180);
         const offset = (sectionHeight / sectionWidth) * 100 * tanSkew / 2;
@@ -80,16 +80,29 @@ document.addEventListener('DOMContentLoaded', () => {
         rentLayer.style.clipPath = `polygon(${xTop}% 0%, 100% 0%, 100% 100%, ${xBottom}% 100%)`;
         buyLayer.style.clipPath = `polygon(0% 0%, ${xTop}% 0%, ${xBottom}% 100%, 0% 100%)`;
         
-        // Move handle to mouse/touch position
+        // Move handle to match the percentage
         handle.style.left = `${percentage}%`;
     };
 
     // Mouse events: follow mouse without clicking (desktop)
     section.addEventListener('mousemove', (e) => {
-        if (mediaQueries.mobile.matches || mediaQueries.smallMobile.matches) return; // Skip mouse events on mobile
-        const rect = section.getBounding клиент
+        if (isDragging) return; // Prevent mouse movement during touch drag
+        const isMobile = mediaQueries.mobile.matches || mediaQueries.smallMobile.matches;
+        if (isMobile) return; // Skip mouse events on mobile
+        const rect = section.getBoundingClientRect();
         const xPos = e.clientX - rect.left;
         updateClipPath(xPos);
+    });
+
+    // Mouse down to enable dragging on desktop
+    section.addEventListener('mousedown', (e) => {
+        const isMobile = mediaQueries.mobile.matches || mediaQueries.smallMobile.matches;
+        if (isMobile) return; // Skip mouse events on mobile
+        isDragging = true;
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
     });
 
     // Touch events: move handle only when sliding (mobile)
@@ -120,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    document.addEventListener('touchend', () => {
+    section.addEventListener('touchend', () => {
         isDragging = false;
         isHorizontal = false;
     });
@@ -138,9 +151,3 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', handleResizeOrOrientation);
     window.addEventListener('orientationchange', handleResizeOrOrientation);
 });
-
-
-
-            
-            
-   
