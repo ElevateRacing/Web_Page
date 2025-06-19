@@ -1414,10 +1414,10 @@ body {
               and (max-width: 1280px) {                                                              /* Tablet */
         .page8-video {
                 width: 70%;
-                margin: 20vw auto 0; /* Center with small top margin */
+                margin: 22vw auto 0; /* Center with small top margin */
         }
         .page8-header {
-                top: 5rem; /* Generous top margin */
+                top: 3rem; /* Generous top margin */
                 left: 4rem; /* Generous left margin */
         }
         .page8-header h1 {
@@ -1426,7 +1426,7 @@ body {
         }
         .page8-header h2 {
                 font-size: var(--content-header2-tablet);
-                max-width: 550px; /* 50% width * 80% * 1367px = 550px */
+                max-width: 500px;
                 margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
         }
 }
