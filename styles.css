@@ -1282,39 +1282,7 @@ body {
     object-fit: cover;
 }
 
-@media screen and (min-width: 1367px) {                                                              /* Large Desktop */
-}
 
-@media screen and (min-width: 1281px) 
-              and (max-width: 1366px) {                                                              /* Desktop */
-}
-
-@media screen and (min-width: 768px) 
-              and (max-width: 1280px) {                                                              /* Tablet */
-}
-
-@media screen and (min-width: 321px) 
-              and (max-width: 767px) {                                                               /* Mobile styles */
-        .section_page7 img {
-                width: 100%;
-                height: auto; /* Maintain aspect ratio for taller appearance */
-                object-fit: cover; /* Ensure image fills container, cropping sides */
-                object-position: 50% 50%; /* Center horizontally to crop 20% from both sides */
-                display: block;
-                margin: 0 auto; /* Center the image within the container */
-        }
-}
-
-@media screen and (max-width: 380px) {                                                               /* Small mobile */
-        .section_page7 img {
-                width: 100%;
-                height: auto; /* Maintain aspect ratio for taller appearance */
-                object-fit: cover; /* Ensure image fills container, cropping sides */
-                object-position: 50% 50%; /* Center horizontally to crop 20% from both sides */
-                display: block;
-                margin: 0 auto; /* Center the image within the container */
-        }
-}
 
 /* - - - - - - PAGE_8 SECTION - - - - - - */
 .section_page8 {
