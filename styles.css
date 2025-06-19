@@ -39,6 +39,7 @@ body {
     --Page2-background-color:#e0e0e0;
     --Page3-background-color:#DFDFDF;
     --Page4-background-color:#1a1a1a;
+    --Spec-background-color:#E6E6E6;
 
 /* Hero text margins for easy adjustment */
     --hero-text-margin-left-desktop: 3rem;           /* Desktop left margin for hero text */
@@ -1282,15 +1283,13 @@ body {
     object-fit: cover;
 }
 
-
-
 /* - - - - - - PAGE_8 SECTION - - - - - - */
 .section_page8 {
     position: relative; /* For absolute positioning of header and video */
     min-height: 100vh; /* Ensure full viewport height */
     display: flex; /* Flexbox for layout */
     flex-direction: column; /* Stack video and bottom content vertically */
-    background-color: #E6E6E6; /* Match existing page2 background */
+    background-color: var(--Spec-background-color);
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden; /* Prevent horizontal overflow */
@@ -1309,7 +1308,7 @@ body {
 }
 .page8-header {
     position: absolute; /* Position over video */
-    top: 5rem; /* Generous top margin */
+    top: 4rem; /* Generous top margin */
     left: 4rem; /* Generous left margin */
     text-align: left; /* Left-aligned text */
     z-index: 2; /* Above video */
@@ -1368,6 +1367,141 @@ body {
     font-size: var(--content-textL-desktop-large);
     margin-bottom: 1rem;
 }
+
+@media screen and (min-width: 1367px) {                                                              /* Large Desktop */
+        .page8-video {
+                width: 70%;
+                margin: 12vw auto 0; /* Center with small top margin */
+        }
+        .page8-header {
+                top: 4rem; /* Generous top margin */
+                left: 4rem; /* Generous left margin */
+        }
+}
+
+@media screen and (min-width: 1281px) 
+              and (max-width: 1366px) {                                                              /* Desktop */
+        .page8-video {
+                width: 70%;
+                margin: 20vw auto 0; /* Center with small top margin */
+        }
+        .page8-header {
+                top: 5rem; /* Generous top margin */
+                left: 4rem; /* Generous left margin */
+        }
+        .page8-header h1 {
+                font-size: var(--content-header-desktop);
+                margin-bottom: 15px;
+        }
+        .page8-header h2 {
+                font-size: var(--content-header2-desktop);
+                max-width: 550px; /* 50% width * 80% * 1367px = 550px */
+                margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
+        }
+}
+
+@media screen and (min-width: 768px) 
+              and (max-width: 1280px) {                                                              /* Tablet */
+        .page8-video {
+                width: 70%;
+                margin: 20vw auto 0; /* Center with small top margin */
+        }
+        .page8-header {
+                top: 5rem; /* Generous top margin */
+                left: 4rem; /* Generous left margin */
+        }
+        .page8-header h1 {
+                font-size: var(--content-header-tablet);
+                margin-bottom: 15px;
+        }
+        .page8-header h2 {
+                font-size: var(--content-header2-tablet);
+                max-width: 550px; /* 50% width * 80% * 1367px = 550px */
+                margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
+        }
+}
+
+@media screen and (min-width: 321px) 
+              and (max-width: 767px) {                                                               /* Mobile styles */
+        .section_page8 {
+                width: 100%; /* Full width */
+                margin: 0; /* Remove centering margin */
+                flex-direction: column; /* Stack vertically */
+        }
+        .page8-header {
+                position: relative; /* Natural flow */
+                top: 0;
+                left: 0;
+                text-align: center; /* Centered text */
+                max-width: 100%; /* Full width */
+                padding: 1rem;
+                order: 1; /* First in layout */
+        }
+        .page8-header h1 {
+                font-size: var(--content-header-mobile);
+        }
+        .page8-header h2 {
+                font-size: var(--content-header2-mobile);
+                margin: 0 0 10px 0;
+                max-width: 90%; /* Restrict width */
+                margin-left: auto;
+                margin-right: auto;
+        }
+        .page8-video {
+                width: 100%; /* Full width */
+                max-width: none; /* No max-width limit */
+                height: auto; /* Let video dictate height */
+                margin: 0; /* No margins */
+                object-fit: contain; /* Show entire video without black bars */
+                order: 2; /* Second in layout */
+        }
+        .page8-content-bottom {
+                flex-direction: column; /* Stack vertically */
+                gap: 1rem; /* Space between elements */
+                padding: 1rem;
+                margin-top: 0; /* No extra margin */
+                width: 100%; /* Full width */
+                order: 3; /* Third in layout */
+        }
+        .page8-bottom-right {
+                text-align: center; /* Centered text */
+                order: 1; /* Text before image */
+                margin-left: 0; /* Remove margin for mobile */
+        }
+        .page8-bottom-left {
+                flex: none; /* Remove fixed width */
+                width: 90%; /* Image 90% width */
+                margin: 0 auto; /* Center image */
+                order: 2; /* Image after text */
+        }
+}
+
+@media screen and (max-width: 380px) {                                                               /* Small mobile */
+        .section_page8 {
+                width: 100%; /* Full width */
+                margin: 0;
+        }
+        .page8-header h1 {
+                font-size: var(--content-header-small-mobile);
+        }
+        .page8-header h2 {
+                font-size: var(--content-header2-small-mobile);
+                max-width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+        }
+        .page8-bottom-right h1 {
+                font-size: var(--content-title-small-mobile);
+        }
+        .page8-bottom-right p {
+            font-size: var(--content-textL-small-mobile);
+        }
+}
+
+
+
+
+
 
 /* - - - - - - PAGE_9 SECTION - - - - - - */
 .section_page9 {
@@ -1552,14 +1686,7 @@ body {
         left: 50%;
     }
     
-    .page8-video {
-        width: 70%;
-        margin: 12vw auto 0; /* Center with small top margin */
-    }
-    .page8-header {
-        top: 5rem; /* Generous top margin */
-        left: 4rem; /* Generous left margin */
-    }
+    
 } 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                       /* Desktop */
@@ -1567,23 +1694,7 @@ body {
         left: calc(50% - 130px);
     }
     
-    .page8-video {
-        width: 70%;
-        margin: 20vw auto 0; /* Center with small top margin */
-    }
-    .page8-header {
-        top: 5rem; /* Generous top margin */
-        left: 4rem; /* Generous left margin */
-    }
-    .page8-header h1 {
-        font-size: var(--content-header-desktop);
-        margin-bottom: 15px;
-    }
-    .page8-header h2 {
-        font-size: var(--content-header2-desktop);
-        max-width: 550px; /* 50% width * 80% * 1367px = 550px */
-        margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
-    }
+    
 }
 @media screen and (min-width: 768px) 
               and (max-width: 1280px) {                       /* Tablet */
@@ -1618,23 +1729,7 @@ body {
     }
     
     
-    .page8-video {
-        width: 70%;
-        margin: 20vw auto 0; /* Center with small top margin */
-    }
-    .page8-header {
-        top: 5rem; /* Generous top margin */
-        left: 4rem; /* Generous left margin */
-    }
-    .page8-header h1 {
-        font-size: var(--content-header-tablet);
-        margin-bottom: 15px;
-    }
-    .page8-header h2 {
-        font-size: var(--content-header2-tablet);
-        max-width: 550px; /* 50% width * 80% * 1367px = 550px */
-        margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
-    }
+    
     .page10-top h1 {
         font-size: var(--content-title-tablet);
     }
@@ -1690,57 +1785,7 @@ body {
     }
     
     
-    .section_page8 {
-        width: 100%; /* Full width */
-        margin: 0; /* Remove centering margin */
-        flex-direction: column; /* Stack vertically */
-    }
-    .page8-header {
-        position: relative; /* Natural flow */
-        top: 0;
-        left: 0;
-        text-align: center; /* Centered text */
-        max-width: 100%; /* Full width */
-        padding: 1rem;
-        order: 1; /* First in layout */
-    }
-    .page8-header h1 {
-        font-size: var(--content-header-mobile);
-    }
-    .page8-header h2 {
-        font-size: var(--content-header2-mobile);
-        margin: 0 0 10px 0;
-        max-width: 90%; /* Restrict width */
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .page8-video {
-        width: 100%; /* Full width */
-        max-width: none; /* No max-width limit */
-        height: auto; /* Let video dictate height */
-        margin: 0; /* No margins */
-        object-fit: contain; /* Show entire video without black bars */
-        order: 2; /* Second in layout */
-    }
-    .page8-content-bottom {
-        flex-direction: column; /* Stack vertically */
-        gap: 1rem; /* Space between elements */
-        padding: 1rem;
-        margin-top: 0; /* No extra margin */
-        width: 100%; /* Full width */
-        order: 3; /* Third in layout */
-    }
-    .page8-bottom-right {
-        text-align: center; /* Centered text */
-        order: 1; /* Text before image */
-        margin-left: 0; /* Remove margin for mobile */
-    }
-    .page8-bottom-left {
-        flex: none; /* Remove fixed width */
-        width: 90%; /* Image 90% width */
-        margin: 0 auto; /* Center image */
-        order: 2; /* Image after text */
-    }
+    
     .section_left {
         position: static; /* Remove absolute positioning for stacking */
         text-align: center;
@@ -1864,29 +1909,7 @@ body {
     }
     
     
-    .section_page8 {
-        width: 100%; /* Full width */
-        margin: 0;
-    }
-
-    .page8-header h1 {
-        font-size: var(--content-header-small-mobile);
-    }
-
-    .page8-header h2 {
-        font-size: var(--content-header2-small-mobile);
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .page8-bottom-right h1 {
-        font-size: var(--content-title-small-mobile);
-    }
-
-    .page8-bottom-right p {
-        font-size: var(--content-textL-small-mobile);
-    }
+    
     .section_left {
         position: static; /* Remove absolute positioning for stacking */
         text-align: center;
