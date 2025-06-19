@@ -38,6 +38,7 @@ body {
     --main-background-color: #f0f0f0;
     --Page2-background-color:#e0e0e0;
     --Page3-background-color:#DFDFDF;
+    --Page4-background-color:#1a1a1a;
 
 /* Hero text margins for easy adjustment */
     --hero-text-margin-left-desktop: 3rem;           /* Desktop left margin for hero text */
@@ -886,8 +887,8 @@ body {
 
 /* - - - - - - PAGE_4 SECTION - - - - - - */
 .section_page4 {
-    background-color: #1a1a1a; /* Very dark background */
-    color: #ffffff; /* White text */
+    background-color: var(--Page4-background-color); /* Very dark background */
+    color: var(--white-font-color); /* White text */
     width: 100%;
     display: flex;
     justify-content: center;
