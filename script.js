@@ -47,10 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
         smallMobile: window.matchMedia("(max-width: 380px)")
     };
 
-    // Determine skew angle based on device
-    const isMobile = mediaQueries.mobile.matches || mediaQueries.smallMobile.matches;
-    const skewAngle = isMobile ? 5 : 30; // 5deg for mobile, 30deg for desktop
-    const tanSkew = Math.tan(skewAngle * Math.PI / 180); // tan(5deg) ≈ 0.087, tan(30deg) ≈ 0.577
+    // Function to get skew angle based on device
+    const getSkewAngle = () => {
+        const isMobile = mediaQueries.mobile.matches || mediaQueries.smallMobile.matches;
+        return isMobile ? 5 : 30; // 5deg for mobile, 30deg for desktop
+    };
 
     const updateClipPath = (xPos) => {
         const sectionWidth = section.offsetWidth;
@@ -59,19 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Apply boundaries based on media query
         if (mediaQueries.largeDesktop.matches || mediaQueries.desktop.matches) {
-            // Desktops: 30% from left, 20% from right (30% to 80%)
             percentage = Math.max(30, Math.min(80, percentage));
         } else if (mediaQueries.tablet.matches) {
-            // Tablet: 30% from each edge (30% to 80%)
             percentage = Math.max(30, Math.min(80, percentage));
         } else if (mediaQueries.mobile.matches || mediaQueries.smallMobile.matches) {
-            // Mobile: 10% from each edge (10% to 90%)
             percentage = Math.max(10, Math.min(90, percentage));
         }
 
         currentPercentage = percentage; // Update current position
         
-        // Calculate x-offset for skew, adjusted for aspect ratio
+        // Calculate skew dynamically
+        const skewAngle = getSkewAngle();
+        const tanSkew = Math.tan(skewAngle * Math.PI / 180);
         const offset = (sectionHeight / sectionWidth) * 100 * tanSkew / 2;
         const xTop = percentage - offset;
         const xBottom = percentage + offset;
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mouse events: follow mouse without clicking (desktop)
     section.addEventListener('mousemove', (e) => {
         if (mediaQueries.mobile.matches || mediaQueries.smallMobile.matches) return; // Skip mouse events on mobile
-        const rect = section.getBoundingClientRect();
+        const rect = section.getBounding клиент
         const xPos = e.clientX - rect.left;
         updateClipPath(xPos);
     });
@@ -118,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const xPos = currentX - rect.left;
             updateClipPath(xPos);
         }
-        // Vertical movement allows default scrolling (no e.preventDefault)
     });
 
     document.addEventListener('touchend', () => {
@@ -126,14 +125,18 @@ document.addEventListener('DOMContentLoaded', () => {
         isHorizontal = false;
     });
 
+    // Handle resize and orientation change
+    const handleResizeOrOrientation = () => {
+        const newXPos = (currentPercentage / 100) * section.offsetWidth;
+        updateClipPath(newXPos);
+    };
+
     // Initialize clip path at center
     updateClipPath(section.offsetWidth / 2);
 
-    // Update on window resize
-    window.addEventListener('resize', () => {
-        const newXPos = (currentPercentage / 100) * section.offsetWidth;
-        updateClipPath(newXPos);
-    });
+    // Add event listeners for resize and orientation change
+    window.addEventListener('resize', handleResizeOrOrientation);
+    window.addEventListener('orientationchange', handleResizeOrOrientation);
 });
 
 
