@@ -1308,7 +1308,7 @@ body {
 }
 .page8-header {
     position: absolute; /* Position over video */
-    top: 4rem; /* Generous top margin */
+    top: 3rem; /* Generous top margin */
     left: 4rem; /* Generous left margin */
     text-align: left; /* Left-aligned text */
     z-index: 2; /* Above video */
@@ -1374,7 +1374,7 @@ body {
                 margin: 12vw auto 0; /* Center with small top margin */
         }
         .page8-header {
-                top: 4rem; /* Generous top margin */
+                top: 3rem; /* Generous top margin */
                 left: 4rem; /* Generous left margin */
         }
 }
@@ -1386,7 +1386,7 @@ body {
                 margin: 20vw auto 0; /* Center with small top margin */
         }
         .page8-header {
-                top: 5rem; /* Generous top margin */
+                top: 3rem; /* Generous top margin */
                 left: 4rem; /* Generous left margin */
         }
         .page8-header h1 {
