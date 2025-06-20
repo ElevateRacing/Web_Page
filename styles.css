@@ -2207,12 +2207,20 @@ body {
     /* height: 100vh; /* Full viewport height */
     width: 100vw;
     position: relative;
+    overflow: hidden; /* Hide overflow for wide image */
+    
     display: flex;
     align-items: center; /* Vertically center content */
-    overflow: hidden; /* Hide overflow for wide image */
-    background-size: cover; /* Ensure image covers the section */
+    
+    /* background-size: cover; /* Ensure image covers the section */
     /* background-position: calc(100% - 30%) center; /* Shift image right, hiding 10% beyond right edge */
     background-image: url('Images/page12-duct_arrows.png'); /* Background image */
+
+    height: auto;
+    background-size: contain; /* Ensure full image is visible */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    
 }
 .image12_duct {
     display: none; /* Hide the img tag since background is used */
@@ -2235,9 +2243,13 @@ body {
 
 @media screen and (min-width: 1367px) {                                                              /* Large Desktop */
         .section_page12 {
-                /* height: 100vh; /* Full viewport height */
-                width: 100vw;
-                /* background-position: calc(100% - 30%) center; /* Shift image right, hiding 10% beyond right edge */
+                height: auto; /* Let height be determined by image */
+        background-image: url('Images/page12-duct_arrows.png');
+        background-size: contain; /* Ensure full image is visible */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center; /* Vertically center text */
         }
         .image12_duct {
                 display: none; /* Hide the img tag since background is used */
