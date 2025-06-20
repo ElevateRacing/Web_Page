@@ -1962,7 +1962,7 @@ body {
 
 /* - - - - - - PAGE_11 SECTION - - - - - - */
 .section_page11 {
-    background-color: #E6E6E6;
+    background-color: var(--Spec-background-color);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1993,6 +1993,125 @@ body {
     font-size: var(--content-textL-desktop-large);
     text-align: left; /* Left-justified text */
     margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1367px) {                                                              /* Large Desktop */
+        .image11_mono {
+                width: 60%;
+        }
+        .page11-text {
+                width: 40%;
+                padding: 0 5%;
+        }
+        .page11-text h1 {
+                font-size: var(--content-title-desktop-large);
+                margin-bottom: 15px;
+        }
+        .page11-text p {
+                font-size: var(--content-textL-desktop-large);
+                margin-bottom: 30px;
+        }
+}
+
+@media screen and (min-width: 1281px) 
+              and (max-width: 1366px) {                                                              /* Desktop */
+        .image11_mono {
+                width: 60%;
+        }
+        .page11-text {
+                width: 40%;
+                padding: 0 5%;
+        }
+        .page11-text h1 {
+                font-size: var(--content-title-desktop);
+                margin-bottom: 15px;
+        }
+        .page11-text p {
+                font-size: var(--content-textL-desktop);
+                margin-bottom: 30px;
+        }
+}
+
+@media screen and (min-width: 768px) 
+              and (max-width: 1280px) {                                                              /* Tablet */
+        .image11_mono {
+                width: 60%;
+        }
+        .page11-text {
+                width: 40%;
+                padding: 0 5%;
+        }
+        .page11-text h1 {
+                font-size: var(--content-title-tablet);
+                margin-bottom: 15px;
+        }
+        .page11-text p {
+                font-size: var(--content-textL-tablet);
+                margin-bottom: 30px;
+        }
+}
+
+@media screen and (min-width: 321px) 
+              and (max-width: 767px) {                                                               /* Mobile styles */
+        .section_page11 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: fit-content;
+                width: 100%;
+                padding: 2rem 0;
+        }
+        .page11-text {
+                width: 90%;
+                text-align: center;
+                margin-bottom: 1.5rem;
+                margin-top: 1rem;
+        }
+        .page11-text h1 {
+                font-size: var(--content-title-mobile);
+                margin-bottom: 1rem;
+        }
+        .page11-text p {
+                font-size: var(--content-textS-mobile);
+                line-height: 1.5;
+                text-align: center;
+        }
+        .image11_mono {
+                width: 90%;
+                height: auto;
+                object-fit: cover;
+        }
+}
+
+@media screen and (max-width: 380px) {                                                               /* Small mobile */
+        .section_page11 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: fit-content;
+                width: 100%;
+                padding: 2rem 0;
+        }
+        .page11-text {
+                width: 90%;
+                text-align: center;
+                margin-bottom: 1.5rem;
+                margin-top: 1rem;
+        }
+        .page11-text h1 {
+                font-size: var(--content-title-small-mobile);
+                margin-bottom: 1rem;
+        }
+        .page11-text p {
+                font-size: var(--content-textS-small-mobile);
+                line-height: 1.5;
+                text-align: center;
+        }
+        .image11_mono {
+                width: 90%;
+                height: auto;
+                object-fit: cover;
+        }
 }
 
 /* - - - - - - PAGE_12 SECTION - - - - - - */
@@ -2131,42 +2250,6 @@ body {
         clip-path: polygon(0% 0%, calc(50% - 50% * tan(5deg)) 0%, calc(50% + 50% * tan(5deg)) 100%, 0% 100%);
     }
     
-    
-    
-    
-    
-    .section_page11 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: fit-content;
-        width: 100%;
-        padding: 2rem 0;
-    }
-
-    .page11-text {
-        width: 90%;
-        text-align: center;
-        margin-bottom: 1.5rem;
-        margin-top: 1rem;
-    }
-
-    .page11-text h1 {
-        font-size: var(--content-title-mobile);
-        margin-bottom: 1rem;
-    }
-
-    .page11-text p {
-        font-size: var(--content-textL-mobile);
-        line-height: 1.5;
-        text-align: center;
-    }
-
-    .image11_mono {
-        width: 90%;
-        height: auto;
-        object-fit: cover;
-    }
     .section_page12 {
         height: 100vh; /* Full viewport height */
         background-position: calc(100% - 40%) center; /* Shift image right, hiding 30% beyond right edge */
@@ -2215,38 +2298,6 @@ body {
         display: none;                                        /* Hide buttons on mobile */
     }
     
-    
-    
-    
-    
-    .section_page11 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: fit-content;
-        width: 100%;
-        padding: 2rem 0;
-    }
-    .page11-text {
-        width: 90%;
-        text-align: center;
-        margin-bottom: 1.5rem;
-        margin-top: 1rem;
-    }
-    .page11-text h1 {
-        font-size: var(--content-title-small-mobile);
-        margin-bottom: 1rem;
-    }
-    .page11-text p {
-        font-size: var(--content-textL-small-mobile);
-        line-height: 1.5;
-        text-align: center;
-    }
-    .image11_mono {
-        width: 90%;
-        height: auto;
-        object-fit: cover;
-    }
     .section_page12 {
         height: 100vh; /* Full viewport height */
         background-position: calc(100% - 40%) center; /* Shift image right, hiding 30% beyond right edge */
