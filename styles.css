@@ -2210,7 +2210,7 @@ body {
 }
 .page12-text-wrapper {
     position: absolute;
-    max-width: 600px; /* Limit text width for readability */
+    max-width: 40%; /* Limit text width for readability */
     margin-left: 5rem; /* Generous left margin */
     text-align: left;
 }
@@ -2239,7 +2239,7 @@ body {
         }
         .page12-text-wrapper {
                 position: absolute;
-                max-width: 50%; /* Limit text width for readability */
+                max-width: 40%; /* Limit text width for readability */
                 margin-left: 5rem; /* Generous left margin */
         }
         .page12-text-wrapper h1 {
@@ -2266,7 +2266,7 @@ body {
         }
         .page12-text-wrapper {
                 position: absolute;
-                max-width: 50%; /* Limit text width for readability */
+                max-width: 40%; /* Limit text width for readability */
                 margin-left: 5rem; /* Generous left margin */
         }
         .page12-text-wrapper h1 {
@@ -2293,7 +2293,7 @@ body {
         }
         .page12-text-wrapper {
                 position: absolute;
-                max-width: 50%; /* Limit text width for readability */
+                max-width: 40%; /* Limit text width for readability */
                 margin-left: 5rem; /* Generous left margin */
         }
         .page12-text-wrapper h1 {
