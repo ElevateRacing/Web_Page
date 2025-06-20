@@ -1531,6 +1531,7 @@ body {
                 text-align: center; /* Centered text */
                 order: 1; /* Text before image */
                 margin-left: 0; /* Remove margin for mobile */
+                margin-right:0;
                 width: 90%; /* Text 90% width */
         }
         .page8-bottom-left {
