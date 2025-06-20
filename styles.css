@@ -2250,6 +2250,7 @@ body {
         background-repeat: no-repeat;
         display: flex;
         align-items: center; /* Vertically center text */
+            width: 100vw;
         }
         .image12_duct {
                 display: none; /* Hide the img tag since background is used */
