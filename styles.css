@@ -1469,6 +1469,9 @@ body {
                 margin-top: 1rem; /* Small margin below video */
                 width: 90%; /* Match video width */
         }
+        .page8-bottom-left {
+                flex: 0 0 40%; /* Image takes 40% of container width */
+        }
         .page8-bottom-right {
                 margin-left: 1rem; /* Margin from image */
         }
