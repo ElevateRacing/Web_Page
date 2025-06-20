@@ -2228,18 +2228,18 @@ body {
 @media screen and (min-width: 1367px) {                                                              /* Large Desktop */
         .section_page12 {
                 height: auto; /* Let height be determined by image */
-        display: flex;
-        align-items: center; /* Vertically center text */
-        background-image: none; /* Remove background image */
+                display: flex;
+                align-items: center; /* Vertically center text */
+                background-image: none; /* Remove background image */
         }
         .image12_duct {
                 display: block; /* Show the img tag */
-        width: 100vw; /* Full viewport width */
-        height: auto; /* Maintain aspect ratio */
+                width: 100vw; /* Full viewport width */
+                height: auto; /* Maintain aspect ratio */
         }
         .page12-text-wrapper {
-            position: absolute;
-                max-width: 600px; /* Limit text width for readability */
+                position: absolute;
+                max-width: 50%; /* Limit text width for readability */
                 margin-left: 5rem; /* Generous left margin */
         }
         .page12-text-wrapper h1 {
@@ -2253,10 +2253,56 @@ body {
 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                                                              /* Desktop */
+        .section_page12 {
+                height: auto; /* Let height be determined by image */
+                display: flex;
+                align-items: center; /* Vertically center text */
+                background-image: none; /* Remove background image */
+        }
+        .image12_duct {
+                display: block; /* Show the img tag */
+                width: 100vw; /* Full viewport width */
+                height: auto; /* Maintain aspect ratio */
+        }
+        .page12-text-wrapper {
+                position: absolute;
+                max-width: 50%; /* Limit text width for readability */
+                margin-left: 5rem; /* Generous left margin */
+        }
+        .page12-text-wrapper h1 {
+                font-size: var(--content-title-desktop);
+                margin-bottom: 15px;
+        }
+        .page12-text-wrapper p {
+                font-size: var(--content-textL-desktop);
+        }
 }
 
 @media screen and (min-width: 768px) 
               and (max-width: 1280px) {                                                              /* Tablet */
+        .section_page12 {
+                height: auto; /* Let height be determined by image */
+                display: flex;
+                align-items: center; /* Vertically center text */
+                background-image: none; /* Remove background image */
+        }
+        .image12_duct {
+                display: block; /* Show the img tag */
+                width: 100vw; /* Full viewport width */
+                height: auto; /* Maintain aspect ratio */
+        }
+        .page12-text-wrapper {
+                position: absolute;
+                max-width: 50%; /* Limit text width for readability */
+                margin-left: 5rem; /* Generous left margin */
+        }
+        .page12-text-wrapper h1 {
+                font-size: var(--content-title-tablet);
+                margin-bottom: 15px;
+        }
+        .page12-text-wrapper p {
+                font-size: var(--content-textL-tablet);
+        }
 }
 
 @media screen and (min-width: 321px) 
