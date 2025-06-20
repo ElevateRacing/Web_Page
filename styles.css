@@ -108,15 +108,15 @@ body {
     
     --content-textL-desktop-large: 22px;
     --content-textL-desktop: 22px;
-    --content-textL-tablet: 20px;
-    --content-textL-mobile: 20px;
+    --content-textL-tablet: 18px;
+    --content-textL-mobile: 18px;
     --content-textL-small-mobile: 16px;
     
     --content-textS-desktop-large: 18px;
     --content-textS-desktop: 18px;
-    --content-textS-tablet: 16px;
-    --content-textS-mobile: 16px;
-    --content-textS-small-mobile: 14px;
+    --content-textS-tablet: 14px;
+    --content-textS-mobile: 14px;
+    --content-textS-small-mobile: 12px;
 }
 
 /* Style the navigation bar */
