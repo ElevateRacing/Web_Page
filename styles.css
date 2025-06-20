@@ -2217,7 +2217,7 @@ body {
     background-image: url('Images/page12-duct_arrows.png'); /* Background image */
 
     height: auto;
-    background-size: contain; /* Ensure full image is visible */
+    background-size: 100% auto;
     background-position: center; /* Center the image */
     background-repeat: no-repeat;
     
@@ -2245,7 +2245,7 @@ body {
         .section_page12 {
                 height: auto; /* Let height be determined by image */
         background-image: url('Images/page12-duct_arrows.png');
-        background-size: contain; /* Ensure full image is visible */
+        background-size: 100% auto;
         background-position: center; /* Center the image */
         background-repeat: no-repeat;
         display: flex;
