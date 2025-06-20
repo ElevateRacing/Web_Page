@@ -1464,7 +1464,6 @@ body {
                 margin: 0; /* No margins */
                 object-fit: contain; /* Show entire video without black bars */
                 order: 2; /* Second in layout */
-                object-position: 50% 50%; /* Center video */
         }
         .page8-content-bottom {
                 flex-direction: column; /* Stack vertically */
