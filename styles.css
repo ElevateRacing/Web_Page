@@ -2321,6 +2321,7 @@ body {
                 object-position: 50% 50%; /* Center the image content */
         }
         .page12-text-wrapper {
+                position: static;
                 margin: 2rem auto; /* Margin from top and centered horizontally */
                 max-width: 90%; /* Responsive width */
                 text-align: center; /* Justify text to center */
