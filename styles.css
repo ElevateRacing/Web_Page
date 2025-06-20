@@ -1641,23 +1641,33 @@ body {
 
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                                                               /* Mobile styles */
-.section_left {
-        position: static; /* Remove absolute positioning for stacking */
+
+    .section_page9 {
+        display: flex; /* Enable Flexbox */
+        flex-direction: column; /* Stack vertically */
+        justify-content: space-between; /* Push children to top and bottom */
+        min-height: 100vh; /* Ensure full viewport height */
+        padding: 20px; /* Add padding to avoid content touching edges */
+        box-sizing: border-box; /* Include padding in height calculation */
+    }
+    .section_left {
+        position: static; /* Remove absolute positioning */
         text-align: center;
         max-width: 90%; /* Wider content for readability */
-        margin: 20px auto; /* Centered with margin from top */
+        margin: 0 auto; /* Center horizontally, no top margin */
         background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
         padding: 15px;
-        border-radius: 8px; /* Rounded corners for aesthetics */
+        border-radius: 8px; /* Rounded corners */
     }
     .section_right {
-        position: static; /* Remove absolute positioning for stacking */
+        position: static; /* Remove absolute positioning */
         text-align: center;
         max-width: 90%; /* Wider content for readability */
-        margin: 40vh auto;
+        margin: 0 auto; /* Center horizontally */
         background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
         padding: 15px;
-        border-radius: 8px; /* Rounded corners for aesthetics */
+        border-radius: 8px; /* Rounded corners */
+        margin-top: auto; /* Push to bottom within flex container */
     }
 }
 
