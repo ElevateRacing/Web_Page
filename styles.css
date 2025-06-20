@@ -1656,7 +1656,7 @@ body {
         .section_left {
                 top: 20px; /* Margin from top */
                 padding: 20px;
-            left: 20px; /* Margin from left */
+                left: 20px; /* Margin from left */
                 max-width: 30%;
         }
         .section_right {
