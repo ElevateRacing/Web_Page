@@ -1628,6 +1628,63 @@ body {
     max-width: 35%;
 }
 
+@media screen and (min-width: 1367px) {                                                              /* Large Desktop */
+}
+
+@media screen and (min-width: 1281px) 
+              and (max-width: 1366px) {                                                              /* Desktop */
+}
+
+@media screen and (min-width: 768px) 
+              and (max-width: 1280px) {                                                              /* Tablet */
+}
+
+@media screen and (min-width: 321px) 
+              and (max-width: 767px) {                                                               /* Mobile styles */
+.section_left {
+        position: static; /* Remove absolute positioning for stacking */
+        text-align: center;
+        max-width: 90%; /* Wider content for readability */
+        margin: 20px auto; /* Centered with margin from top */
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners for aesthetics */
+    }
+    .section_right {
+        position: static; /* Remove absolute positioning for stacking */
+        text-align: center;
+        max-width: 90%; /* Wider content for readability */
+        margin: 40vh auto;
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners for aesthetics */
+    }
+}
+
+@media screen and (max-width: 380px) {                                                               /* Small mobile */
+.section_left {
+        position: static; /* Remove absolute positioning for stacking */
+        text-align: center;
+        max-width: 90%; /* Wider content for readability */
+        margin: 20px auto; /* Centered with margin from top */
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners for aesthetics */
+    }
+    .section_right {
+        position: static; /* Remove absolute positioning for stacking */
+        text-align: center;
+        max-width: 90%; /* Wider content for readability */
+        margin: 30vh auto;
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners for aesthetics */
+    }
+}
+
+
+
+
 /* - - - - - - PAGE_10 SECTION - - - - - - */
 .section_page10 {
     background-color: #E6E6E6;
@@ -1856,24 +1913,7 @@ body {
     
     
     
-    .section_left {
-        position: static; /* Remove absolute positioning for stacking */
-        text-align: center;
-        max-width: 90%; /* Wider content for readability */
-        margin: 20px auto; /* Centered with margin from top */
-        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-        padding: 15px;
-        border-radius: 8px; /* Rounded corners for aesthetics */
-    }
-    .section_right {
-        position: static; /* Remove absolute positioning for stacking */
-        text-align: center;
-        max-width: 90%; /* Wider content for readability */
-        margin: 40vh auto;
-        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-        padding: 15px;
-        border-radius: 8px; /* Rounded corners for aesthetics */
-    }
+    
     .page10-top {
         text-align: center;
         margin: 2rem auto 40px; /* Reduced bottom margin for mobile */
@@ -1980,24 +2020,7 @@ body {
     
     
     
-    .section_left {
-        position: static; /* Remove absolute positioning for stacking */
-        text-align: center;
-        max-width: 90%; /* Wider content for readability */
-        margin: 20px auto; /* Centered with margin from top */
-        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-        padding: 15px;
-        border-radius: 8px; /* Rounded corners for aesthetics */
-    }
-    .section_right {
-        position: static; /* Remove absolute positioning for stacking */
-        text-align: center;
-        max-width: 90%; /* Wider content for readability */
-        margin: 30vh auto;
-        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-        padding: 15px;
-        border-radius: 8px; /* Rounded corners for aesthetics */
-    }
+    
     .page10-top {
         text-align: center;
         margin: 2rem auto 40px;
