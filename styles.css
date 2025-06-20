@@ -2324,8 +2324,8 @@ body {
         }
         .page12-text-wrapper {
                 position: static;
-                margin: 2rem auto 0.5rem; /* Margin from top and centered horizontally */
-                width: 90%; /* Responsive width */
+                margin: 2rem 5% 0.5rem; /* Margin from top and centered horizontally */
+                max-width: 90%; /* Responsive width */
                 text-align: center; /* Justify text to center */
                 padding: 0; /* Padding for readability */
         }
