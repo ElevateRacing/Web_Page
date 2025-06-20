@@ -1387,6 +1387,23 @@ body {
                 max-width: 550px; /* 50% width * 80% * 1367px = 550px */
                 margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
         }
+        .page8-content-bottom {
+                gap: 2rem; /* Space between columns */
+                padding: 1rem; /* Padding around bottom section */
+                margin-top: 1rem; /* Small margin below video */
+                width: 90%; /* Match video width */
+        }
+        .page8-bottom-right {
+                margin-left: 1rem; /* Margin from image */
+        }
+        .page8-bottom-right h1 {
+                font-size: var(--content-title-desktop-large);
+                margin-bottom: 15px;
+        }
+        .page8-bottom-right p {
+                font-size: var(--content-textL-desktop-large);
+                margin-bottom: 1rem;
+        }
 }
 
 @media screen and (min-width: 1281px) 
@@ -1408,6 +1425,23 @@ body {
                 max-width: 550px; /* 50% width * 80% * 1367px = 550px */
                 margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
         }
+        .page8-content-bottom {
+                gap: 2rem; /* Space between columns */
+                padding: 1rem; /* Padding around bottom section */
+                margin-top: 1rem; /* Small margin below video */
+                width: 90%; /* Match video width */
+        }
+        .page8-bottom-right {
+                margin-left: 1rem; /* Margin from image */
+        }
+        .page8-bottom-right h1 {
+                font-size: var(--content-title-desktop);
+                margin-bottom: 15px;
+        }
+        .page8-bottom-right p {
+                font-size: var(--content-textL-desktop);
+                margin-bottom: 1rem;
+        }
 }
 
 @media screen and (min-width: 768px) 
@@ -1428,6 +1462,23 @@ body {
                 font-size: var(--content-header2-tablet);
                 max-width: 500px;
                 margin: 0 0 0.6rem 0; /* Added bottom margin for spacing */
+        }
+        .page8-content-bottom {
+                gap: 2rem; /* Space between columns */
+                padding: 1rem; /* Padding around bottom section */
+                margin-top: 1rem; /* Small margin below video */
+                width: 90%; /* Match video width */
+        }
+        .page8-bottom-right {
+                margin-left: 1rem; /* Margin from image */
+        }
+        .page8-bottom-right h1 {
+                font-size: var(--content-title-tablet);
+                margin-bottom: 15px;
+        }
+        .page8-bottom-right p {
+                font-size: var(--content-textL-tablet);
+                margin-bottom: 1rem;
         }
 }
 
