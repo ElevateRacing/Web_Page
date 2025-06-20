@@ -2211,7 +2211,7 @@ body {
     overflow: hidden; /* Hide overflow for wide image */
     background-size: cover; /* Ensure image covers the section */
     background-position: calc(100% - 30%) center; /* Shift image right, hiding 10% beyond right edge */
-    background-image: url('Images/page12-duct.png'); /* Background image */
+    background-image: url('Images/page12-duct_arrows.png'); /* Background image */
 }
 .image12_duct {
     display: none; /* Hide the img tag since background is used */
