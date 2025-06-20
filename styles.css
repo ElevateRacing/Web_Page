@@ -2207,6 +2207,7 @@ body {
     width: 100vw;
     position: relative;
     overflow: hidden;
+    background-color: var(--Spec-background-color);
 }
 .page12-text-wrapper {
     position: absolute;
@@ -2325,7 +2326,6 @@ body {
                 margin: 2rem auto; /* Margin from top and centered horizontally */
                 max-width: 90%; /* Responsive width */
                 text-align: center; /* Justify text to center */
-                background-color: rgba(211, 211, 211, 0.7); /* Light grey semi-transparent box */
                 padding: 1.5rem; /* Padding for readability */
                 border-radius: 8px; /* Optional: rounded corners */
         }
@@ -2333,7 +2333,7 @@ body {
                 font-size: var(--content-title-mobile);
         }
         .page12-text-wrapper p {
-                font-size: var(--content-textL-mobile); /* Adjusted for mobile */
+                font-size: var(--content-textS-mobile); /* Adjusted for mobile */
         }
 }
 
@@ -2342,7 +2342,7 @@ body {
                 font-size: var(--content-title-small-mobile); /* Slightly smaller for mobile */
         }
         .page12-text-wrapper p {
-                font-size: var(--content-textL-small-mobile); /* Adjusted for mobile */
+                font-size: var(--content-textS-small-mobile); /* Adjusted for mobile */
         }
 }
 
