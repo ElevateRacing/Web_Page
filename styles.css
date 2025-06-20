@@ -1301,7 +1301,7 @@ body {
     object-fit: contain; /* Show entire video without black bars */
     object-position: 50% 50%; /* Center video */
     z-index: 1; /* Behind header text */
-    margin: 16vw auto 0; /* Center with small top margin */
+    margin: 17vw auto 0; /* Center with small top margin */
     display: block; /* Remove inline gaps */
     border: none; /* Ensure no border */
     padding: 0; /* Remove padding */
@@ -1371,7 +1371,7 @@ body {
 @media screen and (min-width: 1367px) {                                                              /* Large Desktop */
         .page8-video {
                 width: 70%;
-                margin: 16vw auto 0; /* Center with small top margin */
+                margin: 17vw auto 0; /* Center with small top margin */
         }
         .page8-header {
                 top: 3rem; /* Generous top margin */
@@ -1393,7 +1393,7 @@ body {
               and (max-width: 1366px) {                                                              /* Desktop */
         .page8-video {
                 width: 70%;
-                margin: 16vw auto 0; /* Center with small top margin */
+                margin: 17vw auto 0; /* Center with small top margin */
         }
         .page8-header {
                 top: 3rem; /* Generous top margin */
@@ -1414,7 +1414,7 @@ body {
               and (max-width: 1280px) {                                                              /* Tablet */
         .page8-video {
                 width: 70%;
-                margin: 22vw auto 0; /* Center with small top margin */
+                margin: 23vw auto 0; /* Center with small top margin */
         }
         .page8-header {
                 top: 3rem; /* Generous top margin */
@@ -1507,11 +1507,6 @@ body {
             font-size: var(--content-textL-small-mobile);
         }
 }
-
-
-
-
-
 
 /* - - - - - - PAGE_9 SECTION - - - - - - */
 .section_page9 {
