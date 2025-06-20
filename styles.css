@@ -1512,13 +1512,12 @@ body {
                 margin-right: auto;
         }
         .page8-video {
-                width: 120%; /* Full width */
+                width: 100%; /* Full width */
                 max-width: none; /* No max-width limit */
                 height: auto; /* Let video dictate height */
                 margin: 0; /* No margins */
                 object-fit: contain; /* Show entire video without black bars */
                 order: 2; /* Second in layout */
-                object-position: 80% 50%; /* Center video */
         }
         .page8-content-bottom {
                 flex-direction: column; /* Stack vertically */
@@ -1538,6 +1537,14 @@ body {
                 width: 90%; /* Image 90% width */
                 margin: 0 auto; /* Center image */
                 order: 2; /* Image after text */
+        }
+        .page8-bottom-right h1 {
+                font-size: var(--content-title-mobile);
+                margin-bottom: 15px;
+        }
+        .page8-bottom-right p {
+                font-size: var(--content-textL-mobile);
+                margin-bottom: 1rem;
         }
 }
 
