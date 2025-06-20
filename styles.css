@@ -2204,28 +2204,12 @@ body {
 .section_page12 {
     margin: 0;
     padding: 0;
-    /* height: 100vh; /* Full viewport height */
     width: 100vw;
     position: relative;
-    overflow: hidden; /* Hide overflow for wide image */
-    
-    display: flex;
-    align-items: center; /* Vertically center content */
-    
-    /* background-size: cover; /* Ensure image covers the section */
-    /* background-position: calc(100% - 30%) center; /* Shift image right, hiding 10% beyond right edge */
-    background-image: url('Images/page12-duct_arrows.png'); /* Background image */
-
-    height: auto;
-    background-size: 100% auto;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat;
-    
-}
-.image12_duct {
-    display: none; /* Hide the img tag since background is used */
+    overflow: hidden;
 }
 .page12-text-wrapper {
+    position: absolute;
     max-width: 600px; /* Limit text width for readability */
     margin-left: 5rem; /* Generous left margin */
     text-align: left;
@@ -2244,18 +2228,17 @@ body {
 @media screen and (min-width: 1367px) {                                                              /* Large Desktop */
         .section_page12 {
                 height: auto; /* Let height be determined by image */
-        background-image: url('Images/page12-duct_arrows.png');
-        background-size: 100% auto;
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat;
         display: flex;
         align-items: center; /* Vertically center text */
-            width: 100vw;
+        background-image: none; /* Remove background image */
         }
         .image12_duct {
-                display: none; /* Hide the img tag since background is used */
+                display: block; /* Show the img tag */
+        width: 100vw; /* Full viewport width */
+        height: auto; /* Maintain aspect ratio */
         }
         .page12-text-wrapper {
+            position: absolute;
                 max-width: 600px; /* Limit text width for readability */
                 margin-left: 5rem; /* Generous left margin */
         }
