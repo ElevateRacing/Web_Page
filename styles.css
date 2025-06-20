@@ -2211,7 +2211,7 @@ body {
 .page12-text-wrapper {
     position: absolute;
     max-width: 40%; /* Limit text width for readability */
-    margin-left: 5rem; /* Generous left margin */
+    margin-left: 5%; /* Generous left margin */
     text-align: left;
 }
 .page12-text-wrapper h1 {
@@ -2240,7 +2240,7 @@ body {
         .page12-text-wrapper {
                 position: absolute;
                 max-width: 40%; /* Limit text width for readability */
-                margin-left: 5rem; /* Generous left margin */
+                margin-left: 5%; /* Generous left margin */
         }
         .page12-text-wrapper h1 {
                 font-size: var(--content-title-desktop-large);
@@ -2294,7 +2294,7 @@ body {
         .page12-text-wrapper {
                 position: absolute;
                 max-width: 40%; /* Limit text width for readability */
-                margin-left: 5rem; /* Generous left margin */
+                margin-left: 5%; /* Generous left margin */
         }
         .page12-text-wrapper h1 {
                 font-size: var(--content-title-tablet);
