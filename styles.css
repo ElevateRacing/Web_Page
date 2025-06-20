@@ -2211,7 +2211,7 @@ body {
 .page12-text-wrapper {
     position: absolute;
     max-width: 40%; /* Limit text width for readability */
-    padding-left: 5%; /* Generous left margin */
+    margin-left: 5%; /* Generous left margin */
     text-align: left;
 }
 .page12-text-wrapper h1 {
@@ -2240,7 +2240,7 @@ body {
         .page12-text-wrapper {
                 position: absolute;
                 max-width: 40%; /* Limit text width for readability */
-                padding-left: 5%; /* Generous left margin */
+                margin-left: 5%; /* Generous left margin */
         }
         .page12-text-wrapper h1 {
                 font-size: var(--content-title-desktop-large);
@@ -2267,7 +2267,7 @@ body {
         .page12-text-wrapper {
                 position: absolute;
                 max-width: 40%; /* Limit text width for readability */
-                padding-left: 5rem; /* Generous left margin */
+                margin-left: 5%; /* Generous left margin */
         }
         .page12-text-wrapper h1 {
                 font-size: var(--content-title-desktop);
@@ -2307,68 +2307,43 @@ body {
 
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                                                               /* Mobile styles */
-.section_page12 {
-        height: 100vh; /* Full viewport height */
-        background-position: calc(100% - 40%) center; /* Shift image right, hiding 30% beyond right edge */
-        background-size: cover; /* Cover the viewport */
-    }
-
-    .page12-text-wrapper {
-        margin: 2rem auto; /* Margin from top and centered horizontally */
-        max-width: 90%; /* Responsive width */
-        text-align: center; /* Justify text to center */
-        background-color: rgba(211, 211, 211, 0.7); /* Light grey semi-transparent box */
-        padding: 1.5rem; /* Padding for readability */
-        border-radius: 8px; /* Optional: rounded corners */
-    }
-
-    .page12-text-wrapper h1 {
-        font-size: var(--content-title-mobile);
-    }
-
-    .page12-text-wrapper p {
-        font-size: var(--content-textL-mobile); /* Adjusted for mobile */
-    }
+        .section_page12 {
+                height: auto; /* Allow natural height */
+                display: flex;
+                flex-direction: column; /* Stack text and image vertically */
+                background-image: none; /* Remove background image */
+        }
+        .image12_duct {
+                display: block; /* Show the img tag */
+                width: 100%;
+                height: 50vh; /* 50% of viewport height */
+                object-fit: cover; /* Cover the area, cropping as needed */
+                object-position: 50% 50%; /* Center the image content */
+        }
+        .page12-text-wrapper {
+                margin: 2rem auto; /* Margin from top and centered horizontally */
+                max-width: 90%; /* Responsive width */
+                text-align: center; /* Justify text to center */
+                background-color: rgba(211, 211, 211, 0.7); /* Light grey semi-transparent box */
+                padding: 1.5rem; /* Padding for readability */
+                border-radius: 8px; /* Optional: rounded corners */
+        }
+        .page12-text-wrapper h1 {
+                font-size: var(--content-title-mobile);
+        }
+        .page12-text-wrapper p {
+                font-size: var(--content-textL-mobile); /* Adjusted for mobile */
+        }
 }
 
 @media screen and (max-width: 380px) {                                                               /* Small mobile */
-.section_page12 {
-        height: 100vh; /* Full viewport height */
-        background-position: calc(100% - 40%) center; /* Shift image right, hiding 30% beyond right edge */
-        background-size: cover; /* Cover the viewport */
-    }
-
-    .page12-text-wrapper {
-        margin: 2rem auto; /* Margin from top and centered horizontally */
-        max-width: 90%; /* Responsive width */
-        text-align: center; /* Justify text to center */
-        background-color: rgba(211, 211, 211, 0.7); /* Light grey semi-transparent box */
-        padding: 1.5rem; /* Padding for readability */
-        border-radius: 8px; /* Optional: rounded corners */
-    }
-
-    .page12-text-wrapper h1 {
-        font-size: var(--content-title-small-mobile); /* Slightly smaller for mobile */
-    }
-
-    .page12-text-wrapper p {
-        font-size: var(--content-textL-small-mobile); /* Adjusted for mobile */
-    }
+        .page12-text-wrapper h1 {
+                font-size: var(--content-title-small-mobile); /* Slightly smaller for mobile */
+        }
+        .page12-text-wrapper p {
+                font-size: var(--content-textL-small-mobile); /* Adjusted for mobile */
+        }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* - - - - - - PAGE_13 SECTION - - - - - - */
 .section_page13 {
