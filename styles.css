@@ -1592,13 +1592,13 @@ body {
 .section_left {
     position: absolute;
     top: 20px; /* Margin from top */
-    color: white; /* Text color for visibility */
+    color: var(--white-font-color);
     padding: 20px;
 }
 .section_right {
     position: absolute;
     top: 50px; /* Margin from top */
-    color: white; /* Text color for visibility */
+    color: var(--white-font-color);
     padding: 20px;
 }
 .section_left h1 {
@@ -1629,46 +1629,142 @@ body {
 }
 
 @media screen and (min-width: 1367px) {                                                              /* Large Desktop */
+        .section_left {
+                top: 20px; /* Margin from top */
+                padding: 20px;
+        }
+        .section_right {
+                top: 50px; /* Margin from top */
+                padding: 20px;
+        }
+        .section_left h1 {
+                font-size: var(--content-title-desktop-large);
+                margin-bottom: 15px;
+        }
+        .section_left p {
+                font-size: var(--content-textL-desktop-large);
+                margin-bottom: 1rem;
+        }
+        .section_right p {
+                font-size: var(--content-textL-desktop-large);
+                margin-bottom: 1rem;
+        }
+        .section_left {
+                left: 20px; /* Margin from left */
+                max-width: 30%;
+        }
+        .section_right {
+                right: 20px; /* Margin from right */
+                max-width: 35%;
+        }
 }
 
 @media screen and (min-width: 1281px) 
               and (max-width: 1366px) {                                                              /* Desktop */
+        .section_left {
+                top: 20px; /* Margin from top */
+                padding: 20px;
+        }
+        .section_right {
+                top: 50px; /* Margin from top */
+                padding: 20px;
+        }
+        .section_left h1 {
+                font-size: var(--content-title-desktop);
+                margin-bottom: 15px;
+        }
+        .section_left p {
+                font-size: var(--content-textL-desktop);
+                margin-bottom: 1rem;
+        }
+        .section_right p {
+                font-size: var(--content-textL-desktop);
+                margin-bottom: 1rem;
+        }
+        .section_left {
+                left: 20px; /* Margin from left */
+                max-width: 30%;
+        }
+        .section_right {
+                right: 20px; /* Margin from right */
+                max-width: 35%;
+        }
 }
 
 @media screen and (min-width: 768px) 
               and (max-width: 1280px) {                                                              /* Tablet */
+        .section_left {
+                top: 20px; /* Margin from top */
+                padding: 20px;
+        }
+        .section_right {
+                top: 50px; /* Margin from top */
+                padding: 20px;
+        }
+        .section_left h1 {
+                font-size: var(--content-title-tablet);
+                margin-bottom: 15px;
+        }
+        .section_left p {
+                font-size: var(--content-textS-tablet);
+                margin-bottom: 1rem;
+        }
+        .section_right p {
+                font-size: var(--content-textS-tablet);
+                margin-bottom: 1rem;
+        }
+        .section_left {
+                left: 20px; /* Margin from left */
+                max-width: 30%;
+        }
+        .section_right {
+                right: 20px; /* Margin from right */
+                max-width: 35%;
+        }
 }
 
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                                                               /* Mobile styles */
 
-    .section_page9 {
-        display: flex; /* Enable Flexbox */
-        flex-direction: column; /* Stack vertically */
-        justify-content: space-between; /* Push children to top and bottom */
-        min-height: 100vh; /* Ensure full viewport height */
-        padding: 20px; /* Add padding to avoid content touching edges */
-        box-sizing: border-box; /* Include padding in height calculation */
-    }
-    .section_left {
-        position: static; /* Remove absolute positioning */
-        text-align: center;
-        max-width: 90%; /* Wider content for readability */
-        margin: 0 auto; /* Center horizontally, no top margin */
-        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-        padding: 15px;
-        border-radius: 8px; /* Rounded corners */
-    }
-    .section_right {
-        position: static; /* Remove absolute positioning */
-        text-align: center;
-        max-width: 90%; /* Wider content for readability */
-        margin: 0 auto; /* Center horizontally */
-        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-        padding: 15px;
-        border-radius: 8px; /* Rounded corners */
-        margin-top: auto; /* Push to bottom within flex container */
-    }
+        .section_page9 {
+                display: flex; /* Enable Flexbox */
+                flex-direction: column; /* Stack vertically */
+                justify-content: space-between; /* Push children to top and bottom */
+                min-height: 100vh; /* Ensure full viewport height */
+                padding: 20px; /* Add padding to avoid content touching edges */
+                box-sizing: border-box; /* Include padding in height calculation */
+        }
+        .section_left {
+                position: static; /* Remove absolute positioning */
+                text-align: center;
+                max-width: 90%; /* Wider content for readability */
+                margin: 0 auto; /* Center horizontally, no top margin */
+                background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+                padding: 15px;
+                border-radius: 8px; /* Rounded corners */
+        }
+        .section_right {
+                position: static; /* Remove absolute positioning */
+                text-align: center;
+                max-width: 90%; /* Wider content for readability */
+                margin: 0 auto; /* Center horizontally */
+                background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+                padding: 15px;
+                border-radius: 8px; /* Rounded corners */
+                margin-top: auto; /* Push to bottom within flex container */
+        }
+        .section_left h1 {
+                font-size: var(--content-title-mobile);
+                margin-bottom: 15px;
+        }
+        .section_left p {
+                font-size: var(--content-textS-mobile);
+                margin-bottom: 1rem;
+        }
+        .section_right p {
+                font-size: var(--content-textS-mobile);
+                margin-bottom: 1rem;
+        }
 }
 
 @media screen and (max-width: 380px) {                                                               /* Small mobile */
