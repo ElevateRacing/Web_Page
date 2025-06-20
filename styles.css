@@ -1531,6 +1531,7 @@ body {
                 text-align: center; /* Centered text */
                 order: 1; /* Text before image */
                 margin-left: 0; /* Remove margin for mobile */
+                width: 90%; /* Text 90% width */
         }
         .page8-bottom-left {
                 flex: none; /* Remove fixed width */
@@ -1552,6 +1553,7 @@ body {
         .section_page8 {
                 width: 100%; /* Full width */
                 margin: 0;
+                flex-direction: column; /* Stack vertically */
         }
         .page8-header h1 {
                 font-size: var(--content-header-small-mobile);
@@ -1566,7 +1568,7 @@ body {
                 font-size: var(--content-title-small-mobile);
         }
         .page8-bottom-right p {
-            font-size: var(--content-textL-small-mobile);
+            font-size: var(--content-textS-small-mobile);
         }
 }
 
