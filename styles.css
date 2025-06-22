@@ -2354,7 +2354,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 0.5rem 0;
 }
 .bg-image {
     position: absolute;
@@ -2386,30 +2386,13 @@ body {
 
 .col1 {
     width: 15%;
-}
-
-.logo-top, .logo-bottom {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.logo-top img, .logo-bottom img {
-    max-width: 100%;
-    height: auto;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: var(--content-textL-desktop-large);
 }
 
 .col2 {
-    width: 15%;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.col3 {
     width: 50%;
+    
 }
 
 .form {
@@ -2452,9 +2435,10 @@ input[type="email"] {
     background-color: #0056b3;
 }
 
-.col4 {
+.col3 {
     width: 20%;
-    font-size: 1rem;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: var(--content-textL-desktop-large);
 }
 
 
