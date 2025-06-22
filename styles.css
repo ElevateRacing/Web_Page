@@ -2580,6 +2580,8 @@ body {
         .col1 {
                 font-size: var(--content-textS-mobile);
                 text-align: center; /* Center text */
+                width: 100%; /* Full width for centering */
+                display: block; /* Stack vertically */
         }
         .col2 {
                 order: -1; /* Move form to top */
@@ -2616,13 +2618,8 @@ body {
         .col3 {
                 font-size: var(--content-textS-mobile);
                 text-align: center; /* Center text */
-        }
-        /* Bottom row split into two columns */
-        .col1, .col3 {
-                width: 50%;
-                display: inline-block;
-                vertical-align: top;
-                text-align: center;
+                width: 100%; /* Full width for centering */
+                display: block; /* Stack vertically */
         }
 }
 
