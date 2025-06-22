@@ -2376,6 +2376,7 @@ body {
     width: 20%;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: var(--content-textS-desktop-large);
+    color: ver(--white-font-color);
 }
 .col2 {
     width: 60%;
@@ -2400,13 +2401,13 @@ body {
     width: 20%;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: var(--content-textS-desktop-large);
+    color: ver(--white-font-color);
 }
 
 @media screen and (min-width: 1367px) {                                                              /* Large Desktop */
         .col {
                 display: flex;
                 flex-direction: column;
-                color: ver(--white-font-color);
         }
         .col1 {
                 width: 20%;
@@ -2461,7 +2462,6 @@ body {
         .col {
                 display: flex;
                 flex-direction: column;
-                color: ver(--white-font-color);
         }
         .col1 {
                 width: 20%;
@@ -2516,7 +2516,6 @@ body {
         .col {
                 display: flex;
                 flex-direction: column;
-                color: ver(--white-font-color);
         }
         .col1 {
                 width: 20%;
@@ -2524,6 +2523,7 @@ body {
                 text-align: left;
                 justify-content: left;
                 align-items: left;
+                color: ver(--white-font-color);
         }
         .col2 {
                 width: 60%;
@@ -2622,10 +2622,10 @@ body {
                 vertical-align: top;
         }
         .col1 {
-                text-align: left;
+                text-align: center;
         }
         .col3 {
-                text-align: right;
+                text-align: center;
         }
 }
 
