@@ -2420,7 +2420,7 @@ input[type="email"] {
     margin-bottom: 1rem;
 }
 
-.button {
+.col .col2 .form .button {
     align-self: center;
     padding: 10px 20px;
     background-color: var(--button-orange);
