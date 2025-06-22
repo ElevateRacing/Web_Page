@@ -2370,13 +2370,13 @@ body {
     z-index: 1;
 }
 .col {
-    color: ver(--white-font-color);
+    color: var(--white-font-color);
 }
 .col1 {
     width: 20%;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: var(--content-textS-desktop-large);
-    color: ver(--white-font-color);
+    color: var(--white-font-color);
 }
 .col2 {
     width: 60%;
@@ -2401,7 +2401,7 @@ body {
     width: 20%;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: var(--content-textS-desktop-large);
-    color: ver(--white-font-color);
+    color: var(--white-font-color);
 }
 
 @media screen and (min-width: 1367px) {                                                              /* Large Desktop */
