@@ -2568,6 +2568,65 @@ body {
 
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                                                               /* Mobile styles */
+        .content {
+                flex-direction: column;
+                width: 90%;
+        }
+        .col {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 1rem; 
+        }
+        .col1 {
+                font-size: var(--content-textS-mobile);
+        }
+        .col2 {
+                order: -1; /* Move form to top */
+        }
+        .form {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center form elements */
+                width: 100%;
+        }
+        textarea {
+                width: 100%;
+                min-height: 100px;
+                margin-bottom: 0.5rem;
+                padding: 0.5rem;
+                border: none;
+                border-radius: 5px;
+                font-family: Arial, sans-serif;
+        }
+        input[type="email"] {
+                width: 100%;
+                padding: 0.5rem;
+                border: none;
+                border-radius: 5px;
+                font-family: Arial, sans-serif;
+                margin-bottom: 0.5rem;
+        }
+        .button-contact {
+                width: 100%;
+                padding: 10px;
+                font-size: var(--content-textS-mobile);
+                border-radius: 5px;
+        }
+        .col3 {
+                font-size: var(--content-textS-mobile);
+        }
+        /* Bottom row split into two columns */
+        .col1, .col3 {
+                width: 50%;
+                display: inline-block;
+                vertical-align: top;
+        }
+        .col1 {
+                text-align: left;
+        }
+        .col3 {
+                text-align: right;
+        }
 }
 
 @media screen and (max-width: 380px) {                                                               /* Small mobile */
