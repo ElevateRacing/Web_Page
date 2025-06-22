@@ -2402,7 +2402,7 @@ body {
 
 textarea {
     width: 100%;
-    min-height: 150px;
+    min-height: 200px;
     margin-bottom: 1rem;
     padding: 0.5rem;
     border: none;
