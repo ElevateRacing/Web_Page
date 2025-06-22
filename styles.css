@@ -2350,7 +2350,6 @@ body {
 .section_contact {
     position: relative;
     width: 100%;
-    /* min-height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2387,6 +2386,7 @@ body {
     width: 20%;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: var(--content-textS-desktop-large);
+    text-align: left;
 }
 
 .col2 {
@@ -2397,6 +2397,7 @@ body {
 .form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
