@@ -2377,8 +2377,6 @@ body {
 .col {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     color: #fff; /* Adjust based on background image */
 }
 
@@ -2387,10 +2385,15 @@ body {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: var(--content-textS-desktop-large);
     text-align: left;
+    justify-content: left;
+    align-items: left;
 }
 
 .col2 {
     width: 60%;
+
+justify-content: center;
+    align-items: center;
     
 }
 
@@ -2442,6 +2445,8 @@ input[type="email"] {
     width: 20%;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: var(--content-textS-desktop-large);
+    justify-content: center;
+    align-items: center;
 }
 
 
