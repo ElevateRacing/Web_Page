@@ -2378,7 +2378,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*align-items: center; */
+    align-items: center;
     color: #fff; /* Adjust based on background image */
 }
 
@@ -2391,7 +2391,6 @@ body {
 
 .col2 {
     width: 60%;
-    aligh-items: center;
     
 }
 
