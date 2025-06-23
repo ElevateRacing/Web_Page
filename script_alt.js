@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const populateDropdowns = async () => {
         try {
             // Fetch countries from REST Countries API
-            const response = await fetch('https://restcountries.com/v3.1/all', {
+            const response = await fetch('https://restcountries.com/v3.1/all?fields=name,cca2', {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json'
