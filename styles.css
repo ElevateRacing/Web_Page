@@ -2701,6 +2701,11 @@ body {
     height: 12px;
     vertical-align: middle;
     margin-right: 8px;
+    display: inline-block
+}
+.flag-wrapper {
+    display: inline-flex;
+    align-items: center; /* Align flag and text in dropdown options */
 }
 .name-group {
     display: flex;
@@ -2708,6 +2713,11 @@ body {
 }
 .name-field {
     flex: 1;
+}
+.phone-group select#phone-prefix option {
+    display: flex;
+    align-items: center;
+    padding: 5px; /* Space for flag images */
 }
 .phone-group {
     display: flex;
