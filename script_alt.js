@@ -14,22 +14,23 @@ window.addEventListener('scroll', () => {
             }
         });
 
-// Dropdown and Popup Script
-document.addEventListener('DOMContentLoaded', () => {
-    // Function to populate dropdowns
+// Function to populate dropdowns (common to both pages)
     const populateDropdowns = async () => {
-        const countrySelect = document.getElementById('country');
-        const phonePrefixSelect = document.getElementById('phone-prefix');
+        const countrySelects = document.querySelectorAll('#country');
+        const phonePrefixSelects = document.querySelectorAll('#phone-prefix');
 
-        // Check if elements exist
-        if (!countrySelect || !phonePrefixSelect) {
+        if (countrySelects.length === 0 || phonePrefixSelects.length === 0) {
             console.error('Dropdown elements not found: country or phone-prefix');
             return;
         }
 
-        // Initialize loading state
-        countrySelect.innerHTML = '<option value="">Loading countries...</option>';
-        phonePrefixSelect.innerHTML = '<option value="">Loading prefixes...</option>';
+        // Initialize loading state for all dropdowns
+        countrySelects.forEach(select => {
+            select.innerHTML = '<option value="">Loading countries...</option>';
+        });
+        phonePrefixSelects.forEach(select => {
+            select.innerHTML = '<option value="">Loading prefixes...</option>';
+        });
 
         try {
             // Fetch countries with specific fields
@@ -45,93 +46,117 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const data = await response.json();
-            console.log('API data sample:', data.slice(0, 3)); // Debug: Log first 3 countries
 
             // Sort countries alphabetically by common name
             data.sort((a, b) => a.name.common.localeCompare(b.name.common));
 
-            // Populate country dropdown
-            countrySelect.innerHTML = '<option value="">Select Country</option>';
-            data.forEach(country => {
-                const option = document.createElement('option');
-                option.value = country.name.common;
-                option.textContent = country.name.common;
-                countrySelect.appendChild(option);
-            });
-
-            // Populate phone prefix dropdown with flag images
-            phonePrefixSelect.innerHTML = '<option value="">Select Prefix</option>';
-            data.forEach(country => {
-                if (country.idd && country.idd.root && country.idd.suffixes && country.idd.suffixes.length > 0) {
-                    const prefix = `${country.idd.root}${country.idd.suffixes[0]}`;
-                    const cca2 = country.cca2.toLowerCase(); // Lowercase for flag URL
-                    const flagUrl = `https://flagcdn.com/16x12/${cca2}.png`;
+            // Populate country dropdowns
+            countrySelects.forEach(select => {
+                select.innerHTML = '<option value="">Select Country</option>';
+                data.forEach(country => {
                     const option = document.createElement('option');
-                    option.value = prefix; // Only prefix number for form
-                    option.textContent = `${country.name.common} (${prefix})`;
-                    option.setAttribute('data-flag', flagUrl);
-                    phonePrefixSelect.appendChild(option);
-                    console.log(`Added prefix option: ${prefix}, flag: ${flagUrl}`); // Debugging
-                }
+                    option.value = country.name.common;
+                    option.textContent = country.name.common;
+                    select.appendChild(option);
+                });
             });
 
-            // Apply flag images to dropdown options
-            const options = phonePrefixSelect.querySelectorAll('option:not([value=""])');
-            options.forEach((option, index) => {
-                const flagUrl = option.getAttribute('data-flag');
-                if (flagUrl) {
-                    const img = document.createElement('img');
-                    img.src = flagUrl;
-                    img.alt = 'Flag';
-                    img.className = 'flag-icon';
-                    img.onerror = () => {
-                        console.error(`Failed to load flag: ${flagUrl}`); // Debug
-                        img.src = 'https://via.placeholder.com/16x12?text=?'; // Fallback
-                    };
-                    option.innerHTML = `<span class="flag-wrapper">${img.outerHTML} ${option.textContent}</span>`;
-                    console.log(`Applied flag for option ${index + 1}: ${flagUrl}`); // Debugging
-                }
-            });
+            // Populate phone prefix dropdowns with flag images
+            phonePrefixSelects.forEach(select => {
+                select.innerHTML = '<option value="">Select Prefix</option>';
+                data.forEach(country => {
+                    if (country.idd && country.idd.root && country.idd.suffixes && country.idd.suffixes.length > 0) {
+                        const prefix = `${country.idd.root}${country.idd.suffixes[0]}`;
+                        const cca2 = country.cca2.toLowerCase();
+                        const flagUrl = `https://flagcdn.com/16x12/${cca2}.png`;
+                        const option = document.createElement('option');
+                        option.value = prefix;
+                        option.textContent = `${country.name.common} (${prefix})`;
+                        option.setAttribute('data-flag', flagUrl);
+                        select.appendChild(option);
+                    }
+                });
 
-            // Log if no prefixes were added
-            if (phonePrefixSelect.options.length <= 1) {
-                console.warn('No valid phone prefixes found in API response. Check idd data.');
-            }
+                // Apply flag images to dropdown options
+                const options = select.querySelectorAll('option:not([value=""])');
+                options.forEach(option => {
+                    const flagUrl = option.getAttribute('data-flag');
+                    if (flagUrl) {
+                        const img = document.createElement('img');
+                        img.src = flagUrl;
+                        img.alt = 'Flag';
+                        img.className = 'flag-icon';
+                        img.onerror = () => {
+                            img.src = 'https://via.placeholder.com/16x12?text=?';
+                        };
+                        option.innerHTML = `<span class="flag-wrapper">${img.outerHTML} ${option.textContent}</span>`;
+                    }
+                });
+            });
 
         } catch (error) {
             console.error('Error fetching countries:', error.message);
-            countrySelect.innerHTML = '<option value="">Failed to load countries</option>';
-            phonePrefixSelect.innerHTML = '<option value="">Failed to load prefixes</option>';
+            countrySelects.forEach(select => {
+                select.innerHTML = '<option value="">Failed to load countries</option>';
+            });
+            phonePrefixSelects.forEach(select => {
+                select.innerHTML = '<option value="">Failed to load prefixes</option>';
+            });
         }
     };
 
     // Call the function to populate dropdowns
     populateDropdowns();
 
-    // Handle form submission and popup
-    const form = document.getElementById('buy-form');
-    const popup = document.getElementById('buy_popup');
-    const closePopup = document.querySelector('.close-popup');
+    // Function to handle form submission and popup
+    const setupFormHandler = (formId, popupId) => {
+        const form = document.getElementById(formId);
+        const popup = document.getElementById(popupId);
+        const closePopup = popup ? popup.querySelector('.close-popup') : null;
 
-    if (form && popup && closePopup) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevent default form submission for demo
-            popup.style.display = 'flex'; // Show popup
-            // Uncomment below to test Formspree submission
-            // form.submit();
-        });
+        if (form && popup && closePopup) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
 
-        closePopup.addEventListener('click', () => {
-            popup.style.display = 'none'; // Hide popup
-        });
+                // Combine phone prefix and phone number
+                const phonePrefix = form.querySelector('#phone-prefix').value;
+                const phoneNumber = form.querySelector('#phone').value;
+                const fullPhoneNumber = phonePrefix ? `${phonePrefix}${phoneNumber}` : phoneNumber;
 
-        // Close popup when clicking outside
-        popup.addEventListener('click', (e) => {
-            if (e.target === popup) {
+                // Create a hidden input for the full phone number
+                const hiddenInput = document.createElement('input');
+                hiddenInput.type = 'hidden';
+                hiddenInput.name = 'full-phone-number';
+                hiddenInput.value = fullPhoneNumber;
+                form.appendChild(hiddenInput);
+
+                // Show popup
+                popup.style.display = 'flex';
+
+                // Submit form to Formspree (uncomment to enable)
+                // form.submit();
+            });
+
+            closePopup.addEventListener('click', () => {
                 popup.style.display = 'none';
-            }
-        });
-    } else {
-        console.error('Form or popup elements not found buy_form, buy_popup, or close_popup');
+            });
+
+            // Close popup when clicking outside
+            popup.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        } else {
+            console.error(`Form or popup elements not found: ${formId}, ${popupId}, or close-popup`);
+        }
+    };
+
+    // Initialize form handlers for both pages
+    if (document.getElementById('book-form')) {
+        setupFormHandler('book-form', 'book-popup');
+    }
+    if (document.getElementById('buy-form')) {
+        setupFormHandler('buy-form', 'buy_popup');
     }
 });
