@@ -93,30 +93,32 @@ body {
     --content-header-tablet: clamp(42px, 4.85vw, 60px);
     --content-header-mobile: 32px;
     --content-header-small-mobile: 26px;
-    
     --content-header2-desktop-large: 24px;
     --content-header2-desktop: 22px;
     --content-header2-tablet: clamp(16px, 1.75vw, 20px);
     --content-header2-mobile: 16px;
     --content-header2-small-mobile: 16px;
-    
     --content-title-desktop-large: 30px;
     --content-title-desktop: 30px;
     --content-title-tablet: 26px;
     --content-title-mobile: 26px;
     --content-title-small-mobile: 24px;
-    
     --content-textL-desktop-large: 22px;
     --content-textL-desktop: 22px;
     --content-textL-tablet: 18px;
     --content-textL-mobile: 18px;
     --content-textL-small-mobile: 16px;
-    
     --content-textS-desktop-large: 18px;
     --content-textS-desktop: 18px;
     --content-textS-tablet: 14px;
     --content-textS-mobile: 14px;
     --content-textS-small-mobile: 12px;
+
+    --footer-text-desktop-large: 14px;
+    --footer-text-desktop: 14px;
+    --footer-text-tablet: 12px;
+    --footer-text-mobile: 10px;
+    --footer-text-small-mobile: 8px;
 }
 
 /* Style the navigation bar */
@@ -2891,7 +2893,7 @@ body {
 .col1 {
     width: 20%;
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: var(--content-textS-desktop-large);
+    font-size: var(--footer-text-desktop-large);
     color: var(--white-font-color);
 }
 .col2 {
@@ -2904,7 +2906,7 @@ body {
 .col3 {
     width: 20%;
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: var(--content-textS-desktop-large);
+    font-size: var(--footer-text-desktop-large);
     color: var(--white-font-color);
 }
 
