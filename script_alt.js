@@ -14,16 +14,36 @@ window.addEventListener('scroll', () => {
             }
         });
 
-//POPUP SCRIPT
+// Dropdown and Popup Script
 document.addEventListener('DOMContentLoaded', () => {
-    // Fetch countries for dropdowns
-    fetch('https://restcountries.com/v3.1/all')
-        .then(response => response.json())
-        .then(data => {
+    // Function to populate dropdowns
+    const populateDropdowns = async () => {
+        try {
+            // Fetch countries from REST Countries API
+            const response = await fetch('https://restcountries.com/v3.1/all', {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            // Get dropdown elements
             const countrySelect = document.getElementById('country');
             const phonePrefixSelect = document.getElementById('phone-prefix');
 
-            // Sort countries alphabetically
+            // Check if elements exist
+            if (!countrySelect || !phonePrefixSelect) {
+                console.error('Dropdown elements not found in the DOM');
+                return;
+            }
+
+            // Sort countries alphabetically by common name
             data.sort((a, b) => a.name.common.localeCompare(b.name.common));
 
             // Populate country dropdown
@@ -46,33 +66,47 @@ document.addEventListener('DOMContentLoaded', () => {
                     phonePrefixSelect.appendChild(option);
                 }
             });
-        })
-        .catch(error => {
+
+        } catch (error) {
             console.error('Error fetching countries:', error);
-            document.getElementById('country').innerHTML = '<option value="">Error loading countries</option>';
-            document.getElementById('phone-prefix').innerHTML = '<option value="">Error loading prefixes</option>';
-        });
+            const countrySelect = document.getElementById('country');
+            const phonePrefixSelect = document.getElementById('phone-prefix');
+            if (countrySelect) {
+                countrySelect.innerHTML = '<option value="">Error loading countries</option>';
+            }
+            if (phonePrefixSelect) {
+                phonePrefixSelect.innerHTML = '<option value="">Error loading prefixes</option>';
+            }
+        }
+    };
+
+    // Call the function to populate dropdowns
+    populateDropdowns();
 
     // Handle form submission and popup
     const form = document.getElementById('buy-form');
     const popup = document.getElementById('buy-popup');
     const closePopup = document.querySelector('.close-popup');
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault(); // Prevent default form submission for demo
-        popup.style.display = 'flex'; // Show popup
-        // Uncomment below to actually submit the form via Formspree
-        // form.submit();
-    });
+    if (form && popup && closePopup) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent default form submission for demo
+            popup.style.display = 'flex'; // Show popup
+            // Uncomment below to actually submit the form via Formspree
+            // form.submit();
+        });
 
-    closePopup.addEventListener('click', () => {
-        popup.style.display = 'none'; // Hide popup
-    });
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none'; // Hide popup
+        });
 
-    // Close popup when clicking outside
-    popup.addEventListener('click', (e) => {
-        if (e.target === popup) {
-            popup.style.display = 'none';
-        }
-    });
+        // Close popup when clicking outside
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    } else {
+        console.error('Form or popup elements not found in the DOM');
+    }
 });
