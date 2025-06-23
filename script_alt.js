@@ -19,18 +19,25 @@ window.addEventListener('scroll', () => {
         const countrySelects = document.querySelectorAll('#country');
         const phonePrefixSelects = document.querySelectorAll('#phone-prefix');
 
-        if (countrySelects.length === 0 || phonePrefixSelects.length === 0) {
-            console.error('Dropdown elements not found: country or phone-prefix');
+        // Debugging logs
+        console.log('Detected country dropdowns:', countrySelects.length);
+        console.log('Detected phone-prefix dropdowns:', phonePrefixSelects.length);
+
+        // Check if at least one phone-prefix dropdown exists
+        if (phonePrefixSelects.length === 0) {
+            console.error('No phone-prefix dropdowns found');
             return;
         }
 
-        // Initialize loading state for all dropdowns
-        countrySelects.forEach(select => {
-            select.innerHTML = '<option value="">Loading countries...</option>';
-        });
+        // Initialize loading state
         phonePrefixSelects.forEach(select => {
             select.innerHTML = '<option value="">Loading prefixes...</option>';
         });
+        if (countrySelects.length > 0) {
+            countrySelects.forEach(select => {
+                select.innerHTML = '<option value="">Loading countries...</option>';
+            });
+        }
 
         try {
             // Fetch countries with specific fields
@@ -46,59 +53,45 @@ window.addEventListener('scroll', () => {
             }
 
             const data = await response.json();
+            console.log('API data sample:', data.slice(0, 3)); // Debug: Log first 3 countries
 
             // Sort countries alphabetically by common name
             data.sort((a, b) => a.name.common.localeCompare(b.name.common));
 
-            // Populate country dropdowns
-            countrySelects.forEach(select => {
-                select.innerHTML = '<option value="">Select Country</option>';
-                data.forEach(country => {
-                    const option = document.createElement('option');
-                    option.value = country.name.common;
-                    option.textContent = country.name.common;
-                    select.appendChild(option);
+            // Populate country dropdowns if present
+            if (countrySelects.length > 0) {
+                countrySelects.forEach(select => {
+                    select.innerHTML = '<option value="">Select Country</option>';
+                    data.forEach(country => {
+                        const option = document.createElement('option');
+                        option.value = country.name.common;
+                        option.textContent = country.name.common;
+                        select.appendChild(option);
+                    });
                 });
-            });
+            }
 
-            // Populate phone prefix dropdowns with flag images
+            // Populate phone prefix dropdowns
             phonePrefixSelects.forEach(select => {
                 select.innerHTML = '<option value="">Select Prefix</option>';
                 data.forEach(country => {
                     if (country.idd && country.idd.root && country.idd.suffixes && country.idd.suffixes.length > 0) {
                         const prefix = `${country.idd.root}${country.idd.suffixes[0]}`;
-                        const cca2 = country.cca2.toLowerCase();
-                        const flagUrl = `https://flagcdn.com/16x12/${cca2}.png`;
                         const option = document.createElement('option');
                         option.value = prefix;
                         option.textContent = `${country.name.common} (${prefix})`;
-                        option.setAttribute('data-flag', flagUrl);
                         select.appendChild(option);
-                    }
-                });
-
-                // Apply flag images to dropdown options
-                const options = select.querySelectorAll('option:not([value=""])');
-                options.forEach(option => {
-                    const flagUrl = option.getAttribute('data-flag');
-                    if (flagUrl) {
-                        const img = document.createElement('img');
-                        img.src = flagUrl;
-                        img.alt = 'Flag';
-                        img.className = 'flag-icon';
-                        img.onerror = () => {
-                            img.src = 'https://via.placeholder.com/16x12?text=?';
-                        };
-                        option.innerHTML = `<span class="flag-wrapper">${img.outerHTML} ${option.textContent}</span>`;
                     }
                 });
             });
 
         } catch (error) {
             console.error('Error fetching countries:', error.message);
-            countrySelects.forEach(select => {
-                select.innerHTML = '<option value="">Failed to load countries</option>';
-            });
+            if (countrySelects.length > 0) {
+                countrySelects.forEach(select => {
+                    select.innerHTML = '<option value="">Failed to load countries</option>';
+                });
+            }
             phonePrefixSelects.forEach(select => {
                 select.innerHTML = '<option value="">Failed to load prefixes</option>';
             });
@@ -157,6 +150,6 @@ window.addEventListener('scroll', () => {
         setupFormHandler('book-form', 'book-popup');
     }
     if (document.getElementById('buy-form')) {
-        setupFormHandler('buy-form', 'buy_popup');
+        setupFormHandler('buy-form', 'buy-popup');
     }
 });
