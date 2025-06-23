@@ -2635,9 +2635,9 @@ body {
 /* - - - - - - BUY SECTION - - - - - - */
 .section_page-buy {
     display: flex;
-    min-height: 100vh;
-    max-height: 100vh;
-    margin-top: 110px;
+    min-height: calc(100vh - var(--navbar-height));
+    max-height: calc(100vh - var(--navbar-height));
+    margin-top: var(--navbar-height); /* Start immediately below navbar */
     background-color: var(--Spec-background-color);
     overflow: hidden;
 }
@@ -2671,11 +2671,14 @@ body {
 .buy-form {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center; /* Center form elements */
+    max-width: 500px; /* Shortened form width */
+    margin: 0 auto; /* Center form within buy-content */
 }
 .buy-form-group {
     margin-bottom: 15px;
     text-align: left;
+    width: 100%;
     
     /*display: flex;
     flex-direction: column;
