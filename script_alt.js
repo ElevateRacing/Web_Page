@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data.forEach(country => {
                 const option = document.createElement('option');
                 option.value = country.name.common;
-                option.textContent = country.name';
+                option.textContent = country.name.common;
                 countrySelect.appendChild(option);
             });
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     option.setAttribute('data-flag', flagUrl);
                     phonePrefixSelect.appendChild(option);
                     console.log(`Added prefix option: ${prefix}, flag: ${flagUrl}`); // Debugging
-                });
+                }
             });
 
             // Apply flag images to dropdown options
@@ -106,11 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Call the function to populate dropdowns
-    populating_dropdowns();
+    populateDropdowns();
 
     // Handle form submission and popup
     const form = document.getElementById('buy-form');
-    const popup = document.getElementById('buy-popup');
+    const popup = document.getElementById('buy_popup');
     const closePopup = document.querySelector('.close-popup');
 
     if (form && popup && closePopup) {
@@ -132,6 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     } else {
-        console.error('Form or popup elements not found: buy-form, buy-popup, or close-popup');
+        console.error('Form or popup elements not found buy_form, buy_popup, or close_popup');
     }
 });
