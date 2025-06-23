@@ -3002,6 +3002,10 @@ body {
                 font-size: var(--content-textS-mobile);
                 width: 100%;
         }
+        .buy-form-group label {
+                font-size: var(--content-textS-mobile);
+                margin-bottom: 5px;
+        }
         .custom-btn {
                 padding: 10px 20px;
                 font-size: var(--content-textS-mobile);
@@ -3025,6 +3029,10 @@ body {
                 border: 1px solid #ccc;
                 font-size: var(--content-textS-small-mobile);
                 width: 100%;
+        }
+        .buy-form-group label {
+                font-size: var(--content-textS-small-mobile);
+                margin-bottom: 5px;
         }
         .custom-btn {
                 padding: 10px 20px;
