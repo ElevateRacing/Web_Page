@@ -2696,6 +2696,12 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
+.flag-icon {
+    width: 16px;
+    height: 12px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
 .name-group {
     display: flex;
     gap: 15px;
