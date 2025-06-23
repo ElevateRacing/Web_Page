@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const data = await response.json();
+            console.log('API data sample:', data.slice(0, 3)); // Debug: Log first 3 countries
 
             // Sort countries alphabetically by common name
             data.sort((a, b) => a.name.common.localeCompare(b.name.common));
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data.forEach(country => {
                 const option = document.createElement('option');
                 option.value = country.name.common;
-                option.textContent = country.name.common;
+                option.textContent = country.name';
                 countrySelect.appendChild(option);
             });
 
@@ -64,26 +65,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (country.idd && country.idd.root && country.idd.suffixes && country.idd.suffixes.length > 0) {
                     const prefix = `${country.idd.root}${country.idd.suffixes[0]}`;
                     const cca2 = country.cca2.toLowerCase(); // Lowercase for flag URL
+                    const flagUrl = `https://flagcdn.com/16x12/${cca2}.png`;
                     const option = document.createElement('option');
-                    option.value = prefix; // Only prefix number for form submission
+                    option.value = prefix; // Only prefix number for form
                     option.textContent = `${country.name.common} (${prefix})`;
-                    option.setAttribute('data-flag', `https://flagcdn.com/16x12/${cca2}.png`);
+                    option.setAttribute('data-flag', flagUrl);
                     phonePrefixSelect.appendChild(option);
-                }
+                    console.log(`Added prefix option: ${prefix}, flag: ${flagUrl}`); // Debugging
+                });
             });
 
             // Apply flag images to dropdown options
             const options = phonePrefixSelect.querySelectorAll('option:not([value=""])');
-            options.forEach(option => {
+            options.forEach((option, index) => {
                 const flagUrl = option.getAttribute('data-flag');
                 if (flagUrl) {
-                    option.innerHTML = `<img src="${flagUrl}" alt="Flag" class="flag-icon"> ${option.textContent}`;
+                    const img = document.createElement('img');
+                    img.src = flagUrl;
+                    img.alt = 'Flag';
+                    img.className = 'flag-icon';
+                    img.onerror = () => {
+                        console.error(`Failed to load flag: ${flagUrl}`); // Debug
+                        img.src = 'https://via.placeholder.com/16x12?text=?'; // Fallback
+                    };
+                    option.innerHTML = `<span class="flag-wrapper">${img.outerHTML} ${option.textContent}</span>`;
+                    console.log(`Applied flag for option ${index + 1}: ${flagUrl}`); // Debugging
                 }
             });
 
             // Log if no prefixes were added
             if (phonePrefixSelect.options.length <= 1) {
-                console.warn('No valid phone prefixes found in API response. Check idd field data.');
+                console.warn('No valid phone prefixes found in API response. Check idd data.');
             }
 
         } catch (error) {
@@ -94,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Call the function to populate dropdowns
-    populateDropdowns();
+    populating_dropdowns();
 
     // Handle form submission and popup
     const form = document.getElementById('buy-form');
@@ -105,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault(); // Prevent default form submission for demo
             popup.style.display = 'flex'; // Show popup
-            // Uncomment below to actually submit the form via Formspree
+            // Uncomment below to test Formspree submission
             // form.submit();
         });
 
