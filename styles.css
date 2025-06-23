@@ -2886,6 +2886,10 @@ body {
 .col2 {
     width: 60%;
 }
+.logo-white {
+    width: 200px;
+    height: auto;
+}
 .col3 {
     width: 20%;
     font-family: 'Open Sans', Arial, sans-serif;
