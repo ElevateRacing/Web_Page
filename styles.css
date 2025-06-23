@@ -2961,29 +2961,29 @@ body {
 
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                                                               /* Mobile styles */
-        .buy-section {
-                flex-direction: column;
-                margin-top: 90px;
-                min-height: auto;
-                max-height: none;
-                overflow-y: auto;
+        .section_page-buy {
+                flex-direction: column; /* Stack vertically */
+                margin-top: var(--navbar-height); /* Keep navbar offset */
+                min-height: auto; /* Height based on content */
+                overflow-y: auto; /* Allow scrolling if content overflows */
         }
         .buy-left {
-                flex: none;
-                width: 100%;
-                padding: 20px;
-                overflow-y: visible;
+                flex: none; /* Remove fixed sizing */
+                width: 100%; /* Full width */
+                padding: 20px; /* Consistent padding */
+                order: 1; /* Top row */
         }
         .buy-right {
-                flex: none;
-                width: 100%;
-                padding: 0;
+                flex: none; /* Remove fixed sizing */
+                width: 100%; /* Full width */
+                padding: 0; /* No padding to avoid gaps */
+                order: 2; /* Bottom row */
         }
         .buy-image {
                 width: 100%;
                 height: auto;
-                max-height: none;
                 object-fit: cover;
+                object-position: 50% 50%; /* Center image */
         }
         .buy-content {
                 padding-top: 20px;
@@ -2994,10 +2994,9 @@ body {
                 padding: 10px;
                 border-radius: 8px;
                 border: 1px solid #ccc;
-                font-size: var(--content-textS-desktop-large);
+                font-size: var(--content-textS-mobile);
                 width: 100%;
         }
-
 }
 
 @media screen and (max-width: 380px) {                                                               /* Small mobile */
@@ -3088,6 +3087,39 @@ body {
 
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                                                               /* Mobile styles */
+.section_contact-alt .content {
+        flex-direction: column; /* Stack vertically */
+        width: 90%; /* Maintain width */
+        align-items: center; /* Center all content */
+    }
+    .section_contact-alt .col {
+        width: 100%; /* Full width for all columns */
+        text-align: center; /* Center text */
+        margin-bottom: 1rem; /* Space between elements */
+    }
+    .section_contact-alt .col1 {
+        font-size: var(--footer-text-mobile); /* Mobile font size */
+        order: 2; /* Address below logo */
+    }
+    .section_contact-alt .col2 {
+        width: 100%; /* Full width */
+        display: flex; /* Flex for centering */
+        justify-content: center; /* Center logo horizontally */
+        order: 1; /* Logo at top */
+        margin-bottom: 1rem; /* Space below logo */
+    }
+    .section_contact-alt .logo-white {
+        width: 150px; /* Maintain logo size */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .section_contact-alt .col3 {
+        font-size: var(--footer-text-mobile); /* Mobile font size */
+        order: 3; /* Copyright at bottom */
+    }
+
+
+
+
 }
 
 @media screen and (max-width: 380px) {                                                               /* Small mobile */
