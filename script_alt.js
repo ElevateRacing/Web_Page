@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Fetch countries with specific fields
-            const response = await fetch('https://restcountries.com/v3.1/all?fields=name,cca2,idd,flag', {
+            const response = await fetch('https://restcountries.com/v3.1/all?fields=name,cca2,idd', {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json'
@@ -58,16 +58,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 countrySelect.appendChild(option);
             });
 
-            // Populate phone prefix dropdown with flag emojis
+            // Populate phone prefix dropdown with flag images
             phonePrefixSelect.innerHTML = '<option value="">Select Prefix</option>';
             data.forEach(country => {
                 if (country.idd && country.idd.root && country.idd.suffixes && country.idd.suffixes.length > 0) {
                     const prefix = `${country.idd.root}${country.idd.suffixes[0]}`;
-                    const flag = country.flag || ''; // Use flag emoji or empty string
+                    const cca2 = country.cca2.toLowerCase(); // Lowercase for flag URL
                     const option = document.createElement('option');
-                    option.value = prefix;
-                    option.textContent = `${flag} ${country.name.common} (${prefix})`;
+                    option.value = prefix; // Only prefix number for form submission
+                    option.textContent = `${country.name.common} (${prefix})`;
+                    option.setAttribute('data-flag', `https://flagcdn.com/16x12/${cca2}.png`);
                     phonePrefixSelect.appendChild(option);
+                }
+            });
+
+            // Apply flag images to dropdown options
+            const options = phonePrefixSelect.querySelectorAll('option:not([value=""])');
+            options.forEach(option => {
+                const flagUrl = option.getAttribute('data-flag');
+                if (flagUrl) {
+                    option.innerHTML = `<img src="${flagUrl}" alt="Flag" class="flag-icon"> ${option.textContent}`;
                 }
             });
 
