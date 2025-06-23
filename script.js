@@ -151,3 +151,85 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', handleResizeOrOrientation);
     window.addEventListener('orientationchange', handleResizeOrOrientation);
 });
+
+//POPUP SCRIPT
+// Fetch countries for the country dropdown
+        async function populateCountries() {
+            try {
+                const response = await fetch('https://restcountries.com/v3.1/all?fields=name,cca2');
+                const countries = await response.json();
+                const countrySelect = document.getElementById('country');
+                
+                // Clear loading option
+                countrySelect.innerHTML = '<option value="">Select Country</option>';
+                
+                // Sort countries by common name
+                countries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+                
+                // Populate options
+                countries.forEach(country => {
+                    const option = document.createElement('option');
+                    option.value = country.cca2; // Use ISO code as value
+                    option.textContent = country.name.common;
+                    countrySelect.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error fetching countries:', error);
+                document.getElementById('country').innerHTML = '<option value="">Error loading countries</option>';
+            }
+        }
+
+        // Fetch phone prefixes
+        async function populatePhonePrefixes() {
+            try {
+                const response = await fetch('https://restcountries.com/v3.1/all?fields=idd,name,cca2');
+                const countries = await response.json();
+                const prefixSelect = document.getElementById('phone-prefix');
+                
+                // Clear loading option
+                prefixSelect.innerHTML = '<option value="">Select Prefix</option>';
+                
+                // Create a map to store unique prefixes
+                const prefixMap = new Map();
+                
+                countries.forEach(country => {
+                    if (country.idd && country.idd.root) {
+                        const prefix = `${country.idd.root}${country.idd.suffixes ? country.idd.suffixes[0] : ''}`;
+                        if (prefix && !prefixMap.has(prefix)) {
+                            prefixMap.set(prefix, country.name.common);
+                        }
+                    }
+                });
+                
+                // Sort prefixes
+                const sortedPrefixes = Array.from(prefixMap.entries()).sort((a, b) => a[0].localeCompare(b[0]));
+                
+                // Populate options
+                sortedPrefixes.forEach(([prefix, countryName]) => {
+                    const option = document.createElement('option');
+                    option.value = prefix;
+                    option.textContent = `${prefix} (${countryName})`;
+                    prefixSelect.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error fetching phone prefixes:', error);
+                document.getElementById('phone-prefix').innerHTML = '<option value="">Error loading prefixes</option>';
+            }
+        }
+
+        // Initialize dropdowns
+        populateCountries();
+        populatePhonePrefixes();
+
+        // Popup handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent actual form submission for demo
+            document.getElementById('popup').style.display = 'flex';
+        });
+
+        document.querySelector('.close-popup').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+        });
+
+
+
