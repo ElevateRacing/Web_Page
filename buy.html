@@ -40,18 +40,35 @@
                 <p>Production start is planned in 2026 and first deliveries estimated late 2027. Secure your place in line today. AirKart will be ready for collection in one of our training zones after completing comprehensive training for $199,000.</p>
                 <p>One of our Sales team members will contact you as soon as possible to discuss future payments and delivery details.</p>
                 <p>Secure your place in line today.</p>
-                <form action="https://formspree.io/f/your-form-id" method="POST" class="reserve-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                <form action="https://formspree.io/f/your-form-id" method="POST" class="buy-form">
+                    <div class="buy-form-group">
+                        <div class="name-field">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="name-field">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="country">Country</label>
-                        <input type="text" id="country" name="country" required>
+                        <label for="phone">Phone Number</label>
+                            <div class="phone-group">
+                                <select id="phone-prefix" name="phone-prefix">
+                                    <option value="">Loading...</option>
+                                </select>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Shipping Address Country</label>
+                            <select id="country" name="country" required>
+                            <option value="">Loading...</option>
+                            </select>
                     </div>
                     <button type="submit" class="custom-btn">Send Message</button>
                 </form>
@@ -59,6 +76,12 @@
         </div>
         <div class="reserve-right">
             <img src="Images/page5-left.PNG" alt="AirKart reservation preview image" class="buy-image">
+        </div>
+        <div id="buy-popup" class="buy-popup">
+            <div class="buy-popup-content">
+                <span class="close-popup">x</span>
+                    <p>Your form was sent. Thank You!</p>
+            </div>
         </div>
     </section>
 
