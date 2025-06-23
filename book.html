@@ -30,9 +30,6 @@
           </div>
     </nav>
 
-
-
-    
     <section id="page-book" class="section_page-book">
         <div class="book-left">
             <div class="book-content">
@@ -40,8 +37,8 @@
                 <p>Step into the next dimension of racing!</p>
                 <p>In 2027, electrifying AirKarting Tracks launch in Rugged Texas and stunning Dominican Republic. For $249, claim your 15-minute slot.</p>
                 <p>Hurry, these wings won't wait!</p>
-                <form action="https://formspree.io/f/TBD" method="POST" class="buy-form">
-                    <div class="buy-form-group">
+                <form action="https://formspree.io/f/TBD" method="POST" class="book-form">
+                    <div class="book-form-group">
                         <div class="name-field">
                             <label for="first-name">First Name</label>
                             <input type="text" id="first-name" name="first-name" required>
@@ -51,7 +48,7 @@
                             <input type="text" id="last-name" name="last-name" required>
                         </div>
                     </div>
-                    <div class="buy-form-group">
+                    <div class="book-form-group">
                         <label for="phone">Phone Number</label>
                             <div class="phone-group">
                                 <select id="phone-prefix" name="phone-prefix">
@@ -60,25 +57,28 @@
                                 <input type="tel" id="phone" name="phone">
                             </div>
                     </div>
-                    <div class="buy-form-group">
+                    <div class="book-form-group">
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                    <div class="buy-form-group">
-                        <label for="country">Shipping Country</label>
-                            <select id="country" name="country" required>
-                            <option value="">Loading...</option>
+                    <div class="book-form-group">
+                        <label for="location">Select Desired Location</label>
+                            <select id="location" name="location" required>
+                            <option value="" disabled selected>Select Desired Location</option>
+                            <option value="US">US</option>
+                            <option value="Dominican Republic">Dominican Republic</option>
+                            <option value="Middle East">Middle East</option>
                             </select>
                     </div>
                     <button type="submit" class="custom-btn">Send</button>
                 </form>
             </div>
         </div>
-        <div class="reserve-right">
-            <img src="Images/page5-right.png" alt="AirKart reservation preview image" class="buy-image">
+        <div class="book-right">
+            <img src="Images/page5-right.png" alt="AirKart booking preview image" class="book-image">
         </div>
-        <div id="buy-popup" class="buy-popup">
-            <div class="buy-popup-content">
+        <div id="book-popup" class="book-popup">
+            <div class="book-popup-content">
                 <span class="close-popup">x</span>
                     <p>Your form was sent. Thank You!</p>
             </div>
