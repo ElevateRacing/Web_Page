@@ -18,9 +18,22 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
     // Function to populate dropdowns
     const populateDropdowns = async () => {
+        const countrySelect = document.getElementById('country');
+        const phonePrefixSelect = document.getElementById('phone-prefix');
+
+        // Check if elements exist
+        if (!countrySelect || !phonePrefixSelect) {
+            console.error('Dropdown elements not found: country or phone-prefix');
+            return;
+        }
+
+        // Initialize loading state
+        countrySelect.innerHTML = '<option value="">Loading countries...</option>';
+        phonePrefixSelect.innerHTML = '<option value="">Loading prefixes...</option>';
+
         try {
-            // Fetch countries from REST Countries API
-            const response = await fetch('https://restcountries.com/v3.1/all?fields=name,cca2', {
+            // Fetch countries with specific fields
+            const response = await fetch('https://restcountries.com/v3.1/all?fields=name,cca2,idd,flag', {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json'
@@ -28,20 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                throw new Error(`HTTP error! Status: ${response.status} ${response.statusText}`);
             }
 
             const data = await response.json();
-
-            // Get dropdown elements
-            const countrySelect = document.getElementById('country');
-            const phonePrefixSelect = document.getElementById('phone-prefix');
-
-            // Check if elements exist
-            if (!countrySelect || !phonePrefixSelect) {
-                console.error('Dropdown elements not found in the DOM');
-                return;
-            }
 
             // Sort countries alphabetically by common name
             data.sort((a, b) => a.name.common.localeCompare(b.name.common));
@@ -55,28 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 countrySelect.appendChild(option);
             });
 
-            // Populate phone prefix dropdown
+            // Populate phone prefix dropdown with flag emojis
             phonePrefixSelect.innerHTML = '<option value="">Select Prefix</option>';
             data.forEach(country => {
-                if (country.idd && country.idd.root) {
-                    const prefix = `${country.idd.root}${country.idd.suffixes ? country.idd.suffixes[0] : ''}`;
+                if (country.idd && country.idd.root && country.idd.suffixes && country.idd.suffixes.length > 0) {
+                    const prefix = `${country.idd.root}${country.idd.suffixes[0]}`;
+                    const flag = country.flag || ''; // Use flag emoji or empty string
                     const option = document.createElement('option');
                     option.value = prefix;
-                    option.textContent = `${country.name.common} (${prefix})`;
+                    option.textContent = `${flag} ${country.name.common} (${prefix})`;
                     phonePrefixSelect.appendChild(option);
                 }
             });
 
+            // Log if no prefixes were added
+            if (phonePrefixSelect.options.length <= 1) {
+                console.warn('No valid phone prefixes found in API response. Check idd field data.');
+            }
+
         } catch (error) {
-            console.error('Error fetching countries:', error);
-            const countrySelect = document.getElementById('country');
-            const phonePrefixSelect = document.getElementById('phone-prefix');
-            if (countrySelect) {
-                countrySelect.innerHTML = '<option value="">Error loading countries</option>';
-            }
-            if (phonePrefixSelect) {
-                phonePrefixSelect.innerHTML = '<option value="">Error loading prefixes</option>';
-            }
+            console.error('Error fetching countries:', error.message);
+            countrySelect.innerHTML = '<option value="">Failed to load countries</option>';
+            phonePrefixSelect.innerHTML = '<option value="">Failed to load prefixes</option>';
         }
     };
 
@@ -107,6 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     } else {
-        console.error('Form or popup elements not found in the DOM');
+        console.error('Form or popup elements not found: buy-form, buy-popup, or close-popup');
     }
 });
