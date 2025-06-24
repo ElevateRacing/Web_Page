@@ -3375,13 +3375,13 @@ body {
                 flex: none; /* Remove fixed sizing */
                 width: 100%; /* Full width */
                 padding: 20px; /* Consistent padding */
-                order: 1; /* Top row */
+                order: 2; /* Top row */
         }
         .book-right {
                 flex: none; /* Remove fixed sizing */
                 width: 100%; /* Full width */
                 padding: 0; /* No padding to avoid gaps */
-                order: 2; /* Bottom row */
+                order: 1; /* Bottom row */
         }
         .book-image {
                 width: 100%;
