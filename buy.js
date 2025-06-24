@@ -18,8 +18,12 @@ window.addEventListener('scroll', () => {
 
 // Function to populate dropdowns for a specific form
 const populateDropdownsForForm = async (formElement) => {
+    console.log('populateDropdownsForForm called for:', formElement.id); // NEW LOG
     const countrySelect = formElement.querySelector('#country');
     const phonePrefixSelect = formElement.querySelector('#phone-prefix');
+
+    console.log('countrySelect:', countrySelect);     // NEW LOG
+    console.log('phonePrefixSelect:', phonePrefixSelect); // NEW LOG
 
     if (!phonePrefixSelect) {
         console.error('No phone-prefix dropdown found within the provided form element for populateDropdownsForForm.');
@@ -32,6 +36,7 @@ const populateDropdownsForForm = async (formElement) => {
     }
 
     try {
+        console.log('Attempting to fetch countries...'); // NEW LOG
         const response = await fetch('https://restcountries.com/v3.1/all?fields=name,cca2,idd', {
             method: 'GET',
             headers: {
@@ -40,10 +45,12 @@ const populateDropdownsForForm = async (formElement) => {
         });
 
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status} ${response.statusText}`);
+            const errorText = await response.text(); // Try to get more error details
+            throw new Error(`HTTP error! Status: ${response.status} ${response.statusText}. Response body: ${errorText}`);
         }
 
         const data = await response.json();
+        console.log('API data received, first country:', data[0]); // NEW LOG
         data.sort((a, b) => a.name.common.localeCompare(b.name.common));
 
         if (countrySelect) {
@@ -54,6 +61,7 @@ const populateDropdownsForForm = async (formElement) => {
                 option.textContent = country.name.common;
                 countrySelect.appendChild(option);
             });
+            console.log('Country dropdown populated.'); // NEW LOG
         }
 
         phonePrefixSelect.innerHTML = '<option value="">Select Prefix</option>';
@@ -66,9 +74,10 @@ const populateDropdownsForForm = async (formElement) => {
                 phonePrefixSelect.appendChild(option);
             }
         });
+        console.log('Phone prefix dropdown populated.'); // NEW LOG
 
     } catch (error) {
-        console.error('Error fetching countries:', error.message);
+        console.error('Error fetching countries in populateDropdownsForForm:', error.message); // MODIFIED LOG
         if (countrySelect) {
             countrySelect.innerHTML = '<option value="">Failed to load countries</option>';
         }
@@ -104,9 +113,13 @@ const setupFormHandler = (formId) => { // Removed popupId as popup is gone
 
 // Initialize only for the buy-form on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded event fired.'); // NEW LOG
     const buyForm = document.getElementById('buy-form');
+    console.log('buyForm element:', buyForm); // NEW LOG
     if (buyForm) {
         populateDropdownsForForm(buyForm);
         setupFormHandler('buy-form'); // Pass only formId
+    } else {
+        console.error('buy-form not found on page.'); // NEW LOG
     }
 });
