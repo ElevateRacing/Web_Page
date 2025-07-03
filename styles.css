@@ -2665,7 +2665,7 @@ body {
 }
 .buy-content p {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: var(--content-textL-desktop-large);
+    font-size: var(--content-textS-desktop-large);
     font-weight: 400;
     line-height: 1.6;
     margin: 0 0 20px 0;
@@ -2697,6 +2697,12 @@ body {
     font-size: var(--content-textS-desktop-large);
     width: 100%;
     box-sizing: border-box;
+}
+.buy-form-group textarea {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: var(--content-textS-desktop-large);
+    margin-bottom: 5px;
+    text-align: left;
 }
 .flag-icon {
     width: 16px;
@@ -2774,7 +2780,7 @@ body {
                 margin-bottom: 20px;
         }
         .buy-content p {
-                font-size: var(--content-textL-desktop-large);
+                font-size: var(--content-textS-desktop-large);
                 margin: 0 0 20px 0;
         }
         .buy-form {
@@ -2786,6 +2792,10 @@ body {
                 width: 100%;
         }
         .buy-form-group label {
+                font-size: var(--content-textS-desktop-large);
+                margin-bottom: 5px;
+        }
+        .buy-form-group textarea {
                 font-size: var(--content-textS-desktop-large);
                 margin-bottom: 5px;
         }
@@ -2831,7 +2841,7 @@ body {
                 margin-bottom: 20px;
         }
         .buy-content p {
-                font-size: var(--content-textL-desktop);
+                font-size: var(--content-textS-desktop);
                 margin: 0 0 20px 0;
         }
         .buy-form {
@@ -2843,6 +2853,10 @@ body {
                 width: 100%;
         }
         .buy-form-group label {
+                font-size: var(--content-textS-desktop);
+                margin-bottom: 5px;
+        }
+        .buy-form-group textarea {
                 font-size: var(--content-textS-desktop);
                 margin-bottom: 5px;
         }
@@ -2900,6 +2914,10 @@ body {
                 width: 100%;
         }
         .buy-form-group label {
+                font-size: var(--content-textS-tablet);
+                margin-bottom: 5px;
+        }
+        .buy-form-group textarea {
                 font-size: var(--content-textS-tablet);
                 margin-bottom: 5px;
         }
@@ -2978,6 +2996,10 @@ body {
                 font-size: var(--content-textS-mobile);
                 margin-bottom: 5px;
         }
+        .buy-form-group textarea {
+                font-size: var(--content-textS-mobile);
+                margin-bottom: 5px;
+        }
         .custom-btn {
                 padding: 10px 20px;
                 font-size: var(--content-textS-mobile);
@@ -3003,6 +3025,10 @@ body {
                 width: 100%;
         }
         .buy-form-group label {
+                font-size: var(--content-textS-small-mobile);
+                margin-bottom: 5px;
+        }
+        .buy-form-group textarea {
                 font-size: var(--content-textS-small-mobile);
                 margin-bottom: 5px;
         }
