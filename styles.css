@@ -2457,31 +2457,31 @@ body {
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                                                               /* Mobile styles */
         .divider {
-                transform: rotate(5deg);
+                transform: rotate(0deg);
         }
         .page13-column h1 {
-                font-size: var(--content-textL-mobile);
+                font-size: 14px;
                 margin: 10px 0;
         }
         .page13-column a {
                 margin-top: 20px;
                 padding: 10px 20px;
-                font-size: var(--content-textS-mobile);
+                font-size: 12px;
         }
 }
 
 @media screen and (max-width: 380px) {                                                               /* Small mobile */
         .divider {
-                transform: rotate(5deg);
+                transform: rotate(0deg);
         }
         .page13-column h1 {
-                font-size: var(--content-textL-small-mobile);
+                font-size: 12px;
                 margin: 10px 0;
         }
         .page13-column a {
                 margin-top: 20px;
                 padding: 10px 20px;
-                font-size: var(--content-textS-small-mobile);
+                font-size: 10px;
         }
 }
 
