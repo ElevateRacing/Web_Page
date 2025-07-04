@@ -2440,6 +2440,9 @@ body {
 
 @media screen and (min-width: 768px) 
               and (max-width: 1280px) {                                                              /* Tablet */
+        .divider {
+                transform: rotate(10deg);
+        }
         .page13-column h1 {
                 font-size: var(--content-title-tablet);
                 margin: 10px 0;
@@ -2453,6 +2456,9 @@ body {
 
 @media screen and (min-width: 321px) 
               and (max-width: 767px) {                                                               /* Mobile styles */
+        .divider {
+                transform: rotate(5deg);
+        }
         .page13-column h1 {
                 font-size: var(--content-title-mobile);
                 margin: 10px 0;
@@ -2465,6 +2471,9 @@ body {
 }
 
 @media screen and (max-width: 380px) {                                                               /* Small mobile */
+        .divider {
+                transform: rotate(5deg);
+        }
         .page13-column h1 {
                 font-size: var(--content-title-small-mobile);
                 margin: 10px 0;
