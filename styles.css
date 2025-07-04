@@ -2351,16 +2351,15 @@ body {
 /* - - - - - - PAGE_13 SECTION - - - - - - */
 .section_page13 {
     margin: 0;
-    background-color: black;
-    color: white;
+    background-color: var(--Page4-background-color);
+    color: var(--white-font-color);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .page13-container {
-    max-width: 1200px;
+    max-width: 1600px;
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -2369,7 +2368,6 @@ body {
     flex-direction: row;
     gap: 40px;
 }
-
 .divider {
     position: absolute;
     top: 0;
@@ -2389,21 +2387,35 @@ body {
     text-align: center;
     padding: 20px;
 }
+.page13-column h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    margin: 10px 0;
+}
 
 .page13-column a {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: orange;
+    background-color: var(--button-orange);
     border: none;
-    color: black;
+    color: var(--white-font-color);
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
+
+    
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: var(--content-textS-desktop-large);
+ 
+    
 }
 
 .page13-column a:hover {
-    background-color: #ff8c00;
+    background-color: var(--button-orange-hover);
 }
 
 
