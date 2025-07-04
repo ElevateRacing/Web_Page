@@ -2460,7 +2460,7 @@ body {
                 transform: rotate(5deg);
         }
         .page13-column h1 {
-                font-size: var(--content-title-mobile);
+                font-size: var(--content-textL-mobile);
                 margin: 10px 0;
         }
         .page13-column a {
@@ -2475,7 +2475,7 @@ body {
                 transform: rotate(5deg);
         }
         .page13-column h1 {
-                font-size: var(--content-title-small-mobile);
+                font-size: var(--content-textL-small-mobile);
                 margin: 10px 0;
         }
         .page13-column a {
