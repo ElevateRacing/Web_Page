@@ -2370,15 +2370,14 @@ body {
 }
 .divider {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: -20px;
+    bottom: -20px;
     left: 50%;
     width: 5px;
     background-color: orange;
     transform: rotate(30deg);
     transform-origin: center;
 }
-
 .page13-column {
     flex: 1;
     display: flex;
@@ -2389,10 +2388,10 @@ body {
 }
 .page13-column h1 {
     font-family: 'Exo 2', sans-serif;
+    font-size: var(--content-title-desktop-large);
     font-weight: 700;
     margin: 10px 0;
 }
-
 .page13-column a {
     margin-top: 20px;
     padding: 10px 20px;
@@ -2403,24 +2402,15 @@ body {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-
-    
     display: inline-block;
     text-decoration: none;
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
     font-size: var(--content-textS-desktop-large);
- 
-    
 }
-
 .page13-column a:hover {
     background-color: var(--button-orange-hover);
 }
-
-
-
-
 
 
 @media screen and (min-width: 1367px) {                                                              /* Large Desktop */
