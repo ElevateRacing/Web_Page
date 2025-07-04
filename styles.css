@@ -2354,7 +2354,6 @@ body {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
